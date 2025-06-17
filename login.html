@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="#tab1">로그인</a></li>
+            <li><a href="#tab2">비회원예매</a></li>
+            <li><a href="#tab3">비회원예매확인</a></li>
+        </ul>
+    </div>
+    <div id="tab1">
+        <form action="" method="POST">
+            <div>
+                <label for="userid"></label>
+                <input type="text" name="userid" id="userid" placeholder="아이디" required>
+            </div>
+            <div>
+                <label for="password"></label>
+                <input type="password" name="password" id="password" placeholder="비밀번호" required>
+            </div>
+            <div>
+                <input type="submit" value="전송">
+                <a href="">네이버로그인</a>
+            </div>
+        </form>
+        <div>
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">아이디저장</label>
+            <a href="">간편로그인</a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="">아이디찾기</a></li>
+                <li><a href="">비밀번호찾기</a></li>
+                <li><a href="">회원가입</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="tab2">
+        <form action="" method="POST">
+            <div>
+                <label for="userid"></label>
+                <input type="text" name="userid" id="userid" placeholder="생년월일(250617)" required>
+            </div>
+            <div>
+                <label for="tel"></label>
+                <input type="tel" name="tel" id="tel" placeholder="휴대폰번호(01012345678)" required>
+            </div>
+            <div>
+                <label for="number"></label>
+                <input type="number" name="number" id="number" placeholder="인증번호" required>
+            </div>
+            <div>
+                <label for="password"></label>
+                <input type="password" name="password" id="password" placeholder="비밀번호" required>
+            </div>
+            <div>
+                <label for="password"></label>
+                <input type="password" name="password" id="password" placeholder="비밀번호확인" required>
+            </div>
+            <div>
+                <label for="">개인정보 수집 및 이용동의</label>
+                <input type="radio">동의함
+                <input type="radio">동의안함
+            </div>
+            <div>
+                <p>비회원 예매 고객께서는 먼저 개인정보 수집 및 이용동의 정책에 동의해 주셔야 합니다.</p>
+                <a href="">개인정보처리(취급)방침전문보기</a>
+                <p>개인정보를 잘못 입력하시면 예매내역 확인/취소 및 티켓 발권이 어려울 수 있으니, 입력하신 정보를 다시 한번 확인해주시기 바랍니다.</p>
+                <p>비회원 예매 고객께서는 먼저 개인정보 수집 및 이용동의 정책에 동의해 주셔야 합니다.</p>
+            </div>
+            <div>
+                <input type="submit" value="비회원 예매하기">
+            </div>
+        </form>
+        <div>
+            <p>비회원 예매시 참고하세요!</p>
+            <p>1. 위 정보 수집 및 이용에 동의하지 않을 경우, 비회원 예매 서비스를 이용하실 수 없습니다.</p>
+            <p>2. 비회원 예매 시 청소년 관람불가 영화는 예매가 제한됩니다.</p>
+            <p>3. 만 14세 미만 고객은 비회원으로 예매하실 수 없습니다.</p>
+            <p>4. 비회원 예매 결제수단은 신용카드만 가능하며 모든 제휴상품권, 쿠폰, 영화예매권 등은 회원 예매 서비스 이용 시 사용 가능합니다.</p>
+            <p>5. ARS에서는 취소가 불가능하며, 홈페이지/모바일을 이용하여 취소 처리하실 수 있습니다.</p>
+            <p>6. 비회원 예매 및 예매 확인/취소 메뉴만 이용 가능합니다. 그 외 서비스는  회원 가입 후 이용해 주십시오.</p>
+            <p>7. 문의 사항은 CGV고객센터(1544-1122)로 문의해 주시기 바랍니다. (평일 9:00~18:00)</p>
+        </div>
+    </div>
+    <div id="tab3">
+                <form action="" method="POST">
+            <div>
+                <label for="userid"></label>
+                <input type="text" name="userid" id="userid" placeholder="생년월일(250617)" required>
+            </div>
+            <div>
+                <label for="tel"></label>
+                <input type="tel" name="tel" id="tel" placeholder="휴대폰번호(01012345678)" required>
+            </div>
+            <div>
+                <label for="number"></label>
+                <input type="number" name="number" id="number" placeholder="인증번호" required>
+            </div>
+            <div>
+                <label for="password"></label>
+                <input type="password" name="password" id="password" placeholder="비밀번호" required>
+            </div>
+            <div>
+                <p>비회원 예매 시, 입력한 휴대폰 번호로 SMS인증을 하면 비회원 예매 비밀번호를 찾으실 수 있습니다.</p>
+            </div>
+            <div>
+                <input type="submit" value="비회원 예매하기">
+                <a href="">휴대폰 SMS인증으로 찾기</a>
+            </div>
+        </form>
+        <div>
+            <p>비회원 예매시 참고하세요!</p>
+            <p>1. 위 정보 수집 및 이용에 동의하지 않을 경우, 비회원 예매 서비스를 이용하실 수 없습니다.</p>
+            <p>2. 비회원 예매 시 청소년 관람불가 영화는 예매가 제한됩니다.</p>
+            <p>3. 만 14세 미만 고객은 비회원으로 예매하실 수 없습니다.</p>
+            <p>4. 비회원 예매 결제수단은 신용카드만 가능하며 모든 제휴상품권, 쿠폰, 영화예매권 등은 회원 예매 서비스 이용 시 사용 가능합니다.</p>
+            <p>5. ARS에서는 취소가 불가능하며, 홈페이지/모바일을 이용하여 취소 처리하실 수 있습니다.</p>
+            <p>6. 비회원 예매 및 예매 확인/취소 메뉴만 이용 가능합니다. 그 외 서비스는  회원 가입 후 이용해 주십시오.</p>
+            <p>7. 문의 사항은 CGV고객센터(1544-1122)로 문의해 주시기 바랍니다. (평일 9:00~18:00)</p>
+        </div>
+    </div>
+    <script>
+        const tabs = document.querySelectorAll('ul li a');
+        const contents = document.querySelectorAll('div[id^="tab"]');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function(e) {
+            e.preventDefault();  // 새로고침/페이지 이동 막기
+
+            contents.forEach(content => content.style.display = 'none');
+
+            const targetId = this.getAttribute('href').substring(1); // # 제거
+            const target = document.getElementById(targetId);
+            if (target) target.style.display = 'block';
+            });
+        });
+
+        // 초기 탭 설정 (첫 번째 탭만 보이게)
+        contents.forEach((content, i) => content.style.display = i === 0 ? 'block' : 'none');
+</script>
+</body>
+</html>
