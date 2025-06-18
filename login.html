@@ -4,38 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
-    <div class="one">
+    <div class="container one">
         <div class="tabs">
             <ul class="login">
-                <li><a href="#tab1">로그인</a></li>
+                <li><a href="#tab1" class="active">로그인</a></li>
                 <li><a href="#tab2">비회원예매</a></li>
                 <li><a href="#tab3">비회원예매확인</a></li>
             </ul>
         </div>
         <div id="tab1">
             <form action="" method="POST">
-                <div>
-                    <label for="userid"></label>
-                    <input type="text" name="userid" id="userid" placeholder="아이디" required>
-                </div>
-                <div>
-                    <label for="password"></label>
-                    <input type="password" name="password" id="password" placeholder="비밀번호" required>
-                </div>
-                <div>
-                    <input type="submit" value="전송" class="submit">
-                </div>
-                <a href="#" class="naver">네이버로그인</a>
+               <input type="text" name="userid" id="userid" placeholder="아이디" required>
+                <input type="password" name="password" id="password" placeholder="비밀번호" required>
+                <input type="submit" name="submit" value="전송" class="submit">
+                <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/" class="naver">네이버로그인</a>
             </form>
             <div class="box">
-                <div>
+                <div class="box2">
                     <input type="checkbox" id="checkbox">
                     <label for="checkbox">아이디저장</label>
                 </div>
-                <a href="#">간편로그인</a>
+                    <a href="#">간편로그인</a>
+
             </div>
             <div>
                 <ul class="Search">
@@ -47,26 +42,11 @@
         </div>
         <div id="tab2">
             <form action="" method="POST">
-                <div>
-                    <label for="userid"></label>
                     <input type="text" name="userid" id="userid" placeholder="생년월일(250617)" required>
-                </div>
-                <div>
-                    <label for="tel"></label>
                     <input type="tel" name="tel" id="tel" placeholder="휴대폰번호(01012345678)" required>
-                </div>
-                <div>
-                    <label for="number"></label>
                     <input type="number" name="number" id="number" placeholder="인증번호" required>
-                </div>
-                <div>
-                    <label for="password"></label>
                     <input type="password" name="password" id="password" placeholder="비밀번호" required>
-                </div>
-                <div>
-                    <label for="password"></label>
                     <input type="password" name="password" id="password" placeholder="비밀번호확인" required>
-                </div>
                 <div>
                     <label for="">개인정보 수집 및 이용동의</label>
                     <input type="radio" name="consent" class="consent">동의함
@@ -95,22 +75,10 @@
         </div>
         <div id="tab3">
                     <form action="" method="POST">
-                <div>
-                    <label for="userid"></label>
                     <input type="text" name="userid" id="userid" placeholder="생년월일(250617)" required>
-                </div>
-                <div>
-                    <label for="tel"></label>
                     <input type="tel" name="tel" id="tel" placeholder="휴대폰번호(01012345678)" required>
-                </div>
-                <div>
-                    <label for="number"></label>
                     <input type="number" name="number" id="number" placeholder="인증번호" required>
-                </div>
-                <div>
-                    <label for="password"></label>
                     <input type="password" name="password" id="password" placeholder="비밀번호" required>
-                </div>
                 <div>
                     <p>비회원 예매 시, 입력한 휴대폰 번호로 SMS인증을 하면 비회원 예매 비밀번호를 찾으실 수 있습니다.</p>
                 </div>
