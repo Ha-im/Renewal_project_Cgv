@@ -82,3 +82,40 @@ input[type="submit"]{
     justify-content: center;
     padding:0;
 }
+/*tab2*/
+#openModal{
+    background: none;
+    border:none;
+    color:#ED3124;
+    padding:0;
+}
+#tab2 .policy{
+    color:#ED3124 !important;
+    display:block;
+    margin-top:12px;
+    margin-bottom:24px;
+}
+#tab2 div input[type="submit"]{
+    margin-bottom:24px;
+}
+p{
+    font-size:13px;
+}
+.notice{
+    display:flex;
+    flex-direction: column;
+    gap:12px;
+    justify-content: center;
+    align-items: left;
+    width:733px;
+    height:250px;
+    border-radius:14px;
+    background:#945934;
+    margin-top:24px;
+}
+.radio{
+    margin-top:24px;
+    margin-bottom:24px;
+    display:flex;
+    gap:10px;
+}
