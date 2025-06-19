@@ -20,7 +20,7 @@
 
     }
     .page6{
-      background-color: coral;
+      background-color: var(--bg-color);
 
     }
     .page7{
