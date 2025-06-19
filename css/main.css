@@ -117,6 +117,9 @@
     .box2 p{
       font:var(--storeTextP);
     }
-    img{
+    .smimage img{
       display:none;
+    }
+    .bicimage img{
+
     }
