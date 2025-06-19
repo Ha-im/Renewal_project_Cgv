@@ -34,35 +34,40 @@
 
 
     /*cinema*/
-    .container{
+    .cinema{
       display:flex;
       flex-direction: column;
       gap:24px;
     }
-    .container button{
+    .cinema div div.active{
+      display:block;
+    }
+    .cinema button{
       border:none;
       background:none;
       color:var(--fontColorWhite);
       font:var(--designFonts);
+      letter-spacing: -10px;
     }
-    .container div{
+    .cinema div{
       display:flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap:4px;
-    }
-    .container div{
       gap:24px;
     }
-    .container div div{
+    .cinema button.active{
+      border-bottom:8px solid var(--primaryColor); 
+      color:var(--primaryColor);
+    }
+    .cinema div div{
       display:none;
     }
-    .container p{
+    .cinema p{
       color:var(--primaryColor);
       font:var(--cinemaP);
     }
-    .container a{
+    .cinema a{
       display:flex;
       border:1px solid var(--primaryColor);
       border-radius:36px;
