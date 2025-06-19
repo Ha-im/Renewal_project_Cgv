@@ -34,13 +34,20 @@
 
 
     /*cinema*/
+    .page5{
+      background: var(--bg-color);
+    }
     .cinema{
       display:flex;
       flex-direction: column;
       gap:24px;
     }
-    .cinema div div.active{
-      display:block;
+    .cinema div div.active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
     }
     .cinema button{
       border:none;
@@ -59,25 +66,27 @@
     .cinema button.active{
       border-bottom:8px solid var(--primaryColor); 
       color:var(--primaryColor);
+      line-height: 76px;
     }
-    .cinema div div{
-      display:none;
+    .cinema div div {
+      display: none;
     }
-    .cinema p{
-      color:var(--primaryColor);
-      font:var(--cinemaP);
+    .cinema p {
+      color: var(--primaryColor);
+      font: var(--cinemaP);
+      text-align: center;
     }
-    .cinema a{
-      display:flex;
-      border:1px solid var(--primaryColor);
-      border-radius:36px;
+
+    .cinema a {
+      display: flex;
+      border: 1px solid var(--primaryColor);
+      border-radius: 36px;
       width: 253px;
-      height:72px;
-      padding:0 80px;
+      height: 72px;
       justify-content: center;
       align-items: center;
-      font:var(--BtnText);
-      color:var(--primaryColor);
+      font: var(--BtnText);
+      color: var(--primaryColor);
     }
     h5{
       display:flex;
