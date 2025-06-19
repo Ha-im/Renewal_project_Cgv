@@ -31,3 +31,78 @@
       background-color: coral;
 
     }
+
+
+    /*cinema*/
+    .container{
+      display:flex;
+      flex-direction: column;
+      gap:24px;
+    }
+    .container button{
+      border:none;
+      background:none;
+      color:var(--fontColorWhite);
+      font:var(--designFonts);
+    }
+    .container div{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap:4px;
+    }
+    .container div{
+      gap:24px;
+    }
+    .container div div{
+      display:none;
+    }
+    .container p{
+      color:var(--primaryColor);
+      font:var(--cinemaP);
+    }
+    .container a{
+      display:flex;
+      border:1px solid var(--primaryColor);
+      border-radius:36px;
+      width: 253px;
+      height:72px;
+      padding:0 80px;
+      justify-content: center;
+      align-items: center;
+      font:var(--BtnText);
+      color:var(--primaryColor);
+    }
+    h5{
+      display:flex;
+      justify-content: center;
+      color:var(--fontColorWhite);
+      font:var(--cinemaText);
+    }
+    /*store*/
+    .box1{
+      display:flex;
+      height: 100vh;
+    }
+    .box2{
+      display:flex;
+      flex-direction: column;
+      width:707px;
+      border: 1px solid var(--fontColordisable);
+      box-sizing: border-box;
+      background:var(--sectionBg-Grad-lin);
+      gap:12px;
+      text-align:center;
+      color:var(--fontColorWhite);
+      justify-content: center;
+    }
+    .box2 h6{
+      font:var(--storeText);
+    }
+    .box2 p{
+      font:var(--storeTextP);
+    }
+    img{
+      display:none;
+    }
