@@ -1,3 +1,44 @@
 @import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet');
 /* 변수 등록 */
+:root{
+  /*컬러*/
+  --fontColorWhite:#fff;
+  --fontColordisable:#666666;
+  --fontColorDark:#D9D9D9;
+  --primaryColor:#ED3124;
+  --btnHoverColor:#C32A20;
+  --btnClickColor:#A1221B;
+  --btnDisableColor:#F1A6A0;
+  --sectionBg-Grad-lin:linear-gradient(rgba(14,14,14,0),rgba(0,0,0,0.6) 62%, rgba(0,0,0,0.97));
+  --headerBg-Grad-lin:linear-gradient(rgba(14,14,14,0.66),rgba(0,0,0,0.86) 57%, rgba(0,0,0,0.97) 89%);
+  --bg-op-50:rgba(0,0,0,.5);
+  --bg-color:#000;
+  /*폰트*/
+
+  /*
+  font: [font-style] [font-variant] [font-weight] [font-size]/[line-height] [font-family];
+  light 300 regular 400 semi Bold 600 bold 700 
+  */
+  
+  --dubLineTitleText: 600 48px/72px "Noto Sans KR", sans-serif;
+  --titleText: 600 48px/48px "Noto Sans KR", sans-serif;
+  --titleDesc: 400 18px/24px "Noto Sans KR", sans-serif;
+  --BtnText: 400 24px/48px "Noto Sans KR", sans-serif;
+  --iconsText: 400 24px/24px 'Material Icons';
+  --footerbodyText: 300 16px/24px "Noto Sans KR", sans-serif;
+  --footerLinkText: 700 16px/24px "Noto Sans KR", sans-serif;
+  --designFonts: 700 96px/96px "Noto Sans KR", sans-serif;
+  --GNB: 400 18px/24px "Noto Sans KR", sans-serif;
+  --LNB: 400 18px/24px "Noto Sans KR", sans-serif;
+  --numberFont: 400 60px/72px "Noto Sans KR", sans-serif;
+
+  /*그림자*/
+  --box--shadow-card:4px 4px 8px rgba(0,0,0,.25);
+  --btn-shadow-click:-4px -4px 8px rgba(0,0,0,.25);
+  --input-shadow-sm:2px 2px 8px rgba(0,0,0,.25);
+  --form-shadow-eroor:0 0 12px rgba(255,0,0,0.3);
+  --input-shadow:2px 2px 10px rgba(255,0,0,0.3), -2px -2px 10px rgba(255,0,0,0.3);
+}
 
