@@ -25,7 +25,11 @@
   
   --dubLineTitleText: 600 48px/72px "Noto Sans KR", sans-serif;
   --titleText: 600 48px/48px "Noto Sans KR", sans-serif;
+  --storeText: 400 48px/48px "Noto Sans KR", sans-serif;
+  --storeTextP: 400 24px/24px "Noto Sans KR", sans-serif;
+  --cinemaText: 700 38px/48px "Noto Sans KR", sans-serif;
   --titleDesc: 400 18px/24px "Noto Sans KR", sans-serif;
+  --cinemaP: 600 18px/24px "Noto Sans KR", sans-serif;
   --BtnText: 400 24px/48px "Noto Sans KR", sans-serif;
   --iconsText: 400 24px/24px 'Material Icons';
   --footerbodyText: 300 16px/24px "Noto Sans KR", sans-serif;
