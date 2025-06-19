@@ -37,6 +37,13 @@
     .page5{
       background: var(--bg-color);
     }
+    .page5 > div{
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      height:100vh;
+      background:var(--sectionBg-Grad-lin);
+    }
     .cinema{
       display:flex;
       flex-direction: column;
