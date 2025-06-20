@@ -1,33 +1,41 @@
-    .section{
-      width : 100%;
+    .section {
+      width: 100%;
     }
-    .page1{
+
+    .page1 {
       background-color: cornflowerblue;
     }
-    .page2{
+
+    .page2 {
       background-color: coral;
     }
-    .page3{
+
+    .page3 {
       background-color: cornflowerblue;
 
     }
-    .page4{
-      background-color: coral;
 
-    }
-    .page5{
-      background-color: cornflowerblue;
-
-    }
-    .page6{
+    .page4 {
       background-color: coral;
 
     }
-    .page7{
+
+    .page5 {
       background-color: cornflowerblue;
 
     }
-    .page8{
+
+    .page6 {
+      background-color: var(--bg-color);
+
+    }
+
+    .page7 {
+      background-color: cornflowerblue;
+
+    }
+
+    .page8 {
       background-color: coral;
 
     }
@@ -66,3 +74,116 @@
 
 
  
+
+    /*cinema*/
+    .page5 {
+      background: var(--bg-color);
+      background: url(../images/suite.png) no-repeat;
+    }
+
+    .page5>div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: var(--sectionBg-Grad-lin);
+    }
+
+    .cinema {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .cinema div div.active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .cinema button {
+      border: none;
+      background: none;
+      color: var(--fontColorWhite);
+      font: var(--designFonts);
+      letter-spacing: -5px;
+    }
+
+    .cinema div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .cinema button.active {
+      border-bottom: 8px solid var(--primaryColor);
+      color: var(--primaryColor);
+      line-height: 76px;
+
+    }
+
+    .cinema div div {
+      display: none;
+    }
+
+    .cinema p {
+      color: var(--primaryColor);
+      font: var(--cinemaP);
+      text-align: center;
+      background: no-repeat
+    }
+
+    .cinema a {
+      display: flex;
+      border: 1px solid var(--primaryColor);
+      border-radius: 36px;
+      width: 253px;
+      height: 72px;
+      justify-content: center;
+      align-items: center;
+      font: var(--BtnText);
+      color: var(--primaryColor);
+    }
+
+    h5 {
+      display: flex;
+      justify-content: center;
+      color: var(--fontColorWhite);
+      font: var(--cinemaText);
+    }
+
+    /*store*/
+    .box1 {
+      display: flex;
+      height: 100vh;
+    }
+
+    .box2 {
+      display: flex;
+      flex-direction: column;
+      width: 709px;
+      border: 1px solid var(--fontColordisable);
+      box-sizing: border-box;
+      background: var(--sectionBg-Grad-lin);
+      gap: 12px;
+      text-align: center;
+      color: var(--fontColorWhite);
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .box2 h6 {
+      font: var(--storeText);
+    }
+
+    .box2 p {
+      font: var(--storeTextP);
+    }
+
+    .smimage img {
+      display: none;
+    }
