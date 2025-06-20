@@ -15,7 +15,7 @@ header {
     z-index: 999;
 }
 
-header .logo {}
+
 
 header .logo a {
     font-size: 0;
@@ -25,7 +25,7 @@ header .logo a img {
     height: 40px;
 }
 
-header .menu {}
+
 
 header .menu .gnb {
     display: flex;
@@ -53,28 +53,18 @@ header .lnb {
     display: none;
 }
 
-header .lnb li {}
-
-header .lnb li a {}
-
-
-header .user_menu {}
 
 header .user_menu>ul {
     display: flex;
 }
 
-header .user_menu>ul>li {}
 
-header .user_menu>ul>li>a {}
 
 header .lang_box {
     display: none;
 }
 
-header .lang_box li {}
 
-header .lang_box li a {}
 
 
 
