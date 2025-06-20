@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 const buttons = $('.container.cinema button')
 const divs = $('.container.cinema button + div')
 const page5 = $('.section.page5')
+
 buttons.click(function(){
   let index = buttons.index(this)
   console.log(index);
@@ -30,7 +31,7 @@ buttons.click(function(){
       backgroundRepeat:"no-repeat",
   })
   }
-  if(qbuttons.e(1).hasClass('active')){
+  if(buttons.eq(1).hasClass('active')){
     page5.css({
       backgroundImage:"url('../images/suite.png')",
       backgroundRepeat:"no-repeat",
@@ -55,16 +56,12 @@ const page = $('.section.page6')
 $('.box2').eq(0).mouseenter(function(){
   page.css({backgroundRepeat:"no-repeat",backgroundImage:"url('../images/store.png')"});
 }).mouseleave(function(){
-  page.css({backgroundImage:"url('')"});
+  page.css({backgroundImage:"url('../images/store.png')"});
 })
 $('.box2').eq(1).mouseenter(function(){
   page.css({backgroundRepeat:"no-repeat",backgroundImage:"url('../images/event.png')"});
-}).mouseleave(function(){
-  page.css({backgroundImage:"url('')"});
 })
 $('.box2').eq(2).mouseenter(function(){
   page.css({backgroundRepeat:"no-repeat",backgroundImage:"url('../images/special.png')"});
-}).mouseleave(function(){
-  page.css({backgroundImage:"url('')"});
 })
 });
