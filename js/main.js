@@ -30,7 +30,7 @@ buttons.click(function(){
       backgroundRepeat:"no-repeat",
   })
   }
-  if(buttons.eq(1).hasClass('active')){
+  if(qbuttons.e(1).hasClass('active')){
     page5.css({
       backgroundImage:"url('../images/suite.png')",
       backgroundRepeat:"no-repeat",
