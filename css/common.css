@@ -1,4 +1,5 @@
 @import url('./reset.css');
+/* 변수 등록 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet');
 /* 변수 등록 */
@@ -45,4 +46,3 @@
   --form-shadow-eroor:0 0 12px rgba(255,0,0,0.3);
   --input-shadow:2px 2px 10px rgba(255,0,0,0.3), -2px -2px 10px rgba(255,0,0,0.3);
 }
-
