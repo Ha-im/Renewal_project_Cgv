@@ -36,11 +36,33 @@
 
 
 
-   /* 09 search pym */
-   .page8 .container{
-    display: flex;
-    color: ;
-     }
-   .container{
-    font-size: 24px;
-   }
+/* 09 search pym */
+.app_container{
+  display: flex;
+  color: #fff;
+  font-size: 24px;
+  align-items: center;
+  justify-content: center;
+  
+}
+.app_content{
+  padding-left: 30px;
+}
+.app_content h2{
+  font-size: 48px;
+  padding: 24px 0;
+}
+.appdown_btn{
+  padding-top: 24px;
+}
+.appdown_btn a{
+  text-decoration: none;
+  border: 1px solid #fff;
+  color: #fff;
+
+}
+
+
+
+
+ 
