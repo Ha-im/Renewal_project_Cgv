@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 const buttons = $('.container.cinema button')
 const divs = $('.container.cinema button + div')
 const page5 = $('.section.page5')
-
+const a = $('.cinema a');
 buttons.click(function(){
   let index = buttons.index(this)
   console.log(index);
@@ -50,18 +50,17 @@ buttons.click(function(){
   })
   }
 })
-
 const page = $('.section.page6')
 
  $('.box2').eq(0).mouseenter(function(){
-   page.css({backgroundRepeat:"no-repeat",backgroundImage:"url('../images/store.png')"});
+   page.css({backgroundRepeat:"no-repeat",backgroundImage:"url('../images/store.png')",transition:".5s"});
  }).mouseleave(function(){
    page.css({backgroundImage:"url('../images/store.png')"})
  })
 $('.box2').eq(1).mouseenter(function(){
-  page.css({backgroundRepeat:"no-repeat",backgroundImage:"url('../images/event.png')"});
+  page.css({backgroundRepeat:"no-repeat",backgroundImage:"url('../images/event.png')",transition:".5s"});
 })
 $('.box2').eq(2).mouseenter(function(){
-  page.css({backgroundRepeat:"no-repeat",backgroundImage:"url('../images/special.png')"});
+  page.css({backgroundRepeat:"no-repeat",backgroundImage:"url('../images/special.png')",transition:".5s"});
 })
 });
