@@ -29,7 +29,7 @@ buttons.click(function(){
     page5.css({
       backgroundImage:"url('../images/livingroom.png')",
       backgroundRepeat:"no-repeat",
-  }).fadeIn()
+  })
   }
   if(buttons.eq(1).hasClass('active')){
     page5.css({
