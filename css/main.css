@@ -27,53 +27,16 @@
 
     .page6 {
       background-color: var(--bg-color);
-
+      
     }
 
     .page7 {
-      background-color: cornflowerblue;
-
+      background:  url(../images/location_bg.png);
     }
-
     .page8 {
-      background-color: coral;
+      background-color: var(--bg-color);;
 
     }
-
-   /* 08 location pym */
-
-
-
-/* 09 search pym */
-.app_container{
-  display: flex;
-  color: #fff;
-  font-size: 24px;
-  align-items: center;
-  justify-content: center;
-  
-}
-.app_content{
-  padding-left: 30px;
-}
-.app_content h2{
-  font-size: 48px;
-  padding: 24px 0;
-}
-.appdown_btn{
-  padding-top: 24px;
-}
-.appdown_btn a{
-  text-decoration: none;
-  border: 1px solid #fff;
-  color: #fff;
-
-}
-
-
-
-
- 
 
     /*cinema*/
     .page5 {
@@ -168,7 +131,7 @@
       width: 709px;
       border: 1px solid var(--fontColordisable);
       box-sizing: border-box;
-      background: var(--sectionBg-Grad-lin);
+      
       gap: 12px;
       text-align: center;
       color: var(--fontColorWhite);
@@ -187,3 +150,69 @@
     .smimage img {
       display: none;
     }
+
+
+
+/* 0 location pym */
+.page7>div{
+  background: var(--sectionBg-Grad-lin);
+}
+.location{
+  height : 100vh;
+  display: flex;
+  color: var(--fontColorWhite);
+  align-items: center;
+  justify-content: center;
+}
+.location>div{
+  text-align: center;
+
+}
+.location>div h2{
+  font: var(--titleText);
+}
+.location>div p{
+  font: var(--storeTextP);
+  padding: 24px 0;
+}
+.location>div input{
+  height: 72px;
+  width: 100%;
+  border-radius: 8px;
+  border: 0px solid;
+  padding: 0 24px;
+}
+
+
+/* 08 search pym */
+.app{
+  display: flex;
+  color: var(--fontColorWhite);
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.app>div p{
+  font: var(--storeTextP);
+}
+.app>div h2{
+  font: var(--titleText);
+  padding: 24px 0;
+}
+.appdown{
+  padding-top: 24px;
+}
+
+.appdown a{
+  /* font: var(--storeTextP); */
+  border: 1px solid var(--fontColorWhite);
+  border-radius: 36px;
+  color: var(--fontColorWhite);
+  padding: 5px 80px 6px;
+  font-size: 24px;
+
+}
+.appdown a img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
