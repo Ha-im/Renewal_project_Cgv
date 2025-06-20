@@ -29,7 +29,7 @@ buttons.click(function(){
     page5.css({
       backgroundImage:"url('../images/livingroom.png')",
       backgroundRepeat:"no-repeat",
-  })
+  }).fadeIn()
   }
   if(buttons.eq(1).hasClass('active')){
     page5.css({
@@ -53,11 +53,11 @@ buttons.click(function(){
 
 const page = $('.section.page6')
 
-$('.box2').eq(0).mouseenter(function(){
-  page.css({backgroundRepeat:"no-repeat",backgroundImage:"url('../images/store.png')"});
-}).mouseleave(function(){
-  page.css({backgroundImage:"url('../images/store.png')"});
-})
+ $('.box2').eq(0).mouseenter(function(){
+   page.css({backgroundRepeat:"no-repeat",backgroundImage:"url('../images/store.png')"});
+ }).mouseleave(function(){
+   page.css({backgroundImage:"url('../images/store.png')"})
+ })
 $('.box2').eq(1).mouseenter(function(){
   page.css({backgroundRepeat:"no-repeat",backgroundImage:"url('../images/event.png')"});
 })
