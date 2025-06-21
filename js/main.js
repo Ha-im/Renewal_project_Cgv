@@ -29,6 +29,8 @@ buttons.click(function(){
     page5.css({
       backgroundImage:"url('../images/livingroom.png')",
       backgroundRepeat:"no-repeat",
+      backgroundSize: "cover",
+      backgroundPosition: "center"
   })
   }
   if(buttons.eq(1).hasClass('active')){
