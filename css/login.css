@@ -98,6 +98,24 @@ input[type="submit"]{
 #tab2 div input[type="submit"]{
     margin-bottom:24px;
 }
+.btn {
+    width:500px;
+    background: none;
+    border:none;
+    color:#ed3124;
+    font-size:15px;
+    text-align:start;
+    padding:0;
+}
+.btn:hover{
+    background:#ed3124;
+}
+#tab2 div p{
+    margin-bottom:12px;
+}
+#tab2 div p:last-child{
+    margin-bottom:24px;
+}
 p{
     font-size:13px;
 }

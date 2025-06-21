@@ -1,47 +1,219 @@
-    .section{
-      width : 100%;
+    .section {
+      width: 100%;
     }
-    .page1{
+
+    .page1 {
       background-color: cornflowerblue;
     }
-    .page2{
+
+    .page2 {
       background-color: coral;
     }
-    .page3{
+
+    .page3 {
       background-color: cornflowerblue;
 
     }
-    .page4{
-      background-color: coral;
 
-    }
-    .page5{
-      background-color: cornflowerblue;
-
-    }
-    .page6{
-      background-color: coral;
-
-    }
-    .page7{
-      background-color: cornflowerblue;
-
-    }
-    .page8{
+    .page4 {
       background-color: coral;
       
 
     }
 
-   
+    .page5 {
+      background-color: cornflowerblue;
+
+    }
+
+    .page6 {
+      background-color: var(--bg-color);
+      
+    }
+
+    .page7 {
+      background:  url(../images/location_bg.png);
+    }
+    .page8 {
+      background-color: var(--bg-color);;
+
+    }
+
+    /*cinema*/
+    .page5 {
+      background: var(--bg-color);
+      background: url(../images/suite.png) no-repeat;
+    }
+
+    .page5>div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: var(--sectionBg-Grad-lin);
+    }
+
+    .cinema {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .cinema div div.active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .cinema button {
+      border: none;
+      background: none;
+      color: var(--fontColorWhite);
+      font: var(--designFonts);
+      letter-spacing: -5px;
+    }
+
+    .cinema div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .cinema button.active {
+      border-bottom: 8px solid var(--primaryColor);
+      color: var(--primaryColor);
+      line-height: 76px;
+
+    }
+
+    .cinema div div {
+      display: none;
+    }
+
+    .cinema p {
+      color: var(--primaryColor);
+      font: var(--cinemaP);
+      text-align: center;
+      background: no-repeat
+    }
+
+    .cinema a {
+      display: flex;
+      border: 1px solid var(--primaryColor);
+      border-radius: 36px;
+      width: 253px;
+      height: 72px;
+      justify-content: center;
+      align-items: center;
+      font: var(--BtnText);
+      color: var(--primaryColor);
+    }
+
+    h5 {
+      display: flex;
+      justify-content: center;
+      color: var(--fontColorWhite);
+      font: var(--cinemaText);
+    }
+
+    /*store*/
+    .box1 {
+      display: flex;
+      height: 100vh;
+    }
+
+    .box2 {
+      display: flex;
+      flex-direction: column;
+      width: 709px;
+      border: 1px solid var(--fontColordisable);
+      box-sizing: border-box;
+      
+      gap: 12px;
+      text-align: center;
+      color: var(--fontColorWhite);
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .box2 h6 {
+      font: var(--storeText);
+    }
+
+    .box2 p {
+      font: var(--storeTextP);
+    }
+
+    .smimage img {
+      display: none;
+    }
 
 
 
-
-
-.page8 .container {
+/* 0 location pym */
+.page7>div{
+  background: var(--sectionBg-Grad-lin);
+}
+.location{
+  height : 100vh;
   display: flex;
+  color: var(--fontColorWhite);
   align-items: center;
-  justify-content: ;
-  
+  justify-content: center;
+}
+.location>div{
+  text-align: center;
+
+}
+.location>div h2{
+  font: var(--titleText);
+}
+.location>div p{
+  font: var(--storeTextP);
+  padding: 24px 0;
+}
+.location>div input{
+  height: 72px;
+  width: 100%;
+  border-radius: 8px;
+  border: 0px solid;
+  padding: 0 24px;
+}
+
+
+/* 08 search pym */
+.app{
+  display: flex;
+  color: var(--fontColorWhite);
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.app>div p{
+  font: var(--storeTextP);
+}
+.app>div h2{
+  font: var(--titleText);
+  padding: 24px 0;
+}
+.appdown{
+  padding-top: 24px;
+}
+
+.appdown a{
+  /* font: var(--storeTextP); */
+  border: 1px solid var(--fontColorWhite);
+  border-radius: 36px;
+  color: var(--fontColorWhite);
+  padding: 5px 80px 6px;
+  font-size: 24px;
+
+}
+.appdown a img {
+  vertical-align: middle;
+  margin-right: 10px;
 }
