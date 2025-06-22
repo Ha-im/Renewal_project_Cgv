@@ -1,91 +1,85 @@
 /* header */
-
 header {
-    width: 100%;
-    height: 72px;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0px 60px;
+    width : 100%;
+    height : 72px; /* row * 3 */
+    background-color: rgba(0, 0, 0, 0.8); /*추후 선형 그라데이션으로 변경*/
 
-    z-index: 999;
+    display: flex; /* 내부 요소들 가로 정렬*/
+    justify-content: space-between; /* 양 끝 정렬*/
+    align-items: center; /* 교차축 가운데 정렬*/
+    padding : 0 60px; /*패딩 위아래 0 좌우 60px*/
+
+    position: fixed; /*화면에서 고정*/
+    top : 0;
+    left : 0;
+    z-index: 999; /*항상 최상단*/
+}
+
+/* logo */
+.logo a{
+    font-size : 0; /*텍스트 안보이게*/
+}
+.logo a img{
+    height : 40px;
+    vertical-align: top;
 }
 
 
-
-header .logo a {
-    font-size: 0;
+/* gnb, lnb */
+.gnb{
+    display: flex; /* 대메뉴 가로정렬*/
+    gap : 64px; /*간격*/
 }
-
-header .logo a img {
-    height: 40px;
+.gnb li.on>a{
+    color : #f00; /* 임시 값*/
 }
-
-
-
-header .menu .gnb {
-    display: flex;
-    padding: 0 10px;
-    gap: 64px;
-}
-
-header .menu .gnb>li {}
-
-header .menu .gnb li.on>a{
-    color : red;
-    font-weight: bold;
-    border-bottom: 2px solid red;
-}
-
-header .menu .gnb>li>a {
+.gnb>li>a{
     display: block;
-    font-size: 18px;
-    line-height: 24px;
-    color: #fff;
-    font-weight: 400;
+    font-size : 18px;
+    font-weight : 400;
+    line-height: 72px;
+    color : #fff;
+}
+.lnb {
+    display: none; /* jquery 제어*/
+    position: absolute;
+    top : 72px; /* header 높이값 */
+    left : 0;
+    width : 100%;
+    height : 48px; /* rows * 2*/
+    color : #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.lnb li{
+    display: inline-block;
+}
+.lnb li a{
+    display: block;
+    line-height: 48px;
 }
 
-header .lnb {
-    display: none;
-}
-
-
-header .user_menu>ul {
+/* user-menu */
+.user_menu>ul {
     display: flex;
+    gap : 20px;
 }
 
-
-
-header .lang_box {
+.lang_box {
     display: none;
-}
-
-
-
-/* bannerBg */
-.banner {
-    width: 100%;
-    height: 100vh;
-}
-.banner .cover {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 11;
+    top : 80px;
+    right : 100px;
+    width : 80px;
+    height : 120px;
+    border-radius: 10px;
+    color : #fff;
+    background-color: rgb(82, 136, 183);
+    text-align: center;
+    padding-top : 40px;
 }
-.banner video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
+.lang_box li:first-child{
+    margin-bottom: 4px;
 }
+
+
