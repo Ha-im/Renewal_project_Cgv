@@ -439,7 +439,7 @@ li.item .text_box {
   border-radius: 48px;
   position: absolute;
   top: 50%;
-  left: 10%;
+  left: 15%;
   transform: translateY(-50%);
   z-index: 30;
   padding: 72px 100px;
@@ -448,7 +448,7 @@ li.item .text_box {
 
 .recommend .content_box .text_box {
   margin-bottom: 48px;
-  width : 70%;
+  width : 60%;
 }
 
 .recommend .content_box .text_box .title {
@@ -499,7 +499,7 @@ li.item .text_box {
 
 .recommend .content_box .thumb {
   position: absolute;
-  width: 300px;
+  width: 400px;
   top: -30px;
   right: 100px;
   border-radius : 20px;
@@ -517,7 +517,6 @@ li.item .text_box {
   left: 0;
 
   z-index: 20;
-
 }
 
 .recommend .bg .cover {
