@@ -260,6 +260,51 @@
       width : 306px;
       height : 400px;
     }
+    .lang{
+      position:absolute;
+      font:var(--designFonts);
+      font-style:italic;
+      color:rgba(255,255,255,0.6);
+      top:70%;
+      left:5%;
+      z-index:2;
+    }
+    .lang1{
+      position:absolute;
+      font:var(--designFonts);
+      font-style:italic;
+      color:rgba(255,255,255,0.6);
+      top:70%;
+      left:5%;
+      z-index:2;
+    }
+    .lang2{
+      position:absolute;
+      font:var(--designFonts);
+      font-style:italic;
+      color:rgba(255,255,255,0.6);
+      top:70%;
+      left:5%;
+      z-index:2;
+    }
+    .lang3{
+      position:absolute;
+      font:var(--designFonts);
+      font-style:italic;
+      color:rgba(255,255,255,0.6);
+      top:70%;
+      left:5%;
+      z-index:2;  
+    }
+    .lang4{
+      position:absolute;
+      font:var(--designFonts);
+      font-style:italic;
+      color:rgba(255,255,255,0.6);
+      top:70%;
+      left:5%;
+      z-index:2;  
+    }
 
     /* query */
 @media (max-width: 1600px) {
