@@ -58,7 +58,7 @@
 }
 
 .main_banner .text_box .title {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: bold;
   letter-spacing: -1.1%;
   line-height: 48px;
@@ -67,8 +67,8 @@
 }
 
 .main_banner .text_box .des {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 200;
   letter-spacing: -1.1%;
   line-height: 24px;
   color: #fff;
@@ -84,16 +84,22 @@
   padding: 24px 80px;
   border-radius: 36px;
   color: #fff;
-
-  font-size: 24px;
+  font-weight: 200;
+  font-size: 16px;
   line-height: 24px;
   letter-spacing: -1.1%;
 }
 
 .main_banner .content_box .info_btn {
-  background-color: var(--bg-op-50);
+  background-color: transparent;
+  backdrop-filter: blur(20px);
   margin-right: 24px;
   border: 1px solid #fff;
+}
+
+.main_banner .content_box .info_btn:hover {
+  background-color: var(--bg-op-50);
+
 }
 
 .main_banner .content_box .cta_btn {
@@ -443,12 +449,12 @@ li.item .text_box {
   transform: translateY(-50%);
   z-index: 30;
   padding: 72px 100px;
-  border : 1px solid #f0f0f0;
+  border: 1px solid #f0f0f0;
 }
 
 .recommend .content_box .text_box {
   margin-bottom: 48px;
-  width : 60%;
+  width: 60%;
 }
 
 .recommend .content_box .text_box .title {
@@ -487,14 +493,16 @@ li.item .text_box {
   line-height: 24px;
   letter-spacing: -1.1%;
 }
-.recommend .content_box .btn_box a{
-  color : #fff;
+
+.recommend .content_box .btn_box a {
+  color: #fff;
 }
+
 .recommend .content_box .btn_box .cta_btn {
   background-color: transparent;
   border: 1px solid var(--primaryColor);
   color: var(--primaryColor);
-  margin-right : 24px;
+  margin-right: 24px;
 }
 
 .recommend .content_box .thumb {
@@ -502,7 +510,7 @@ li.item .text_box {
   width: 400px;
   top: -30px;
   right: 100px;
-  border-radius : 20px;
+  border-radius: 20px;
   box-shadow: var(----box--shadow-card);
 }
 
