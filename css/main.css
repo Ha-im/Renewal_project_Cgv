@@ -270,15 +270,6 @@
       left:5%;
       z-index:2;
     }
-    .lang1, .lang2, .lang3, .lang4, .lang5, .lang6, .lang7, .lang8{
-      position:absolute;
-      font:var(--designFonts);
-      font-style:italic;
-      color:rgba(255,255,255,0.6);
-      top:70%;
-      left:5%;
-      z-index:2;
-    }
 
     /* query */
 @media (max-width: 1600px) {
