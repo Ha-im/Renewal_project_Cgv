@@ -499,48 +499,6 @@ li.item .text_box {
   z-index: 2;
 }
 
-.lang1 {
-  position: absolute;
-  font: var(--designFonts);
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.6);
-  top: 70%;
-  left: 5%;
-  z-index: 2;
-}
-
-.lang2 {
-  position: absolute;
-  font: var(--designFonts);
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.6);
-  top: 70%;
-  left: 5%;
-  z-index: 2;
-}
-
-.lang3 {
-  position: absolute;
-  font: var(--designFonts);
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.6);
-  top: 70%;
-  left: 5%;
-  z-index: 2;
-}
-
-.lang4 {
-  position: absolute;
-  font: var(--designFonts);
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.6);
-  top: 70%;
-  left: 5%;
-  z-index: 2;
-}
-
-
-
 
 /* recommend */
 .recommend {}
