@@ -67,7 +67,7 @@ input{
     width:13px;
     height:13px;
 }
-input[type="button"],input[type="submit"]{
+input[type="submit"]{
     line-height: 24px;
     vertical-align: center;
     background: #ED3124;
@@ -136,10 +136,4 @@ p{
     margin-bottom:24px;
     display:flex;
     gap:10px;
-}
-#submitid{
-    margin-bottom:24px;
-}
-input:focus{
-    border-color: #000;
 }

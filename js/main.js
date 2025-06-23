@@ -66,11 +66,3 @@ $('.box2').eq(2).mouseenter(function(){
   page.css({backgroundRepeat:"no-repeat",backgroundImage:"url('../images/special.png')",transition:".5s"});
 })
 });
-
- const itemImg = $('.item') 
- const item = $('.img_box') 
-
- itemImg.each(function(idx){
-  console.log(idx);
-  $(this).find('.lang').text(`${idx+1}`)
- }) 
