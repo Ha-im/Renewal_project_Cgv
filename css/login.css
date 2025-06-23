@@ -133,7 +133,7 @@ p{
 }
 .radio{
     margin-top:24px;
-    margin-bottom:24px;
+    margin-bottom:12px;
     display:flex;
     gap:10px;
 }
