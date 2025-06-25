@@ -761,13 +761,21 @@ body {
   gap: 5px;
 }
 
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
 .star {
   color: #ffd700;
+  border: none;
   font-size: 24px;
-  transition: 0.3s;
 }
 
-.star.empty {
+.material-symbols-outlined.empty {
   color: var(--fontColorDark);
 }
 
@@ -900,7 +908,7 @@ body {
 }
 
 .nav-btn:hover {
-  background: var(--fontColorWhite);
+  background: rgba(255, 255, 255, 0.15);
   border-color: var(--fontColorWhite);
 }
 
