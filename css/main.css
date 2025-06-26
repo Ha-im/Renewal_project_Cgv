@@ -27,7 +27,6 @@
   width: 1320px;
   height: 100vh;
   margin: 0 auto;
-
   position: relative;
 }
 
@@ -37,31 +36,75 @@
   left: 0;
   bottom: 18%;
   /* 작은값 / 큰값 = 0.18... * 100 = 18%  */
+  z-index: 30;
 }
+
 .content_box .text_box {
   margin-bottom: 30px;
 }
+
 .content_box .text_box .title {
+  display: inline-block;
   font: var(--title);
   color: var(--white);
   margin-bottom: 10px;
+  position: relative;
 }
+
+h2.rating::after {
+  width: var(--icon_s_w);
+  height: var(--icon_s_h);
+  display: block;
+  position: absolute;
+  left: calc(100% + 5px);
+  bottom: 0;
+  color: var(--white);
+  font: var(--rating_number);
+  border-radius: var(--icon_radius);
+  text-align: center;
+  padding-top: 5px;
+}
+
+h2.rating19::after {
+  content: '19';
+  background-color: var(--rating19);
+}
+
+h2.rating15::after {
+  content: '15';
+  background-color: var(--rating15);
+}
+
+h2.rating12::after {
+  content: '12';
+  background-color: var(--rating12);
+}
+
+h2.ratingall::after {
+  content: 'All';
+  background-color: var(--ratingAll);
+}
+
 .content_box .text_box .subtitle {
   font: var(--sub_title);
   color: var(--white);
   margin-bottom: 24px;
 }
+
 .content_box .text_box .content_body {
   font: var(--content_body);
   color: var(--white);
 }
+
 .content_box .btn_box {
   display: flex;
-  gap : 16px;
+  gap: 16px;
 }
-.content_box .btn_box a{
+
+.content_box .btn_box a {
   display: block;
 }
+
 .content_box .btn_box .empty_btn {
   background-color: transparent;
   padding: var(--web_btn_padding);
@@ -70,10 +113,10 @@
   border: var(--empty_btn_border);
   border-radius: var(--max_radius);
   backdrop-filter: blur(20px);
-
   /* 이거 왜..? */
-  height : 51px;
+  height: 51px;
 }
+
 .content_box .btn_box .cta_btn {
   background-color: var(--primary_color);
   padding: var(--web_btn_padding);
@@ -83,49 +126,40 @@
   border-radius: var(--max_radius);
   backdrop-filter: blur(20px);
 }
+
 /* //content_box */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* bannerBg */
-.main_banner .banner {
+.video_banner {
   width: 100%;
   height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.main_banner .banner .cover {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+.video_banner::before {
+  content: '';
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 20;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.main_banner .banner video {
+.video_banner video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
+  position: relative;
 }
+
+/* main_banner */
+
+
+
 
 
 /*cinema*/
