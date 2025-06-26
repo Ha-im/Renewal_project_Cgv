@@ -23,76 +23,83 @@
 }
 
 /* main_banner */
-.con {
-  /*추후 bootstrap gird로 변경*/
-  /* outline: 5px solid red; */
+.boot {
   width: 1320px;
-  /* height : 100vh; */
+  height: 100vh;
   margin: 0 auto;
+
+  position: relative;
+}
+
+/* content_box */
+.content_box {
   position: absolute;
-  left: 50%;
-  bottom: 240px;
-  /* %값으로 변경 */
-  transform: translateX(-50%);
-  z-index: 30;
+  left: 0;
+  bottom: 18%;
+  /* 작은값 / 큰값 = 0.18... * 100 = 18%  */
 }
-
-.main_banner .content_box {}
-
-.main_banner .content_box .text_box {
+.content_box .text_box {
+  margin-bottom: 30px;
+}
+.content_box .text_box .title {
+  font: var(--title);
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.content_box .text_box .subtitle {
+  font: var(--sub_title);
+  color: var(--white);
   margin-bottom: 24px;
 }
-
-.main_banner .text_box .title {
-  font-size: 40px;
-  font-weight: bold;
-  letter-spacing: -1.1%;
-  line-height: 48px;
-  margin-bottom: 48px;
-  color: #fff;
+.content_box .text_box .content_body {
+  font: var(--content_body);
+  color: var(--white);
 }
-
-.main_banner .text_box .des {
-  font-size: 16px;
-  font-weight: 200;
-  letter-spacing: -1.1%;
-  line-height: 24px;
-  color: #fff;
+.content_box .btn_box {
+  display: flex;
+  gap : 16px;
 }
-
-.main_banner .text_box .des {
-  margin-bottom: 24px;
+.content_box .btn_box a{
+  display: block;
 }
-
-.main_banner .content_box .btn_box {}
-
-.main_banner .content_box button {
-  padding: 24px 80px;
-  border-radius: 36px;
-  color: #fff;
-  font-weight: 200;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -1.1%;
-}
-
-.main_banner .content_box .info_btn {
+.content_box .btn_box .empty_btn {
   background-color: transparent;
+  padding: var(--web_btn_padding);
+  color: var(--white);
+  font: var(--btn_text);
+  border: var(--empty_btn_border);
+  border-radius: var(--max_radius);
   backdrop-filter: blur(20px);
-  margin-right: 24px;
-  border: 1px solid #fff;
+
+  /* 이거 왜..? */
+  height : 51px;
 }
-
-.main_banner .content_box .info_btn:hover {
-  background-color: var(--bg-op-50);
-
+.content_box .btn_box .cta_btn {
+  background-color: var(--primary_color);
+  padding: var(--web_btn_padding);
+  color: var(--white);
+  font: var(--btn_text);
+  border: var(--empty_btn_border);
+  border-radius: var(--max_radius);
+  backdrop-filter: blur(20px);
 }
+/* //content_box */
 
-.main_banner .content_box .cta_btn {
-  background-color: var(--primaryColor);
-  border: 1px solid var(--primaryColor);
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* bannerBg */
 .main_banner .banner {
@@ -630,9 +637,11 @@ li.item .text_box {
 .location_search {
   background: url(../images/location_bg.jpg) no-repeat center / cover;
 }
+
 .location_search>div {
   background: var(--sectionBg-Grad-lin);
 }
+
 .location {
   height: 100vh;
   width: 100%;
@@ -642,21 +651,26 @@ li.item .text_box {
   justify-content: center;
 
 }
+
 .location>div {
   text-align: center;
   width: 517px;
 }
+
 .location>div h2 {
   font: var(--titleText);
 }
+
 .location>div p {
   font: var(--storeTextP);
   padding: 8px 0 28px 0;
 }
-.search_container{
+
+.search_container {
   position: relative;
   width: 517px;
 }
+
 .location>div input {
   height: 48px;
   width: 100%;
@@ -665,6 +679,7 @@ li.item .text_box {
   padding: 12px 24px;
   line-height: 24px;
 }
+
 .search-btn {
   position: absolute;
   top: 12px;
@@ -677,33 +692,39 @@ li.item .text_box {
   border: none;
   background-color: transparent;
 }
-.search-btn:hover{
+
+.search-btn:hover {
   color: #333;
 }
-.tag_box{
-  padding : 15px 20px;
+
+.tag_box {
+  padding: 15px 20px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  gap : 4px;
+  gap: 4px;
 }
-.hint{
-  font-size : 14px;
-  line-height : 16px;
+
+.hint {
+  font-size: 14px;
+  line-height: 16px;
   font-weight: 400;
-  color : #fff;
-  padding : 10px 20px;
+  color: #fff;
+  padding: 10px 20px;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 999px;
 }
-.hint:hover{
-  background-color:var(--primaryColor);
+
+.hint:hover {
+  background-color: var(--primaryColor);
   transition: .5s;
 }
+
 /* 08 appdownload pym */
 .appdownload {
   background-color: var(--bg-color);
 }
+
 .app {
   display: flex;
   color: var(--fontColorWhite);
@@ -711,18 +732,22 @@ li.item .text_box {
   justify-content: center;
   gap: 30px;
 }
+
 .app>div p {
   font: var(--storeTextP);
 }
+
 .app>div h2 {
   font: var(--titleText);
   padding: 24px 0;
 }
+
 .appdown {
   padding-top: 24px;
   display: flex;
   gap: 24px;
 }
+
 .appdown a {
   /* font: var(--storeTextP); */
   border: 1px solid var(--fontColorWhite);
@@ -732,20 +757,24 @@ li.item .text_box {
   font-size: 24px;
   display: flex;
 }
+
 .appdown a img {
   vertical-align: middle;
   margin-right: 10px;
 }
+
 /*  02 rank  */
 .movie_rank {
   background-color: var(--bg-color);
 }
+
 body {
   height: 100vh;
   margin: 0;
   padding: 0;
   background-color: black;
 }
+
 .movie-detail {
   /* flex: 1; */
   padding-left: 140px;
@@ -756,6 +785,7 @@ body {
   z-index: 3;
   position: relative;
 }
+
 .ranking-number {
   font-size: 150px;
   font-weight: 600;
@@ -763,60 +793,73 @@ body {
   line-height: 120px;
   color: var(--fontColorWhite);
 }
+
 .movie-title {
   font: var(--titleText);
 }
+
 .star-rating {
   display: flex;
   gap: 5px;
 }
+
 .material-symbols-outlined {
   font-variation-settings:
-  'FILL' 1,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
 }
+
 .star {
   color: #ffd700;
   border: none;
   font-size: 24px;
 }
+
 .material-symbols-outlined.empty {
   color: var(--fontColorDark);
 }
+
 .movie-description {
   font-size: var(--storeTextP);
   line-height: 1.6;
   margin-bottom: 20px;
 }
+
 .movie-buttons {
   display: flex;
   gap: 20px;
   margin-bottom: 30px;
 }
+
 .btn {
   font-size: 24px;
   line-height: 24px;
   padding: 24px 80px;
   border-radius: 37px;
 }
+
 .btn-details {
   background: none;
   color: var(--fontColorWhite);
   border: 1px solid var(--fontColorWhite);
 }
+
 .btn-details:hover {
   background: var(--bg-op-50);
   border: 1px solid var(--fontColorWhite);
 }
+
 .btn-buy {
   background: var(--primaryColor);
   color: var(--fontColorWhite);
 }
+
 .btn-buy:hover {
   background: #b8070f;
 }
+
 /* 우측 포스터 슬라이더 영역 */
 .poster-slider {
   position: absolute;
@@ -829,6 +872,7 @@ body {
   justify-content: center;
   z-index: 2;
 }
+
 .poster-container {
   position: relative;
   width: 100%;
@@ -838,12 +882,14 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .poster-items {
   display: flex;
   gap: 20px;
   transition: transform 0.8s;
   align-items: center;
 }
+
 .item {
   position: relative;
   width: 306px;
@@ -854,6 +900,7 @@ body {
   transition: all 0.5s ease;
   flex-shrink: 0;
 }
+
 .poster-bg {
   width: 306px;
   height: 418px;
@@ -861,6 +908,7 @@ body {
   background-position: center;
   position: relative;
 }
+
 .poster-number {
   position: absolute;
   bottom: 0px;
@@ -874,6 +922,7 @@ body {
   justify-content: center;
   font-size: 60px;
 }
+
 /* 네비게이션 버튼 */
 .nav-buttons {
   position: absolute;
@@ -883,6 +932,7 @@ body {
   gap: 15px;
   z-index: 4;
 }
+
 .nav-btn {
   width: 50px;
   height: 50px;
@@ -897,13 +947,29 @@ body {
   color: var(--fontColorWhite);
   font-size: var(--storeTextP);
 }
+
 .nav-btn:hover {
   background: rgba(255, 255, 255, 0.15);
   border-color: var(--fontColorWhite);
 }
+
 /* 영화포스터 이미지 */
-.poster-1 {background-image: url(../images/movierank_poster_howtotraindragon.jpg);}
-.poster-2 {background-image: url(../images/movierank_poster_f1.jpg);}
-.poster-3 {background-image: url(../images/movierank_poster_28yearslater.jpg);}
-.poster-4 {background-image: url(../images/movierank_poster_nausicaaofthevalleyofthewinds.jpg);}
-.poster-5 {background-image: url(../images/movierank_poster_theseedofthescaredfig.jpg);}
+.poster-1 {
+  background-image: url(../images/movierank_poster_howtotraindragon.jpg);
+}
+
+.poster-2 {
+  background-image: url(../images/movierank_poster_f1.jpg);
+}
+
+.poster-3 {
+  background-image: url(../images/movierank_poster_28yearslater.jpg);
+}
+
+.poster-4 {
+  background-image: url(../images/movierank_poster_nausicaaofthevalleyofthewinds.jpg);
+}
+
+.poster-5 {
+  background-image: url(../images/movierank_poster_theseedofthescaredfig.jpg);
+}
