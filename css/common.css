@@ -21,6 +21,7 @@
   --btnDisableColor:#F1A6A0;
   --sectionBg-Grad-lin:linear-gradient(rgba(14,14,14,0),rgba(0,0,0,0.6) 62%, rgba(0,0,0,0.97));
   --headerBg-Grad-lin:linear-gradient(rgba(14,14,14,0.66),rgba(0,0,0,0.86) 57%, rgba(0,0,0,0.97) 89%);
+  --bg-op-80:rgba(0,0,0,.8);
   --bg-op-50:rgba(0,0,0,.5);
   --bg-color:#000;
   /*폰트*/
@@ -31,9 +32,9 @@
   */
   
   --dubLineTitleText: 600 48px/72px "Noto Sans KR", sans-serif;
-  --titleText: 600 48px/48px "Noto Sans KR", sans-serif;
+  --titleText: 600 32px/32px "Noto Sans KR", sans-serif;
   --storeText: 400 48px/48px "Noto Sans KR", sans-serif;
-  --storeTextP: 400 24px/24px "Noto Sans KR", sans-serif;
+  --storeTextP: 400 16px/24px "Noto Sans KR", sans-serif;
   --cinemaText: 700 38px/48px "Noto Sans KR", sans-serif;
   --titleDesc: 400 18px/24px "Noto Sans KR", sans-serif;
   --cinemaP: 600 18px/24px "Noto Sans KR", sans-serif;
