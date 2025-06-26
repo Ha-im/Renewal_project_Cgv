@@ -124,7 +124,7 @@
     </div>
 
     <!-- 02 연미 - 영화순위 -->
-    <div class="section page2 ">
+    <div class="section movie_rank ">
       <div class="main-container">
         <!-- 배경 이미지 -->
         <div class="background-image bg-1" id="bg-0"></div>
@@ -476,21 +476,34 @@
     </div>
 
     <!-- 07 연미 - 위치찾기 -->
-    <div class="section page7">
+    <div class="section location_search">
       <div class="container location">
         <div>
           <h2>CGV 찾기</h2>
           <p>가장 가까운 CGV를 찾아보세요</p>
-          <input type="text" name="search" id="search" placeholder="위치를 검색하려면 지역을 입력하세요.">
-          <button class="search-btn">
-            <i class="bi bi-search"></i>
-          </button>
+          <form class="search_container">
+            <input type="text" name="search" id="search" placeholder="찾으시는 상영관의 지역을 입력하세요.">
+            <button class="search-btn">
+              <span class="material-symbols-outlined">search</span>
+            </button>
+            <div class="tag_box">
+              <a href="" class="hint"># 강남</a>
+              <a href="" class="hint"># 건대</a>
+              <a href="" class="hint"># 대학로</a>
+              <a href="" class="hint"># 명동</a>
+              <a href="" class="hint"># 성수</a>
+              <a href="" class="hint"># 신논현</a>
+              <a href="" class="hint"># 신림</a>
+              <a href="" class="hint"># 왕십리</a>
+              <a href="" class="hint"># 종로</a>
+            </div>
+          </form>
         </div>
       </div>
     </div>
 
     <!-- 08 연미 - 앱다운 -->
-    <div class="section page8">
+    <div class="section appdownload">
       <div class="container app">
         <div>
           <img src="../images/appdownload.png" alt="appdownload">
