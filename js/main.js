@@ -6,24 +6,24 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   $('.promotion .store').mouseenter(function(){
     $(this).find('.hashtag').addClass('active')
-    $('.page6').css({backgroundImage:"url('../images/store.png')"});
+    $('.eventzone').css({background:"url('../images/event_zone/event_zone_store.jpg') center center/ cover no-repeat"});
   }).mouseleave(function(){
     $(this).find('.hashtag').removeClass('active');
-    $('.page6').css({backgroundImage:"url('')"});
+    $('.eventzone').css({background:"url('../images/event_zone/event_zone_store.jpg') center center/ cover no-repeat"});
   })
   $('.promotion .event').mouseenter(function(){
     $(this).find('.hashtag').addClass('active')
-    $('.page6').css({backgroundImage:"url('../images/event.png')"});
+    $('.eventzone').css({background:"url('../images/event_zone/event_zone_event.jpg') center center/ cover no-repeat"});
   }).mouseleave(function(){
     $(this).find('.hashtag').removeClass('active');
-    $('.page6').css({backgroundImage:"url('../images/store.png')"});
+    $('.eventzone').css({background:"url('../images/event_zone/event_zone_store.jpg') center center/ cover no-repeat"});
   })
-  $('.promotion .special').mouseenter(function(){
+  $('.special').mouseenter(function(){
     $(this).find('.hashtag').addClass('active')
-    $('.page6').css({backgroundImage:"url('../images/special.png')"});
+    $('.eventzone').css({background:"url('../images/event_zone/event_zone_special.jpg') center center/ cover no-repeat"});
   }).mouseleave(function(){
     $(this).find('.hashtag').removeClass('active');
-    $('.page6').css({backgroundImage:"url('../images/store.png')"});
+    $('.eventzone').css({background:"url('../images/event_zone/event_zone_store.jpg') center center / cover no-repeat"});
   })
 });
 /*
