@@ -29,12 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-
-
-
-
 /* 02 rank pym */
 const movies = [
   {
@@ -65,7 +59,7 @@ const movies = [
 ];
 
        
-
+/*
  const itemImg = $('.item') 
  const item = $('.img_box') 
 
