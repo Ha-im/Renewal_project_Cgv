@@ -4,112 +4,61 @@ document.addEventListener('DOMContentLoaded', function () {
     navigation: true,
     scrollOverflow: true
   });
-  /*
-  // cinema slideToggle
-  const buttons = $('.container.cinema button')
-  buttons.click(function () {
-  $(this).next('div').slideToggle();
-  });
- */
-
-const buttons = $('.container.cinema button')
-const divs = $('.container.cinema button + div')
-const page5 = $('.section.page5')
-const a = $('.cinema a');
-buttons.click(function(){
-  let index = buttons.index(this)
-  console.log(index);
-  buttons.removeClass('active');
-  divs.removeClass('active');
-
-  $(this).eq(0).addClass('active');
-  divs.eq(index).addClass('active');
-
-  if(buttons.eq(0).hasClass('active')){
-    page5.css({
-      backgroundImage:"url('../images/livingroom.png')",
-      backgroundRepeat:"no-repeat",
-      backgroundSize: "cover",
-      backgroundPosition: "center"
+  $('.promotion .store').mouseenter(function(){
+    $(this).find('.hashtag').addClass('active')
+    $('.eventzone').css({background:"url('../images/event_zone/event_zone_store.jpg') center center/ cover no-repeat"});
+  }).mouseleave(function(){
+    $(this).find('.hashtag').removeClass('active');
+    $('.eventzone').css({background:"url('../images/event_zone/event_zone_store.jpg') center center/ cover no-repeat"});
   })
-  }
-  if(buttons.eq(1).hasClass('active')){
-    page5.css({
-      backgroundImage:"url('../images/suite.png')",
-      backgroundRepeat:"no-repeat",
+  $('.promotion .event').mouseenter(function(){
+    $(this).find('.hashtag').addClass('active')
+    $('.eventzone').css({background:"url('../images/event_zone/event_zone_event.jpg') center center/ cover no-repeat"});
+  }).mouseleave(function(){
+    $(this).find('.hashtag').removeClass('active');
+    $('.eventzone').css({background:"url('../images/event_zone/event_zone_store.jpg') center center/ cover no-repeat"});
   })
-  }
-    if(buttons.eq(2).hasClass('active')){
-    page5.css({
-      backgroundImage:"url('../images/4dx.png')",
-      backgroundRepeat:"no-repeat",
+  $('.special').mouseenter(function(){
+    $(this).find('.hashtag').addClass('active')
+    $('.eventzone').css({background:"url('../images/event_zone/event_zone_special.jpg') center center/ cover no-repeat"});
+  }).mouseleave(function(){
+    $(this).find('.hashtag').removeClass('active');
+    $('.eventzone').css({background:"url('../images/event_zone/event_zone_store.jpg') center center / cover no-repeat"});
   })
-  }
-    if(buttons.eq(3).hasClass('active')){
-    page5.css({
-      backgroundImage:"url('../images/chef.png')",
-      backgroundRepeat:"no-repeat",
-  })
-  }
-})
-const page = $('.section.page6')
-
- $('.box2').eq(0).mouseenter(function(){
-   page.css({backgroundRepeat:"no-repeat",backgroundImage:"url('../images/store.png')",transition:".5s"});
- }).mouseleave(function(){
-   page.css({backgroundImage:"url('../images/store.png')"})
- })
-$('.box2').eq(1).mouseenter(function(){
-  page.css({backgroundRepeat:"no-repeat",backgroundImage:"url('../images/event.png')",transition:".5s"});
-})
-$('.box2').eq(2).mouseenter(function(){
-  page.css({backgroundRepeat:"no-repeat",backgroundImage:"url('../images/special.png')",transition:".5s"});
-})
 });
-
-
-
-
-
-
 
 
 
 /* 02 rank pym */
 const movies = [
   {
-      title: "드래곤 길들이기",
-      description: "수백년간 지속되어온 바이킹과 드래곤의 전쟁<br><br>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과 다른 신념을 가진 ‘히컵’은<br>무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못한다.<br><br>그러던 어느 날,<br>히컵은 베일에 싸인 전설의 드래곤 나이트 퓨어리인 ‘투슬리스’와 만나게 되고,<br>드래곤을 죽이라는 바이킹의 신념을 깨고 ‘투슬리스’와 친구가 된다...",
-      rating: 5
+    title: "드래곤 길들이기",
+    subtitle:"&lt; 수백년간 지속되어온 바이킹과 드래곤의 전쟁 &gt;",
+    description: "드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과 다른 신념을 가진 ‘히컵’은<br>무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못한다. 그러던 어느 날,<br>히컵은 베일에 싸인 전설의 드래곤 나이트 퓨어리인 ‘투슬리스’와 만나게 되는데...",
+    rating: 5
   },
   {
-      title: "F1 더 무비",
-      description: "최고가 되지 못한 전설 VS 최고가 되고 싶은 루키<br><br>한때 주목받는 유망주였지만 끔찍한 사고로 F1에서 우승하지 못하고<br>한순간에 추락한 드라이버 '소니 헤이스'. 그의 오랜 동료인 '루벤 세르반테스'에게<br>레이싱 복귀를 제안받으며 최하위 팀인 APXGP에 합류한게 되는데...<br><br>빨간 불이 꺼지고 운명을 건 레이스가 시작된다!",
-      rating: 3
+    title: "F1 더 무비",
+    subtitle:"&lt; 최고가 되지 못한 전설 VS 최고가 되고 싶은 루키 &gt;",
+    description: "한때 주목받는 유망주였지만 끔찍한 사고로 F1에서 우승하지 못하고<br>한순간에 추락한 드라이버 '소니 헤이스'. 그의 오랜 동료인 '루벤 세르반테스'에게<br>레이싱 복귀를 제안받으며 최하위 팀인 APXGP에 합류한게 되는데...",
+    rating: 3
   },
   {
-      title: "28년후",
-      description: "28일 후 시작, 28주 후 전염, 28년 후 진화...<br><br>태어나 처음 마주한 바이러스에 감염된 세상,<br>충격을 넘어선 극강의 공포가 밀려온다!<br><br>이곳에서 태어나 한 번도 섬 밖을 나가 본 적 없는 소년 ‘스파이크’는<br>어느 날 섬을 떠나 본토에 발을 들이게 되고<br>난생처음 바이러스에 잠식된 세상을 마주하게 된다.",
-      rating: 4
+    title: "28년후",
+    subtitle:"&lt; 28일 후 시작, 28주 후 전염, 28년 후 진화... &gt;",
+    description: "태어나 처음 마주한 바이러스에 감염된 세상, 충격을 넘어선 극강의 공포가 밀려온다!<br>이곳에서 태어나 한 번도 섬 밖을 나가 본 적 없는 소년 ‘스파이크’는 어느 날<br>섬을 떠나 본토에 발을 들이게 되고 난생처음 바이러스에 잠식된 세상을 마주하게 되는데....",
+    rating: 4
   },
   {
-      title: "바람계곡의 나우시카",
-      description: "1천 년 전, 문명은 대전쟁 ‘불의 7일’로 인해 붕괴하고<br><br>지구는 곰팡이의 숲 ‘부해(腐海)’로 뒤덮인 죽음의 행성이 된다.<br><br>그리고 부해를 지키는 거대한 곤충 ‘오무’까지, 인류는 절멸에 가까운 위기를 맞이한다.<br>한편, 자연과 소통할 수 있는 특별한 능력을 가진 바람계곡의 공주 ‘나우시카’는</br>‘거신병’을 부활시켜 자연을 정복하려는 군사제국 토르메키아의 침략에 맞서는데…!</br></br>자연과 인간의 공존을 찾기 위한 ‘나우시카’의 운명을 건 사투가 시작된다!",
-      rating: 5
+    title: "바람계곡의 나우시카",
+    subtitel: "&lt; ‘나우시카’의 운명을 건 사투가 시작된다! &gt;",
+    description: "1천 년 전, 문명은 대전쟁 ‘불의 7일’로 인해 붕괴하고<br>지구는 곰팡이의 숲 ‘부해(腐海)’로 뒤덮인 죽음의 행성이 된다.<br>그리고 부해를 지키는 거대한 곤충 ‘오무’까지, 인류는 절멸에 가까운 위기를 맞이하는데...",
+    rating: 5
   },
   {
-      title: "신성한 나무의 씨앗",
-      description: "꿈에 그리던 수사판사 승진을 하게 된 ‘이만’,<br><br>때마침 테헤란에서는 대규모 히잡 반대 시위가 일어나고<br>‘이만’은 가족의 안전을 위해 총을 지급받는다.<br><br>그러나 딸들과 논쟁을 벌인 어느 날,총이 집에서 감쪽같이 사라지고 가족의 믿음에는 균열이 생긴다.<br><br>지금 반드시 목격해야 할,올해 가장 용감한 걸작.",
-      rating: 2
+    title: "신성한 나무의 씨앗",
+    subtitel: "&lt; 지금 반드시 목격해야 할,올해 가장 용감한 걸작. &gt;",
+    description: "꿈에 그리던 수사판사 승진을 하게 된 ‘이만’, 때마침 테헤란에서는 대규모 히잡 반대 시위가<br일어나고 ‘이만’은 가족의 안전을 위해 총을 지급받는다. 그러나 딸들과 논쟁을 벌인 어느 날,<br>총이 집에서 감쪽같이 사라지고 가족의 믿음에는 균열이 생긴다.",
+    rating: 2
   }
 ];
-
-       
-
- const itemImg = $('.item') 
- const item = $('.img_box') 
-
- itemImg.each(function(idx){
-  console.log(idx);
-  $(this).find('.lang').text(`${idx+1}`)
- }) 

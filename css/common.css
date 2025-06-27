@@ -2,6 +2,7 @@
 @import url('./header.css');
 /* 변수 등록 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
@@ -53,7 +54,7 @@
   --hint_bg_color: rgba(0, 0, 0, 0.8);
 
   --disable_color: #666666;
-  --img_cover_color : linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.09) 35%, rgba(0, 0, 0, 0.75));
+  --img_cover_color : linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.09) 35%, rgba(0, 0, 0, 0.80));
 
   /* 영화 연령 아이콘 색상 */
   --ratingAll: #00B140;
