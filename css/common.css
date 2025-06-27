@@ -64,7 +64,7 @@
   /* border_style */
   --fill_btn_border: 1px solid #ED3124;
   --empty_btn_border: 1px solid rgba(217, 217, 217, 0.2);
-
+  
   /* border-radius */
   --max_radius: 999px;
   --m_radius: 24px;
