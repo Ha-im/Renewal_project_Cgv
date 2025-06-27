@@ -43,7 +43,7 @@
   margin-bottom: 30px;
 }
 
-.content_box .text_box .title {
+.title {
   display: inline-block;
   font: var(--title);
   color: var(--white);
@@ -85,27 +85,27 @@ h2.ratingall::after {
   background-color: var(--ratingAll);
 }
 
-.content_box .text_box .subtitle {
+.subtitle {
   font: var(--sub_title);
   color: var(--white);
   margin-bottom: 24px;
 }
 
-.content_box .text_box .content_body {
+.content_body {
   font: var(--content_body);
   color: var(--white);
 }
 
-.content_box .btn_box {
+.btn_box {
   display: flex;
   gap: 16px;
 }
 
-.content_box .btn_box a {
+.btn_box a {
   display: block;
 }
 
-.content_box .btn_box .empty_btn {
+.empty_btn {
   background-color: transparent;
   padding: var(--web_btn_padding);
   color: var(--white);
@@ -117,7 +117,7 @@ h2.ratingall::after {
   height: 51px;
 }
 
-.content_box .btn_box .cta_btn {
+.cta_btn {
   background-color: var(--primary_color);
   padding: var(--web_btn_padding);
   color: var(--white);
@@ -546,114 +546,109 @@ li.item .text_box {
 
 
 /* recommend */
-.recommend {}
-
-.recommend .con1 {
-  width: 1320px;
-  margin: 0 auto;
+.recommend {
+  position: relative;
 }
 
-.recommend .content_box {
-  width: 1400px;
-  background-color: rgba(255, 255, 255, 0.05);
+.boot {
+}
+
+.recommend_content {
+  width: 1077px;
+  height: 520px;
   backdrop-filter: blur(20px);
-  border-radius: 48px;
+  border-radius: var(--m_radius);
+  border: 1px solid rgba(217, 217, 217, 0.2);
   position: absolute;
   top: 50%;
-  left: 15%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 30;
-  padding: 72px 100px;
-  border: 1px solid #f0f0f0;
 }
 
-.recommend .content_box .text_box {
-  margin-bottom: 48px;
-  width: 60%;
+.recommend_content .content_box {
+  width: 420px;
+  left: 111px;
+  bottom: 18%;
 }
 
-.recommend .content_box .text_box .title {
-  font-size: 48px;
-  color: #fff;
-  font-weight: bold;
-  letter-spacing: -1.1%;
-  line-height: 72px;
-
-  margin-bottom: 24px;
+.recommend_content .content_box .text_box .title {
+  font-size: 32px;
+  line-height: 38px;
 }
 
-.recommend .content_box .text_box .des {
-  font-size: 18px;
-  color: #fff;
-  letter-spacing: -1.1%;
-  line-height: 24px;
-  font-weight: 100;
-
-  margin-bottom: 24px;
+.recommend_content .content_box .text_box .content_body {
+  text-align: justify;
 }
 
-.recommend .content_box .text_box span {
-  font-size: 20px;
-  color: #fff;
-  font-weight: 100;
-  letter-spacing: -1.1%;
-  line-height: 24px;
-}
-
-.recommend .content_box .btn_box button {
-  padding: 24px 80px;
-  border-radius: 36px;
-
-  font-size: 24px;
-  line-height: 24px;
-  letter-spacing: -1.1%;
-}
-
-.recommend .content_box .btn_box a {
-  color: #fff;
-}
-
-.recommend .content_box .btn_box .cta_btn {
-  background-color: transparent;
-  border: 1px solid var(--primaryColor);
-  color: var(--primaryColor);
-  margin-right: 24px;
-}
-
-.recommend .content_box .thumb {
+.recommend_content .thumb_box {
   position: absolute;
+  top: -64px;
+  right: 111px;
   width: 400px;
-  top: -30px;
-  right: 100px;
-  border-radius: 20px;
-  box-shadow: var(----box--shadow-card);
+  height: 534px;
+  overflow: hidden;
+  border-radius: var(--s_radius);
+  box-shadow: var(--web_card_shadow);
 }
 
-
-
-
-.recommend .bg {
-  width: 100%;
-  height: 100vh;
+.recommend_content .thumb_box .play_cover {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+  z-index: 10;
+}
+.recommend_content .thumb_box .play_cover:hover{
+  background-color: rgba(0, 0, 0, 0.4);
 
-  z-index: 20;
+}
+.recommend_content .thumb_box .play_cover svg {
+  width: var(--icon_m_w);
+  height: var(--icon_m_h);
 }
 
-.recommend .bg .cover {
+.recommend_content .thumb_box .play_cover:hover svg {
+  fill: var(--primary_color);
+}
+
+.recommend_content .thumb_box img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.recommend .img_banner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.recommend .img_banner::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.recommend .bg img {
+.img_banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 20;
 }
-
 
 /* query */
 @media (max-width: 1600px) {
