@@ -4,6 +4,25 @@ document.addEventListener('DOMContentLoaded', function () {
     navigation: true,
     scrollOverflow: true
   });
+  /* plan */ 
+  $('.plan_title a').mouseenter(function(){
+    $(this).addClass('active')
+  }).mouseleave(function(){
+    $(this).removeClass('active')
+  })
+  const ranking = $('.ranking');
+
+  ranking.each(function(idx) {
+    const displayIndex = (idx + 1).toString().padStart(2, '0');
+    $(this).text(displayIndex);
+  });
+  
+  $('.planHover').mouseenter(function(){
+    $(this).addClass('active');
+  }).mouseleave(function(){
+    $(this).removeClass('active');
+  })
+  /* plan end */ 
   /* cinema */
   for(let i = 1; i<=$('.cinemaspecial .item').length; i++){
     $(`.cinemaspecial .item:nth-child(${i})`).mouseenter(function(){
