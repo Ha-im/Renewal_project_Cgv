@@ -4,6 +4,26 @@ document.addEventListener('DOMContentLoaded', function () {
     navigation: true,
     scrollOverflow: true
   });
+  /* cinema */
+  for(let i = 1; i<=$('.cinemaspecial .item').length; i++){
+    $(`.cinemaspecial .item:nth-child(${i})`).mouseenter(function(){
+      $(this).addClass('active');
+      $(this).find('span').addClass('active');
+      const bgImg = $(this).data('bg');
+    $('.cinemazone').css({
+      background: `linear-gradient(rgba(14, 14, 14, 0), rgba(0, 0, 0, 0.6) 62%, rgba(0, 0, 0, 0.97)), url(${bgImg}) no-repeat center center / cover`
+    });
+    }).mouseleave(function(){
+      $(this).removeClass('active');
+      $(this).find('span').removeClass('active');
+      $('.cinemazone').css({
+      background: ''
+    });
+    })
+  }
+
+  /* cinema end */
+  /* eventZone */ 
   $('.promotion .store').mouseenter(function(){
     $(this).find('.hashtag').addClass('active')
     $('.eventzone').css({background:"url('../images/event_zone/event_zone_store.jpg') center center/ cover no-repeat"});
@@ -26,8 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     $('.eventzone').css({background:"url('../images/event_zone/event_zone_store.jpg') center center / cover no-repeat"});
   })
 });
-
-
+/*eventZone end*/
 
 /* 02 rank pym */
 const movies = [

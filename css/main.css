@@ -173,45 +173,53 @@ h2.ratingall::after {
 
 /*cinema*/
 .cinemazone {
-  background:url(../images/suite.png) no-repeat center center / cover;
-  align-items: center;
+  background:var(--sectionBg-Grad-lin),url(../images/suite.png) no-repeat center center / cover ;
   width:100%;
   height:100vh;
 }
 .cinema{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  gap:70px;
-  align-items: center;
+  color:#fff;
+}
+.cinema h5{
   font-size:28px;
   line-height: 48px;
   font-weight:700;
-  color:#fff;
+  margin-bottom:70px;
+  text-align: center;
+  box-shadow: 0 0 8 rgba(255,255,255,0.2);
+}
+.cinema .item{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  height:100%;
+  gap:4px;
+  
+}
+.cinemaspecial .item.active{
+  box-shadow:var(----web_strong_shadow);
+}
+.cinemaspecial .item a, .cinema .item span{
+  font-size:72px;
+  font-weight:700;
 }
 .cinemaspecial{
-  position:relative;
-  font-size:72px;
-  line-height: 72px;
-  font-weight:700;
-  text-align: center;
-  color:#fff;
-  display:flex;
-  flex-direction: column;
-  gap:4px;
+  overflow:hidden;
 }
-.cinemaspecial>span{
-  font-size:72px;
-}
-.cinemaspecial>span:nth-child(2){
-  position:absolute;
-  left:-90%;
-
-}
-.cinemaspecial a.active{
+.cinemaspecial .item.active{
   color:#ED3124;
 }
-
+.cinemaspecial span {
+  opacity:0;
+  font-size:72px;
+  transform:translateX(-50px);
+  transition:0.5s;
+}
+.cinemaspecial span.active{
+  transform: translateX(0);
+  opacity:1;
+}
 /* cinema end */
 /* event_zone */
 .eventzone{
@@ -268,10 +276,40 @@ h2.ratingall::after {
 .event:hover{
   background:rgba(0,0,0,0.6);
 }
-
-
-
-
+.event:hover h6, .event:hover p{
+  transform:translateY(-50px);
+  transition:.5s;
+}
+.special{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width:100%;
+}
+.special:hover{
+  background:rgba(0,0,0,0.6);
+}
+.special:hover h6, .special:hover p{
+  transform:translateY(-50px);
+  transition:.5s;
+}
+.hashtag{
+  width:323px;
+  opacity: 0;
+}
+.hashtag.active{
+  opacity: 1;
+  transform: translateY(50px);
+  transition:.5s;
+}
+.hashtag ul{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap:8px;
+}
 .hashtag ul li{
   background:rgba(0,0,0,0.6);
   border:1px solid rgba(0,0,0,0.6);
