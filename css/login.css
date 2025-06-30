@@ -3,6 +3,13 @@ body{
     color:#fff;
     font-size:14px;
 }
+h2{
+    text-align: center;
+    margin-bottom:48px;
+    margin-top:120px;
+    font-size:33px;
+    font-weight: 700;
+}
 .one{
     width:500px;
 }
@@ -30,6 +37,7 @@ form {
 .login li a.active{
     color:#ED3124;
     border-bottom:3px #ED3124 solid;
+    transition: 0.3s;
 }
 input{
     width:100%;
@@ -41,6 +49,15 @@ input{
 #checkbox{
     width:13px;
     height:13px;
+}
+.checkId{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    gap:10px;
+}
+.checkId input[type='button']{
+    width:30%;
 }
 .naver{
     display:block;
@@ -142,4 +159,12 @@ p{
 }
 input:focus{
     border-color: #000;
+}
+#tab3 form {
+    margin-bottom:12px;
+}
+.modal-body p{
+    font-size:12px;
+    line-height: 20px;
+    margin-bottom:12px;
 }
