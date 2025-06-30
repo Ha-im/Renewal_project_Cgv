@@ -183,6 +183,28 @@ h2.ratingall::after {
   font-size:32px;
   font-weight:700;
 }
+.planPost .swiper-slide {
+  width: 280px; 
+  flex-shrink: 0; 
+}
+.swiper-pagination {
+  width:1320px !important;
+  position: relative; 
+  z-index: 10;
+  height: 4px;
+  margin-top:46px;
+  margin-left:300px;
+  background: rgba(51,51,51,1);
+  overflow: hidden;
+  border-radius: 4px;  
+}
+
+.swiper-pagination-progressbar-fill {
+  background: var(--primary_color) !important;
+  border-radius: 4px;   
+  transition: width 0.3s ease;
+}
+
 .plan_title a{
   display:flex;
   justify-content: center;
@@ -196,12 +218,6 @@ h2.ratingall::after {
 }
 .plan_title a.active{
   color:var(--primary_color);
-}
-.planPost{
-  display:flex;
-  gap:18px;
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 .imgItem{
   position: relative;
@@ -261,7 +277,6 @@ h2.ratingall::after {
   z-index:2;
 }
 /* plan end */
-
 
 
 /*cinema*/

@@ -5,18 +5,69 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollOverflow: true
   });
   /* plan */ 
+  const swiper = new Swiper('.planPost', {
+    slidesPerView: 'auto',
+    spaceBetween: 18,
+    loop: true,
+    speed: 0,
+    autoplay: false,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'progressbar',
+    },
+  });
+  
+  // 2. 슬라이드 복제 1세트 (눈에 보이게 자연스러운 흐름 만들기)
+  const $wrapper = $('.planPost .swiper-wrapper');
+  const $originalSlides = $wrapper.children('.swiper-slide');
+  $wrapper.append($originalSlides.clone()); // 클론 1세트만 추가
+  
+  // 3. ranking 번호 매기기 (원본 번호만 반복되게)
+  $wrapper.children('.swiper-slide').each(function (idx) {
+    const displayIndex = ((idx % $originalSlides.length) + 1).toString().padStart(2, '0');
+    $(this).find('.ranking').text(displayIndex);
+  });
+  
+  // 4. 자연스러운 무한 슬라이드 애니메이션
+  let posX = 0;
+  let animId;
+  const speed = 0.5; // 이동 속도(px/frame)
+  
+  // 원본 슬라이드 세트의 총 너비
+  let originalWidth = 0;
+  $originalSlides.each(function () {
+    originalWidth += $(this).outerWidth(true);
+  });
+  
+  // resetPoint는 원본 너비보다 조금 짧게 잡기 → 끊김 없는 느낌
+  const resetPoint = originalWidth - 50;
+  
+  function animate() {
+    posX -= speed;
+  
+    if (Math.abs(posX) >= resetPoint) {
+      posX = 0; // 자연스럽게 처음으로 위치 리셋
+    }
+  
+    $wrapper.css('transform', `translateX(${posX}px)`);
+    animId = requestAnimationFrame(animate);
+  }
+  
+  // 5. 마우스 올리면 멈춤, 벗어나면 재생
+  $('.planPost').hover(
+    () => cancelAnimationFrame(animId),
+    () => animId = requestAnimationFrame(animate)
+  );
+  
+  // 6. 시작
+  animId = requestAnimationFrame(animate);
+
   $('.plan_title a').mouseenter(function(){
     $(this).addClass('active')
   }).mouseleave(function(){
     $(this).removeClass('active')
   })
-  const ranking = $('.ranking');
 
-  ranking.each(function(idx) {
-    const displayIndex = (idx + 1).toString().padStart(2, '0');
-    $(this).text(displayIndex);
-  });
-  
   $('.planHover').mouseenter(function(){
     $(this).addClass('active');
   }).mouseleave(function(){
