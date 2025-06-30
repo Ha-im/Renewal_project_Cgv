@@ -180,6 +180,10 @@ h2.ratingall::after {
   font-size:32px;
   font-weight:700;
 }
+.planPost .swiper-slide {
+  width: 280px; 
+  flex-shrink: 0; 
+}
 .plan_title a{
   display:flex;
   justify-content: center;
@@ -193,12 +197,6 @@ h2.ratingall::after {
 }
 .plan_title a.active{
   color:var(--primary_color);
-}
-.planPost{
-  display:flex;
-  gap:18px;
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 .imgItem{
   position: relative;
@@ -258,7 +256,6 @@ h2.ratingall::after {
   z-index:2;
 }
 /* plan end */
-
 
 
 /*cinema*/

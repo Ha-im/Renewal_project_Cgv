@@ -5,6 +5,26 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollOverflow: true
   });
   /* plan */ 
+  const swiper = new Swiper('.planPost', { //스와이프 + 무한
+    slidesPerView: 'auto',
+    spaceBetween: 18,
+    loop: true,
+    breakpoints: {
+      1024: {
+        slidesPerView: 'auto',
+        spaceBetween: 18,
+      },
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 14,
+      },
+      480: {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+      },
+    },
+  });
+  
   $('.plan_title a').mouseenter(function(){
     $(this).addClass('active')
   }).mouseleave(function(){
