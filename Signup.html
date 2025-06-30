@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+      body{
+        background:#000;
+      }
+      .allpage{
+        width:500px;
+      }
+      .container_all {
+        display: flex;
+        justify-content: center; 
+        align-items: center;     
+      }
+      h1{
+        margin-top:120px;
+      }
+      input{
+        width:100%;
+        height: 48px;
+        border-radius: 8px; 
+        margin-bottom:10px;
+        padding:10px;
+      }
+      button[type='button']{
+        width:30%;
+        height: 48px;
+        margin-bottom:10px;
+        border-radius:8px;
+        color:#fff;
+        background:var(--primary_color);
+        border:1px solid var(--primary_color);
+        box-sizing: border-box;
+      }
+      button[type='submit']{
+        width:100%;
+        height: 48px;
+        border-radius:8px;
+        color:#fff;
+        background:var(--primary_color);
+        border:1px solid var(--primary_color);
+        box-sizing: border-box;
+      }
+      .input{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .title2{
+        margin:0 auto;
+        width:100%;
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        margin-bottom:10px;
+      }
+      .title1{
+        text-align: center;
+        margin-bottom:48px;
+      }
+      .container div h1{
+        font-size:33px;
+        font-weight: 700;
+        color:#fff;
+      }
+      .container div h2{
+        font-size:20px;
+        font-weight: 600;
+        color:#fff;
+      }
+      .container div p{
+        font-size: 12px;
+        color:var(--primary_color);
+      }
+      .checkId{
+        width:100%;
+        display:flex;
+        justify-content: space-between;
+        gap:10px;
+      }
+      .allpage a{
+        display:inline-block;
+        text-align: center;
+        margin-top:10px;
+        padding-top:16px;
+        box-sizing: border-box;
+        width:100%;
+        height:48px;
+        color: var(--white);
+        border: var(--empty_btn_border);
+        border-radius: 8px;
+        backdrop-filter: blur(20px);
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <h1 class="logo">
+      <a href="index.html">
+        CGV
+        <img src="images/header_logo.png" alt="CGV메인로고">
+      </a>
+    </h1>
+    <nav class="menu">
+      <ul class="gnb">
+        <li class="on">
+          <a href="#">영화</a>
+          <ul class="lnb">
+            <li><a href="#">영화순위</a></li>
+            <li><a href="#">아트하우스</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">극장</a>
+          <ul class="lnb">
+            <li><a href="#">CGV극장</a></li>
+            <li><a href="#">특별관</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">예매</a>
+          <ul class="lnb">
+            <li><a href="#">빠른예매</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">스토어</a>
+          <ul class="lnb">
+            <li><a href="#">패키지</a></li>
+            <li><a href="#">영화 기프트</a></li>
+            <li><a href="#">먹거리</a></li>
+            <li><a href="#">씨네샵</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">이벤트 혜택</a>
+          <ul class="lnb">
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">특별 기획전</a></li>
+            <li><a href="#">영화/예매 할인</a></li>
+            <li><a href="#">멤버쉽 혜택</a></li>
+            <li><a href="#">제휴/할인</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="user_menu">
+      <ul>
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">예매</a></li>
+        <li>
+          <a href="#">언어</a>
+          <ul class="lang_box">
+            <li><a href="#">KOR</a></li>
+            <li><a href="#">ENG</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="container container_all">
+    <div class="allpage">
+      <div class="title1">
+        <h1>회원가입</h1>
+      </div>
+      <div class="title2">
+        <h2>기본정보</h2>
+        <p>*전체 항목은 필수 입력입니다</p>
+      </div>
+      <form action="">
+        <div class="input">
+          <input type="text" name="username" id="username" placeholder="이름을 입력해주세요." required>
+          <div class="checkId">
+          <input type="text" name="userid" id="userid" placeholder="아이디를 입력해주세요." required>
+          <button type="button">중복확인</button>
+          </div>
+          <input type="password" name="password" id="password" placeholder="비밀번호를 입력해주세요." required>
+          <input type="password" name="password" id="password" placeholder="비밀번호 확인" required>
+          <input type="email" name="email" id="email" placeholder="이메일을 입력해주세요." required>
+        </div>
+        <button type="submit">가입하기</button>
+      </form>
+      <a href="index.html">돌아가기</a>
+    </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./js/login.js"></script>
+</body>
+</html>

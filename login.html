@@ -3,12 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>로그인</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
+  <header>
+    <h1 class="logo">
+      <a href="index.html">
+        CGV
+        <img src="images/header_logo.png" alt="CGV메인로고">
+      </a>
+    </h1>
+    <nav class="menu">
+      <ul class="gnb">
+        <li class="on">
+          <a href="#">영화</a>
+          <ul class="lnb">
+            <li><a href="#">영화순위</a></li>
+            <li><a href="#">아트하우스</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">극장</a>
+          <ul class="lnb">
+            <li><a href="#">CGV극장</a></li>
+            <li><a href="#">특별관</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">예매</a>
+          <ul class="lnb">
+            <li><a href="#">빠른예매</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">스토어</a>
+          <ul class="lnb">
+            <li><a href="#">패키지</a></li>
+            <li><a href="#">영화 기프트</a></li>
+            <li><a href="#">먹거리</a></li>
+            <li><a href="#">씨네샵</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">이벤트 혜택</a>
+          <ul class="lnb">
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">특별 기획전</a></li>
+            <li><a href="#">영화/예매 할인</a></li>
+            <li><a href="#">멤버쉽 혜택</a></li>
+            <li><a href="#">제휴/할인</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="user_menu">
+      <ul>
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">예매</a></li>
+        <li>
+          <a href="#">언어</a>
+          <ul class="lang_box">
+            <li><a href="#">KOR</a></li>
+            <li><a href="#">ENG</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="title">
+  <h2>로그인</h1>
+  </div>
   <div class="container one">
     <div class="tabs">
       <ul class="login">
@@ -35,15 +102,17 @@
           <ul class="Search">
             <li><a href="#">아이디찾기</a></li>
             <li><a href="#">비밀번호찾기</a></li>
-            <li><a href="#">회원가입</a></li>
+            <li><a href="/Signup.html">회원가입</a></li>
           </ul>
         </div>
       </div>
     <div id="tab2">
         <form action="" method="POST">
-          <input type="text" name="userid" id="userid" placeholder="생년월일(250617)" required>
+          <input type="text" name="userid" id="userid" placeholder="생년월일(010101)" required>
+          <div class="checkId">
           <input type="tel" name="tel" id="tel" placeholder="휴대폰번호(01012345678)" required>
           <input type="button" name="button" value="인증번호받기">
+          </div>
           <input type="number" name="number" id="number" placeholder="인증번호" required>
           <input type="password" name="password" id="password" placeholder="비밀번호" required>
           <input type="password" name="password" id="password" placeholder="비밀번호확인" required>
@@ -91,12 +160,12 @@
     </div>
       <div id="tab3">
         <form action="" method="POST">
-          <input type="text" name="userid" id="userid" placeholder="생년월일(250617)" required>
+          <input type="text" name="userid" id="userid" placeholder="생년월일(010101)" required>
           <input type="tel" name="tel" id="tel" placeholder="휴대폰번호(01012345678)" required>
           <input type="number" name="number" id="number" placeholder="인증번호" required>
           <input type="password" name="password" id="password" placeholder="비밀번호" required>
           <div>
-              <p>비회원 예매 시, 입력한 휴대폰 번호로 SMS인증을 하면 비회원 예매 비밀번호를 찾으실 수 있습니다.</p>
+              <p>비회원 예매 시, 입력한 휴대폰 번호로 인증 하면 비회원 예매 비밀번호를 찾으실 수 있습니다.</p>
           </div>
           <div>
               <input type="submit" value="비회원 예매하기">
