@@ -45,6 +45,7 @@ input{
     border-radius:8px;
     padding:12px;
     box-sizing:border-box;
+    background-color:#fff;
 }
 #checkbox{
     width:13px;
@@ -157,9 +158,7 @@ p{
 #submitid{
     margin-bottom:24px;
 }
-input:focus{
-    border-color: #000;
-}
+/* tab3 */
 #tab3 form {
     margin-bottom:12px;
 }
@@ -167,4 +166,9 @@ input:focus{
     font-size:12px;
     line-height: 20px;
     margin-bottom:12px;
+}
+/* input error */
+input.error{
+    outline:2px solid rgba(255,0,0,1);
+    box-shadow:inset 0 0 10px rgba(255,0,0,.5);
 }
