@@ -542,7 +542,7 @@ h2.ratingall::after {
 
 /*  02 rank  */
 .movie_rank {
-  background-color: ;
+  /* background-color: / */
 }
 body {
   height: 100vh;
@@ -668,28 +668,29 @@ body {
 .nav-buttons {
   position: absolute;
   bottom: 30px;
-  left: 80px;
+  bottom: 50px;
+  left: 50%;
   display: flex;
   gap: 15px;
-  z-index: 4;
 }
 .nav-btn {
-  width: 50px;
-  height: 50px;
-  border: 1px solid var(--fontColorDark);
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--disable_color);
   background: transparent;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s;
-  color: var(--fontColorWhite);
+  transition: 0.3s;
+  color: var(--disable_color);
   font-size: var(--storeTextP);
 }
 .nav-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: var(--fontColorWhite);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #B5B5B5;
+  color: #B5B5B5;
 }
 
 /* 영화포스터 이미지 */
