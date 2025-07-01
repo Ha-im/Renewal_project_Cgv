@@ -118,6 +118,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 /*eventZone end*/
 
+
+
 /* 02 rank pym */
 const movies = [
   {
@@ -151,3 +153,39 @@ const movies = [
     rating: 2
   }
 ];
+
+let slideWrapper = $('.poster-container'),
+slides = slideWrapper.find('.poster-items'),
+item = slides.find('.item'),
+currentIdx = 0,
+slideCount = item.length,
+slideWidth = 280,
+slideMargin = 20,
+moveAmt,
+maxSlide = 3,
+//responsiveMargin = 10,
+prevBtn = $('#prevBtn'),
+nextBtn = $('#nextBtn');
+
+moveAmt = slideWidth + slideMargin;
+
+//복사본 생성
+slides.prepend(item.clone());
+item.clone().appendTo(slides);
+
+let allSlide = slides.find('.item');
+
+//슬라이드 배치
+function slideLayout(sw,sm){
+  allSlide.each(function(idx){
+    let newLeft = idx * (sw + sm);
+
+    $(this).css({left: newLeft, width:sw})
+  });
+
+//슬라이드 중앙 배치
+moveAmt = sw+sm;
+let adjustment = -moveAmt*slideCount + 'px';
+
+}
+
