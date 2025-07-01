@@ -260,7 +260,7 @@ h2.ratingall::after {
   box-sizing:border-box;
   margin-bottom:10px;
   font-size:15px;
-  line-height: 15px;
+  line-height: 22px;
 }
 .planHover .btn_box{
   display:flex;
