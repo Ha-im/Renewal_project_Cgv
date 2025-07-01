@@ -709,7 +709,7 @@ h2.ratingall::after {
 
 /*  02 rank  */
 .movie_rank {
-  background-color: ;
+
 }
 body {
   height: 100vh;
@@ -764,17 +764,6 @@ body {
   color: var(--fontColorDark);
 }
 /* 우측 포스터 슬라이더 영역 */
-.poster-slider {
-  position: absolute;
-  right: 0;
-  bottom: 120px;
-  width: 878px;
-  /* height: 100vh; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
 .poster-container {
   position: relative;
   width: 100%;
@@ -783,6 +772,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.poster-slider {
+  position: absolute;
+  right: 0;
+  bottom: 18%;
+  width: 878px;
+  /* height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
 }
 .poster-items {
   display: flex;
@@ -800,14 +800,31 @@ body {
   transition: all 0.5s ease;
   flex-shrink: 0;
 }
-/*
+
 .bg-img{
   width: 100%;
   height: 100vh;
   background-size: cover;
-  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-  */
+.bg-img::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--img_cover_color);
+}
+.bg-1{background-image: url(../images/movierank_bg_howtotraindragon.jpg);}
+.bg-2{background-image: url(../images/movierank_bg_f1.jpg);}
+.bg-3{background-image: url(../images/movierank_bg_28yearslater.jpg);}
+.bg-4{background-image: url(../images/movierank_bg_nausicaaofthevalleyofthewinds.jpg);}
+.bg-5{background-image: url(../images/movierank_bg_theseedofthescaredfig_bg.jpg);}
+
 .poster-bg {
   width: 280px;
   height: 382px;
@@ -834,29 +851,29 @@ body {
 /* 네비게이션 버튼 */
 .nav-buttons {
   position: absolute;
-  bottom: 30px;
-  left: 80px;
+  bottom: 5%;
+  left: 50%;
   display: flex;
   gap: 15px;
-  z-index: 4;
 }
 .nav-btn {
-  width: 50px;
-  height: 50px;
-  border: 1px solid var(--fontColorDark);
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--disable_color);
   background: transparent;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s;
-  color: var(--fontColorWhite);
+  transition: 0.3s;
+  color: var(--disable_color);
   font-size: var(--storeTextP);
 }
 .nav-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: var(--fontColorWhite);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #B5B5B5;
+  color: #B5B5B5;
 }
 
 /* 영화포스터 이미지 */
