@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollOverflow: true
   });
   /* plan */ 
+  /*1. 스와이프 기능 추가*/
   const swiper = new Swiper('.planPost', {
     slidesPerView: 'auto',
     spaceBetween: 18,
@@ -96,24 +97,24 @@ document.addEventListener('DOMContentLoaded', function () {
   /* eventZone */ 
   $('.promotion .store').mouseenter(function(){
     $(this).find('.hashtag').addClass('active')
-    $('.eventzone').css({background:"url('../images/event_zone/event_zone_store.jpg') center center/ cover no-repeat"});
+    $('.eventzone').css({background:"url('../images/event_zone/store.jpg') center center/ cover no-repeat"});
   }).mouseleave(function(){
     $(this).find('.hashtag').removeClass('active');
-    $('.eventzone').css({background:"url('../images/event_zone/event_zone_store.jpg') center center/ cover no-repeat"});
+    $('.eventzone').css({background:"url('../images/event_zone/store.jpg') center center/ cover no-repeat"});
   })
   $('.promotion .event').mouseenter(function(){
     $(this).find('.hashtag').addClass('active')
     $('.eventzone').css({background:"url('../images/event_zone/event_zone_event.jpg') center center/ cover no-repeat"});
   }).mouseleave(function(){
     $(this).find('.hashtag').removeClass('active');
-    $('.eventzone').css({background:"url('../images/event_zone/event_zone_store.jpg') center center/ cover no-repeat"});
+    $('.eventzone').css({background:"url('../images/event_zone/store.jpg') center center/ cover no-repeat"});
   })
   $('.special').mouseenter(function(){
     $(this).find('.hashtag').addClass('active')
-    $('.eventzone').css({background:"url('../images/event_zone/event_zone_special.jpg') center center/ cover no-repeat"});
+    $('.eventzone').css({background:"url('../images/event_zone/special.png') center center/ cover no-repeat"});
   }).mouseleave(function(){
     $(this).find('.hashtag').removeClass('active');
-    $('.eventzone').css({background:"url('../images/event_zone/event_zone_store.jpg') center center / cover no-repeat"});
+    $('.eventzone').css({background:"url('../images/event_zone/store.jpg') center center / cover no-repeat"});
   })
 });
 /*eventZone end*/
