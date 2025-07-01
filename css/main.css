@@ -760,7 +760,7 @@ body {
 }
 .poster-items {
   display: flex;
-  gap: 20px;
+  /*gap: 20px;*/
   transition: transform 0.8s;
   align-items: center;
 }

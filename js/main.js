@@ -168,24 +168,42 @@ prevBtn = $('#prevBtn'),
 nextBtn = $('#nextBtn');
 
 moveAmt = slideWidth + slideMargin;
-
 //복사본 생성
-slides.prepend(item.clone());
-item.clone().appendTo(slides);
-
-let allSlide = slides.find('.item');
+let originalItems = slides.find('.item'); // 원본만 잡아두고
+slides.prepend(originalItems.clone());
+originalItems.clone().appendTo(slides);
 
 //슬라이드 배치
 function slideLayout(sw,sm){
   allSlide.each(function(idx){
     let newLeft = idx * (sw + sm);
-
     $(this).css({left: newLeft, width:sw})
   });
 
+
 //슬라이드 중앙 배치
 moveAmt = sw+sm;
-let adjustment = -moveAmt*slideCount + 'px';
-
+	let adjustment = -moveAmt * slideCount + 'px';
+	slides.css({transform:`translateX(${adjustment})`});
 }
+slideLayout(slideWidth,slideMargin);
 
+//이동함수
+function moveSlide(num){
+  let newLeft= -num * moveAmt + 'px';
+  slides.stop().animate({left:newLeft}, 500, function(){
+    if(currentIdx === slideCount || currentIdx === -slideCount){
+      slides.css({left:0});
+      currentIdx = 0;
+    }
+  });
+  currentIdx = num;
+}
+moveSlide(0)
+
+nextBtn.click(debounce(()=>{
+  moveSlide(++currentIdx);
+},500));
+prevBtn.click(debounce(()=>{
+  moveSlide(--currentIdx);
+}, 500));
