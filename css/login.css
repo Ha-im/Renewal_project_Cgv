@@ -104,6 +104,12 @@ button[type="button"]:active,.sms:active{
     margin-top:10px;
     margin-bottom:24px;
 }
+.naverLogin:hover{
+    background:rgb(23,183,94);
+}
+.naverLogin:active{
+    background:rgb(42,183,94);
+}
 .save{
     display:flex;
     justify-content: space-between;
