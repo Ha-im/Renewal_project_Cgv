@@ -40,13 +40,4 @@
                 password.focus();
             }
         })
-        //포커스가 됬을때 태두리 색
-        
-        input.forEach(function(item){
-            item.addEventListener('focus',function(){
-                item.style.outline = "1px solid #ccc";
-            })
-                item.addEventListener('blur',function(){
-                item.style.outline = '';
-            })
-        })
+
