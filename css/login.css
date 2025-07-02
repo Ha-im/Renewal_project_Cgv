@@ -1,5 +1,181 @@
+/* all */
 body{
     background: #000;
     color:#fff;
     font-size:14px;
+}
+.title{
+    margin-top:120px;
+}
+.title h2{
+    font-size:33px;
+    font-weight: 700;
+    color:#fff;
+}
+.form-group{
+    width:500px;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+input{
+    width:100%;
+    height: 48px;
+    border-radius: 8px; 
+    padding:10px;
+    outline: none;
+    border:none;
+}
+input[type="checkbox"],input[type="radio"]{
+    width:13px;
+    height:13px;
+}
+input[type="submit"]{
+    color:#fff;
+    background:var(--primary_color);
+}
+input[type="submit"]:hover,input[type="button"]:hover{
+    background:var(--fill_hover_color);
+}
+input[type="submit"]:active,input[type="button"]:active{
+    background:var(--fill_active_color);
+}
+input[type="button"]{
+    color:#fff;
+    background:var(--primary_color);
+}
+.tel_ok, .verification_ok{
+    width:100%;
+    display:flex;
+    gap:10px;
+}
+button[type="button"]{
+    font-size:14px;
+    width:100%;
+    height: 48px;
+    background:#2d2d2d;
+    border:#2d2d2d;
+}
+.btn-close{
+    display:none;
+}
+button[type="button"]:hover,.sms:hover{
+    background:#3d3d3d;
+}
+button[type="button"]:active,.sms:active{
+    background:#4d4d4d !important;
+}
+.modal-body p{
+    font-size:12px;
+    line-height: 22px;
+}
+/* all end */
+/* tab1 */
+.one{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login{
+    display:flex;
+    gap:24px;
+    margin-top:48px;
+    margin-bottom:48px;
+}
+.tab1{
+    width:500px;
+    height:100%;
+}
+.naverLogin{
+    width:100%;
+    height: 48px;
+    border-radius: 8px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:#03c75a;
+    margin-top:10px;
+    margin-bottom:24px;
+}
+.save{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:48px;
+}
+.save_checkbox{
+    display:flex;
+    gap:5px;
+}
+.idSearch{
+    display:flex;
+    gap:24px;
+    justify-content: center;
+}
+/* tap1 end */
+/* tap2 */
+#verification,#verification_complete,#dob3,#dob5{
+    width:20%;
+}
+.privacy_label_box{
+    display:flex;
+    justify-content: space-between;
+    margin-top:12px;
+    margin-bottom:12px;
+}
+.radio_label{
+    display:flex;
+    gap:10px; 
+}
+.radio_label label{
+    display:flex;
+    gap:8px;
+}
+.privacy_Policy{
+    display:flex;
+    flex-direction: column;
+    gap:12px;
+}
+.privacy_Policy a{
+    display:inline-block;
+    color:var(--primary_color);
+}
+#guest{
+    margin-bottom:12px;
+}
+.privacy{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    margin-bottom:12px;
+}
+/* tap2 end */
+/* tab3 */
+.sms{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 48px;
+    border-radius: 8px; 
+    padding:10px;
+    outline: none;
+    border:none;
+    background:#2d2d2d;
+    margin-bottom:12px;
+}
+.information{
+    margin-bottom:12px;
+}
+/* tab3 end */
+/* 라벨 히든 */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
 }
