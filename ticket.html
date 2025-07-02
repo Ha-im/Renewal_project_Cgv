@@ -12,19 +12,224 @@
 
   <main class="main-container">
     <div class="booking-header">
-      <div class="header header-1">
-        <span>극장</span>
+
+<!-- 극장 > 전체 리스트 -->
+      <div class="cinema-section">  
+        <div class="header header-1">
+          <span>극장</span>
+        </div>
+        <div class="tab-button">
+          <button class="tab-btn active">
+            <span>전체</span>
+          </button>
+          <button class="tab-btn">
+            <span>특별관</span>
+          </button>
+        </div>
+        
+        <div class="cinema-list">
+          <div class="cinema-area-list">
+            <ul>
+              <li>
+                <a href="" class="active">
+                  <span>서울</span>
+                  <span>(31)</span>
+                </a>
+                <div class="area-cinema-list">
+                  <ul class="content scroll-y">
+                    <li>
+                      <a href="">강남</a>
+                    </li>
+                    <li>
+                      <a href="" class="active">강변</a>
+                    </li>
+                    <li>
+                      <a href="">건대입구</a>
+                    </li>
+                  </ul>
+                </div>
+                
+              </li>
+            </ul>
+          </div>
+          <div class="cinema-area-list">
+            <ul>
+              <li>
+                <a href="">
+                  <span>경기</span>
+                  <span>(54)</span>
+                </a>
+                <div class="area-cinema-list">
+                  <ul class="content scroll-y">
+                    <li>
+                      
+                    </li>
+                    <li>
+                      
+                    </li>
+                    <li>
+                      
+                    </li>
+                  </ul>
+                </div>
+                
+              </li>
+            </ul>
+          </div>
+          <div class="cinema-area-list">
+            <ul>
+              <li>
+                <a href="">
+                  <span>인천</span>
+                  <span>(11)</span>
+                </a>
+                <div class="area-cinema-list">
+                  <ul class="content scroll-y">
+                    <li>
+
+                    </li>
+                    <li>
+                      
+                    </li>
+                    <li>
+                      
+                    </li>
+                  </ul>
+                </div>
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+
+<!-- 극장 > 특별관 리스트 -->
+ <!--
+        <div class="cinema-list">
+          <div class="cinema-area-list">
+            <ul>
+              <li>
+                <a href="" class="active">
+                  <span>서울</span>
+                  <span>(31)</span>
+                </a>
+                <div class="area-cinema-list">
+                  <ul class="content scroll-y">
+                    <li>
+                      <a href="">강남</a>
+                    </li>
+                    <li>
+                      <a href="" class="active">강변</a>
+                    </li>
+                    <li>
+                      <a href="">건대입구</a>
+                    </li>
+                  </ul>
+                </div>
+                
+              </li>
+            </ul>
+          </div>
+          <div class="cinema-area-list">
+            <ul>
+              <li>
+                <a href="">
+                  <span>경기</span>
+                  <span>(54)</span>
+                </a>
+                <div class="area-cinema-list">
+                  <ul class="content scroll-y">
+                    <li>
+                      
+                    </li>
+                    <li>
+                      
+                    </li>
+                    <li>
+                      
+                    </li>
+                  </ul>
+                </div>
+                
+              </li>
+            </ul>
+          </div>
+          <div class="cinema-area-list">
+            <ul>
+              <li>
+                <a href="">
+                  <span>인천</span>
+                  <span>(11)</span>
+                </a>
+                <div class="area-cinema-list">
+                  <ul class="content scroll-y">
+                    <li>
+                      
+                    </li>
+                    <li>
+                      
+                    </li>
+                    <li>
+                      
+                    </li>
+                  </ul>
+                </div>
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+  -->    
       </div>
-      <div class="header header-2">
-        <span>영화</span>
+
+
+
+
+
+<!-- 영화 > 전체 리스트 -->
+      <div class="movie-section">  
+        <div class="header header-2">
+          <span>영화</span>
+        </div>
+          <div class="tab-button">
+            <button class="tab-btn active">
+              <span>전체</span>
+            </button>
+            <button class="tab-btn">
+              <span>특별관</span>
+            </button>
+          </div>
+
+          <div class="movie-list">
+            <ul>
+              <li>
+                <a href="">드래곤 길들이기</a>
+              </li>
+              <li>
+                <a href="" class="active">F1 더 무비</a>
+              </li>
+              <li>
+                <a href="">바람계곡의 나우시카</a>
+              </li>
+            </ul>
+          </div>
+
+       
+        
       </div>
+
+
+
+
+
+
+
       <div class="header header-3">
         <span>날짜</span>
       </div>
     </div>
 
     <div class="booking-container">
-        <div class="booking-step"><!-- booking-header -->
+        <div class="booking-step">
             <div class="booking-tab active" data-step="1">
                 <div>01</div>
                 <div>상영시간</div>
@@ -44,22 +249,6 @@
         </div>
         </div>
 
-        <div class="inner">
-          <ul>
-            <li>
-              <button>
-                <span>전체</span>
-              </button>
-            </li>
-            <li>
-              <button>
-                <span>특별관</span>
-              </button>
-            </li>
-          </ul>
-        </div>
-
-      </main>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
