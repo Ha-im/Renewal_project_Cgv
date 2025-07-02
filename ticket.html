@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>예매</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/ticket.css">
+</head>
+<body>
+
+  <main class="main-container">
+    <div class="booking-header">
+      <div class="header header-1">
+        <span>극장</span>
+      </div>
+      <div class="header header-2">
+        <span>영화</span>
+      </div>
+      <div class="header header-3">
+        <span>날짜</span>
+      </div>
+    </div>
+
+    <div class="booking-container">
+        <div class="booking-step"><!-- booking-header -->
+            <div class="booking-tab active" data-step="1">
+                <div>01</div>
+                <div>상영시간</div>
+            </div>
+            <div class="booking-tab" data-step="2">
+                <div>02</div>
+                <div>인원/좌석</div>
+            </div>
+            <div class="booking-tab" data-step="3">
+                <div>03</div>
+                <div>결제</div>
+            </div>
+            <div class="booking-tab" data-step="4">
+                <div>04</div>
+                <div>결제완료</div>
+            </div>
+        </div>
+        </div>
+
+        <div class="inner">
+          <ul>
+            <li>
+              <button>
+                <span>전체</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span>특별관</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+      </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./js/ticket.js"></script>
+</body>
+</html>

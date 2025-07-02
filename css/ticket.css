@@ -1,0 +1,55 @@
+body{
+	background: #3B3B3B;
+	color:#fff;
+	font-size:14px;
+}
+.main-container {
+	max-width: 1280px;
+	margin: 144px auto 76px;
+}
+.booking-container {
+	background-color: #262525;
+}
+.booking-tab {
+	/* flex: 1; */
+	text-align: center;
+	padding: 76px 0;
+	width: 80px;
+	height: 200px;
+	background-color: #444;
+	cursor: pointer;
+	position: relative;
+	border-top: 1px solid #5E5E5E;
+}
+.booking-tab div{
+	height: 24px;
+	font-size: 15px;
+}
+.booking-tab.active {
+	background-color: #FF243E;
+}
+
+
+.booking-header{
+	display: flex;
+	background-color: #121212;
+}
+.header{
+	height: 72px;
+	text-align: center;
+	padding: 18px;
+	position: relative;
+	font-size: 18px;
+  line-height: 24px;
+}
+.header-1 {
+  width: 33.6%;
+	border-right: 1px solid #5E5E5E;
+}
+.header-2 {
+  width: 27.3%;
+	border-right: 1px solid #5E5E5E;
+}
+.header-3 {
+  width: 39.06%;
+}
