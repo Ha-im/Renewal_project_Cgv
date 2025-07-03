@@ -567,16 +567,6 @@ h2.ratingall::after {
   z-index: 20;
 }
 
-/* query */
-@media (max-width: 1600px) {
-  .releasedtitle h2 {
-    margin-top: 100px;
-  }
-}
-
-
-
-
 
 
 /* 07 location pym */
@@ -899,3 +889,11 @@ body {
 .fp-watermark a{
   display:none;
 }
+
+/* query */
+/*
+@media screen and(max-width: 1600px) {
+
+}
+*/
+
