@@ -29,10 +29,22 @@ header {
     display: block;
 }
 
+/* logo의 텍스트는 안보이게.. */
+.logo a span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 .logo a img {
     height: 40px;
     vertical-align: top;
 }
+
 
 /* gnb, lnb */
 .gnb {
@@ -54,7 +66,7 @@ header {
 }
 
 .lnb {
-    display: none;
+    display: block;
     /* jquery 제어*/
     position: absolute;
     top: 72px;

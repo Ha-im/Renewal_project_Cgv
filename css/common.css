@@ -82,18 +82,5 @@
   --web_btn_shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
   --web_card_shadow: 8px 8px 16px rgba(0, 0, 0, 0.25);
   --web_strong_shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
-}
 
-
-/* 공통 css style */
-
-/* text만 mask하기 */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-    border: 0;
 }
