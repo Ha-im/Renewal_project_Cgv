@@ -1,0 +1,138 @@
+body{
+	background: #3B3B3B;
+	color:#fff;
+	font-size:14px;
+	font: 15px/24px "Noto Sans KR", sans-serif;
+}
+.main-container {
+	max-width: 1280px;
+	margin: 144px auto 76px;
+	position: relative;
+}
+.booking-container {
+	background-color: #262525;
+}
+.booking-tab {
+	/* flex: 1; */
+	text-align: center;
+	padding: 76px 0;
+	width: 80px;
+	height: 200px;
+	background-color: #323232;
+	cursor: pointer;
+	position: relative;
+	border-top: 1px solid #434343;
+}
+.booking-tab.active {
+	background-color: #FF243E;
+}
+.booking-header{
+	display: flex;
+	min-width: 1280px;
+	background-color: #121212;
+	color: var(--light_white);
+}
+.header{
+	position: relative;
+	height: 60px;
+	text-align: center;
+	padding: 18px;
+	font-size: 18px;
+  line-height: 24px;
+}
+.header-1 {
+  width: 430px;
+	border-right: 1px solid #434343;
+}
+.header-2 {
+  width: 350px;
+	border-right: 1px solid #434343;
+}
+.header-3 {
+  width: 500px;
+}
+
+/* 영화예매 컨텐츠 영역 */
+.tab-button{
+	position: absolute;
+	display: flex;
+	top: 60px;
+	left: 80px;
+}
+.movie-section .tab-button{
+	left: 430px;
+}
+.tab-btn{
+	border: none;
+	background-color: #262525;
+	width: 175px;
+	height: 60px;
+	color: #767575;
+	border: 1px solid #434343;
+}
+.tab-btn.active{
+	background-color: #1B1B1B;
+	color: var(--white);
+}
+
+/* 극장 list */
+.cinema-list{
+	position: absolute;
+	left: 80px;
+	top: 120px;
+}
+.cinema-area-list > ul {
+	width: 350px;
+}
+.cinema-area-list li{
+	display: flex;
+	height: 34px;
+	font-size: 14px;
+	line-height: 34px;
+}
+.cinema-area-list a{
+	width: 175px;
+	padding-left: 20px;
+	background-color: #1B1B1B;
+}
+.cinema-area-list a.active{
+	background-color: #262525;
+}
+.cinema-area-list a span:nth-of-type(2){
+	color: #767575;
+}
+.area-cinema-list a{
+	padding-left: 20px;
+	background-color: transparent;
+}
+.area-cinema-list a.active{
+	color: var(--primary_color);
+}
+
+/* 영화 list */
+.movie-list{
+	position: absolute;
+	left: 430px;
+	top: 120px;
+}
+.movie-list > ul {
+	width: 350px;
+}
+.movie-list li{
+	height: 34px;
+	font-size: 14px;
+	line-height: 34px;
+	background-color: #1B1B1B;
+	
+}
+.movie-list a {
+  display: block;
+  height: 34px;
+  padding-left: 20px;
+  background-color: #1B1B1B;
+  line-height: 34px;
+}
+.movie-list a.active {
+  background-color: #262525;
+  border: 2px solid #fff;
+}
