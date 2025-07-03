@@ -62,6 +62,14 @@ body{
 .movie-section .tab-button{
 	left: 430px;
 }
+.cinema-tab-btn{
+	border: none;
+	background-color: #1B1B1B;
+	width: 350px;
+	height: 60px;
+	color: var(--white);
+	border: 1px solid #434343;
+}
 .tab-btn{
 	border: none;
 	background-color: #262525;
@@ -125,20 +133,19 @@ body{
 	width: 175px;
 	height: 740px;
 	overflow: scroll;
-}
-.area-cinema-list .content.scroll-y{
-	overflow-x: hidden;
-}
-.content{
 	background-color: #262525;
 	border-top: 8px solid #262525;
   border-right: 6px solid #262525;
   border-bottom: 8px solid #262525;
   border-left: none;
 }
+.area-cinema-list .content.scroll-y{
+	overflow-x: hidden;
+}
 /* 스크롤 */
 ::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-thumb {
   background: #4D4D4D;
@@ -171,4 +178,34 @@ body{
   background-color: #262525;
   border: 2px solid #fff;
 	box-sizing: border-box;
+	width: 98.3%;
 }
+.movie-list .content{
+	width: 350px;
+	height: 740px;
+	overflow: scroll;
+	background-color: #1B1B1B;
+	border-top: 8px solid #1B1B1B;
+  border-right: 6px solid #1B1B1B;
+  border-bottom: 8px solid #1B1B1B;
+}
+.movie-list .content.scroll-y{
+	overflow-x: hidden;
+}
+
+/* 날짜 선택 */
+.date-wrapper{
+	position: absolute;
+	width: 500px;
+	height: 800px;
+	background-color: #262525;
+}
+	.date-wrapper{
+		position: absolute;
+	}
+	.date-wrapper>.date-slide>ul{
+		display: flex;
+	}
+	.date-slide{
+		padding: 20px;
+	}
