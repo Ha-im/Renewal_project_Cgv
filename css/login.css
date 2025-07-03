@@ -48,6 +48,7 @@ input[type="submit"]:active,input[type="button"]:active{
 input[type="button"]{
     color:#fff;
     background:var(--primary_color);
+    font-size:0.875em;
 }
 .tel_ok, .verification_ok{
     width:100%;
@@ -90,7 +91,6 @@ button[type="button"]:active,.sms:active{
     margin-bottom:48px;
 }
 .tab1{
-    width:500px;
     height:100%;
 }
 .naverLogin{
@@ -156,6 +156,12 @@ button[type="button"]:active,.sms:active{
     display:flex;
     gap:8px;
 }
+input[type="radio"] {
+    accent-color: red; /* 또는 #ff0000 등 원하는 색 */
+  }
+input[type="checkbox"] {
+accent-color: red; /* 또는 #ff0000 등 원하는 색 */
+}
 .privacy_Policy{
     display:flex;
     flex-direction: column;
@@ -202,4 +208,16 @@ button[type="button"]:active,.sms:active{
     clip: rect(0 0 0 0);
     white-space: nowrap;
     border: 0;
+}
+/* 미디어 */
+@media (max-width:500px) {
+    .form-group{
+        width:100%;
+    }
+    input[type="button"]{
+        font-size:0.7em;
+    }
+    #tab1{
+        width:100%;
+    }
 }
