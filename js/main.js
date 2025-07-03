@@ -77,16 +77,16 @@ document.addEventListener('DOMContentLoaded', function () {
   /* plan end */ 
   /* cinema */
   for(let i = 1; i<=$('.cinemaspecial .item').length; i++){
-    $(`.cinemaspecial .item:nth-child(${i})`).mouseenter(function(){
+    $(`.cinemaspecial .item a:nth-child(${i})`).mouseenter(function(){
       $(this).addClass('active');
-      $(this).find('span').addClass('active');
+      $(this).next('span').addClass('active');
       const bgImg = $(this).data('bg');
     $('.cinemazone').css({
       background: `linear-gradient(rgba(14, 14, 14, 0), rgba(0, 0, 0, 0.6) 62%, rgba(0, 0, 0, 0.97)), url(${bgImg}) no-repeat center center / cover`
     });
     }).mouseleave(function(){
       $(this).removeClass('active');
-      $(this).find('span').removeClass('active');
+      $(this).next('span').removeClass('active');
       $('.cinemazone').css({
       background: ''
     });

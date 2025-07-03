@@ -330,13 +330,9 @@ h2.ratingall::after {
   width:100%;
   height:100%;
   gap:4px;
-  
 }
 .cinemaspecial .item.active{
   box-shadow:var(----web_strong_shadow);
-}
-.cinemaspecial .item a{
-  display:inline-block;
 }
 .cinemaspecial .item a, .cinema .item span{
   font-size:72px;
@@ -345,13 +341,13 @@ h2.ratingall::after {
 .cinemaspecial{
   overflow:hidden;
 }
-.cinemaspecial .item.active{
+.cinemaspecial .item a.active,.cinemaspecial .item span.active {
   color:#ED3124;
 }
 .cinemaspecial span {
   opacity:0;
   font-size:72px;
-  transform:translateX(-50px);
+  transform:translateX(-30px);
   transition:0.5s;
 }
 .cinemaspecial span.active{
