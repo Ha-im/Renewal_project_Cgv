@@ -9,13 +9,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.planPost', {
     slidesPerView: 'auto',
     spaceBetween: 18,
-    loop: true,
+    loop: false,
     speed: 0,
     autoplay: false,
     pagination: {
       el: '.swiper-pagination',
       type: 'progressbar',
     },
+    freeMode:true,
+    freeModeMomentum:false,
+    centeredSlides:false
   });
   
   // 2. 슬라이드 복제 1세트 (눈에 보이게 자연스러운 흐름 만들기)
