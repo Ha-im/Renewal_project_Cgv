@@ -359,7 +359,7 @@ h2.ratingall::after {
 .eventzone{
   width:100%;
   height: 100vh;
-  background:url('../images/event_zone/event_zone_store.jpg') center center / cover no-repeat;
+  background:url('../images/event_zone/store.jpg') center center / cover no-repeat;
 }
 .promotion{
   width:100%;
@@ -894,3 +894,8 @@ body {
 
 /* 영화포스터 이미지 */
 .bg-1 {background-image: url(../images/movierank_bg_howtotraindragon.jpg);}
+
+/* 마크 제거 */
+.fp-watermark a{
+  display:none;
+}
