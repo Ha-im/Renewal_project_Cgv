@@ -1,85 +1,107 @@
 /* header */
 header {
-    width : 100%;
-    height : 72px; /* row * 3 */
-    background-color: rgba(0, 0, 0, 0.8); /*추후 선형 그라데이션으로 변경*/
+    width: 100%;
+    height: 72px;
+    /* row * 3 */
+    background-color: rgba(0, 0, 0, 0.8);
+    /*추후 선형 그라데이션으로 변경*/
 
-    display: flex; /* 내부 요소들 가로 정렬*/
-    justify-content: space-between; /* 양 끝 정렬*/
-    align-items: center; /* 교차축 가운데 정렬*/
-    padding : 0 60px; /*패딩 위아래 0 좌우 60px*/
+    display: flex;
+    /* 내부 요소들 가로 정렬*/
+    justify-content: space-between;
+    /* 양 끝 정렬*/
+    align-items: center;
+    /* 교차축 가운데 정렬*/
+    padding: 0 60px;
+    /*패딩 위아래 0 좌우 60px*/
 
-    position: fixed; /*화면에서 고정*/
-    top : 0;
-    left : 0;
-    z-index: 999; /*항상 최상단*/
+    position: fixed;
+    /*화면에서 고정*/
+    top: 0;
+    left: 0;
+    z-index: 999;
+    /*항상 최상단*/
 }
 
 /* logo */
-.logo a{
-    font-size : 0; /*텍스트 안보이게*/
+
+.logo a {
+    display: block;
 }
-.logo a img{
-    height : 40px;
+
+/* logo의 텍스트는 안보이게.. */
+.logo a span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.logo a img {
+    height: 40px;
     vertical-align: top;
 }
 
 
 /* gnb, lnb */
-.gnb{
-    display: flex; /* 대메뉴 가로정렬*/
-    gap : 64px; /*간격*/
+.gnb {
+    display: flex;
+    /* 대메뉴 가로정렬*/
+    gap: 64px;
+    /*간격*/
 }
-.gnb li.on>a{
-    color : #f00; /* 임시 값*/
+
+.gnb li.on>a {
+    color: #f00;
+    /* 임시 값*/
 }
-.gnb>li>a{
+
+.gnb>li>a {
     display: block;
-    font-size : 18px;
-    font-weight : 400;
-    line-height: 72px;
-    color : #fff;
+    font: var(--gnb);
+    color: var(--white);
 }
+
 .lnb {
-    display: none; /* jquery 제어*/
+    display: block;
+    /* jquery 제어*/
     position: absolute;
-    top : 72px; /* header 높이값 */
-    left : 0;
-    width : 100%;
-    height : 48px; /* rows * 2*/
-    color : #fff;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    /* header 높이값 */
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
 }
-.lnb li{
+
+.lnb li {
     display: inline-block;
 }
-.lnb li a{
+
+.lnb li a {
     display: block;
-    line-height: 48px;
+    font: var(--lnb);
+    color: var(--white);
 }
 
 /* user-menu */
 .user_menu>ul {
     display: flex;
-    gap : 20px;
+    gap: 20px;
+    align-items: center;
 }
 
-.lang_box {
-    display: none;
-    position: absolute;
-    top : 80px;
-    right : 100px;
-    width : 80px;
-    height : 120px;
-    border-radius: 10px;
-    color : #fff;
-    background-color: rgb(82, 136, 183);
-    text-align: center;
-    padding-top : 40px;
-}
-.lang_box li:first-child{
-    margin-bottom: 4px;
+.lang_menu {}
+
+.lang_menu button {
+    background: transparent;
+    border: none;
 }
 
+.lang_menu button svg {}
 
+.lang_menu button svg path {}
