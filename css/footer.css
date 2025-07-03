@@ -2,17 +2,18 @@
 
 
 .footer {
-    height: 400px;
+    height: 600px;
     padding: 48px 60px;
 }
 
 footer nav {
-    margin-bottom: 48px;
+    margin-bottom: 96px;
 }
 
 footer .footer_menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap : 92px
 }
 
 footer .footer_menu a {
@@ -24,8 +25,8 @@ footer .footer_menu a {
 }
 
 footer .footer_menu a img {
-    width: 72px;
-    height: 72px;
+    width: 48px;
+    height: 48px;
 }
 
 footer .footer_menu a span {
