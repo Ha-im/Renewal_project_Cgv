@@ -335,6 +335,9 @@ h2.ratingall::after {
 .cinemaspecial .item.active{
   box-shadow:var(----web_strong_shadow);
 }
+.cinemaspecial .item a{
+  display:inline-block;
+}
 .cinemaspecial .item a, .cinema .item span{
   font-size:72px;
   font-weight:700;
