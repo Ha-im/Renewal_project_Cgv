@@ -10,7 +10,7 @@ body{
 	position: relative;
 }
 .booking-container {
-	background-color: #262525;
+	background-color: #1B1B1B;
 }
 .booking-tab {
 	/* flex: 1; */
@@ -93,7 +93,6 @@ body{
 .cinema-area-list a{
 	width: 175px;
 	padding-left: 20px;
-	background-color: #1B1B1B;
 }
 .cinema-area-list a.active{
 	background-color: #262525;
@@ -101,6 +100,20 @@ body{
 .cinema-area-list a span:nth-of-type(2){
 	color: #767575;
 }
+
+/*.cinema-area-list li:last-child a {
+  position: absolute;
+	left: 0px;
+  top: 100%; 
+	width: 175;
+  height: 434px;
+	display: block;
+	background-color: #1B1B1B;
+}
+.cinema-area-list li:last-child a {
+  position: relative;
+}
+*/
 .area-cinema-list a{
 	padding-left: 20px;
 	background-color: transparent;
@@ -108,6 +121,30 @@ body{
 .area-cinema-list a.active{
 	color: var(--primary_color);
 }
+.area-cinema-list .content{
+	width: 175px;
+	height: 740px;
+	overflow: scroll;
+}
+.area-cinema-list .content.scroll-y{
+	overflow-x: hidden;
+}
+.content{
+	background-color: #262525;
+	border-top: 8px solid #262525;
+  border-right: 6px solid #262525;
+  border-bottom: 8px solid #262525;
+  border-left: none;
+}
+/* 스크롤 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #4D4D4D;
+  border-radius: 10px;
+}
+
 
 /* 영화 list */
 .movie-list{
@@ -122,17 +159,16 @@ body{
 	height: 34px;
 	font-size: 14px;
 	line-height: 34px;
-	background-color: #1B1B1B;
-	
 }
 .movie-list a {
   display: block;
   height: 34px;
   padding-left: 20px;
   background-color: #1B1B1B;
-  line-height: 34px;
+	line-height: 34px;
 }
 .movie-list a.active {
   background-color: #262525;
   border: 2px solid #fff;
+	box-sizing: border-box;
 }
