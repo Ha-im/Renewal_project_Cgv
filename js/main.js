@@ -24,7 +24,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const menu = $('header'); //header
   let currentPage = 0; //현재 사용자가 보고있는 page (index 체크용)
   let checkEvent = false; //스크롤 이벤트 on/off
-  
+
+
+  const gnb = $('.gnb li');
+  gnb.on('mouseenter', function () {
+    $(this).addClass('on')
+  })
 
   // 해석...
   // .section의 첫 번째 페이지 에서는 header가 보여지고 있다. // 초기값은 block으로 충분
@@ -46,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
       menu.animate({
         top: `-72px`
       }, 600, function () {
+        $('.toggle').fadeIn();
         checkEvent = false;
       })
     } else {
@@ -56,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
       menu.animate({
         top: `0`
       }, 600, function () {
+        $('.toggle').fadeOut();
         checkEvent = false;
       })
     }
