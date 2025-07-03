@@ -1,29 +1,15 @@
-.section {
-  width: 100%;
+
+/* pager */
+#fp-nav.fp-right {
+  right : 0;
+  left : 20px;
 }
-
-.page3 {
-  background-color: #000;
-
-}
-
-.page4 {
-  background-color: coral;
+#fp-nav ul li a span {
+  background-color: var(--white);
 
 }
-
-.page5 {
-  background-color: cornflowerblue;
-
-}
-.page7 {
-  background-color: cornflowerblue;
-
-}
-
-.page8 {
-  background-color: coral;
-
+#fp-nav ul li a.active span {
+  background-color: var(--primary_color);
 }
 
 /* main_banner */
@@ -48,9 +34,6 @@
 }
 
 .title {
-
-
-  
   display: inline-block;
   font: var(--title);
   color: var(--white);
