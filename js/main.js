@@ -5,13 +5,17 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollOverflow: true
   });
   /* plan */ 
+  // 2. 슬라이드 복제 1세트 (눈에 보이게 자연스러운 흐름 만들기)
+  const $wrapper = $('.planPost .swiper-wrapper');
+  const $originalSlides = $wrapper.children('.swiper-slide');
+  $wrapper.append($originalSlides.clone()); // 클론 1세트만 추가
   /*1. 스와이프 기능 추가*/
   const swiper = new Swiper('.planPost', {
     slidesPerView: 'auto',
     spaceBetween: 18,
     loop: false,
     speed: 0,
-    autoplay: false,
+    autoplay: true,
     pagination: {
       el: '.swiper-pagination',
       type: 'progressbar',
@@ -20,11 +24,15 @@ document.addEventListener('DOMContentLoaded', function () {
     freeModeMomentum:false,
     centeredSlides:false
   });
+  //슬라이드 돌아가는 기능 막기
+  swiper.on('touchStart', () => {
+    cancelAnimationFrame(animId);
+  });
   
-  // 2. 슬라이드 복제 1세트 (눈에 보이게 자연스러운 흐름 만들기)
-  const $wrapper = $('.planPost .swiper-wrapper');
-  const $originalSlides = $wrapper.children('.swiper-slide');
-  $wrapper.append($originalSlides.clone()); // 클론 1세트만 추가
+  swiper.on('touchEnd', () => {
+    animId = requestAnimationFrame(animate);
+  });
+  
   
   // 3. ranking 번호 매기기 (원본 번호만 반복되게)
   $wrapper.children('.swiper-slide').each(function (idx) {
