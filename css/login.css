@@ -215,7 +215,7 @@ accent-color: red; /* 또는 #ff0000 등 원하는 색 */
         width:100%;
     }
     input[type="button"]{
-        font-size:0.7em;
+        font-size:0.6em;
     }
     #tab1{
         width:100%;
