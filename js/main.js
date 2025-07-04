@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     freeMode: true,
     freeModeMomentum: true,        
     allowTouchMove: true,
-    speed: 2000,
+    speed: 4000,
     autoplay: {
       delay: 0,                   
       disableOnInteraction: false,
@@ -42,47 +42,56 @@ document.addEventListener('DOMContentLoaded', function () {
   })
   /* plan end */ 
   /* cinema */
-  for(let i = 1; i<=$('.cinemaspecial .item').length; i++){
-    $(`.cinemaspecial .item a:nth-child(${i})`).mouseenter(function(){
-      $(this).addClass('active');
-      $(this).next('span').addClass('active');
-      const bgImg = $(this).data('bg');
-    $('.cinemazone').css({
-      background: `linear-gradient(rgba(14, 14, 14, 0), rgba(0, 0, 0, 0.6) 62%, rgba(0, 0, 0, 0.97)), url(${bgImg}) no-repeat center center / cover`
+  const cinemaspecial = $('.cinemaspecial > div')
+  const bg1 = $('.cinemazone .bg1')
+  const arrows = $('.cinemaspecial .item a span')
+  const item = $('.cinemaspecial .item a')
+
+  item.each(function(){
+
+    const img = new Image();
+    img.src = $(this).attr('data-bg');
+  })
+  item.on('mouseenter',function(){
+      const cinemaUrl = $(this).attr('data-bg');
+      bg1.fadeOut(100,function(){
+        $(this).css({backgroundImage:`var(--sectionBg-Grad-lin),url(${cinemaUrl})`}).fadeIn()
+      })
+          $(this).next('span').addClass('active');
+          $(this).addClass('active');
     });
-    }).mouseleave(function(){
-      $(this).removeClass('active');
+    item.on('mouseleave',function(){
+      //  bg.stop().fadeOut(400);
       $(this).next('span').removeClass('active');
-      $('.cinemazone').css({
-      background: ''
-    });
+      $(this).removeClass('active');
     })
-  }
+});
 
   /* cinema end */
   /* eventZone */ 
-  $('.promotion .store').mouseenter(function(){
-    $(this).find('.hashtag').addClass('active')
-    $('.eventzone').css({background:"url('../images/event_zone/store.jpg') center center/ cover no-repeat"});
-  }).mouseleave(function(){
-    $(this).find('.hashtag').removeClass('active');
-    $('.eventzone').css({background:"url('../images/event_zone/store.jpg') center center/ cover no-repeat"});
+  const eventzone = $('.promotion > div')
+  const bg = $('.eventzone .bg')
+  const hashtag = $('.promotion div div.hashtag')
+
+  eventzone.each(function(){
+
+    const img = new Image();
+    img.src = $(this).attr('data-bg');
   })
-  $('.promotion .event').mouseenter(function(){
-    $(this).find('.hashtag').addClass('active')
-    $('.eventzone').css({background:"url('../images/event_zone/event_zone_event.jpg') center center/ cover no-repeat"});
-  }).mouseleave(function(){
-    $(this).find('.hashtag').removeClass('active');
-    $('.eventzone').css({background:"url('../images/event_zone/store.jpg') center center/ cover no-repeat"});
-  })
-  $('.special').mouseenter(function(){
-    $(this).find('.hashtag').addClass('active')
-    $('.eventzone').css({background:"url('../images/event_zone/special.png') center center/ cover no-repeat"});
-  }).mouseleave(function(){
-    $(this).find('.hashtag').removeClass('active');
-    $('.eventzone').css({background:"url('../images/event_zone/store.jpg') center center / cover no-repeat"});
-  })
-});
+    eventzone.on('mouseenter',function(){
+      const url = $(this).attr('data-bg');
+      bg.fadeOut(100,function(){
+        $(this).css({backgroundImage:`url(${url})`}).fadeIn()
+      })
+
+          $(this).find('.hashtag').addClass('active');
+    });
+    eventzone.on('mouseleave',function(){
+      // bg.stop().fadeOut(100);
+      $(this).find('.hashtag').removeClass('active');
+    })
+
+
 /*eventZone end*/
 
 

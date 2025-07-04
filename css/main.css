@@ -291,9 +291,10 @@ h2.ratingall::after {
 
 /*cinema*/
 .cinemazone {
-  background:var(--sectionBg-Grad-lin),url(../images/cinema/suite.png) no-repeat center center / cover ;
   width:100%;
   height:100vh;
+  position:relative;
+  
 }
 .cinema{
   color:#fff;
@@ -320,6 +321,7 @@ h2.ratingall::after {
 .cinemaspecial .item a, .cinema .item span{
   font-size:72px;
   font-weight:700;
+  line-height: 1;
 }
 .cinemaspecial{
   overflow:hidden;
@@ -337,12 +339,38 @@ h2.ratingall::after {
   transform: translateX(0);
   opacity:1;
 }
+.bg1{
+  position:absolute;
+  left: 0;
+  right: 0;
+  bottom:0;
+  top:0;
+  background-image:var(--sectionBg-Grad-lin),url('../images/cinema/livingroom.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:cover;
+  display:block;
+  z-index: -1;
+}
 /* cinema end */
 /* event_zone */
 .eventzone{
   width:100%;
   height: 100vh;
-  background:url('../images/event_zone/store.jpg') center center / cover no-repeat;
+  position:relative
+}
+.bg{
+  position:absolute;
+  left: 0;
+  right: 0;
+  bottom:0;
+  top:0;
+  background-image:url('../images/event_zone/store.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:cover;
+  display:block;
+  z-index: -1;
 }
 .promotion{
   width:100%;
