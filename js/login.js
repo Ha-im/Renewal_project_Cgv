@@ -22,22 +22,27 @@
         contents.forEach((content, i) => content.style.display = i === 0 ? 'block' : 'none');
 
         // 로그인 입력 에러
-        const form = document.querySelector('form')
-        const userid = document.querySelector('#userid')
-        const password = document.querySelector('#password')
-        const input = document.querySelectorAll('input')
-        form.addEventListener('submit',function(e){
+        const submitBtn = $('#submitBtn');
+        const form = $('#loginPage')
+
+        form.submit(function(e){
             e.preventDefault();
-
-            userid.classList.remove('error');
-            password.classList.remove('error');
-
-            if(userid.value.trim() === ''){
-                userid.classList.add('error')
-                userid.focus();
-            }else if(password.value.trim() === ''){
-                password.classList.add('error')
-                password.focus();
+            const id = $('#userid');
+            const pw = $('#password');
+            const userid = $('#userid').val().trim()
+            const password = $('#password').val().trim()
+            if(!userid){
+                alert('아이디를 입력해주세요.');
+                id.addClass('input-error');
+            }else if(!password){
+                id.removeClass('input-error');
+                alert('비밀번호를 입력해주세요.');
+                pw.addClass('input-error');
+            }else{
+                id.removeClass('input-error');
+                pw.removeClass('input-error');
+                alert('로그인 성공');
             }
         })
+
 

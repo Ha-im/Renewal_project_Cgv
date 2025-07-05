@@ -239,6 +239,11 @@ accent-color: red; /* 또는 #ff0000 등 원하는 색 */
     white-space: nowrap;
     border: 0;
 }
+/* 유효성검사 */
+.input-error {
+  transition: box-shadow 0.5s;
+  box-shadow: inset 0 0 15px rgba(255,0,0,0.5) !important;
+}
 /* 미디어 */
 @media (max-width:500px) {
     .form-group{

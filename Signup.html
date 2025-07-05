@@ -144,6 +144,18 @@
       .reset a:active{
         background:#4d4d4d;
       }
+      /* 유효성 검사 */
+      .input-error {
+        border: 1px solid red;
+        box-shadow: inset 0 0 5px rgba(255, 0, 0, 0.5);
+      }
+
+      .error-message {
+        color: red;
+        font-size: 12px;
+        line-height: 22px;
+        margin-top: 2px;
+      }
     </style>
 </head>
 <body>
@@ -156,16 +168,21 @@
         <h3>기본정보</h3>
         <p>*전체 항목은 필수 입력입니다</p>
       </div>
-      <form action="">
+      <form action="" method="POST">
         <div class="input">
           <input type="text" name="username" id="username" placeholder="이름을 입력해주세요." required>
-          <div class="checkId">
+          <div id="name-error" class="error-message"></div>
+        <div class="checkId">
           <input type="text" name="userid" id="userid" placeholder="아이디를 입력해주세요." required>
           <button type="button">중복확인</button>
-          </div>
+        </div>
+          <div id="id-error" class="error-message"></div>
           <input type="password" name="password" id="password" placeholder="비밀번호를 입력해주세요." required>
-          <input type="password" name="password" id="password" placeholder="비밀번호 확인" required>
+          <div id="pw-error" class="error-message"></div>
+          <input type="password" name="passwordok" id="passwordok" placeholder="비밀번호 확인" required>
+          <div id="pwok-error" class="error-message"></div>
           <input type="email" name="email" id="email" placeholder="이메일을 입력해주세요." required>
+          <div id="email-error" class="error-message"></div>
         </div>
         <button type="submit">가입하기</button>
       </form>
@@ -176,6 +193,6 @@
   </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="./js/login.js"></script>
+  <script src="./js/signup.js"></script>
 </body>
 </html>
