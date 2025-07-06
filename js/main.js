@@ -5,41 +5,73 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollOverflow: true
   });
   /* plan */ 
-  const $wrapper = $('.planPost .swiper-wrapper');
-  const $originalSlides = $wrapper.children('.swiper-slide');
-  $wrapper.append($originalSlides.clone()); // 슬라이드 복제
-  
+// JSON 데이터로부터 슬라이드 생성 및 Swiper 초기화
+$.getJSON('./json/slides.json', function(data) {
+  const slides = data.slides;
+
+  slides.forEach(function(item, idx) {
+    const displayIndex = (idx + 1).toString().padStart(2, '0'); // 01, 02 ... 번호 붙이기
+    const slideHTML = `
+      <div class="swiper-slide imgItem">
+        <img src="${item.image}" alt="">
+        <div class="planHover">
+          <div class="moviText">
+            <p>${item.description}</p>
+          </div>
+          <div class="btn_box">
+            <a href="${item.buttons[0].link}" class="${item.buttons[0].class}">${item.buttons[0].label}</a>
+            <a href="${item.buttons[1].link}" class="${item.buttons[1].class}">${item.buttons[1].label}</a>
+          </div>
+        </div>
+        <div class="ranking">${displayIndex}</div>  <!-- 슬라이드 번호 -->
+        <div class="age ${item.ageClass}">${item.age}</div> <!-- 연령 등급 표시 -->
+      </div>
+    `;
+    $('.swiper-wrapper').append(slideHTML);  // 슬라이드 HTML 추가
+  });
+//swiper 기능
   const swiper = new Swiper('.planPost', {
     slidesPerView: 'auto',
     spaceBetween: 18,
-    loop: true,               
-    freeMode: true,
-    freeModeMomentum: true,        
+    loop: true,
+    initialSlide: 0,
+    freeMode: false,
+    freeModeMomentum: true,
     allowTouchMove: true,
-    speed: 4000,
+    speed: 6000,
     autoplay: {
-      delay: 0,                   
+      delay: 3000,
       disableOnInteraction: false,
-      pauseOnMouseEnter: true,   
+      pauseOnMouseEnter: true,
     },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'progressbar',
+    },
+    watchSlidesProgress: true,
+    
   });
-  //ranking 번호 매기기 (원본 번호만 반복되게)
-  $wrapper.children('.swiper-slide').each(function (idx) {
-    const displayIndex = ((idx % $originalSlides.length) + 1).toString().padStart(2, '0');
-    $(this).find('.ranking').text(displayIndex);
+
+  $('.planPost').mouseenter(function(){
+    swiper.autoplay.stop(); 
   });
-  
+
+  $('.planPost').mouseleave(function(){
+    swiper.autoplay.start(); 
+  });
+ 
   $('.plan_title a').mouseenter(function(){
-    $(this).addClass('active')
+    $(this).addClass('active');
   }).mouseleave(function(){
-    $(this).removeClass('active')
-  })
+    $(this).removeClass('active');
+  });
 
   $('.planHover').mouseenter(function(){
     $(this).addClass('active');
   }).mouseleave(function(){
     $(this).removeClass('active');
-  })
+  });
+});
   /* plan end */ 
   /* cinema */
   const cinemaspecial = $('.cinemaspecial > div')
@@ -54,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })
   item.on('mouseenter',function(){
       const cinemaUrl = $(this).attr('data-bg');
-      bg1.fadeOut(100,function(){
+      bg1.stop(true, true).fadeOut(100,function(){
         $(this).css({backgroundImage:`var(--sectionBg-Grad-lin),url(${cinemaUrl})`}).fadeIn()
       })
           $(this).next('span').addClass('active');
@@ -66,31 +98,39 @@ document.addEventListener('DOMContentLoaded', function () {
       $(this).removeClass('active');
     })
 });
-
   /* cinema end */
   /* eventZone */ 
-  const eventzone = $('.promotion > div')
-  const bg = $('.eventzone .bg')
-  const hashtag = $('.promotion div div.hashtag')
+  // Swiper 초기화
+  const swiper2 = new Swiper('.eventSwiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      },
+      0: {
+        slidesPerView: 1,
+      },
+    },
+  });
+  // 배경 변경 + 해시태그 토글
+  const $bg = $('.eventzone .bg');
+  const $swiperContainer = $('.promotion.swiper.eventSwiper');
 
-  eventzone.each(function(){
+  $swiperContainer.on('mouseenter', '.swiper-slide', function() {
+    const bgUrl = $(this).data('bg');
+    if (!bgUrl) return;
 
-    const img = new Image();
-    img.src = $(this).attr('data-bg');
-  })
-    eventzone.on('mouseenter',function(){
-      const url = $(this).attr('data-bg');
-      bg.fadeOut(100,function(){
-        $(this).css({backgroundImage:`url(${url})`}).fadeIn()
-      })
-
-          $(this).find('.hashtag').addClass('active');
+    $bg.stop(true, true).fadeOut(150, function() {
+      $(this).css('background-image', `url(${bgUrl})`).fadeIn(150);
     });
-    eventzone.on('mouseleave',function(){
-      // bg.stop().fadeOut(100);
-      $(this).find('.hashtag').removeClass('active');
-    })
 
+    $(this).find('.hashtag').addClass('active');
+  });
+
+  $swiperContainer.on('mouseleave', '.swiper-slide', function() {
+    $(this).find('.hashtag').removeClass('active');
+  });
 
 /*eventZone end*/
 
