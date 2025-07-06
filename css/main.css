@@ -799,7 +799,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--img_cover_color);
+  background: var(--sectionBg-Grad-lin);
 }
 .bg-1{background-image: url(../images/movierank_bg_howtotraindragon.jpg);}
 .bg-2{background-image: url(../images/movierank_bg_f1.jpg);}

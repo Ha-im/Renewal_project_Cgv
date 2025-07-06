@@ -1,0 +1,185 @@
+body{
+	background: #3B3B3B;
+	color:#fff;
+	font-size:14px;
+	font: 15px/24px "Noto Sans KR", sans-serif;
+}
+.main-container {
+	max-width: 1280px;
+	margin: 144px auto 76px;
+	position: relative;
+}
+.booking-container {
+	background-color: #262525;
+}
+.booking-tab {
+	/* flex: 1; */
+	text-align: center;
+	padding: 76px 0;
+	width: 80px;
+	height: 200px;
+	background-color: #323232;
+	cursor: pointer;
+	position: relative;
+	border-top: 1px solid #434343;
+}
+.booking-tab.active {
+	background-color: #FF243E;
+}
+.booking-header{
+	display: flex;
+	min-width: 1280px;
+	background-color: #121212;
+	color: var(--light_white);
+}
+.header{
+	position: relative;
+	width: 1280px;
+	height: 60px;
+	text-align: center;
+	padding: 18px 0;
+	font-size: 18px;
+  line-height: 24px;
+}
+
+
+/* 배경 이미지 */
+.background-img{
+	position: absolute;
+	background-image: url(../images/movierank_bg_nausicaaofthevalleyofthewinds.jpg);
+	width: 1200px;
+	height: 252px;
+	left: 80px;
+}
+
+.background-img::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--sectionBg-Grad-lin);
+}
+
+/* 데이터 */
+.ticket-data{
+	position: absolute;
+	left: 130px;
+	top: 160px;
+	width: 300px;
+	height: 600px;
+	background-color: #121212;
+	border-radius: 10px 10px 0 0;
+	box-shadow: var(--web_card_shadow);
+}
+.data-img{
+	background-image: url(/images/movierank_poster_nausicaaofthevalleyofthewinds.jpg);
+	width: 300px;
+	height: 410px;
+	background-size: cover;
+  background-position: center;
+	border-radius: 10px 10px 0 0;
+}
+.dotted {
+  height: 1px;
+	margin: 24px 0 20px 0;
+  background-image: repeating-linear-gradient(
+    to right,
+    #c9c9c9 0,
+    #c9c9c9 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+
+.data-section{
+	padding-left: 24px;
+}
+
+.data-title{
+	padding-bottom: 18px;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 24px;
+}
+.data-content .data{
+	display: flex;
+	gap: 50px;
+}
+.data-content .data span{
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 24px;
+}
+.data-content .data span:first-child{
+	width: 34px;
+}
+.data-content .data span:last-child{
+	color: #999999;
+}
+.movie-title{
+	position: absolute;
+	left: 476px;
+	top: 240px;
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 48px;
+}
+
+/* 인원수 입력 */
+.input-number-section{
+	display: flex;
+	gap: 24px;
+	left: 476px;
+	top: 320px;
+	position: absolute;
+	width: 746px;
+	height: 48px;
+	background-color: #121212;
+	padding: 12px 20px;
+}
+.ticket-controls{
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+.ticket-text{
+	font-size: 15px;
+}
+.ticket-controls span{
+	font-size: 15px;
+	line-height: 24px;
+	color: var(--light_white);;
+	
+}
+.counter-btn{
+	background-color: transparent;
+	border: none;
+	color: var(--white);
+	font-size: 15px;
+}
+.counter-btn:hover{
+	color: #b5b5b5;
+}
+.total{
+	display: flex;
+	padding-left: 50px;
+	gap: 10px;
+	font-size: 15px;
+	line-height: 24px;
+	font-weight: bold;
+	color: var(--light_white);
+}
+.seats-containr{
+	display: flex;
+	left: 476px;
+	top: 376px;
+	position: absolute;
+	width: 746px;
+	height: 388px;
+	background-color: #121212;
+	border-top: 2px solid var(--light_white);
+	padding: ;
+}
