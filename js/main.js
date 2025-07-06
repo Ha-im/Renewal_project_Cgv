@@ -27,18 +27,18 @@ $.getJSON('./json/slides.json', function(data) {
         <div class="age ${item.ageClass}">${item.age}</div> <!-- 연령 등급 표시 -->
       </div>
     `;
-    $('.swiper-wrapper').append(slideHTML);  // 슬라이드 HTML 추가
+    $('.swiper-wrapper.planA').append(slideHTML);  // 슬라이드 HTML 추가
   });
 //swiper 기능
   const swiper = new Swiper('.planPost', {
-    slidesPerView: 'auto',
-    spaceBetween: 18,
-    loop: true,
-    initialSlide: 0,
-    freeMode: false,
-    freeModeMomentum: true,
-    allowTouchMove: true,
-    speed: 1000,
+    slidesPerView: 'auto', // 보여지는 갯수
+    spaceBetween: 18, // gap
+    loop: true, // 무한 슬라이드
+    initialSlide: 0, // 몇번째부터 이용할건지
+    freeMode: false, // 
+    freeModeMomentum: true, // 관성
+    allowTouchMove: true, 
+    speed: 1000, // 속도
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
@@ -102,8 +102,7 @@ $.getJSON('./json/slides.json', function(data) {
   /* eventZone */ 
   // Swiper 초기화
   const swiper2 = new Swiper('.eventSwiper', {
-    slidesPerView: 'auto',
-    spaceBetween: 30,
+    slidesPerView: 3,
     breakpoints: {
       1024: {
         slidesPerView: 3,
