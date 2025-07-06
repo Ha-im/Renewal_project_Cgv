@@ -38,7 +38,7 @@ $.getJSON('./json/slides.json', function(data) {
     freeMode: false,
     freeModeMomentum: true,
     allowTouchMove: true,
-    speed: 6000,
+    speed: 1000,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
