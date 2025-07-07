@@ -944,14 +944,13 @@ body {
   }
   .cinemaspecial .item a,
   .cinema .item span {
-    font-size:2.5rem;
+    font-size:36px;
   }
 
   .cinema h5 {
     width:100%;
-    font-size: 22px;
-    line-height: 36px;
-    margin-bottom: 40px;
+    font-size: 28px;
+    margin-bottom: 48px;
   }
 }
 
@@ -962,13 +961,12 @@ body {
   }
   .cinemaspecial .item a,
   .cinema .item span {
-    font-size: 24px;  /* 아주 작게 */
+    font-size: 30px;  /* 아주 작게 */
   }
 
   .cinema h5 {
-    font-size: 18px;
-    line-height: 28px;
-    margin-bottom: 30px;
+    font-size: 20px;
+    margin-bottom: 48px;
   }
   .plan_title h3{
     font-size:22px;
