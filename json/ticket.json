@@ -1,0 +1,520 @@
+{
+  "regions": [
+    {
+      "id": "seoul",
+      "name": "서울",
+      "count": 31,
+      "cinemas": [
+        "강남", "강변", "건대입구", "고덕강일", "구로", "대학로", "동대문", "등촌", 
+        "명동", "명동역 씨네라이브러리", "미아", "방학", "불광", "상봉", "성신여대입구", 
+        "수유", "신촌아트레온", "씨네드쉐프 압구정", "씨네드쉐프 용산", "압구정", 
+        "여의도", "연남", "영등포", "왕십리", "용산아이파크몰", "중계", "천호", 
+        "청담씨네시티", "피카드리1958", "하계", "홍대"
+      ]
+    },
+    {
+      "id": "gyeonggi",
+      "name": "경기",
+      "count": 54,
+      "cinemas": [
+        "경기광주", "고양백석", "고양행신", "광교", "광교상현", "광명역", "구리", "구리갈매", 
+        "기흥", "김포", "김포운양", "김포한강", "남양주화도", "다산", "동수원", "동탄", 
+        "동탄그랑파사쥬", "동탄역", "동탄호수공원", "배곧", "범계", "부천", "부천역", "산본", 
+        "서현", "소풍","스타필드시티위례", "신세계경기", "안산", "배곧안성", "야탑",
+        "양주옥정", "역곡", "오리", "오산중앙", "용인", "의정부", "의정부태흥", "이천", "일산", "파주문산",
+        "파주야당", "판교", "평촌", "평택", "평택고덕", "평택소사", "포천", "하남미사", 
+        "화성봉담", "화정","DRIVE IN 용인크랙사이드"
+      ]
+    },
+    {
+      "id": "incheon",
+      "name": "인천",
+      "count": 11,
+      "cinemas": ["계양", "부평", "송도타임스페이스", "인천", "인천가정", "인천도화", "인천시민공원", "인천연수", "인천학익", "죽안역", "청라"]
+    },
+    {
+      "id": "gangwon",
+      "name": "강원",
+      "count": 5,
+      "cinemas": ["강릉", "기린", "원통", "인제", "춘천"]
+    },
+    {
+      "id": "daejeon",
+      "name": "대전/충청",
+      "count": 20,
+      "cinemas": ["논산", "당진", "대전", "대전가수원", "대전가오", "대전탄방", "대전터미널", "서산",
+        "세종", "아산", "유성노은", "천안", "천안터미널", "천안펜타포트", "충주지웰시티", "청주터미널", "청주(서문)", "충북혁신", "충주교현", "홍성"]
+    },
+    {
+      "id": "daegu",
+      "name": "대구",
+      "count": 9,
+      "cinemas": ["대구", "대구수성", "대구스타디움", "대구아카데미", "대구연경", "대구월성", "대구죽전", "대구한일", "대구현대"]
+    },
+    {
+      "id": "busan",
+      "name": "부산/울산",
+      "count": 17,
+      "cinemas": ["대연", "동래", "부산명지", "서면", "서면삼정타워", "서면상상마당", "센텀시티", "씨네드쉐프 센템시티","아시아드", "울산삼산", "울산성남", "울산신천", "울산진장", "정관", "하단아트몰링", "해운대", "Drive In 영도"]
+    },
+    {
+      "id": "gyeongsang",
+      "name": "경상",
+      "count": 15,
+      "cinemas": ["거제", "경산", "고성", "구미", "김천율곡", "김해", "김해율하", "김해장유","마산", "북포항", "안동", "양산삼호", "진주혁신", "창원더시티", "창원성남"]
+    },
+    {
+      "id": "gwangju",
+      "name": "광주/전라/제주",
+      "count": 22,
+      "cinemas": ["광양", "광양 엘에프스퀘어", "광주금남로", "광주상무", "광주용봉", "광주첨단", "광주충장로", "광주하남", "나주", "목포", "목포평화광장", "서전주", "순천", "순천신대", "여수웅천", "익산", "전주고사", "전주에코시티", "전주효자", "정읍", "제주", "제주노형"]
+    }
+  ],
+  "movies": [
+    {
+      "id": "jurassic_world",
+      "title": "쥬라기월드:새로운시작",
+      "rating": "12",
+      "category": "전체"
+    },
+    {
+      "id": "f1_movie",
+      "title": "F1더무비",
+      "rating": "15",
+      "category": "전체"
+    },
+    {
+      "id": "superman",
+      "title": "슈퍼맨",
+      "rating": "all",
+      "category": "전체"
+    },
+    {
+      "id": "noise",
+      "title": "노이즈",
+      "rating": "19",
+      "category": "전체"
+    },
+    {
+      "id": "seventeen",
+      "title": "세븐틴월드투어(비더선)",
+      "rating": "12",
+      "category": "전체"
+    },
+    {
+      "id": "electronic",
+      "title": "전자적독자시점",
+      "rating": "12",
+      "category": "전체"
+    },
+    {
+      "id": "28_years_later",
+      "title": "28년후",
+      "rating": "19",
+      "category": "전체"
+    },
+    {
+      "id": "bts",
+      "title": "방탄소년단[맵오브더소울원]",
+      "rating": "all",
+      "category": "전체"
+    },
+    {
+      "id": "dragon_train",
+      "title": "드래곤길들이기",
+      "rating": "all",
+      "category": "전체"
+    },
+    {
+      "id": "undercover",
+      "title": "위장수사",
+      "rating": "12",
+      "category": "전체"
+    },
+    {
+      "id": "nausicaa",
+      "title": "바람계곡의 나우시카",
+      "rating": "all",
+      "category": "전체"
+    },
+    {
+      "id": "sea_tiger",
+      "title": "바다호랑이",
+      "rating": "all",
+      "category": "전체"
+    },
+    {
+      "id": "elio",
+      "title": "엘리오",
+      "rating": "all",
+      "category": "전체"
+    },
+    {
+      "id": "kbo_allstar",
+      "title": "2025 KBO올스타전",
+      "rating": "12",
+      "category": "전체"
+    },
+    {
+      "id": "shadow_corps",
+      "title": "그림자군단",
+      "rating": "12",
+      "category": "전체"
+    },
+    {
+      "id": "burnt_love",
+      "title": "그을린사랑",
+      "rating": "15",
+      "category": "전체"
+    },
+    {
+      "id": "queer",
+      "title": "퀴어",
+      "rating": "15",
+      "category": "전체"
+    },
+    {
+      "id": "happy_end",
+      "title": "해피엔드",
+      "rating": "15",
+      "category": "전체"
+    },
+    {
+      "id": "naked_lunch",
+      "title": "네이키드런치",
+      "rating": "19",
+      "category": "전체"
+    },
+    {
+      "id": "sasquatch",
+      "title": "사스콰치선셋",
+      "rating": "15",
+      "category": "전체"
+    },
+    {
+      "id": "mission_impossible",
+      "title": "미션임파서블:파이널레코닝",
+      "rating": "15",
+      "category": "전체"
+    },
+    {
+      "id": "high_five",
+      "title": "하이파이브",
+      "rating": "15",
+      "category": "전체"
+    },
+    {
+      "id": "life_beautiful",
+      "title": "인생은아름다워",
+      "rating": "12",
+      "category": "전체"
+    },
+    {
+      "id": "kitchen",
+      "title": "더키친",
+      "rating": "12",
+      "category": "전체"
+    },
+    {
+      "id": "conformist",
+      "title": "순응자",
+      "rating": "15",
+      "category": "전체"
+    },
+    {
+      "id": "hureru",
+      "title": "후레루.",
+      "rating": "15",
+      "category": "전체"
+    },
+    {
+      "id": "school_uniform",
+      "title": "우리들의교복시절",
+      "rating": "15",
+      "category": "전체"
+    },
+    {
+      "id": "anti_communist",
+      "title": "우리는공산당이싫어요",
+      "rating": "15",
+      "category": "전체"
+    },
+    {
+      "id": "crayon_shin",
+      "title": "극장판짱구는못말려-격돌!낙서왕...",
+      "rating": "all",
+      "category": "전체"
+    },
+    {
+      "id": "lilo_stitch",
+      "title": "릴로&스티치",
+      "rating": "all",
+      "category": "전체"
+    },
+    {
+      "id": "on_hon_final",
+      "title": "온혼더파이널",
+      "rating": "19",
+      "category": "전체"
+    },
+    {
+      "id": "bleach",
+      "title": "극장판블리치:페이드투블랙",
+      "rating": "19",
+      "category": "전체"
+    },
+    {
+      "id": "seha_star",
+      "title": "세하별",
+      "rating": "12",
+      "category": "전체"
+    },
+    {
+      "id": "its_okay",
+      "title": "괜찮아괜찮아괜찮아!",
+      "rating": "15",
+      "category": "전체"
+    },
+    {
+      "id": "lobby",
+      "title": "로비",
+      "rating": "15",
+      "category": "전체"
+    },
+    {
+      "id": "king_of_kings",
+      "title": "킹오브킹스",
+      "rating": "19",
+      "category": "전체"
+    },
+    {
+      "id": "haikyu_end",
+      "title": "하이큐!!끝시작",
+      "rating": "all",
+      "category": "전체"
+    },
+    {
+      "id": "haikyu_winner",
+      "title": "하이큐!!승자와패자",
+      "rating": "all",
+      "category": "전체"
+    }
+  ],
+  "showtimes": {
+    "nausicaa": {
+      "2D": [
+        {
+          "time": "11:20",
+          "seats": "89/156",
+          "theater": "2관"
+        },
+        {
+          "time": "14:30",
+          "seats": "45/156",
+          "theater": "2관"
+        },
+        {
+          "time": "17:40",
+          "seats": "112/156",
+          "theater": "2관"
+        },
+        {
+          "time": "20:50",
+          "seats": "78/156",
+          "theater": "2관"
+        },
+        {
+          "time": "23:10",
+          "seats": "25/156",
+          "theater": "2관"
+        }
+      ],
+      "xscreen": [
+        {
+          "time": "11:20",
+          "seats": "89/156",
+          "theater": "1관"
+        },
+        {
+          "time": "15:00",
+          "seats": "67/156",
+          "theater": "1관"
+        },
+        {
+          "time": "18:30",
+          "seats": "134/156",
+          "theater": "1관"
+        },
+        {
+          "time": "21:45",
+          "seats": "89/156",
+          "theater": "1관"
+        },
+        {
+          "time": "00:15",
+          "seats": "12/156",
+          "theater": "1관"
+        }
+      ]
+    },
+    "f1_movie": {
+      "2D": [
+        {
+          "time": "10:00",
+          "seats": "23/180",
+          "theater": "3관"
+        },
+        {
+          "time": "13:20",
+          "seats": "156/180",
+          "theater": "3관"
+        },
+        {
+          "time": "16:40",
+          "seats": "89/180",
+          "theater": "3관"
+        },
+        {
+          "time": "20:00",
+          "seats": "67/180",
+          "theater": "3관"
+        }
+      ],
+      "IMAX": [
+        {
+          "time": "12:00",
+          "seats": "234/280",
+          "theater": "IMAX관"
+        },
+        {
+          "time": "15:30",
+          "seats": "178/280",
+          "theater": "IMAX관"
+        },
+        {
+          "time": "19:00",
+          "seats": "245/280",
+          "theater": "IMAX관"
+        },
+        {
+          "time": "22:30",
+          "seats": "123/280",
+          "theater": "IMAX관"
+        }
+      ]
+    },
+    "superman": {
+      "2D": [
+        {
+          "time": "09:30",
+          "seats": "45/200",
+          "theater": "4관"
+        },
+        {
+          "time": "12:50",
+          "seats": "167/200",
+          "theater": "4관"
+        },
+        {
+          "time": "16:10",
+          "seats": "134/200",
+          "theater": "4관"
+        },
+        {
+          "time": "19:30",
+          "seats": "89/200",
+          "theater": "4관"
+        },
+        {
+          "time": "22:50",
+          "seats": "56/200",
+          "theater": "4관"
+        }
+      ],
+      "4DX": [
+        {
+          "time": "11:00",
+          "seats": "78/88",
+          "theater": "4DX관"
+        },
+        {
+          "time": "14:20",
+          "seats": "65/88",
+          "theater": "4DX관"
+        },
+        {
+          "time": "17:40",
+          "seats": "23/88",
+          "theater": "4DX관"
+        },
+        {
+          "time": "21:00",
+          "seats": "45/88",
+          "theater": "4DX관"
+        }
+      ]
+    }
+  },
+  "dates": [
+    {
+      "date": "2025-07-03",
+      "day": "목",
+      "dayNum": 3
+    },
+    {
+      "date": "2025-07-04",
+      "day": "금",
+      "dayNum": 4
+    },
+    {
+      "date": "2025-07-05",
+      "day": "토",
+      "dayNum": 5
+    },
+    {
+      "date": "2025-07-06",
+      "day": "일",
+      "dayNum": 6
+    },
+    {
+      "date": "2025-07-07",
+      "day": "월",
+      "dayNum": 7
+    },
+    {
+      "date": "2025-07-08",
+      "day": "화",
+      "dayNum": 8
+    },
+    {
+      "date": "2025-07-09",
+      "day": "수",
+      "dayNum": 9
+    },
+    {
+      "date": "2025-07-10",
+      "day": "목",
+      "dayNum": 10
+    },
+    {
+      "date": "2025-07-11",
+      "day": "금",
+      "dayNum": 11
+    },
+    {
+      "date": "2025-07-12",
+      "day": "토",
+      "dayNum": 12
+    },
+    {
+      "date": "2025-07-13",
+      "day": "일",
+      "dayNum": 13
+    },
+    {
+      "date": "2025-07-14",
+      "day": "월",
+      "dayNum": 14
+    }
+  ]
+}

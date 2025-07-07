@@ -907,9 +907,6 @@ body {
 .poster-4 {background-image: url(../images/movierank_poster_nausicaaofthevalleyofthewinds.jpg);}
 .poster-5 {background-image: url(../images/movierank_poster_theseedofthescaredfig.jpg);}
 
-/* 영화포스터 이미지 */
-.bg-1 {background-image: url(../images/movierank_bg_howtotraindragon.jpg);}
-
 /* 마크 제거 */
 .fp-watermark a{
   display:none;

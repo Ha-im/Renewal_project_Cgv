@@ -365,6 +365,7 @@ h3{
 
 .next-page{
 	position: absolute;
+	width: 104px;
 	left: 1160px;
 	bottom: 24px;
 	background-color: var(--primary_color);
