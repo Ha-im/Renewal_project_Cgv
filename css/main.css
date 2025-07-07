@@ -179,7 +179,7 @@ h2.ratingall::after {
   flex-shrink: 0; 
 }
 .swiper-pagination {
-  width: 100%;           /* 부모 가로 대비 90% */
+  width: 90%;           /* 부모 가로 대비  */
   max-width: 1320px;    /* 최대 너비는 1320px로 제한 */
   height: 4px;
   background: rgba(51, 51, 51, 1);
@@ -934,7 +934,6 @@ body {
     font-size: 48px;  /* 좀 작게 */
   }
 }
-
 /* 모바일 (768px 이하) */
 @media screen and (max-width: 768px) {
   .container{
@@ -971,4 +970,11 @@ body {
     line-height: 28px;
     margin-bottom: 30px;
   }
+  .plan_title h3{
+    font-size:22px;
+  }
+  .plan_title a{
+    font-size:12px;
+  }
+}
 }
