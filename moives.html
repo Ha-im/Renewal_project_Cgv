@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화소개</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/moives.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <h1 class="logo">
+            <a href="index.html">
+                <span class="visually-hidden">CGV</span>
+                <img src="images/header_logo.png" alt="CGV메인로고">
+            </a>
+        </h1>
+        <nav class="menu">
+            <ul class="gnb">
+                <li class="on">
+                    <a href="#">영화</a>
+                    <ul class="lnb">
+                        <li><a href="#">영화순위</a></li>
+                        <li><a href="#">아트하우스</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">극장</a>
+                    <ul class="lnb">
+                        <li><a href="#">CGV극장</a></li>
+                        <li><a href="#">특별관</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">예매</a>
+                    <ul class="lnb">
+                        <li><a href="#">빠른예매</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">스토어</a>
+                    <ul class="lnb">
+                        <li><a href="#">패키지</a></li>
+                        <li><a href="#">영화 기프트</a></li>
+                        <li><a href="#">먹거리</a></li>
+                        <li><a href="#">씨네샵</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">이벤트 혜택</a>
+                    <ul class="lnb">
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">특별 기획전</a></li>
+                        <li><a href="#">영화/예매 할인</a></li>
+                        <li><a href="#">멤버쉽 혜택</a></li>
+                        <li><a href="#">제휴/할인</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="user_menu">
+            <ul>
+                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960"
+                            width="20px" fill="#FFFFFF">
+                            <path
+                                d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z" />
+                        </svg></a></li>
+                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960"
+                            width="20px" fill="#FFFFFF">
+                            <path
+                                d="M479.79-312q15.21 0 25.71-10.29t10.5-25.5q0-15.21-10.29-25.71t-25.5-10.5q-15.21 0-25.71 10.29t-10.5 25.5q0 15.21 10.29 25.71t25.5 10.5Zm0-132q15.21 0 25.71-10.29t10.5-25.5q0-15.21-10.29-25.71t-25.5-10.5q-15.21 0-25.71 10.29t-10.5 25.5q0 15.21 10.29 25.71t25.5 10.5Zm0-132q15.21 0 25.71-10.29t10.5-25.5q0-15.21-10.29-25.71t-25.5-10.5q-15.21 0-25.71 10.29t-10.5 25.5q0 15.21 10.29 25.71t25.5 10.5ZM792-192H168q-29.7 0-50.85-21.15Q96-234.3 96-264v-144q29.7 0 50.85-21.21 21.15-21.21 21.15-51t-21.15-50.94Q125.7-552.3 96-552.3v-144q0-29.7 21.15-50.7 21.15-21 50.85-21h624q29.7 0 50.85 21.15Q864-725.7 864-696v144q-29.7 0-50.85 21.21-21.15 21.21-21.15 51t21.15 50.94Q834.3-407.7 864-407.7v144q0 29.7-21.15 50.7-21.15 21-50.85 21Z" />
+                        </svg></a></li>
+                <!-- 피드백에 대한 내용 이해 부족.. -->
+                <li class="lang_menu">
+                    <!--  -->
+                    <button aria-haspopup="true" aria-expanded="false" aria-controls="lang_list">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+                            fill="#FFFFFF">
+                            <path
+                                d="M480-96q-79 0-149-30t-122.5-82.5Q156-261 126-331T96-480q0-80 30-149.5t82.5-122Q261-804 331-834t149-30q80 0 149.5 30t122 82.5Q804-699 834-629.5T864-480q0 79-30 149t-82.5 122.5Q699-156 629.5-126T480-96Zm0-75q17-17 34-63.5T540-336H420q9 55 26 101.5t34 63.5Zm-91-10q-14-30-24.5-69T347-336H204q29 57 77 97.5T389-181Zm182 0q60-17 108-57.5t77-97.5H613q-7 47-17.5 86T571-181ZM177-408h161q-2-19-2.5-37.5T335-482q0-18 .5-35.5T338-552H177q-5 19-7 36.5t-2 35.5q0 18 2 35.5t7 36.5Zm234 0h138q2-20 2.5-37.5t.5-34.5q0-17-.5-35t-2.5-37H411q-2 19-2.5 37t-.5 35q0 17 .5 35t2.5 37Zm211 0h161q5-19 7-36.5t2-35.5q0-18-2-36t-7-36H622q2 19 2.5 37.5t.5 36.5q0 18-.5 35.5T622-408Zm-9-216h143q-29-57-77-97.5T571-779q14 30 24.5 69t17.5 86Zm-193 0h120q-9-55-26-101.5T480-789q-17 17-34 63.5T420-624Zm-216 0h143q7-47 17.5-86t24.5-69q-60 17-108 57.5T204-624Z" />
+                        </svg>
+                    </button>
+                    <ul id="lang_list" class="lang_box" hidden>
+                        <li><a href="?lang=ko">KOR</a></li>
+                        <li><a href="?lang=en">ENG</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <button class="toggle">메뉴</button>
+    </header>
+
+    <!-- main -->
+    <main>
+        <!-- boot -->
+        <div class="boot">
+            <div class="content_box">
+                <div class="moive_box">
+                    <h2 class="title rating ratingall">28주 후</h2>
+                    <div class="special_cinema">
+                        <!-- 추후 js로 제어 -->
+                        <span>아이콘01</span>
+                        <span>아이콘01</span>
+                        <span>아이콘01</span>
+                    </div>
+                    <div class="info_box">
+                        <!-- 태그에 변화가 필요한가..? -->
+                        <p>평점 : 별 / 점수</p>
+                        <p>예매율 : / 시간 : 160분</p>
+                        <p>감독 : 크리스토퍼 멕쿼리 / 배우 : 톰 크루즈, 헤일리 엘 웻, 빙 레이스 사이먼 페그...</p>
+                        <p>장르 : 액션, 스릴러, 첩보, 범죄</p>
+                    </div>
+                    <p class="content_body">
+                        꿈에 그리던 수사판사 승진을 하게 된 ‘이만’, 때마침 테헤란에서는 대규모 히잡 반대 시위가<br>
+                        일어나고 ‘이만’은 가족의 안전을 위해 총을 지급받는다. 그러나 딸들과 논쟁을 벌인 어느 날,<br>
+                        총이 집에서 감쪽같이 사라지고 가족의 믿음에는 균열이 생긴다.
+                    </p>
+                    <div class="btn_box">
+                        <a href="#" class="cta_btn">예매 하기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- banner -->
+        <div class="video_banner">
+            <video autoplay muted loop>
+                <source src="media/banner.mp4">
+                <p>브라우저가 동영상 파일을 지원하지 않습니다.</p>
+            </video>
+        </div>
+    </main>
+
+
+    <!-- section -->
+    <section class="movie_chart">
+        <div class="boot">
+            <ul class="tab_menu">
+                <li class="on"><a href="#">현재 상영작</a></li>
+                <li><a href="#">상영 예정작</a></li>
+                <li><a href="#">스페셜 상영작</a></li>
+            </ul>
+            <!-- 현재 상영작 -->
+            <div class="tab_content">
+                <span class="total">총 40개의 영화가 검색 되었습니다.</span>
+                <ul class="movie_list">
+                    <li class="item">
+                        <a href="#">
+                            <img src="images/recommend_thumb.jpg" alt="">
+                            <div class="img_cover">
+                                <p>
+                                    점멸등이 일렁이는 근미래의 도쿄. 음악에빠진 고등학생 유타와 코우는 친구들과 함께 자유로운 나날을 보낸다 동아리방을 찾아 늦은 밤 학교에 잠입한
+                                    그들은 교장 나가이의 고급 차량에 발칙한 장난을 치고, 분노한 학교는 A...
+                                </p>
+                                <a href="#">상세 정보</a>
+                            </div>
+                        </a>
+                        <div class="">
+                            <h3>드로잉 러브</h3>
+                            <p>예매율 : 23% / 시간 : 125분</p>
+                            <p>평점 : 별 / 점수</p>
+                            <div>
+                                <a href=""></a>
+                                <button>
+                                    하트이미지 / <span>23</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+                <button>더 보기</button>
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <nav>
+            <ul class="footer_menu">
+                <li>
+                    <a href="#">
+                        <img src="images/footer_customer_service.svg" alt="">
+                        <span>고객센터</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/footer_faq.svg" alt="">
+                        <span>자주 묻는 질문</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/footer_rental_inquiry.svg" alt="">
+                        <span>대관/단체 문의</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/footer_lost_and_found.svg" alt="">
+                        <span>분실물 문의/접수</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/footer_Inquiry.svg" alt="">
+                        <span>1 : 1 문의</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/footer_special_cinema.svg" alt="">
+                        <span>스페셜 시네마</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="footer_body">
+            <ul class="footer_link">
+                <li>
+                    <a href="#">회사소개</a>
+                </li>
+                <li>
+                    <a href="#">지속가능경영</a>
+                </li>
+                <li>
+                    <a href="#">IR</a>
+                </li>
+                <li>
+                    <a href="#">채용정보</a>
+                </li>
+                <li>
+                    <a href="#">광고/제휴/출점문의</a>
+                </li>
+                <li>
+                    <a href="#">이용약관</a>
+                </li>
+                <li>
+                    <a href="#">편성기준</a>
+                </li>
+                <li>
+                    <a href="#"><strong>개인정보처리방침</strong></a>
+                </li>
+                <li>
+                    <a href="#">법적고지</a>
+                </li>
+                <li>
+                    <a href="#">이메일주소무단수집거부</a>
+                </li>
+                <li>
+                    <a href="#">윤리경영</a>
+                </li>
+                <li>
+                    <a href="#">사이버감사실</a>
+                </li>
+            </ul>
+            <p class="footer_text">
+                (04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰(한강로동)<br>
+                대표이사 : 정종민 사업자등록번호 : 104-81-45690 통신판매업신고번호 : 2017-서울용산-0662 사업자정보확인<br>
+                호스팅사업자 : CJ올리브네트웍스 대표이베일 : cjcgvmaster@cj.net
+            </p>
+            <p class="copyright">
+                CJ CGV All Rights Reserved
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
