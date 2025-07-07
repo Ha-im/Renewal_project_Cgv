@@ -182,3 +182,35 @@ $(document).on('wheel', function (evt) {
     })
   }
 });
+/* 마우스 커서 이동 */
+
+const cursor = $('.mouse_cursor');
+const emptyBtn = $('.empty_btn');
+const ctaBtn = $('.cta_btn');
+let targetX = 0;
+let targetY = 0;
+let currentX = 0;
+let currentY = 0;
+
+$(window).on('mousemove',function(e){
+  targetX = e.clientX;
+  targetY = e.clientY;
+
+  if (emptyBtn.matches(':hover')) {
+    cursor.classList.add('active');
+  } else {
+    cursor.classList.remove('active');
+  }
+})
+function animateCursor() {
+  // 부드럽게 이동하도록 보간 (0.1은 이동 속도 계수)
+  currentX += (targetX - currentX) * 0.2;
+  currentY += (targetY - currentY) * 0.2;
+
+  cursor.css({left:`${currentX}px`})
+  cursor.css({top:`${currentY}px`})
+
+  requestAnimationFrame(animateCursor);
+}
+
+animateCursor(); // 애니메이션 루프 시작

@@ -740,6 +740,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--black);
+  cursor:none;
 }
 .text_box{
   position: relative;
@@ -911,13 +912,37 @@ body {
 .fp-watermark a{
   display:none;
 }
+/* 마우스 커서 */
+.mouse_cursor{
+  position:fixed;
+  pointer-events:none;
+
+  transition:transform 0.5s;
+  width:24px;
+  height:24px;
+  background: url(../images/mousecursor/mousecursor.svg) 0 0 no-repeat;
+}
+.mouse_cursor:after{
+  content:'';
+  position: absolute;
+  width:1px;
+  height:1px;
+  left:6px;
+  top:3px;
+  box-shadow:
+  0 0 5px 0 rgba(255,255,255,0.1),
+  0 0 25px 10px  rgba(255,255,255,0.5),
+  0 0 45px 30px  rgba(255,255,255,0.2)
+  ;
+  border-radius:50%;
+}
+.mouse_cursor.active{
+  background:none;
+  box-shadow:none;
+}
 
 /* query */
-/*
-@media screen and(max-width: 1600px) {
 
-}
-*/
 /* 태블릿 이하 (1024px 이하) */
 @media screen and (max-width: 1024px) {
   .container{
