@@ -916,11 +916,11 @@ body {
 .mouse_cursor{
   position:fixed;
   pointer-events:none;
-
   transition:transform 0.5s;
   width:24px;
   height:24px;
   background: url(../images/mousecursor/mousecursor.svg) 0 0 no-repeat;
+  z-index: 9999;
 }
 .mouse_cursor:after{
   content:'';
@@ -930,11 +930,42 @@ body {
   left:6px;
   top:3px;
   box-shadow:
-  0 0 5px 0 rgba(255,255,255,0.1),
-  0 0 25px 10px  rgba(255,255,255,0.5),
-  0 0 45px 30px  rgba(255,255,255,0.2)
-  ;
+  0 0 3px 0 rgba(255, 255, 255, 0.2),
+  0 0 6px 2px rgba(255, 255, 255, 0.2),
+  0 0 12px 4px rgba(255, 255, 255, 0.3),
+  0 0 25px 8px rgba(255, 255, 255, 0.5),
+  0 0 40px 15px rgba(255, 255, 255, 0.2);
   border-radius:50%;
+  transition:box-shadow 0.3 ease;
+}
+.mouse_cursor.pulse:after {
+  animation: boxShadowPulse 1s ease forwards;
+}
+@keyframes boxShadowPulse {
+  0% {
+    box-shadow:
+      0 0 3px 0 rgba(255, 255, 255, 0.2),
+      0 0 6px 2px rgba(255, 255, 255, 0.2),
+      0 0 12px 4px rgba(255, 255, 255, 0.3),
+      0 0 25px 8px rgba(255, 255, 255, 0.5),
+      0 0 40px 15px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 10px 5px rgba(255, 255, 255, 0.4),
+      0 0 20px 10px rgba(255, 255, 255, 0.3),
+      0 0 40px 20px rgba(255, 255, 255, 0.5),
+      0 0 50px 25px rgba(255, 255, 255, 0.6),
+      0 0 60px 30px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow:
+      0 0 3px 0 rgba(255, 255, 255, 0.2),
+      0 0 6px 2px rgba(255, 255, 255, 0.2),
+      0 0 12px 4px rgba(255, 255, 255, 0.3),
+      0 0 25px 8px rgba(255, 255, 255, 0.5),
+      0 0 40px 15px rgba(255, 255, 255, 0.2);
+  }
 }
 .mouse_cursor.active{
   background:none;

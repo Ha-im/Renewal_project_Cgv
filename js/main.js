@@ -184,7 +184,7 @@ $(document).on('wheel', function (evt) {
 });
 /* 마우스 커서 이동 */
 
-const cursor = $('.mouse_cursor');
+const cursor = $('div.mouse_cursor');
 const emptyBtn = $('.empty_btn');
 const ctaBtn = $('.cta_btn');
 let targetX = 0;
@@ -196,12 +196,20 @@ $(window).on('mousemove',function(e){
   targetX = e.clientX;
   targetY = e.clientY;
 
-  if (emptyBtn.matches(':hover')) {
-    cursor.classList.add('active');
-  } else {
-    cursor.classList.remove('active');
-  }
 })
+$(document).on('mouseenter', '.empty_btn, .cta_btn, .nav-btn, a, input', function () {
+  cursor.addClass('active');
+}).on('mouseleave', '.empty_btn, .cta_btn, .nav-btn, a, input', function () {
+  cursor.removeClass('active');
+});
+
+$(window).on('click', function() {
+  cursor.addClass('pulse');
+  setTimeout(function(){
+    cursor.removeClass('pulse');
+  }, 1000);
+});
+
 function animateCursor() {
   // 부드럽게 이동하도록 보간 (0.1은 이동 속도 계수)
   currentX += (targetX - currentX) * 0.2;
@@ -214,3 +222,5 @@ function animateCursor() {
 }
 
 animateCursor(); // 애니메이션 루프 시작
+
+/* 마우스 커서  end */
