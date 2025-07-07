@@ -933,7 +933,7 @@ body {
 @media screen and (max-width: 768px) {
   .cinemaspecial .item a,
   .cinema .item span {
-    font-size: 32px;  /* 더 작게 */
+    font-size:2.5rem;
   }
 
   .cinema h5 {
