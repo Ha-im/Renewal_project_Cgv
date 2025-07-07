@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>예매</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/ticket_seat.css">
+</head>
+<body>
+
+  <main class="main-container">
+    <div class="booking-header">
+
+<!-- 인원/좌석 선택 -->
+  <div class="seat-section">  
+    <div class="header">
+      <span>인원/좌석 선택</span>
+    </div>
+    <div class="background-img"></div>
+<!-- 티켓 데이터 -->
+    <div class="ticket-data">
+      <div class="data-img"></div>
+      <div class="dotted"></div>
+      <div  class="data-section">
+        <div class="data-title">바람계곡의 나우시카</div>
+        <div class="data-content">
+          <div class="data data-cinema"><span>극장</span><span>CGV용산</span></div>
+          <div class="data data-date"><span>일시</span><span>2025.07.21(수) 10:00</span></div>
+          <div class="data data-theater"><span>상영관</span><span>4관</span></div>
+        </div>
+      </div>
+    </div>
+
+  <h2 class="movie-title">바람계곡의 나우시카</h2>
+
+    
+<!-- 인원수 입력 -->   
+<div class="input-number-section">
+  
+    <div class="ticket-controls">
+      <span>성인</span>
+      <button class="counter-btn" id="plusBtn">
+        <span class="material-symbols-outlined">add</span>
+      </button>
+      <span>0</span>
+      <button class="counter-btn" id="minusBtn">
+        <span class="material-symbols-outlined">remove</span>
+      </button>
+    </div>
+    <div class="ticket-controls">
+      <span>성인</span>
+      <button class="counter-btn" id="plusBtn">
+        <span class="material-symbols-outlined">add</span>
+      </button>
+      <span>0</span>
+      <button class="counter-btn" id="minusBtn">
+        <span class="material-symbols-outlined">remove</span>
+      </button>
+    </div>
+    <div class="ticket-controls">
+      <span>성인</span>
+      <button class="counter-btn" id="plusBtn">
+        <span class="material-symbols-outlined">add</span>
+      </button>
+      <span>0</span>
+      <button class="counter-btn" id="minusBtn">
+        <span class="material-symbols-outlined">remove</span>
+      </button>
+    </div>
+    <div class="ticket-controls">
+      <span>성인</span>
+      <button class="counter-btn" id="plusBtn">
+        <span class="material-symbols-outlined">add</span>
+      </button>
+      <span>0</span>
+      <button class="counter-btn" id="minusBtn">
+        <span class="material-symbols-outlined">remove</span>
+      </button>
+    </div>
+    <div class="total">
+      <span>총 합계</span>
+      <span>13000</span>
+      <span>원</span>
+    </div>
+</div>
+
+<div class="seats-containr">
+  
+</div>
+
+<button class="prev-page">이전</button>
+<button class="next-page">다음</button>
+  </div>
+</div>
+
+
+
+
+
+
+  <!-- left tab -->
+<div class="booking-container">
+  <div class="booking-step">
+      <div class="booking-tab" data-step="1">
+        <div>01</div>
+        <div>상영시간</div>
+      </div>
+      <div class="booking-tab active" data-step="2">
+        <div>02</div>
+        <div>인원/좌석</div>
+      </div>
+      <div class="booking-tab" data-step="3">
+        <div>03</div>
+        <div>결제</div>
+      </div>
+      <div class="booking-tab" data-step="4">
+        <div>04</div>
+        <div>결제완료</div>
+      </div>
+  </div>
+</div>
+
+</main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./js/ticket_seat.js"></script>
+</body>
+</html>
