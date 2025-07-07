@@ -38,9 +38,9 @@ $.getJSON('./json/slides.json', function(data) {
     freeMode: false, // 
     freeModeMomentum: true, // 관성
     allowTouchMove: true, 
-    speed: 1000, // 속도
+    speed: 800, // 속도
     autoplay: {
-      delay: 3000,
+      delay: 1500,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },
