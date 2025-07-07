@@ -49,8 +49,7 @@ $.getJSON('./json/slides.json', function(data) {
       type: 'progressbar',
     },
     watchSlidesProgress: true,
-    
-  });
+   })
 
   $('.planPost').mouseenter(function(){
     swiper.autoplay.stop(); 
