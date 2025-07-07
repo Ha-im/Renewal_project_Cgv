@@ -108,20 +108,6 @@ body{
 .cinema-area-list a span:nth-of-type(2){
 	color: #767575;
 }
-
-/*.cinema-area-list li:last-child a {
-  position: absolute;
-	left: 0px;
-  top: 100%; 
-	width: 175;
-  height: 434px;
-	display: block;
-	background-color: #1B1B1B;
-}
-.cinema-area-list li:last-child a {
-  position: relative;
-}
-*/
 .area-cinema-list a{
 	padding-left: 20px;
 	background-color: transparent;
@@ -166,11 +152,49 @@ body{
 	height: 34px;
 	font-size: 14px;
 	line-height: 34px;
+	position: relative;
 }
+.movie-list li a{
+	padding-left: 40px;
+}
+/* age icon */
+.rating{
+  width: var(--icon_s_w);
+  height: var(--icon_s_h);
+  position: absolute;
+  top: 5px;
+  color: var(--white);
+  font: var(--rating_number);
+  border-radius: var(--icon_radius);
+  text-align: center;
+  padding-top: 6px;
+	margin-left: 10px;
+}
+
+.rating19{
+  content: '19';
+  background-color: var(--rating19);
+}
+
+.rating15{
+  content: '15';
+  background-color: var(--rating15);
+}
+
+.rating12{
+  content: '12';
+  background-color: var(--rating12);
+}
+
+.ratingall{
+  content: 'All';
+  background-color: var(--ratingAll);
+}
+
 .movie-list a {
   display: block;
   height: 34px;
-  padding-left: 20px;
+  padding-left: 30px;
   background-color: #1B1B1B;
 	line-height: 34px;
 }
@@ -282,7 +306,6 @@ body{
 	margin-top: 20px;
 	margin-left: 20px;
 }
-
 /* 시간 선택 */
 .time-section{
 	position: absolute;
@@ -291,16 +314,22 @@ body{
 	padding: 24px 0 0 0;
 }
 .movie-title{
+	padding-left: 30px;
 	padding-bottom: 20px;
 	font-size: 15px;
 	font-weight: bold;
+}
+.movie-title .rating{
+	top: 25px;
+	left: 0;
+	margin-left: 0;
 }
 .time-container{
 	display: flex;
   flex-wrap: wrap;
 	gap: 12px;
 	width: 460px;
-	padding-bottom: 30px;
+	padding-bottom: 24px;
 }	
 .time-select{
 	border-radius: 5px;
@@ -332,39 +361,16 @@ h3{
 }
 
 
-.content.age{
-  position:absolute;
-  top:;
-  width: 20px;
-  height: 20px;
-  display: block;
-  color: var(--white);
-  font: var(--rating_number);
-  border-radius: var(--icon_radius);
-  text-align: center;
-  padding-top: 5px;
-}
-.content .age.age_all{
-  background-color:var(--ratingAll)
-}
-.content .age.age_15{
-  background-color:var(--rating15);
-}
-.content .age.age_12{
-  background-color:var(--rating12);
-}
-.content .age.age_19{
-  background-color:var(--rating19);
-}
+
 
 .next-page{
 	position: absolute;
-	left: 1090px;
+	left: 1160px;
 	bottom: 24px;
 	background-color: var(--primary_color);
-	font-size: 24px;
+	font-size: 20px;
 	line-height: 24px;
-	padding: 12px 60px;
+	padding: 12px 30px;
 	border-radius: 5px;
 	border: none;
 	color: var(--white);
