@@ -1,15 +1,15 @@
-document.addEventListener('DOMContentLoaded', function () {
-  new fullpage('#fullpage', {
-    autoScrolling: true,
-    navigation: true,
-    scrollOverflow: true
-  });
-  /* plan */ 
+
+new fullpage('#fullpage', {
+  autoScrolling: true,
+  navigation: true,
+  scrollOverflow: true
+});
+/* plan */
 // JSON 데이터로부터 슬라이드 생성 및 Swiper 초기화
-$.getJSON('./json/slides.json', function(data) {
+$.getJSON('./json/slides.json', function (data) {
   const slides = data.slides;
 
-  slides.forEach(function(item, idx) {
+  slides.forEach(function (item, idx) {
     const displayIndex = (idx + 1).toString().padStart(2, '0'); // 01, 02 ... 번호 붙이기
     const slideHTML = `
       <div class="swiper-slide imgItem">
@@ -29,7 +29,7 @@ $.getJSON('./json/slides.json', function(data) {
     `;
     $('.swiper-wrapper.planA').append(slideHTML);  // 슬라이드 HTML 추가
   });
-//swiper 기능
+  //swiper 기능
   const swiper = new Swiper('.planPost', {
     slidesPerView: 'auto', // 보여지는 갯수
     spaceBetween: 18, // gap
@@ -37,7 +37,7 @@ $.getJSON('./json/slides.json', function(data) {
     initialSlide: 0, // 몇번째부터 이용할건지
     freeMode: false, // 
     freeModeMomentum: true, // 관성
-    allowTouchMove: true, 
+    allowTouchMove: true,
     speed: 1000, // 속도
     autoplay: {
       delay: 3000,
@@ -49,89 +49,136 @@ $.getJSON('./json/slides.json', function(data) {
       type: 'progressbar',
     },
     watchSlidesProgress: true,
-   })
-
-  $('.planPost').mouseenter(function(){
-    swiper.autoplay.stop(); 
-  });
-
-  $('.planPost').mouseleave(function(){
-    swiper.autoplay.start(); 
-  });
- 
-  $('.plan_title a').mouseenter(function(){
-    $(this).addClass('active');
-  }).mouseleave(function(){
-    $(this).removeClass('active');
-  });
-
-  $('.planHover').mouseenter(function(){
-    $(this).addClass('active');
-  }).mouseleave(function(){
-    $(this).removeClass('active');
-  });
-});
-  /* plan end */ 
-  /* cinema */
-  const cinemaspecial = $('.cinemaspecial > div')
-  const bg1 = $('.cinemazone .bg1')
-  const arrows = $('.cinemaspecial .item a span')
-  const item = $('.cinemaspecial .item a')
-
-  item.each(function(){
-
-    const img = new Image();
-    img.src = $(this).attr('data-bg');
   })
-  item.on('mouseenter',function(){
-      const cinemaUrl = $(this).attr('data-bg');
-      bg1.stop(true, true).fadeOut(100,function(){
-        $(this).css({backgroundImage:`var(--sectionBg-Grad-lin),url(${cinemaUrl})`}).fadeIn()
-      })
-          $(this).next('span').addClass('active');
-          $(this).addClass('active');
-    });
-    item.on('mouseleave',function(){
-      //  bg.stop().fadeOut(400);
-      $(this).next('span').removeClass('active');
-      $(this).removeClass('active');
-    })
+
+  $('.planPost').mouseenter(function () {
+    swiper.autoplay.stop();
+  });
+
+  $('.planPost').mouseleave(function () {
+    swiper.autoplay.start();
+  });
+
+  $('.plan_title a').mouseenter(function () {
+    $(this).addClass('active');
+  }).mouseleave(function () {
+    $(this).removeClass('active');
+  });
+
+  $('.planHover').mouseenter(function () {
+    $(this).addClass('active');
+  }).mouseleave(function () {
+    $(this).removeClass('active');
+  });
 });
-  /* cinema end */
-  /* eventZone */ 
-  // Swiper 초기화
-  const swiper2 = new Swiper('.eventSwiper', {
-    slidesPerView: 3,
-    breakpoints: {
-      1024: {
-        slidesPerView: 3,
-      },
-      0: {
-        slidesPerView: 1,
-      },
+/* plan end */
+/* cinema */
+const cinemaspecial = $('.cinemaspecial > div')
+const bg1 = $('.cinemazone .bg1')
+const arrows = $('.cinemaspecial .item a span')
+const item = $('.cinemaspecial .item a')
+
+item.each(function () {
+
+  const img = new Image();
+  img.src = $(this).attr('data-bg');
+})
+item.on('mouseenter', function () {
+  const cinemaUrl = $(this).attr('data-bg');
+  bg1.stop(true, true).fadeOut(100, function () {
+    $(this).css({ backgroundImage: `var(--sectionBg-Grad-lin),url(${cinemaUrl})` }).fadeIn()
+  })
+  $(this).next('span').addClass('active');
+  $(this).addClass('active');
+});
+item.on('mouseleave', function () {
+  //  bg.stop().fadeOut(400);
+  $(this).next('span').removeClass('active');
+  $(this).removeClass('active');
+})
+
+/* cinema end */
+/* eventZone */
+// Swiper 초기화
+const swiper2 = new Swiper('.eventSwiper', {
+  slidesPerView: 3,
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
     },
+    0: {
+      slidesPerView: 1,
+    },
+  },
+});
+// 배경 변경 + 해시태그 토글
+const $bg = $('.eventzone .bg');
+const $swiperContainer = $('.promotion.swiper.eventSwiper');
+
+$swiperContainer.on('mouseenter', '.swiper-slide', function () {
+  const bgUrl = $(this).data('bg');
+  if (!bgUrl) return;
+
+  $bg.stop(true, true).fadeOut(150, function () {
+    $(this).css('background-image', `url(${bgUrl})`).fadeIn(150);
   });
-  // 배경 변경 + 해시태그 토글
-  const $bg = $('.eventzone .bg');
-  const $swiperContainer = $('.promotion.swiper.eventSwiper');
 
-  $swiperContainer.on('mouseenter', '.swiper-slide', function() {
-    const bgUrl = $(this).data('bg');
-    if (!bgUrl) return;
+  $(this).find('.hashtag').addClass('active');
+});
 
-    $bg.stop(true, true).fadeOut(150, function() {
-      $(this).css('background-image', `url(${bgUrl})`).fadeIn(150);
-    });
-
-    $(this).find('.hashtag').addClass('active');
-  });
-
-  $swiperContainer.on('mouseleave', '.swiper-slide', function() {
-    $(this).find('.hashtag').removeClass('active');
-  });
+$swiperContainer.on('mouseleave', '.swiper-slide', function () {
+  $(this).find('.hashtag').removeClass('active');
+});
 
 /*eventZone end*/
 
 
+// 변수 선언부
 
-/* 02 rank pym */
+const page = $('#fullpage .section'); //fullpage의 전체 페이지를 담는 변수
+const menu = $('header'); //header
+let currentPage = 0; //현재 사용자가 보고있는 page (index 체크용)
+let checkEvent = false; //스크롤 이벤트 on/off
+
+
+const gnb = $('.gnb li');
+gnb.on('mouseenter', function () {
+  $(this).addClass('on')
+})
+
+// 해석...
+// .section의 첫 번째 페이지 에서는 header가 보여지고 있다. // 초기값은 block으로 충분
+// 사용자가 마우스 스크롤을 위 또는 아래로 당기면 header의 y값을 제어해 화면 밖으로 부드럽게 밀어낸다.
+// -> 사용자가 스크롤을 아래로 당겼는지 이벤트 체크가 필요
+// -> 현재 위치가 0이면 header는 원래의 자리로 부드럽게 나타난다.
+
+
+$(document).on('wheel', function (evt) {
+  //check변수가 true면 이벤트 진행중
+  if (checkEvent === true) {
+    return;
+  }
+  if (evt.originalEvent.deltaY > 0) {
+    //휠을 아래로 당겨 다음 페이지를 본다.
+    console.log('호출!');
+    checkEvent = true;
+    currentPage++;
+    menu.animate({
+      top: `-72px`
+    }, 600, function () {
+      $('.toggle').fadeIn();
+      checkEvent = false;
+    })
+  } else {
+    //휠을 위로 당겨 이전 페이지를 본다.
+    console.log('호출!');
+    currentPage--;
+    checkEvent = true;
+    menu.animate({
+      top: `0`
+    }, 600, function () {
+      $('.toggle').fadeOut();
+      checkEvent = false;
+    })
+  }
+});

@@ -105,7 +105,7 @@ h2.ratingall::after {
   backdrop-filter: blur(20px);
   /* 이거 왜..? */
   height: 51px;
-  box-shadow: 4px 4px 8px rgba(0,0,0,0.25);
+  box-shadow: var(--web_btn_shadow);
 }
 .cta_btn {
   background-color: var(--primary_color);
@@ -115,7 +115,7 @@ h2.ratingall::after {
   border: var(--empty_btn_border);
   border-radius: var(--max_radius);
   backdrop-filter: blur(20px);
-  box-shadow: 4px 4px 8px rgba(0,0,0,0.25);
+  box-shadow: var(--web_btn_shadow);
 }
 .cta_btn:hover{
  background:var(--fill_hover_color);
@@ -920,6 +920,12 @@ body {
 */
 /* 태블릿 이하 (1024px 이하) */
 @media screen and (max-width: 1024px) {
+  .container{
+    width:100%;
+  }
+  .cinemaspecial{
+    width:100%;
+  }
   .cinemaspecial .item a,
   .cinema .item span {
     font-size: 48px;  /* 좀 작게 */
@@ -928,12 +934,19 @@ body {
 
 /* 모바일 (768px 이하) */
 @media screen and (max-width: 768px) {
+  .container{
+    width:100%;
+  }
+  .cinemaspecial{
+    width:100%;
+  }
   .cinemaspecial .item a,
   .cinema .item span {
-    font-size: 32px;  /* 더 작게 */
+    font-size:2.5rem;
   }
 
   .cinema h5 {
+    width:100%;
     font-size: 22px;
     line-height: 36px;
     margin-bottom: 40px;
@@ -942,6 +955,9 @@ body {
 
 /* 아주 작은 화면 (480px 이하) */
 @media screen and (max-width: 480px) {
+  .container{
+    width:100%;
+  }
   .cinemaspecial .item a,
   .cinema .item span {
     font-size: 24px;  /* 아주 작게 */
