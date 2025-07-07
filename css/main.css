@@ -638,7 +638,7 @@ h2.ratingall::after {
   padding: 10px 36px 10px 10px;
   line-height: 24px;
 }
-.search-btn {
+.search_btn {
   position: absolute;
   top: 12px;
   right: 10px;
@@ -650,7 +650,7 @@ h2.ratingall::after {
   border: none;
   background-color: transparent;
 }
-.search-btn:hover {
+.search_btn:hover {
   color: #333;
 }
 .tag_box {
@@ -756,7 +756,7 @@ body {
   display: flex;
   align-items: flex-end;
 }
-.ranking-number {
+.ranking_number {
   font-size: 100px;
   font-weight: 600;
   color: var(--white);
@@ -906,9 +906,6 @@ body {
 .poster-3 {background-image: url(../images/movierank_poster_28yearslater.jpg);}
 .poster-4 {background-image: url(../images/movierank_poster_nausicaaofthevalleyofthewinds.jpg);}
 .poster-5 {background-image: url(../images/movierank_poster_theseedofthescaredfig.jpg);}
-
-/* 영화포스터 이미지 */
-.bg-1 {background-image: url(../images/movierank_bg_howtotraindragon.jpg);}
 
 /* 마크 제거 */
 .fp-watermark a{
