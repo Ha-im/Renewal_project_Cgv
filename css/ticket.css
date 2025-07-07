@@ -228,7 +228,7 @@ body{
 	background-color: #262525;
 }
 .month_title{
-	padding: 14px 0 14px 65px;
+	padding: 10px 0 6px 65px;
 	font-size: 12px;
 	color: var(--light_white);
 }
@@ -276,7 +276,7 @@ body{
 	color: var(--light_white);
 	font-size: 14px;
 	font-weight: 400;
-	padding-top: 10px;
+	padding-top: ;
 }
 
 
@@ -303,14 +303,14 @@ body{
 	height: 1px;
 	background-color: #5E5E5E;
 	align-items: center;
-	margin-top: 20px;
+	margin-top: 10px;
 	margin-left: 20px;
 }
 /* 시간 선택 */
 .time_section{
 	position: absolute;
 	left: 800px;
-	top: 197px;
+	top: 175px;
 	padding: 24px 0 0 0;
 }
 .movie_title{
@@ -329,7 +329,7 @@ body{
   flex-wrap: wrap;
 	gap: 12px;
 	width: 460px;
-	padding-bottom: 24px;
+	padding-bottom: 20px;
 }	
 .time_select{
 	border-radius: 5px;
