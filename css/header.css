@@ -1,3 +1,4 @@
+
 /* header */
 header {
     width: 100%;
@@ -21,6 +22,7 @@ header {
     left: 0;
     z-index: 999;
     /*항상 최상단*/
+    box-sizing: border-box;
 }
 
 /* logo */
@@ -55,7 +57,7 @@ header {
 }
 
 .gnb li.on>a {
-    color: #f00;
+    color: var(--primary_color);
     /* 임시 값*/
 }
 
@@ -63,6 +65,7 @@ header {
     display: block;
     font: var(--gnb);
     color: var(--white);
+    transition: 0.4s;
 }
 
 .lnb {
@@ -105,3 +108,11 @@ header {
 .lang_menu button svg {}
 
 .lang_menu button svg path {}
+
+
+.toggle{
+    display: none;
+    position: absolute;
+    top : 100%;
+    right : 20px;
+}

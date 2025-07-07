@@ -64,6 +64,135 @@ $.getJSON('./json/slides.json', function(data) {
   }).mouseleave(function(){
     $(this).removeClass('active');
   });
+  });
+
+  // 변수 선언부
+
+  const page = $('#fullpage .section'); //fullpage의 전체 페이지를 담는 변수
+  const menu = $('header'); //header
+  let currentPage = 0; //현재 사용자가 보고있는 page (index 체크용)
+  let checkEvent = false; //스크롤 이벤트 on/off
+
+
+  const gnb = $('.gnb li');
+  gnb.on('mouseenter', function () {
+    $(this).addClass('on')
+  })
+
+  // 해석...
+  // .section의 첫 번째 페이지 에서는 header가 보여지고 있다. // 초기값은 block으로 충분
+  // 사용자가 마우스 스크롤을 위 또는 아래로 당기면 header의 y값을 제어해 화면 밖으로 부드럽게 밀어낸다.
+  // -> 사용자가 스크롤을 아래로 당겼는지 이벤트 체크가 필요
+  // -> 현재 위치가 0이면 header는 원래의 자리로 부드럽게 나타난다.
+
+
+  $(document).on('wheel', function (evt) {
+    //check변수가 true면 이벤트 진행중
+    if (checkEvent === true) {
+      return;
+    }
+    if (evt.originalEvent.deltaY > 0) {
+      //휠을 아래로 당겨 다음 페이지를 본다.
+      console.log('호출!');
+      checkEvent = true;
+      currentPage++;
+      menu.animate({
+        top: `-72px`
+      }, 600, function () {
+        $('.toggle').fadeIn();
+        checkEvent = false;
+      })
+    } else {
+      //휠을 위로 당겨 이전 페이지를 본다.
+      console.log('호출!');
+      currentPage--;
+      checkEvent = true;
+      menu.animate({
+        top: `0`
+      }, 600, function () {
+        $('.toggle').fadeOut();
+        checkEvent = false;
+      })
+    }
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // 2. 슬라이드 복제 1세트 (눈에 보이게 자연스러운 흐름 만들기)
+  const $wrapper = $('.planPost .swiper-wrapper');
+  const $originalSlides = $wrapper.children('.swiper-slide');
+  $wrapper.append($originalSlides.clone()); // 클론 1세트만 추가
+
+  // 3. ranking 번호 매기기 (원본 번호만 반복되게)
+  $wrapper.children('.swiper-slide').each(function (idx) {
+    const displayIndex = ((idx % $originalSlides.length) + 1).toString().padStart(2, '0');
+    $(this).find('.ranking').text(displayIndex);
+  });
+
+  // 4. 자연스러운 무한 슬라이드 애니메이션
+  let posX = 0;
+  let animId;
+  const speed = 0.5; // 이동 속도(px/frame)
+
+  // 원본 슬라이드 세트의 총 너비
+  let originalWidth = 0;
+  $originalSlides.each(function () {
+    originalWidth += $(this).outerWidth(true);
+  });
+
+  // resetPoint는 원본 너비보다 조금 짧게 잡기 → 끊김 없는 느낌
+  const resetPoint = originalWidth - 50;
+
+  function animate() {
+    posX -= speed;
+
+    if (Math.abs(posX) >= resetPoint) {
+      posX = 0; // 자연스럽게 처음으로 위치 리셋
+    }
+
+    $wrapper.css('transform', `translateX(${posX}px)`);
+    animId = requestAnimationFrame(animate);
+  }
+
+  // 5. 마우스 올리면 멈춤, 벗어나면 재생
+  $('.planPost').hover(
+    () => cancelAnimationFrame(animId),
+    () => animId = requestAnimationFrame(animate)
+  );
+
+  // 6. 시작
+  animId = requestAnimationFrame(animate);
+
+  $('.plan_title a').mouseenter(function () {
+    $(this).addClass('active')
+  }).mouseleave(function () {
+    $(this).removeClass('active')
+  })
 
   $('.planHover').mouseenter(function(){
     $(this).addClass('active');
