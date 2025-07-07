@@ -183,3 +183,29 @@ body{
 	border-top: 2px solid var(--light_white);
 	padding: ;
 }
+
+.prev-page{
+	position: absolute;
+	left: 1090px;
+	bottom: 24px;
+	background-color: var(--primary_color);
+	font-size: 24px;
+	line-height: 24px;
+	padding: 12px 30px;
+	border-radius: 5px;
+	border: none;
+	color: var(--white);
+}
+
+.next-page{
+	position: absolute;
+	left: 1090px;
+	bottom: 24px;
+	background-color: var(--primary_color);
+	font-size: 24px;
+	line-height: 24px;
+	padding: 12px 30px;
+	border-radius: 5px;
+	border: none;
+	color: var(--white);
+}
