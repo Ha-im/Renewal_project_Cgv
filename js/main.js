@@ -2,7 +2,7 @@
 new fullpage('#fullpage', {
   autoScrolling: true,
   navigation: true,
-  scrollOverflow: true
+  scrollOverflow: true,
 });
 /* plan */
 // JSON 데이터로부터 슬라이드 생성 및 Swiper 초기화
@@ -30,7 +30,8 @@ $.getJSON('./json/slides.json', function (data) {
     $('.swiper-wrapper.planA').append(slideHTML);  // 슬라이드 HTML 추가
   });
   //swiper 기능
-  const swiper = new Swiper('.planPost', {
+
+    const swiper = new Swiper('.planPost', {
     slidesPerView: 'auto', // 보여지는 갯수
     spaceBetween: 18, // gap
     loop: true, // 무한 슬라이드
