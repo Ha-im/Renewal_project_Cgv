@@ -4,15 +4,15 @@ body{
 	font-size:14px;
 	font: 15px/24px "Noto Sans KR", sans-serif;
 }
-.main-container {
+.main_container {
 	max-width: 1280px;
 	margin: 144px auto 76px;
 	position: relative;
 }
-.booking-container {
+.booking_container {
 	background-color: #1B1B1B;
 }
-.booking-tab {
+.booking_tab {
 	/* flex: 1; */
 	text-align: center;
 	padding: 76px 0;
@@ -23,10 +23,10 @@ body{
 	position: relative;
 	border-top: 1px solid #434343;
 }
-.booking-tab.active {
+.booking_tab.active {
 	background-color: #FF243E;
 }
-.booking-header{
+.booking_header{
 	display: flex;
 	min-width: 1280px;
 	background-color: #121212;
@@ -40,29 +40,29 @@ body{
 	font-size: 18px;
   line-height: 24px;
 }
-.header-1 {
+.header_1 {
   width: 430px;
 	border-right: 1px solid #434343;
 }
-.header-2 {
+.header_2 {
   width: 350px;
 	border-right: 1px solid #434343;
 }
-.header-3 {
+.header_3 {
   width: 500px;
 }
 
 /* 영화예매 컨텐츠 영역 */
-.tab-button{
+.tab_button{
 	position: absolute;
 	display: flex;
 	top: 60px;
 	left: 80px;
 }
-.movie-section .tab-button{
+.movie_section .tab_button{
 	left: 430px;
 }
-.cinema-tab-btn{
+.cinema_tab_btn{
 	border: none;
 	background-color: #1B1B1B;
 	width: 350px;
@@ -70,7 +70,7 @@ body{
 	color: var(--white);
 	border: 1px solid #434343;
 }
-.tab-btn{
+.tab_btn{
 	border: none;
 	background-color: #262525;
 	width: 175px;
@@ -78,44 +78,44 @@ body{
 	color: #767575;
 	border: 1px solid #434343;
 }
-.tab-btn.active{
+.tab_btn.active{
 	background-color: #1B1B1B;
 	color: var(--white);
 }
 
 /* 극장 list */
-.cinema-list{
+.cinema_list{
 	position: absolute;
 	left: 80px;
 	top: 120px;
 }
-.cinema-area-list > ul {
+.cinema_area_list > ul {
 	width: 350px;
 }
-.cinema-area-list li{
+.cinema_area_list li{
 	display: flex;
 	height: 34px;
 	font-size: 14px;
 	line-height: 34px;
 }
-.cinema-area-list a{
+.cinema_area_list a{
 	width: 175px;
 	padding-left: 20px;
 }
-.cinema-area-list a.active{
+.cinema_area_list a.active{
 	background-color: #262525;
 }
-.cinema-area-list a span:nth-of-type(2){
+.cinema_area_list a span:nth-of-type(2){
 	color: #767575;
 }
-.area-cinema-list a{
+.area_cinema_list a{
 	padding-left: 20px;
 	background-color: transparent;
 }
-.area-cinema-list a.active{
+.area_cinema_list a.active{
 	color: var(--primary_color);
 }
-.area-cinema-list .content{
+.area_cinema_list .content{
 	width: 175px;
 	height: 740px;
 	overflow: scroll;
@@ -125,7 +125,7 @@ body{
   border-bottom: 8px solid #262525;
   border-left: none;
 }
-.area-cinema-list .content.scroll-y{
+.area_cinema_list .content.scroll_y{
 	overflow-x: hidden;
 }
 /* 스크롤 */
@@ -140,21 +140,21 @@ body{
 
 
 /* 영화 list */
-.movie-list{
+.movie_list{
 	position: absolute;
 	left: 430px;
 	top: 120px;
 }
-.movie-list > ul {
+.movie_list > ul {
 	width: 350px;
 }
-.movie-list li{
+.movie_list li{
 	height: 34px;
 	font-size: 14px;
 	line-height: 34px;
 	position: relative;
 }
-.movie-list li a{
+.movie_list li a{
 	padding-left: 40px;
 }
 /* age icon */
@@ -191,20 +191,20 @@ body{
   background-color: var(--ratingAll);
 }
 
-.movie-list a {
+.movie_list a {
   display: block;
   height: 34px;
   padding-left: 30px;
   background-color: #1B1B1B;
 	line-height: 34px;
 }
-.movie-list a.active {
+.movie_list a.active {
   background-color: #262525;
   border: 2px solid #fff;
 	box-sizing: border-box;
 	width: 98.3%;
 }
-.movie-list .content{
+.movie_list .content{
 	width: 350px;
 	height: 740px;
 	overflow: scroll;
@@ -213,12 +213,12 @@ body{
   border-right: 6px solid #1B1B1B;
   border-bottom: 8px solid #1B1B1B;
 }
-.movie-list .content.scroll-y{
+.movie_list .content.scroll-y{
 	overflow-x: hidden;
 }
 
 /* 날짜 선택 */
-.calendar-container{
+.calendar_container{
 	
 }
 .date{
@@ -227,22 +227,22 @@ body{
 	height: 800px;
 	background-color: #262525;
 }
-.month-title{
+.month_title{
 	padding: 14px 0 14px 65px;
 	font-size: 12px;
 	color: var(--light_white);
 }
-.slide-container{
+.slide_container{
 	display: flex;
 	padding: 0 18px;
 }
 
-.slider-content{
+.slider_content{
 	width: 382px;
 	overflow: hidden;
 	
 }
-.slider-wrapper{
+.slider_wrapper{
 	display: flex;
 	justify-content: space-between;
 	gap: 18px;
@@ -280,7 +280,7 @@ body{
 }
 
 
-.nav-btn {
+.nav_btn {
   width: 40px;
   height: 40px;
   background: transparent;
@@ -295,7 +295,7 @@ body{
 	line-height: 16px;
 	padding: 25px 10px 0 10px;
 }
-.nav-btn:hover {
+.nav_btn:hover {
   color: #B5B5B5;
 }
 .line{
@@ -307,36 +307,36 @@ body{
 	margin-left: 20px;
 }
 /* 시간 선택 */
-.time-section{
+.time_section{
 	position: absolute;
 	left: 800px;
 	top: 197px;
 	padding: 24px 0 0 0;
 }
-.movie-title{
+.movie_title{
 	padding-left: 30px;
 	padding-bottom: 20px;
 	font-size: 15px;
 	font-weight: bold;
 }
-.movie-title .rating{
+.movie_title .rating{
 	top: 25px;
 	left: 0;
 	margin-left: 0;
 }
-.time-container{
+.time_container{
 	display: flex;
   flex-wrap: wrap;
 	gap: 12px;
 	width: 460px;
 	padding-bottom: 24px;
 }	
-.time-select{
+.time_select{
 	border-radius: 5px;
 	background-color: #DFDFDF;
 	border: none;
 }
-.time-select.active {
+.time_select.active {
   background-color: #FFD9D9;
   border: 2px solid red;
 	box-sizing: border-box;
@@ -346,7 +346,7 @@ body{
 	line-height: 24px;
 	font-weight: bold;
 }
-.theater-data{
+.theater_data{
 	display: flex;
 	gap: 	12px;
 	padding: 0 12px;
@@ -363,7 +363,7 @@ h3{
 
 
 
-.next-page{
+.next_page{
 	position: absolute;
 	width: 104px;
 	left: 1160px;
@@ -375,4 +375,8 @@ h3{
 	border-radius: 5px;
 	border: none;
 	color: var(--white);
+	transition: 0.3s;
+}
+.next_page:hover{
+	background-color: var(--fill_hover_color);
 }

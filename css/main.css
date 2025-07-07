@@ -638,7 +638,7 @@ h2.ratingall::after {
   padding: 10px 36px 10px 10px;
   line-height: 24px;
 }
-.search-btn {
+.search_btn {
   position: absolute;
   top: 12px;
   right: 10px;
@@ -650,7 +650,7 @@ h2.ratingall::after {
   border: none;
   background-color: transparent;
 }
-.search-btn:hover {
+.search_btn:hover {
   color: #333;
 }
 .tag_box {
@@ -756,7 +756,7 @@ body {
   display: flex;
   align-items: flex-end;
 }
-.ranking-number {
+.ranking_number {
   font-size: 100px;
   font-weight: 600;
   color: var(--white);
