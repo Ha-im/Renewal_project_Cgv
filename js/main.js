@@ -234,9 +234,9 @@ $(window).on('mousemove', function (e) {
   targetX = e.clientX;
   targetY = e.clientY;
 })
-$(document).on('mouseenter', '.empty_btn, .cta_btn, .nav-btn, a, input,.poster-items .item,svg', function () {
+$(document).on('mouseenter', '.empty_btn, .cta_btn, .nav-btn, a, input,.poster-items .item, .user_menu li', function () {
   cursor.addClass('active');
-}).on('mouseleave', '.empty_btn, .cta_btn, .nav-btn, a, input,.poster-items .item,svg', function () {
+}).on('mouseleave', '.empty_btn, .cta_btn, .nav-btn, a, input,.poster-items .item, .user_menu li', function () {
   cursor.removeClass('active');
 });
 
