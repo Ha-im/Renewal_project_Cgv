@@ -207,9 +207,9 @@ $(window).on('mousemove', function (e) {
   targetX = e.clientX;
   targetY = e.clientY;
 })
-$(document).on('mouseenter', '.empty_btn, .cta_btn, .nav-btn, a, input', function () {
+$(document).on('mouseenter', '.empty_btn, .cta_btn, .nav-btn, a, input,.poster-items .item', function () {
   cursor.addClass('active');
-}).on('mouseleave', '.empty_btn, .cta_btn, .nav-btn, a, input', function () {
+}).on('mouseleave', '.empty_btn, .cta_btn, .nav-btn, a, input,.poster-items .item', function () {
   cursor.removeClass('active');
 });
 
