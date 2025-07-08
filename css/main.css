@@ -678,6 +678,7 @@ h2.ratingall::after {
 .appdownload {
   background-color: var(--bg-color);
 }
+
 .app {
   display: flex;
   color: var(--white);
