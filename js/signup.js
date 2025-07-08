@@ -20,8 +20,14 @@ $('#userid').on('input', function() {
         // 5글자 미만이면 에러
         $(this).addClass('input-error');
         $('#id-error').text('아이디는 5글자 이상이어야 합니다.');
-    } else {
+        //유효한 아이디
+        $('#ok-error').text('');
+        $(this).removeClass('input-ok');
+    }else if(val.length < 4){
+        $(this).removeClass('input-ok');
+    }else {
         $(this).removeClass('input-error');
+        $(this).removeClass('input-ok');
         $('#id-error').text('');
     }
 });
@@ -82,3 +88,38 @@ $('#email').on('input', function() {
     $('#email-error').text('');
     }
 });
+// 중복확인 
+$('.idok').on('click',function(){
+    const val = $('#userid').val().trim();
+    const input = false;
+    if(val.length >= 5){
+        $('#userid').addClass('input-ok');
+        $('#ok-error').text('유효한 아이디 입니다.');
+    }
+})
+// 아무 입력 없이 가입하기 눌럿을때 error메세지 띄우기
+
+const submitBtn = $('#submitBtn');
+let inputMessage = $('input').val().trim();
+const minLength = 8;
+submitBtn.on('click',function(){
+    if(!inputMessage){
+        $('input').each(function(){
+            $(this).addClass('input-error')
+            $('#name-error').text('이름은 2글자 이상 10글자 이하여야하고, 공백 및 특수문자 사용 불가');
+            $('#id-error').text('아이디는 5글자 이상이어야 합니다.');
+            $('#pw-error').text('비밀번호는 최소 ' + minLength + '자 이상이어야 합니다.');
+            $('#pwok-error').text('비밀번호가 서로 일치하지 않습니다.');
+            $('#email-error').text('유효한 이메일을 입력해주세요.');
+        })
+    }else{
+        $('input').each(function(){
+            $(this).removeClass('input-error')
+            $('#name-error').text('');
+            $('#id-error').text('');
+            $('#pw-error').text('');
+            $('#pwok-error').text('');
+            $('#email-error').text('');
+        })
+    }
+})

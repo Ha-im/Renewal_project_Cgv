@@ -1,32 +1,21 @@
-
 /* header */
 header {
     width: 100%;
     height: 72px;
-    /* row * 3 */
     background-color: rgba(0, 0, 0, 0.8);
     /*추후 선형 그라데이션으로 변경*/
-
     display: flex;
-    /* 내부 요소들 가로 정렬*/
     justify-content: space-between;
-    /* 양 끝 정렬*/
     align-items: center;
-    /* 교차축 가운데 정렬*/
     padding: 0 60px;
-    /*패딩 위아래 0 좌우 60px*/
-
     position: fixed;
-    /*화면에서 고정*/
     top: 0;
     left: 0;
     z-index: 999;
     /*항상 최상단*/
-    box-sizing: border-box;
 }
 
 /* logo */
-
 .logo a {
     display: block;
 }
@@ -47,18 +36,10 @@ header {
     vertical-align: top;
 }
 
-
 /* gnb, lnb */
 .gnb {
     display: flex;
-    /* 대메뉴 가로정렬*/
     gap: 64px;
-    /*간격*/
-}
-
-.gnb li.on>a {
-    color: var(--primary_color);
-    /* 임시 값*/
 }
 
 .gnb>li>a {
@@ -66,53 +47,103 @@ header {
     font: var(--gnb);
     color: var(--white);
     transition: 0.4s;
+    padding: 10px;
+}
+
+.gnb>li:hover>a {
+    color: var(--primary_color);
 }
 
 .lnb {
-    display: block;
+    display: none;
     /* jquery 제어*/
     position: absolute;
+    /* header 높이값 만큼 아래로*/
     top: 72px;
     left: 0;
     width: 100%;
     height: 48px;
-    /* header 높이값 */
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .lnb li {
     display: inline-block;
+    margin-right: 48px;
 }
 
 .lnb li a {
     display: block;
     font: var(--lnb);
     color: var(--white);
+    transition: 0.4s;
+}
+
+.lnb li:hover a {
+    color: var(--primary_color);
 }
 
 /* user-menu */
 .user_menu>ul {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     align-items: center;
 }
 
-.lang_menu {}
+.user_menu>ul>li svg {
+    transition: 0.6s;
+}
+
+.user_menu>ul>li:hover svg {
+    fill: var(--primary_color);
+}
 
 .lang_menu button {
     background: transparent;
     border: none;
 }
 
-.lang_menu button svg {}
-
-.lang_menu button svg path {}
-
-
-.toggle{
+/* lang_btn */
+#lang_list {
     display: none;
+    /* js제어 */
     position: absolute;
-    top : 100%;
-    right : 20px;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#lang_list li {
+    display: inline-block;
+    margin-right: 48px;
+}
+
+#lang_list li a {
+    display: block;
+    font: var(--lnb);
+    color: var(--white);
+    transition: 0.4s;
+}
+
+#lang_list li:hover a {
+    color: var(--primary_color);
+}
+
+/* ham menu */
+.gnb_toggle {
+    /* js제어 */
+    display: none;
+    position: fixed;
+    top: 40px;
+    right: 60px;
+    background: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: var(--icon_m_w);
+    height: var(--icon_m_h);
+    border-radius: var(--icon_radius);
+    padding: 0;
 }

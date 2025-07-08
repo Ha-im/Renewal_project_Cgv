@@ -144,10 +144,22 @@ input.input-error {
 }
 
 .error-message {
-  display:none;
   width:100%;
   display:inline-block;
   color: red;
+  font-size: 12px;
+  line-height: 22px;
+  text-align: left;
+}
+input.input-ok{
+  border: 1px solid rgba(0, 161, 73, 0.5);
+  transition: box-shadow 0.5s;
+  box-shadow: inset 0 0 5px rgba(0, 161, 73, 0.5);
+}
+.ok-message{
+  width:100%;
+  display:inline-block;
+  color: rgb(0,161,73);
   font-size: 12px;
   line-height: 22px;
   text-align: left;
