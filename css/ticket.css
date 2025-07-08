@@ -380,3 +380,27 @@ h3{
 .next_page:hover{
 	background-color: var(--fill_hover_color);
 }
+
+/* 태블릿 이하 (1024px 이하) */
+@media screen and (max-width: 1024px) {
+
+	.main_container{
+		width: 728px;
+	}
+	.booking-header{
+		width: 728px;
+	}
+	.header_1{
+		width: 420px;
+	}
+	.header_2{
+		width:308px;
+	}
+	.header_3{
+		width: 296px;
+	}
+}
+/* 모바일 (768px 이하) */
+@media screen and (max-width: 768px) {
+
+}
