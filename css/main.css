@@ -95,7 +95,7 @@
   font-weight: 700;
 }
 
-.planPost .swiper-slide {
+.plan_post .swiper-slide {
   width: 280px;
   flex-shrink: 0;
 }
@@ -155,7 +155,7 @@
   background: var(--img_cover_color);
 }
 
-.planPost div img {
+.plan_post div img {
   width: 280px;
   height: 382px;
   border-radius: 12px;

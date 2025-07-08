@@ -104,7 +104,7 @@ $.getJSON('./json/slides.json', function (data) {
     $('.swiper-wrapper.planA').append(slideHTML);  // 슬라이드 HTML 추가
   });
   //swiper 기능
-  const swiper = new Swiper('.planPost', {
+  const swiper = new Swiper('.plan_post', {
     //swiper 옵션 추가 영역
     slidesPerView: 'auto', // 보여지는 갯수
     spaceBetween: 18, // gap
@@ -126,10 +126,10 @@ $.getJSON('./json/slides.json', function (data) {
     watchSlidesProgress: true,
   })
 
-  $('.planPost').mouseenter(function () {
+  $('.plan_post').mouseenter(function () {
     swiper.autoplay.stop();
   });
-  $('.planPost').mouseleave(function () {
+  $('.plan_post').mouseleave(function () {
     swiper.autoplay.start();
   });
 
@@ -180,7 +180,7 @@ item.on('mouseleave', function () {
 
 /* 이벤트 */
 // Swiper 초기화
-const swiper2 = new Swiper('.eventSwiper', {
+const swiper2 = new Swiper('.event_swiper', {
   // swiper 옵션 추가 영역
   slidesPerView: 3,
   breakpoints: {
@@ -194,7 +194,7 @@ const swiper2 = new Swiper('.eventSwiper', {
 });
 // 배경 변경 + 해시태그 토글
 const bg = $('.eventzone .bg');
-const swiperContainer = $('.promotion.swiper.eventSwiper');
+const swiperContainer = $('.promotion.swiper.event_swiper');
 swiperContainer.on('mouseenter', '.swiper-slide', function () {
   const bgUrl = $(this).data('bg');
   if (!bgUrl) return;
