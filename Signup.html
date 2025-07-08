@@ -24,9 +24,10 @@
           <div id="name-error" class="error-message"></div>
         <div class="checkId">
           <input type="text" name="userid" id="userid" placeholder="아이디를 입력해주세요." required>
-          <button type="button">중복확인</button>
+          <button type="button" class="idok">중복확인</button>
         </div>
           <div id="id-error" class="error-message"></div>
+          <div id="ok-error" class="ok-message"></div>
           <input type="password" name="password" id="password" placeholder="비밀번호를 입력해주세요." required>
           <div id="pw-error" class="error-message"></div>
           <input type="password" name="passwordok" id="passwordok" placeholder="비밀번호 확인" required>
@@ -34,7 +35,7 @@
           <input type="email" name="email" id="email" placeholder="이메일을 입력해주세요." required>
           <div id="email-error" class="error-message"></div>
         </div>
-        <button type="submit">가입하기</button>
+        <button type="submit" id="submitBtn">가입하기</button>
       </form>
       <div class="reset">
         <a href="login.html">돌아가기</a>
