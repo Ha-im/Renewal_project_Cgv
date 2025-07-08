@@ -82,30 +82,21 @@ footer .footer_text span {
     color: var(--white);
 }
 
+/* accordion_btn */
+.accordion_btn {
+    font: var(--fbody_text);
+    color: var(--white);
+}
+
 footer .copyright {
     font-size: 16px;
     line-height: 24px;
     font-weight: 300;
     color: var(--white);
 }
-/* accordion_btn */
-
-.accordion_btn{
-    position: relative;
-    outline: 1px solid red;
-}
-.accordion_btn::after{
-    content: '';
-    display: block;
-    width : 24px;
-    height: 24px;
-    background-color: blueviolet;
-    position : absolute;
-    top : 0;
-    left :calc(100% + 12px);
-}
 
 
-.mail{
-    color : blue;
+
+.mail {
+    color: blue;
 }
