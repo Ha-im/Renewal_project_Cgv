@@ -86,10 +86,12 @@ header {
 /* user-menu */
 .user_menu>ul {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     align-items: center;
 }
-
+.user_menu>ul>li:hover>a>svg{
+    color : var(--primary_color);
+}
 .lang_menu {}
 
 .lang_menu button {

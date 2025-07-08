@@ -41,8 +41,6 @@ $(document).on('wheel', function (evt) {
   }
 });
 
-
-
 // header js
 const gnb = $('.gnb>li');
 gnb.hover(
@@ -54,8 +52,9 @@ gnb.hover(
     $('.lnb').stop().slideUp(400);
   }
 );
-const hamBtn = $('.gnb_toggle');
 
+// header의 ham버튼
+const hamBtn = $('.gnb_toggle');
 hamBtn.on('click', function () {
   menu.animate({
     top : `0`
