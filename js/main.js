@@ -22,7 +22,7 @@ $.getJSON('./json/slides.json', function (data) {
   slides.forEach(function (item, idx) {
     const displayIndex = (idx + 1).toString().padStart(2, '0'); // 01, 02 ... 번호 붙이기
     const slideHTML = `
-      <div class="swiper-slide imgItem">
+      <div class="swiper-slide img_item">
         <img src="${item.image}" alt="">
         <div class="planHover">
           <div class="moviText">
@@ -34,7 +34,7 @@ $.getJSON('./json/slides.json', function (data) {
           </div>
         </div>
         <div class="ranking">${displayIndex}</div>  <!-- 슬라이드 번호 -->
-        <div class="age ${item.ageClass}">${item.age}</div> <!-- 연령 등급 표시 -->
+        <div class="rating ${item.ageClass}"></div> <!-- 연령 등급 표시 -->
       </div>
     `;
     $('.swiper-wrapper.planA').append(slideHTML);  // 슬라이드 HTML 추가

@@ -28,7 +28,7 @@
   --gnb: 400 16px/24px "Noto Sans KR", sans-serif;
   --lnb: 400 16px/48px "Noto Sans KR", sans-serif;
   --link_text: 300 16px/auto "Noto Sans KR", sans-serif;
-  --fmenu_text : 400 20px/20px "Noto Sans KR", sans-serif;
+  --fmenu_text: 400 20px/20px "Noto Sans KR", sans-serif;
   --flink_text: 300 14px/24px "Noto Sans KR", sans-serif;
   --fbody_text: 300 16px/24px "Noto Sans KR", sans-serif;
 
@@ -56,7 +56,7 @@
   --hint_bg_color: rgba(0, 0, 0, 0.8);
 
   --disable_color: #666666;
-  --img_cover_color : linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.09) 35%, rgba(0, 0, 0, 0.80));
+  --img_cover_color: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.09) 35%, rgba(0, 0, 0, 0.80));
 
   /* 영화 연령 아이콘 색상 */
   --ratingAll: #00B140;
@@ -67,7 +67,7 @@
   /* border_style */
   --fill_btn_border: 1px solid #ED3124;
   --empty_btn_border: 1px solid rgba(217, 217, 217, 0.2);
-  
+
   /* border-radius */
   --max_radius: 999px;
   --m_radius: 24px;
@@ -86,11 +86,13 @@
   --web_strong_shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
 
 }
+
 .gradient-bg {
-  background: linear-gradient(135deg, rgba(26, 74, 74, 0.5),rgba(26, 74, 74, 0.3) 10%, rgba(0, 0, 0, 1), rgba(77, 0, 0, 0.3) 90%,rgba(77, 0, 0, 0.5));
+  background: linear-gradient(135deg, rgba(26, 74, 74, 0.5), rgba(26, 74, 74, 0.3) 10%, rgba(0, 0, 0, 1), rgba(77, 0, 0, 0.3) 90%, rgba(77, 0, 0, 0.5));
   width: 100%;
   height: 100vh;
 }
+<<<<<<< HEAD
 /* footer 개인정보 처리 방침 모달 */
 /* 개인정보 모달 띄우기 */
 #policy_modal{
@@ -128,4 +130,119 @@
 }
 #policy_closeModal:active{
   background:#A1221B !important; 
+=======
+
+/* common style */
+
+
+/* 영화 제목 */
+.title {
+  display: inline-block;
+  font: var(--title);
+  color: var(--white);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/*영화 부제목*/
+.subtitle {
+  font: var(--sub_title);
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+/* 콘텐츠 내용 */
+.content_body {
+  font: var(--content_body);
+  color: var(--white);
+}
+
+/* 영화 제목의 가상요쇼 */
+.rating::after {
+  width: var(--icon_s_w);
+  height: var(--icon_s_h);
+  display: block;
+  position: absolute;
+  left: calc(100% + 5px);
+  bottom: 0;
+  color: var(--white);
+  font: var(--rating_number);
+  border-radius: var(--icon_radius);
+  text-align: center;
+  padding-top: 5px;
+}
+
+/* 영화 연령 style */
+.rating19::after {
+  content: '19';
+  background-color: var(--rating19);
+}
+
+.rating15::after {
+  content: '15';
+  background-color: var(--rating15);
+}
+
+.rating12::after {
+  content: '12';
+  background-color: var(--rating12);
+}
+
+.ratingall::after {
+  content: 'All';
+  background-color: var(--ratingAll);
+}
+
+
+/* 버튼 박스 */
+.btn_box {
+  display: flex;
+  gap: 16px;
+}
+
+/* 버튼 박스 하위요소의 a태그 */
+.btn_box a {
+  display: block;
+}
+
+/* 내부가 비어있는 btn style */
+.empty_btn {
+  background-color: transparent;
+  padding: var(--web_btn_padding);
+  color: var(--white);
+  font: var(--btn_text);
+  border: var(--empty_btn_border);
+  border-radius: var(--max_radius);
+  backdrop-filter: blur(20px);
+  /* 이거 왜..? */
+  height: 51px;
+  box-shadow: var(--web_btn_shadow);
+  transition: 0.6s;
+}
+
+.empty_btn:hover {
+  background: var(--empty_hover_color);
+}
+
+/*call to action btn style*/
+.cta_btn {
+  background-color: var(--primary_color);
+  padding: var(--web_btn_padding);
+  color: var(--white);
+  font: var(--btn_text);
+  border: var(--empty_btn_border);
+  border-radius: var(--max_radius);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--web_btn_shadow);
+  transition: 0.6s;
+
+}
+
+.cta_btn:hover {
+  background: var(--fill_hover_color);
+}
+
+.cta_btn:active {
+  background: var(--fill_active_color);
+>>>>>>> 78f1963a2fb14e5b345ab940053a6037373675da
 }

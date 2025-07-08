@@ -1,3 +1,5 @@
+/* main_common style */
+
 /* pager */
 #fp-nav.fp-right {
   right: 0;
@@ -6,22 +8,28 @@
 
 #fp-nav ul li a span {
   background-color: var(--white);
-
 }
 
 #fp-nav ul li a.active span {
   background-color: var(--primary_color);
 }
 
-/* main_banner */
-.boot {
-  width: 1320px;
+/* //pager */
+
+/* layout */
+.h_100 {
   height: 100vh;
-  margin: 0 auto;
+}
+
+.position_rel {
   position: relative;
 }
 
-/* content_box */
+/* //layout */
+/* //main_common style */
+
+
+/* main_banner */
 .content_box {
   position: absolute;
   left: 0;
@@ -33,110 +41,6 @@
 .content_box .text_box {
   margin-bottom: 30px;
 }
-
-.title {
-  display: inline-block;
-  font: var(--title);
-  color: var(--white);
-  margin-bottom: 10px;
-  position: relative;
-}
-
-h2.rating::after {
-  width: var(--icon_s_w);
-  height: var(--icon_s_h);
-  display: block;
-  position: absolute;
-  left: calc(100% + 5px);
-  bottom: 0;
-  color: var(--white);
-  font: var(--rating_number);
-  border-radius: var(--icon_radius);
-  text-align: center;
-  padding-top: 5px;
-}
-
-h2.rating19::after {
-  content: '19';
-  background-color: var(--rating19);
-}
-
-h2.rating15::after {
-  content: '15';
-  background-color: var(--rating15);
-}
-
-h2.rating12::after {
-  content: '12';
-  background-color: var(--rating12);
-}
-
-h2.ratingall::after {
-  content: 'All';
-  background-color: var(--ratingAll);
-}
-
-.subtitle {
-  font: var(--sub_title);
-  color: var(--white);
-  margin-bottom: 24px;
-}
-
-.content_body {
-  font: var(--content_body);
-  color: var(--white);
-}
-
-.btn_box {
-  display: flex;
-  gap: 16px;
-}
-
-.btn_box a {
-  display: block;
-}
-
-.empty_btn {
-  background-color: transparent;
-  padding: var(--web_btn_padding);
-  color: var(--white);
-  font: var(--btn_text);
-  border: var(--empty_btn_border);
-  border-radius: var(--max_radius);
-  backdrop-filter: blur(20px);
-  /* 이거 왜..? */
-  height: 51px;
-  box-shadow: var(--web_btn_shadow);
-  transition: 0.6s;
-}
-
-.empty_btn:hover {
-  background: var(--empty_hover_color);
-}
-
-.cta_btn {
-  background-color: var(--primary_color);
-  padding: var(--web_btn_padding);
-  color: var(--white);
-  font: var(--btn_text);
-  border: var(--empty_btn_border);
-  border-radius: var(--max_radius);
-  backdrop-filter: blur(20px);
-  box-shadow: var(--web_btn_shadow);
-  transition: 0.6s;
-
-}
-
-.cta_btn:hover {
-  background: var(--fill_hover_color);
-}
-
-.cta_btn:active {
-  background: var(--fill_active_color);
-}
-
-
-/* //content_box */
 
 .video_banner {
   width: 100%;
@@ -167,11 +71,17 @@ h2.ratingall::after {
   left: 0;
   z-index: 10;
 }
+/* //main_banner */
 
-/* main_banner */
+
+
+/* movie_rank */
+
+/* //movie_rank */
+
+
 
 /* plan */
-
 .plan_title {
   display: flex;
   justify-content: space-between;
@@ -230,11 +140,11 @@ h2.ratingall::after {
   color: var(--primary_color);
 }
 
-.imgItem {
+.img_item {
   position: relative;
 }
 
-.imgItem:after {
+.img_item:before {
   position: absolute;
   left: 0;
   top: 0;
@@ -290,10 +200,10 @@ h2.ratingall::after {
   padding: 14px 50px;
 }
 
-.imgItem .age {
+.img_item .rating {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 38px;
   width: var(--icon_s_w);
   height: var(--icon_s_h);
   display: block;
@@ -304,23 +214,7 @@ h2.ratingall::after {
   padding-top: 5px;
 }
 
-.imgItem .age.age_all {
-  background-color: var(--ratingAll)
-}
-
-.imgItem .age.age_15 {
-  background-color: var(--rating15);
-}
-
-.imgItem .age.age_12 {
-  background-color: var(--rating12);
-}
-
-.imgItem .age.age_19 {
-  background-color: var(--rating19);
-}
-
-.imgItem .ranking {
+.img_item .ranking {
   position: absolute;
   left: 10px;
   bottom: 10px;
@@ -329,7 +223,7 @@ h2.ratingall::after {
   z-index: 2;
 }
 
-.imgItem:hover .planHover {
+.img_item:hover .planHover {
   opacity: 1;
 }
 

@@ -15,8 +15,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "All",
-      "ageClass": "age_all"
+      "ageClass": "rating19"
     },
     {
       "image": "/images/plan/soon.jpg",
@@ -33,8 +32,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "19",
-      "ageClass": "age_19"
+      "ageClass": "rating15"
     },
     {
       "image": "/images/plan/neo.jpg",
@@ -51,8 +49,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "12",
-      "ageClass": "age_12"
+      "ageClass": "rating15"
     },
     {
       "image": "/images/plan/word.jpg",
@@ -69,8 +66,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "12",
-      "ageClass": "age_12"
+      "ageClass": "rating12"
     },
     {
       "image": "/images/plan/sunset.jpg",
@@ -87,8 +83,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "15",
-      "ageClass": "age_15"
+      "ageClass": "rating15"
     },
     {
       "image": "/images/plan/jang.jpg",
@@ -105,8 +100,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "12",
-      "ageClass": "age_12"
+      "ageClass": "rating15"
     },
     {
       "image": "/images/plan/kbo.jpg",
@@ -123,8 +117,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "All",
-      "ageClass": "age_all"
+      "ageClass": "rating12"
     },
     {
       "image": "/images/plan/kboL.jpg",
@@ -141,8 +134,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "All",
-      "ageClass": "age_all"
+      "ageClass": "rating12"
     },
     {
       "image": "/images/plan/supermen.jpg",
@@ -159,8 +151,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "12",
-      "ageClass": "age_12"
+      "ageClass": "ratingall"
     },
     {
       "image": "/images/plan/gi.jpg",
@@ -177,8 +168,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "15",
-      "ageClass": "age_15"
+      "ageClass": "ratingall"
     },
     {
       "image": "/images/plan/rapachini.jpg",
@@ -195,8 +185,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "12",
-      "ageClass": "age_12"
+      "ageClass": "rating15"
     },
     {
       "image": "/images/plan/balconi.jpg",
@@ -213,8 +202,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "19",
-      "ageClass": "age_19"
+      "ageClass": "rating15"
     },
     {
       "image": "/images/plan/bom.jpg",
@@ -231,8 +219,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "15",
-      "ageClass": "age_15"
+      "ageClass": "rating19"
     },
     {
       "image": "/images/plan/sun.jpg",
@@ -249,8 +236,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "15",
-      "ageClass": "age_15"
+      "ageClass": "rating12"
     },
     {
       "image": "/images/plan/seventin.jpg",
@@ -267,8 +253,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "All",
-      "ageClass": "age_all"
+      "ageClass": "rating19"
     },
     {
       "image": "/images/plan/bangtan.jpg",
@@ -285,8 +270,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "All",
-      "ageClass": "age_all"
+      "ageClass": "rating12"
     },
     {
       "image": "/images/plan/tomo.jpg",
@@ -303,8 +287,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "All",
-      "ageClass": "age_all"
+      "ageClass": "ratingall"
     },
     {
       "image": "/images/plan/nhipen.jpg",
@@ -321,8 +304,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "All",
-      "ageClass": "age_all"
+      "ageClass": "rating12"
     },
     {
       "image": "/images/plan/hive.jpg",
@@ -339,8 +321,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "All",
-      "ageClass": "age_all"
+      "ageClass": "ratingall"
     },
     {
       "image": "/images/plan/delma.jpg",
@@ -357,8 +338,7 @@
           "class": "cta_btn"
         }
       ],
-      "age": "15",
-      "ageClass": "age_15"
+      "ageClass": "rating12"
     }
   ]
 }

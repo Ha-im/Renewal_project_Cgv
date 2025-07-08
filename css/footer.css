@@ -1,10 +1,15 @@
 /* footer */
 
-
+/* main.html에서만 사용하는 class */
 .footer {
     padding: 48px 60px;
     height: 364px;
     /* 추후 풀페이지 ui에서 컨텐츠의 높이만큼만 잡히는 옵션사용 */
+}
+
+footer {
+    padding: 48px 60px;
+    height: 364px;
 }
 
 footer nav {
@@ -62,9 +67,7 @@ footer .footer_link::after {
 
 footer .footer_link a {
     color: var(--white);
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 2;
+    font: var(--flink_text);
 }
 
 footer strong {
@@ -72,30 +75,18 @@ footer strong {
     text-decoration: underline;
 }
 
-footer .footer_text address {
-    font: var(--fbody_text);
-    color: var(--white);
-}
-
-footer .footer_text span {
-    font: var(--fbody_text);
-    color: var(--white);
-}
-
-/* accordion_btn */
+footer .footer_text address,
+footer .footer_text span,
+footer .copyright,
 .accordion_btn {
     font: var(--fbody_text);
     color: var(--white);
 }
 
-footer .copyright {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 300;
-    color: var(--white);
+/* 반응형 - 모바일 버전에서만 등장 */
+.accordion_btn {
+    display: none;
 }
-
-
 
 .mail {
     color: blue;
