@@ -1,8 +1,8 @@
-        const tabs = document.querySelectorAll('.tabs li a');
-        const contents = document.querySelectorAll('div[id^="tab"]');
+        const tabs = $('.tabs li a');
+        const contents = $('div[id^="tab"]');
 
-        tabs.forEach(tab => {
-            tab.addEventListener('click', function(e) {
+        tabs.each(tab => {
+            tab.on('click', function(e) {
             e.preventDefault();  
 
             contents.forEach(content => content.style.display = 'none');
