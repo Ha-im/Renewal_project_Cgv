@@ -224,18 +224,25 @@ accent-color: var(--primary_color);
     height:80%; 
     margin:5% auto; 
     background:white; 
-    padding:20px;
+    padding:1px;
 }
 #policy_closeModal{
     position:absolute; 
-    top:8px; 
-    right:10px;
+    top:10px;
+    right:20px;
     width:50px;
     height:30px;
     background:none;
+    border-radius: 50%;
+    color:#000;
+    font-size:20px;
+    font-weight: bold;
 }
-#policy_modalIframe{
-    border:none;
+#policy_closeModal:hover{
+    background:#C32A20;
+}
+#policy_closeModal:active{
+    background:#A1221B !important; 
 }
 /* tap2 end */
 /* tab3 */
