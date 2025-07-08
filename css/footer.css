@@ -67,7 +67,7 @@ footer .footer_link a {
     line-height: 2;
 }
 
-footer .footer_link a strong {
+footer strong {
     font-weight: bold;
     text-decoration: underline;
 }
@@ -87,4 +87,25 @@ footer .copyright {
     line-height: 24px;
     font-weight: 300;
     color: var(--white);
+}
+/* accordion_btn */
+
+.accordion_btn{
+    position: relative;
+    outline: 1px solid red;
+}
+.accordion_btn::after{
+    content: '';
+    display: block;
+    width : 24px;
+    height: 24px;
+    background-color: blueviolet;
+    position : absolute;
+    top : 0;
+    left :calc(100% + 12px);
+}
+
+
+.mail{
+    color : blue;
 }
