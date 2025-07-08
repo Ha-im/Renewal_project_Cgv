@@ -227,9 +227,9 @@ $(window).on('mousemove', function (e) {
   targetX = e.clientX;
   targetY = e.clientY;
 })
-$(document).on('mouseenter', '.empty_btn, .cta_btn, .nav-btn, a, input,.poster-items .item', function () {
+$(document).on('mouseenter', '.empty_btn, .cta_btn, .nav-btn, a, input,.poster-items .item,svg', function () {
   cursor.addClass('active');
-}).on('mouseleave', '.empty_btn, .cta_btn, .nav-btn, a, input,.poster-items .item', function () {
+}).on('mouseleave', '.empty_btn, .cta_btn, .nav-btn, a, input,.poster-items .item,svg', function () {
   cursor.removeClass('active');
 });
 
