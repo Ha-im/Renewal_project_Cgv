@@ -50,5 +50,13 @@
                 alert('로그인 성공');
             }
         })
+        //모달 띄우기
+        $('#policy_a').on('click',function(e){
+            e.preventDefault();
+            $('#policy_modal').css('display','block');
+        })
+        $('#policy_closeModal').on('click',function(){
+            $('#policy_modal').css('display','none');
+        })
 
 
