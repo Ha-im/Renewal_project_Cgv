@@ -236,6 +236,10 @@ accent-color: var(--primary_color);
     white-space: nowrap;
     border: 0;
 }
+/* footer margin */
+footer{
+    margin-top:100px;
+}
 /* 유효성검사 */
 input.input-error {
   transition: box-shadow 0.5s;
