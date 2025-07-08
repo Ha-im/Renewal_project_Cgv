@@ -13,11 +13,6 @@ const menu = $('header'); //header
 let currentPage = 0; //현재 사용자가 보고있는 page (index 체크용)
 let checkEvent = false; //스크롤 이벤트 on/off
 
-const gnb = $('.gnb li');
-gnb.on('mouseenter', function () {
-  $(this).addClass('on')
-})
-
 $(document).on('wheel', function (evt) {
   //check변수가 true면 이벤트 진행중
   if (checkEvent === true) {
@@ -30,7 +25,7 @@ $(document).on('wheel', function (evt) {
     menu.animate({
       top: `-72px`
     }, 600, function () {
-      $('.toggle').fadeIn();
+      $('.gnb_toggle').fadeIn(200);
       checkEvent = false;
     })
   } else {
@@ -40,11 +35,36 @@ $(document).on('wheel', function (evt) {
     menu.animate({
       top: `0`
     }, 600, function () {
-      $('.toggle').fadeOut();
+      $('.gnb_toggle').fadeOut(200);
       checkEvent = false;
     })
   }
 });
+
+// header js
+const gnb = $('.gnb>li');
+gnb.hover(
+  function () {
+    //마우스가 들어오면 할 일
+    $(this).find('.lnb').stop().slideDown(400);
+  }, function () {
+    //마우스가 나가면 할 일
+    $('.lnb').stop().slideUp(400);
+  }
+);
+
+// header의 ham버튼
+const hamBtn = $('.gnb_toggle');
+hamBtn.on('click', function () {
+  menu.animate({
+    top : `0`
+  },600);
+  $(this).fadeOut(200);
+})
+
+
+
+
 
 // 메인 배너 js
 
