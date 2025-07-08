@@ -14,13 +14,14 @@
 }
 
 /* main_banner */
-.boot {
-  width: 1320px;
-  height: 100vh;
-  margin: 0 auto;
+.container{
+}
+.h_100{
+  height : 100vh;
+}
+.position_rel{
   position: relative;
 }
-
 /* content_box */
 .content_box {
   position: absolute;
