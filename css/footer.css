@@ -2,18 +2,19 @@
 
 
 .footer {
-    height: 600px;
     padding: 48px 60px;
+    height: 364px;
+    /* 추후 풀페이지 ui에서 컨텐츠의 높이만큼만 잡히는 옵션사용 */
 }
 
 footer nav {
-    margin-bottom: 96px;
+    margin-bottom: 48px;
 }
 
 footer .footer_menu {
     display: flex;
     justify-content: center;
-    gap : 92px
+    gap: 64px;
 }
 
 footer .footer_menu a {
@@ -24,25 +25,28 @@ footer .footer_menu a {
     gap: 16px;
 }
 
-footer .footer_menu a img {
-    width: 48px;
-    height: 48px;
+footer .footer_menu a svg {
+    width: var(--icon_m_w);
+    height: var(--icon_m_h);
+    transition: 0.4s;
 }
 
 footer .footer_menu a span {
     color: var(--white);
-    font-size: 20px;
-    font-weight: 400;
-    font-family: "Noto Sans KR", sans-serif;
+    font: var(--fmenu_text);
+    transition: 0.4s;
 }
 
+footer .footer_menu li a:hover svg {
+    fill: var(--primary_color);
+}
 
 footer .footer_link {
     display: flex;
-    gap: 20px;
+    gap: 8px;
     justify-content: flex-start;
     position: relative;
-    margin-bottom: 17px;
+    margin-bottom: 16px;
 }
 
 footer .footer_link::after {
@@ -68,10 +72,13 @@ footer .footer_link a strong {
     text-decoration: underline;
 }
 
-footer .footer_text {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 300;
+footer .footer_text address {
+    font: var(--fbody_text);
+    color: var(--white);
+}
+
+footer .footer_text span {
+    font: var(--fbody_text);
     color: var(--white);
 }
 
