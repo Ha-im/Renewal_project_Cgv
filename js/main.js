@@ -3,7 +3,8 @@ new fullpage('#fullpage', {
   // fullpage 옵션 추가 영역
   autoScrolling: true,
   navigation: true,
-  scrollOverflow: true,
+  scrollOverflow: true
+  // 
 });
 
 // 변수 선언부
@@ -12,17 +13,10 @@ const menu = $('header'); //header
 let currentPage = 0; //현재 사용자가 보고있는 page (index 체크용)
 let checkEvent = false; //스크롤 이벤트 on/off
 
-
 const gnb = $('.gnb li');
 gnb.on('mouseenter', function () {
   $(this).addClass('on')
 })
-
-// 해석...
-// .section의 첫 번째 페이지 에서는 header가 보여지고 있다. // 초기값은 block으로 충분
-// 사용자가 마우스 스크롤을 위 또는 아래로 당기면 header의 y값을 제어해 화면 밖으로 부드럽게 밀어낸다.
-// -> 사용자가 스크롤을 아래로 당겼는지 이벤트 체크가 필요
-// -> 현재 위치가 0이면 header는 원래의 자리로 부드럽게 나타난다.
 
 $(document).on('wheel', function (evt) {
   //check변수가 true면 이벤트 진행중
@@ -31,7 +25,6 @@ $(document).on('wheel', function (evt) {
   }
   if (evt.originalEvent.deltaY > 0) {
     //휠을 아래로 당겨 다음 페이지를 본다.
-    console.log('호출!');
     checkEvent = true;
     currentPage++;
     menu.animate({
@@ -42,7 +35,6 @@ $(document).on('wheel', function (evt) {
     })
   } else {
     //휠을 위로 당겨 이전 페이지를 본다.
-    console.log('호출!');
     currentPage--;
     checkEvent = true;
     menu.animate({
@@ -53,25 +45,11 @@ $(document).on('wheel', function (evt) {
     })
   }
 });
-/* 마우스 커서 이동 */
+
+// 메인 배너 js
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// 영화 순위 js
 
 
 
@@ -145,16 +123,7 @@ $.getJSON('./json/slides.json', function (data) {
 
 
 
-
-
-
-
-
-
-
-
-
-
+// 추천영화(날씨데이터) js
 
 
 
@@ -181,6 +150,8 @@ item.on('mouseleave', function () {
   $(this).removeClass('active');
 })
 /* //씨네마 (특별관) */
+
+
 
 /* 이벤트 */
 // Swiper 초기화
@@ -213,10 +184,17 @@ swiperContainer.on('mouseleave', '.swiper-slide', function () {
 /* //이벤트 */
 
 
+// 위치 찾기 js
+
+
+// 앱 다운로드 js
+
+
+// 푸터 js
 
 
 
-
+/* 마우스 커서 이동 */
 const cursor = $('div.mouse_cursor');
 const emptyBtn = $('.empty_btn');
 const ctaBtn = $('.cta_btn');
@@ -228,7 +206,6 @@ let currentY = 0;
 $(window).on('mousemove', function (e) {
   targetX = e.clientX;
   targetY = e.clientY;
-
 })
 $(document).on('mouseenter', '.empty_btn, .cta_btn, .nav-btn, a, input', function () {
   cursor.addClass('active');
@@ -236,24 +213,22 @@ $(document).on('mouseenter', '.empty_btn, .cta_btn, .nav-btn, a, input', functio
   cursor.removeClass('active');
 });
 
+// 마우스 클릭 애니메이션
 $(window).on('click', function () {
   cursor.addClass('pulse');
   setTimeout(function () {
     cursor.removeClass('pulse');
-  }, 1000);
+  }, 800);
 });
 
+// 마우스 커서 속도
 function animateCursor() {
   // 부드럽게 이동하도록 보간 (0.1은 이동 속도 계수)
-  currentX += (targetX - currentX) * 0.2;
-  currentY += (targetY - currentY) * 0.2;
-
+  currentX += (targetX - currentX) * 0.6;
+  currentY += (targetY - currentY) * 0.6;
   cursor.css({ left: `${currentX}px` })
   cursor.css({ top: `${currentY}px` })
-
   requestAnimationFrame(animateCursor);
 }
-
 animateCursor(); // 애니메이션 루프 시작
-
-/* 마우스 커서  end */
+/* //마우스 커서 이동 */
