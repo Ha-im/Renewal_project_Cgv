@@ -5,7 +5,7 @@ $('#username').on('input', function() {
 
     if (!nameRegex.test(val)) {
         $(this).addClass('input-error');
-        $('#name-error').text('이름은 2글자 이상 10글자 이하여야하고, 공백 및 특수문자 사용 불가');
+        $('#name-error').text('이름은 2글자 이상 10글자 이하여야하고, 공백 및 특수문자 사용 불가').slideDown(500);
     } else {
         $(this).removeClass('input-error');
         $('#name-error').text('');
@@ -19,7 +19,7 @@ $('#userid').on('input', function() {
     if (val.length < 5) {
         // 5글자 미만이면 에러
         $(this).addClass('input-error');
-        $('#id-error').text('아이디는 5글자 이상이어야 합니다.');
+        $('#id-error').text('아이디는 5글자 이상이어야 합니다.').slideDown(500);
         //유효한 아이디
         $('#ok-error').text('');
         $(this).removeClass('input-ok');
@@ -42,24 +42,24 @@ $('#password').on('input', function() {
     const minLength = 8;
   
     if (val.length < minLength) {
-      $('#pw-error').text('비밀번호는 최소 ' + minLength + '자 이상이어야 합니다.');
+      $('#pw-error').text('비밀번호는 최소 ' + minLength + '자 이상이어야 합니다.').slideDown(500);
       $(this).addClass('input-error');
       return;
     }
   
     if (!hasNumber) {
-      $('#pw-error').text('비밀번호에 숫자가 포함되어야 합니다.');
+      $('#pw-error').text('비밀번호에 숫자가 포함되어야 합니다.').slideDown(500);
       $(this).addClass('input-error');
       return;
     }
   
     if (!hasSpecial) {
-      $('#pw-error').text('비밀번호에 특수문자가 포함되어야 합니다.');
+      $('#pw-error').text('비밀번호에 특수문자가 포함되어야 합니다.').slideDown(500);
       $(this).addClass('input-error');
       return;
     }
     // 모든 조건 통과
-    $('#pw-error').text('');
+    $('#pw-error').text('').slideDown(500);
     $(this).removeClass('input-error');
   });
 //password input 유효성 검사2
@@ -69,7 +69,7 @@ $('#passwordok').on('input',function(){
 
     if(pwVal !== pwokVal){
         $(this).addClass('input-error');
-        $('#pwok-error').text('비밀번호가 서로 일치하지 않습니다.');
+        $('#pwok-error').text('비밀번호가 서로 일치하지 않습니다.').slideDown(500);
     }else{
         $(this).removeClass('input-error');
         $('#pwok-error').text('');
@@ -82,7 +82,7 @@ $('#email').on('input', function() {
 
     if (!emailRegex.test(val)) {
     $(this).addClass('input-error');
-    $('#email-error').text('유효한 이메일을 입력해주세요.');
+    $('#email-error').text('유효한 이메일을 입력해주세요.').slideDown(500);
     } else {
     $(this).removeClass('input-error');
     $('#email-error').text('');
@@ -94,7 +94,7 @@ $('.idok').on('click',function(){
     const input = false;
     if(val.length >= 5){
         $('#userid').addClass('input-ok');
-        $('#ok-error').text('유효한 아이디 입니다.');
+        $('#ok-error').text('유효한 아이디 입니다.').slideDown(500);
     }
 })
 // 아무 입력 없이 가입하기 눌럿을때 error메세지 띄우기
@@ -106,11 +106,11 @@ submitBtn.on('click',function(){
     if(!inputMessage){
         $('input').each(function(){
             $(this).addClass('input-error')
-            $('#name-error').text('이름은 2글자 이상 10글자 이하여야하고, 공백 및 특수문자 사용 불가');
-            $('#id-error').text('아이디는 5글자 이상이어야 합니다.');
-            $('#pw-error').text('비밀번호는 최소 ' + minLength + '자 이상이어야 합니다.');
-            $('#pwok-error').text('비밀번호가 서로 일치하지 않습니다.');
-            $('#email-error').text('유효한 이메일을 입력해주세요.');
+            $('#name-error').text('이름은 2글자 이상 10글자 이하여야하고, 공백 및 특수문자 사용 불가').slideDown(500);
+            $('#id-error').text('아이디는 5글자 이상이어야 합니다.').slideDown(500);
+            $('#pw-error').text('비밀번호는 최소 ' + minLength + '자 이상이어야 합니다.').slideDown(500);
+            $('#pwok-error').text('비밀번호가 서로 일치하지 않습니다.').slideDown(500);
+            $('#email-error').text('유효한 이메일을 입력해주세요.').slideDown(500);
         })
     }else{
         $('input').each(function(){
