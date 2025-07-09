@@ -711,20 +711,27 @@
   background: rgba(255, 255, 255, 0.06);
   transition: .5s;
   border-color: #4fc3f7;
-  box-shadow: 0 5px 10px rgba(79, 195, 247, 0.3);
+  box-shadow: 0 8px 14px rgba(79, 195, 247, 0.3);
 }
+/*
+.appdown a:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transition: .5s;
+  border-color: #FF5F62;
+  box-shadow: 0 8px 14px rgba(92, 0, 0, 0.8);
+}
+*/
 
 .appdown a img {
   vertical-align: middle;
   margin-right: 10px;
 }
-.app img{
-  transform: perspective(1000px);
-  animation: Float 6s ease-in-out infinite;
+.appdown_img img{
+  animation: Float 5s ease-in-out infinite;
 }
 @keyframes Float {
-  0%, 100% { transform: perspective(1000px) translateY(0px);}
-  50% { transform: perspective(1000px) translateY(-10px); }
+  0%, 100% { transform:  translateY(0px);}
+  50% { transform:  translateY(-20px); }
 }
 /*  02 rank  */
 .movie_rank {}
