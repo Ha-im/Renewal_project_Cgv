@@ -1,5 +1,5 @@
 body{
-  background:#000;
+  background:#000 linear-gradient(135deg, rgba(26, 74, 74, 0.5),rgba(26, 74, 74, 0.3) 10%, rgba(0, 0, 0, 1), rgba(77, 0, 0, 0.3) 90%,rgba(77, 0, 0, 0.5));
   font-size:13px;
   font-family: "Noto Sans KR", sans-serif;
 }
@@ -135,6 +135,10 @@ h2{
 }
 .reset a:active{
   background:#4d4d4d;
+}
+/* footer */
+footer{
+  margin-top:100px;
 }
 /* 유효성 검사 */
 input.input-error {

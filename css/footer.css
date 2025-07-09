@@ -1,11 +1,6 @@
 /* footer */
 
 /* main.html에서만 사용하는 class */
-.footer {
-    padding: 48px 60px;
-    height: 364px;
-    /* 추후 풀페이지 ui에서 컨텐츠의 높이만큼만 잡히는 옵션사용 */
-}
 
 footer {
     padding: 48px 60px;

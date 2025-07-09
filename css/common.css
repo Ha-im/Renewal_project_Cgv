@@ -92,7 +92,6 @@
   height: 100vh;
 }
 /* footer 개인정보 처리 방침 모달 */
-/* 개인정보 모달 띄우기 */
 #policy_modal{
     display:none; 
     position:fixed; 
@@ -115,19 +114,19 @@
     position:absolute; 
     top:10px;
     right:20px;
-    width:50px;
+    width:40px;
     height:30px;
-    background:none;
-    border-radius: 50%;
-    color:#000;
-    font-size:20px;
-    font-weight: bold;
+    background:rgba(0,0,0,0.5);
+    border:1px solid var(--empty_btn_border);
+    border-radius: 8px;
+    color:#fff;
+    font-size:15px;
 }
 #policy_closeModal:hover{
-    background:#C32A20;
+    background:rgba(0,0,0,.7);
 }
 #policy_closeModal:active{
-    background:#A1221B !important; 
+    background:rgba(0,0,0,0.9) !important; 
 }
 /* common style */
 

@@ -10,13 +10,11 @@ new fullpage('#fullpage', {
 const page = $('#fullpage .section'); //fullpage의 전체 페이지를 담는 변수
 let currentPage = 0; //현재 사용자가 보고있는 page (index 체크용)
 let checkEvent = false; //스크롤 이벤트 on/off
-const langbtn = $('.lang_menu button');
-const langList = $('#lang_list');
 const menu = $('header'); //header
 const hamBtn = $('.gnb_toggle');
-const gnb = $('.gnb>li');
 
 
+//화면 페이지
 $(document).on('wheel', function (evt) {
   //check변수가 true면 이벤트 진행중
   if (checkEvent === true) {
@@ -26,6 +24,18 @@ $(document).on('wheel', function (evt) {
     //휠을 아래로 당겨 다음 페이지를 본다.
     checkEvent = true;
     currentPage++;
+    if(currentPage === 1){
+      // 1번 페이지를 볼 때 할 일
+      $('#move_box').delay(200).animate({
+        left : 0,
+        opacity : 1
+      },1000)
+      $('#slide').delay(200).animate({
+        right : 0,
+        opacity : 1
+      },1000)
+    }
+    console.log(currentPage);
     langList.slideUp(400);
     menu.animate({
       top: `-72px`
@@ -46,16 +56,6 @@ $(document).on('wheel', function (evt) {
   }
 });
 
-gnb.hover(
-  function () {
-    //마우스가 들어오면 할 일
-    $(this).find('.lnb').stop().slideDown(400);
-    langList.slideUp(400);
-  }, function () {
-    //마우스가 나가면 할 일
-    $('.lnb').stop().slideUp(400);
-  }
-);
 
 // header의 ham버튼
 hamBtn.on('click', function () {
@@ -64,12 +64,6 @@ hamBtn.on('click', function () {
   }, 600);
   $(this).fadeOut(200);
 })
-
-langbtn.on('click', function () {
-  $('#lang_list').stop().slideToggle(400);
-})
-
-
 
 // 메인 배너 js
 
@@ -104,7 +98,7 @@ $.getJSON('./json/slides.json', function (data) {
     $('.swiper-wrapper.planA').append(slideHTML);  // 슬라이드 HTML 추가
   });
   //swiper 기능
-  const swiper = new Swiper('.planPost', {
+  const swiper = new Swiper('.plan_post', {
     //swiper 옵션 추가 영역
     slidesPerView: 'auto', // 보여지는 갯수
     spaceBetween: 18, // gap
@@ -126,10 +120,10 @@ $.getJSON('./json/slides.json', function (data) {
     watchSlidesProgress: true,
   })
 
-  $('.planPost').mouseenter(function () {
+  $('.plan_post').mouseenter(function () {
     swiper.autoplay.stop();
   });
-  $('.planPost').mouseleave(function () {
+  $('.plan_post').mouseleave(function () {
     swiper.autoplay.start();
   });
 
@@ -180,7 +174,7 @@ item.on('mouseleave', function () {
 
 /* 이벤트 */
 // Swiper 초기화
-const swiper2 = new Swiper('.eventSwiper', {
+const swiper2 = new Swiper('.event_swiper', {
   // swiper 옵션 추가 영역
   slidesPerView: 3,
   breakpoints: {
@@ -194,7 +188,7 @@ const swiper2 = new Swiper('.eventSwiper', {
 });
 // 배경 변경 + 해시태그 토글
 const bg = $('.eventzone .bg');
-const swiperContainer = $('.promotion.swiper.eventSwiper');
+const swiperContainer = $('.promotion.swiper.event_swiper');
 swiperContainer.on('mouseenter', '.swiper-slide', function () {
   const bgUrl = $(this).data('bg');
   if (!bgUrl) return;

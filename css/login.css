@@ -1,6 +1,6 @@
 /* all */
 body{
-    background: #000;
+    background:#000 linear-gradient(135deg, rgba(26, 74, 74, 0.5),rgba(26, 74, 74, 0.3) 10%, rgba(0, 0, 0, 1), rgba(77, 0, 0, 0.3) 90%,rgba(77, 0, 0, 0.5));
     color:#fff;
     font-size:13px;
     font-family: "Noto Sans KR", sans-serif;
@@ -235,6 +235,10 @@ accent-color: var(--primary_color);
     clip: rect(0 0 0 0);
     white-space: nowrap;
     border: 0;
+}
+/* footer margin */
+footer{
+    margin-top:100px;
 }
 /* 유효성검사 */
 input.input-error {
