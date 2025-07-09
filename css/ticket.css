@@ -4,6 +4,13 @@ body{
 	font-size:14px;
 	font: 15px/24px "Noto Sans KR", sans-serif;
 }
+/*상영관 json 파일 css*/
+.list_location{
+	display:flex;
+}
+.list_location a.active{
+	color:red;
+}
 .main_container{
 	display: flex;
 	width: 1280px;
@@ -34,6 +41,17 @@ body{
 /* 좌측 탭 끝 */
 
 /* 극장 영역 */
+.list_location{
+	height: 34px;
+}
+.list_location a{
+	padding-left: 16px;
+	line-height: 34px;
+	font-size: 14px;
+}
+.list_location span:last-child{
+	color: #666666;
+}
 .cinema_section{
 	position: relative;
 	background-color: #1B1B1B;
@@ -88,7 +106,7 @@ body{
 	color: #767575;
 }
 .area_cinema_list a{
-	padding-left: 20px;
+	padding-left: 16px;
 	background-color: transparent;
 }
 .area_cinema_list a.active{
@@ -144,6 +162,10 @@ body{
 .tab_movie.active{
 	background-color: #1B1B1B;
 	color: var(--white);
+}
+.area_cinema_list .content{
+	position: absolute;
+	top: 0;
 }
 .content li{
 	display: flex;
@@ -260,7 +282,6 @@ body{
 	color: var(--light_white);
 	font-size: 14px;
 	font-weight: 400;
-	padding-top: ;
 }
 
 
@@ -374,18 +395,13 @@ h3{
 	background-color: var(--fill_hover_color);
 }
 /* 다음 페이지 버튼  끝 */
+/* display */
 
 
 /* 태블릿 이하 (1024px 이하) */
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1280px) {
 	body{
 		width:100%;
-	}
-	.main_container{
-		right:-27px;
-	}
-	.movie_section{
-
 	}
 	.tab_movie{
 		width:100%;
@@ -403,6 +419,6 @@ h3{
 
 }
 /* 모바일 (768px 이하) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 725px) {
 
 }
