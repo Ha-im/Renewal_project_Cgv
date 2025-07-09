@@ -158,7 +158,7 @@ body{
 	padding-left: 40px;
 }
 /* age icon */
-.rating{
+.rating_icon{
   width: var(--icon_s_w);
   height: var(--icon_s_h);
   position: absolute;
@@ -171,22 +171,22 @@ body{
 	margin-left: 10px;
 }
 
-.rating19{
+.rating_icon19{
   content: '19';
   background-color: var(--rating19);
 }
 
-.rating15{
+.rating_icon15{
   content: '15';
   background-color: var(--rating15);
 }
 
-.rating12{
+.rating_icon12{
   content: '12';
   background-color: var(--rating12);
 }
 
-.ratingall{
+.rating_iconall{
   content: 'All';
   background-color: var(--ratingAll);
 }
@@ -319,7 +319,7 @@ body{
 	font-size: 15px;
 	font-weight: bold;
 }
-.movie_title .rating{
+.movie_title .rating_icon{
 	top: 25px;
 	left: 0;
 	margin-left: 0;
@@ -383,22 +383,23 @@ h3{
 
 /* 태블릿 이하 (1024px 이하) */
 @media screen and (max-width: 1024px) {
-
 	.main_container{
 		width: 728px;
 	}
 	.booking-header{
 		width: 728px;
 	}
-	.header_1{
-		width: 420px;
-	}
-	.header_2{
+	.header_2,.movie_list,.movie_list .content li{
 		width:308px;
 	}
 	.header_3{
 		width: 296px;
 	}
+	.tab_btn{
+		width: 154px;
+	}
+
+
 }
 /* 모바일 (768px 이하) */
 @media screen and (max-width: 768px) {
