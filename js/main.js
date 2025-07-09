@@ -309,3 +309,51 @@ function animateCursor() {
 }
 animateCursor(); // 애니메이션 루프 시작
 /* //마우스 커서 이동 */
+/* 팝업 */
+const mypopup = $('#popup');
+const popupCloseBtn = mypopup.find('button');
+const onDayCheck = mypopup.find('input');
+
+function setCookie(name, value, day) {
+  const date = new Date();
+  date.setDate(date.getDate() + day);
+
+  let myCookie = '';
+  myCookie += `${name}=${value};`;
+  myCookie += `expires=${date.toUTCString()};`;
+
+  document.cookie = myCookie;
+}
+
+function checkCookie(name) {
+  const currentCookies = document.cookie;
+  const isPopupShow = currentCookies.search(name) > -1 ? false : true;
+
+  if (isPopupShow) {
+    mypopup.addClass('active');
+  } else {
+    mypopup.removeClass('active');
+  }
+}
+
+function deleteCookie(name) {
+  const date = new Date();
+  date.setDate(date.getDate() - 1);
+
+  let myCookie = '';
+  myCookie += `${name}=yes;`;
+  myCookie += `expires=${date.toUTCString()};`;
+
+  document.cookie = myCookie;
+}
+
+checkCookie('popup');
+
+popupCloseBtn.on('click', function () {
+  if (onDayCheck.is(':checked')) {
+    setCookie('popup', 'no', 1);
+  } else {
+    deleteCookie('popup');
+  }
+  mypopup.removeClass('active');
+}); 
