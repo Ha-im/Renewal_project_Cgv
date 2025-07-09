@@ -154,6 +154,7 @@ input.input-error {
   font-size: 12px;
   line-height: 22px;
   text-align: left;
+  display:none;
 }
 input.input-ok{
   border: 1px solid rgba(0, 161, 73, 0.5);
@@ -167,4 +168,5 @@ input.input-ok{
   font-size: 12px;
   line-height: 22px;
   text-align: left;
+  display:none;
 }
