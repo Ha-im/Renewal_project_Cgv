@@ -284,9 +284,9 @@ $(window).on('mousemove', function (e) {
   targetX = e.clientX;
   targetY = e.clientY;
 })
-$(document).on('mouseenter', '.empty_btn, .cta_btn, .nav-btn, a, input,.poster-items .item, .user_menu li', function () {
+$(document).on('mouseenter', '.empty_btn, .cta_btn, .nav-btn, a, input,.poster-items .item, .user_menu li,label,button', function () {
   cursor.addClass('active');
-}).on('mouseleave', '.empty_btn, .cta_btn, .nav-btn, a, input,.poster-items .item, .user_menu li', function () {
+}).on('mouseleave', '.empty_btn, .cta_btn, .nav-btn, a, input,.poster-items .item, .user_menu li,label,button', function () {
   cursor.removeClass('active');
 });
 
