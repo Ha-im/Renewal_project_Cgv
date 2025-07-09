@@ -10,11 +10,11 @@ new fullpage('#fullpage', {
 const page = $('#fullpage .section'); //fullpage의 전체 페이지를 담는 변수
 let currentPage = 0; //현재 사용자가 보고있는 page (index 체크용)
 let checkEvent = false; //스크롤 이벤트 on/off
-const langbtn = $('.lang_menu button');
-const langList = $('#lang_list');
+// const langbtn = $('.lang_menu button');
+// const langList = $('#lang_list');
 const menu = $('header'); //header
 const hamBtn = $('.gnb_toggle');
-const gnb = $('.gnb>li');
+// const gnb = $('.gnb>li');
 
 
 $(document).on('wheel', function (evt) {
@@ -45,7 +45,7 @@ $(document).on('wheel', function (evt) {
     })
   }
 });
-
+/*
 gnb.hover(
   function () {
     //마우스가 들어오면 할 일
@@ -56,6 +56,7 @@ gnb.hover(
     $('.lnb').stop().slideUp(400);
   }
 );
+*/
 
 // header의 ham버튼
 hamBtn.on('click', function () {
@@ -64,11 +65,11 @@ hamBtn.on('click', function () {
   }, 600);
   $(this).fadeOut(200);
 })
-
+/*
 langbtn.on('click', function () {
-  $('#lang_list').stop().slideToggle(400);
+ langList.stop().slideToggle(400);
 })
-
+*/
 
 
 // 메인 배너 js
