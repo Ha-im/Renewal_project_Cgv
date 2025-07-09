@@ -24,16 +24,16 @@ $(document).on('wheel', function (evt) {
     //휠을 아래로 당겨 다음 페이지를 본다.
     checkEvent = true;
     currentPage++;
-    if(currentPage === 1){
+    if (currentPage === 1) {
       // 1번 페이지를 볼 때 할 일
       $('#move_box').delay(200).animate({
-        left : 0,
-        opacity : 1
-      },1000)
+        left: 0,
+        opacity: 1
+      }, 1000)
       $('#slide').delay(200).animate({
-        right : 0,
-        opacity : 1
-      },1000)
+        right: 0,
+        opacity: 1
+      }, 1000)
     }
     console.log(currentPage);
     langList.slideUp(400);
@@ -47,10 +47,10 @@ $(document).on('wheel', function (evt) {
     //휠을 위로 당겨 이전 페이지를 본다.
     currentPage--;
     checkEvent = true;
+    $('.gnb_toggle').fadeOut(200);
     menu.animate({
       top: `0`
     }, 600, function () {
-      $('.gnb_toggle').fadeOut(200);
       checkEvent = false;
     })
   }
@@ -143,8 +143,66 @@ $.getJSON('./json/slides.json', function (data) {
 
 
 // 추천영화(날씨데이터) js
+fetch("https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=7299a66f7547deee9ba6c8f17a2d97a8&units=metric")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("네트워크 응답에 문제가 있습니다: " + response.status);
+    }
+    return response.json();
+  })
+  .then(data => {
+    // 두 번째 json데이터 가져오기
+    fetch('./json/recommend.json')
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("영화 JSON 불러오기 실패");
+        }
+        return res.json();
+      })
+      .then(movieData => {
+        //해당 영역에 사용 가능한 json데이터 목록
+        // - 날씨정보 (data)
+        // - recommend.json값
 
+        //받아온 json의 값으로 할 일
+        /*
+          openweather 날씨 값(main) 목록 : 
+          Thunderstorm - 천둥번개
+          Drizzle - 이슬비
+          Rain - 비 /
+          Snow - 눈  /
+          Clear - 맑음 /
+          Clouds - 흐림 /
+          Mist - 안개낌
+        */
+        let checkWeather = data.weather[0].main //날씨 상태 변수에 담기
+        let checkMovie = movieData[`${checkWeather}`];
+        console.log(checkWeather);
+        console.log(checkMovie);
+        console.log(checkMovie.length);
+        // 랜덤 값 만들기
+        let randomIdx = Math.floor(Math.random() * checkMovie.length);
+        console.log(randomIdx);
+        console.log(checkMovie[randomIdx]);
+        // 변수 선언
+        const title = $('#recommend_title');
+        const subtitle = $('#recommend_subtitle');
+        const des = $('#recommend_des');
+        const thumbUrl = $('#recommend_thumb');
+        const bgUrl = $('#recommend_bg');
 
+        title.html(`${checkMovie[randomIdx].title}`);
+        subtitle.html(`${checkMovie[randomIdx].subtitle}`);
+        des.text(`${checkMovie[randomIdx].description}`)
+        thumbUrl.attr('src', `${checkMovie[randomIdx].thumburl}`);
+        bgUrl.attr('src', `${checkMovie[randomIdx].bgurl}`);
+
+      })
+      .catch(err => console.error("영화 데이터 처리 중 에러:", err));
+  })
+  .catch(error => {
+    console.error("에러 발생:", error);
+  });
 
 /* 씨네마 (특별관) */
 const cinemaspecial = $('.cinemaspecial > div');
