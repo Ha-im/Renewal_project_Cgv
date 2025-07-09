@@ -660,6 +660,7 @@
   align-items: center;
   justify-content: center;
   gap: 80px;
+  height: 880px;
 }
 
 .app>div p {
@@ -684,7 +685,6 @@
   line-height: 24px;
   color: var(--white);
 }
-
 .appdown {
   padding-top: 24px;
   display: flex;
@@ -702,18 +702,37 @@
   line-height: 16px;
   display: flex;
   border-radius: var(--m_radius);
+  transition: all 0.3s ease;
+  background: rgba(255,255,255,0.07);
+  
 }
 
 .appdown a:hover {
   background: rgba(255, 255, 255, 0.06);
   transition: .5s;
+  border-color: #4fc3f7;
+  box-shadow: 0 8px 14px rgba(79, 195, 247, 0.3);
 }
+/*
+.appdown a:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transition: .5s;
+  border-color: #FF5F62;
+  box-shadow: 0 8px 14px rgba(92, 0, 0, 0.8);
+}
+*/
 
 .appdown a img {
   vertical-align: middle;
   margin-right: 10px;
 }
-
+.appdown_img img{
+  animation: Float 5s ease-in-out infinite;
+}
+@keyframes Float {
+  0%, 100% { transform:  translateY(0px);}
+  50% { transform:  translateY(-20px); }
+}
 /*  02 rank  */
 .movie_rank {}
 
