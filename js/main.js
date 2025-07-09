@@ -23,6 +23,11 @@ $(document).on('wheel', function (evt) {
     //휠을 아래로 당겨 다음 페이지를 본다.
     checkEvent = true;
     currentPage++;
+    if(currentPage === 1){
+      // 1번 페이지를 볼 때 할 일
+      
+    }
+    console.log(currentPage);
     langList.slideUp(400);
     menu.animate({
       top: `-72px`
