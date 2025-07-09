@@ -3,7 +3,8 @@ new fullpage('#fullpage', {
   // fullpage 옵션 추가 영역
   autoScrolling: true,
   navigation: true,
-  scrollOverflow: true
+  scrollOverflow: true,
+  // responsiveWidth: 20000
   // 
 });
 /*변수 선언부*/
@@ -34,6 +35,10 @@ $(document).on('wheel', function (evt) {
         right: 0,
         opacity: 1
       }, 1000)
+
+
+
+
     }
     console.log(currentPage);
     langList.slideUp(400);
@@ -69,6 +74,66 @@ hamBtn.on('click', function () {
 
 
 // 영화 순위 js
+const viewSlide = $('.view_slide');
+const slideContainer = $('.slide_container');
+const slideItem = $('.slide_item');
+const nextBtn = $('.slide_btn_box .next_btn');
+const prevBtn = $('.slide_btn_box .prev_btn');
+
+const bgImg = $('.bg_img img');
+let slideCheck = false // false 실행x  true//실행o
+let getRank = 0;
+
+bgImg.eq(getRank).show();
+nextBtn.on('click', function () {
+  if (slideCheck === true) {
+    return;
+  }
+  slideCheck = true;
+  slideContainer.stop().animate({
+    //할 일
+    left: `-600px`
+  }, 600, function () {
+    //움직임이 끝나고 후속 조치
+    slideCheck = false;
+    slideContainer.find('.slide_item').first().appendTo(slideContainer);
+    getRank = slideContainer.find('.slide_item').first().attr('data-rank');
+    bgImg.fadeOut(200);
+    bgImg.eq(getRank).fadeIn(600);
+    slideContainer.css({
+      left: `-300px`
+    })
+  });
+})
+
+
+
+// 추후 구연...
+prevBtn.on('click', function () {
+  if (slideCheck === true) {
+    return;
+  }
+  slideCheck = true;
+  slideContainer.stop().animate({
+    //할 일
+    left: `-600px`
+  }, 600, function () {
+    //움직임이 끝나고 후속 조치
+    slideCheck = false;
+    slideContainer.find('.slide_item').first().appendTo(slideContainer);
+    slideContainer.css({
+      left: `-300px`
+    })
+  });
+})
+
+
+
+
+
+
+
+
 
 
 
