@@ -593,6 +593,7 @@ body {
 
 .cinema {
   color: var(--white);
+  overflow-y: hidden;
 }
 
 .cinema h5 {
