@@ -88,14 +88,17 @@ body {
 .text_box {
   position: relative;
 }
-#move_box{
-  left : -200px;
+
+#move_box {
+  left: -200px;
   opacity: 0;
 }
-#slide{
-  right : -200px;
+
+#slide {
+  right: -200px;
   opacity: 0;
 }
+
 .title-section {
   position: absolute;
   display: flex;
@@ -466,67 +469,73 @@ body {
 }
 
 .recommend_content {
+  display: flex;
+  align-items: center;
+  outline: 10px solid red;
   width: 1077px;
-  height: 520px;
+  padding: 50px 100px;
   backdrop-filter: blur(20px);
   border-radius: var(--m_radius);
   border: 1px solid rgba(217, 217, 217, 0.2);
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 50;
   transform: translate(-50%, -50%);
-  z-index: 30;
 }
 
 .recommend_content .content_box {
-  width: 420px;
+  /* width: 420px;
   left: 111px;
-  bottom: 18%;
+  bottom: 18%; */
 }
 
 .recommend_content .content_box .text_box .title {
-  font-size: 32px;
-  line-height: 38px;
-  position: relative;
+  /* font-size: 32px; */
+  /* line-height: 38px; */
+  /* position: relative; */
 }
-.recommend_content .content_box .text_box .title .weather_icon{
-  position: absolute;
-  top : 0;
-  right :0;
-  width : 70px;
-  box-shadow: 0 0 8px rgba(255,255,255,0.6);
+
+.recommend_content .content_box .text_box .title .weather_icon {
+  /* position: absolute; */
+  /* top : 0; */
+  /* right :0; */
+  /* width : 70px; */
+  /* box-shadow: 0 0 8px rgba(255,255,255,0.6); */
 }
+
 .recommend_content .content_box .text_box .content_body {
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .recommend_content .thumb_box {
-  position: absolute;
-  top: -64px;
-  right: 111px;
   width: 400px;
-  height: 534px;
-  overflow: hidden;
-  border-radius: var(--s_radius);
-  box-shadow: var(--web_card_shadow);
+  /* position: absolute; */
+  /* top: -64px; */
+  /* right: 111px; */
+  /* width: 400px; */
+  /* height: 534px; */
+  /* overflow: hidden; */
+  /* border-radius: var(--s_radius); */
+  /* box-shadow: var(--web_card_shadow); */
 }
 
 .recommend_content .thumb_box .play_cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.6);
-  transition: 0.3s;
-  z-index: 10;
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  /* width: 100%; */
+  /* height: 100%; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  /* transition: 0.3s; */
+  /* z-index: 10; */
 }
 
 .recommend_content .thumb_box .play_cover:hover {
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.4); */
 
 }
 
@@ -585,6 +594,7 @@ body {
 .cinema {
   color: var(--white);
 }
+
 .cinema h5 {
   font-size: 28px;
   line-height: 48px;
@@ -593,24 +603,27 @@ body {
   text-align: center;
   box-shadow: 0 0 8 rgba(255, 255, 255, 0.2);
 }
-.cinemaspecial{
+
+.cinemaspecial {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap : 4px;
+  gap: 4px;
 }
+
 .cinema .item {
   display: inline-block;
-  position:relative;
+  position: relative;
 }
 
 .cinemaspecial .item.active {
   box-shadow: var(--web_strong_shadow);
 }
-.cinema .item span{
+
+.cinema .item span {
   position: absolute;
-  top : 5px;
+  top: 5px;
 }
 
 .cinemaspecial .item a,
@@ -929,6 +942,7 @@ body {
   line-height: 24px;
   color: var(--white);
 }
+
 .appdown {
   padding-top: 24px;
   display: flex;
@@ -947,8 +961,8 @@ body {
   display: flex;
   border-radius: var(--m_radius);
   transition: all 0.3s ease;
-  background: rgba(255,255,255,0.07);
-  
+  background: rgba(255, 255, 255, 0.07);
+
 }
 
 .appdown a:hover {
@@ -957,6 +971,7 @@ body {
   border-color: #4fc3f7;
   box-shadow: 0 8px 14px rgba(79, 195, 247, 0.3);
 }
+
 /*
 .appdown a:hover {
   background: rgba(255, 255, 255, 0.06);
@@ -970,12 +985,21 @@ body {
   vertical-align: middle;
   margin-right: 10px;
 }
-.appdown_img img{
+
+.appdown_img img {
   animation: Float 5s ease-in-out infinite;
 }
+
 @keyframes Float {
-  0%, 100% { transform:  translateY(0px);}
-  50% { transform:  translateY(-20px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 /* // 08 appdownload pym */
