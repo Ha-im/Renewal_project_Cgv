@@ -384,19 +384,17 @@ h3{
 /* 태블릿 이하 (1024px 이하) */
 @media screen and (max-width: 1024px) {
 	.main_container{
-		width: 728px;
+		width: 780px;
+		margin:0 auto;
 	}
-	.booking-header{
-		width: 728px;
+	.booking_header{
+		min-width:780px;
 	}
-	.header_2,.movie_list,.movie_list .content li{
-		width:308px;
+	.booking_container{
+		width:780px
 	}
-	.header_3{
-		width: 296px;
-	}
-	.tab_btn{
-		width: 154px;
+	.date_section, .time_section,.header .header_3, .date{
+		display:none;
 	}
 
 
