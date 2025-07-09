@@ -39,7 +39,7 @@ header {
 /* gnb, lnb */
 .gnb {
     display: flex;
-    gap: 64px;
+    gap: 48px;
 }
 
 .gnb>li>a {
@@ -47,7 +47,7 @@ header {
     font: var(--gnb);
     color: var(--white);
     transition: 0.4s;
-    padding: 10px;
+    padding: 24px 0 ;
 }
 
 .gnb>li:hover>a {

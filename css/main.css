@@ -110,6 +110,7 @@ body {
 
 .rank-title {
   display: flex;
+
   align-items: flex-end;
 }
 
@@ -149,7 +150,87 @@ body {
 }
 
 /* 우측 포스터 슬라이더 영역 */
-.poster-container {
+
+/* bg_img*/
+.bg_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: 5px solid red;
+  width: 100%;
+  /* height : 100%; */
+}
+
+.cover{
+  /* content: ''; */
+  /* display: block; */
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 17;
+  background: var(--sectionBg-Grad-lin);
+}
+
+.bg_img img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top :0;
+  left :0;
+  z-index: 15;
+  display: none;
+}
+/* .bg_img img.bg_show{
+  display: block;
+} */
+
+.slide_content {
+  position: absolute;
+  left: 59%;
+  bottom: 18%;
+  width: 900px;
+  /* outline: 40px solid red; */
+  z-index: 18;
+}
+
+.view_slide {
+  /* 실제로 보여지는 곳 */
+  position: relative;
+  overflow: hidden;
+  /* outline: 20px solid blue; */
+}
+
+.view_slide .slide_container {
+  width: 1480px;
+  display: flex;
+  gap: 20px;
+  position: relative;
+  left: -300px;
+}
+
+.view_slide .slide_container .slide {
+  width: 280px;
+}
+
+.img_box img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.slide_btn_box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+}
+
+.next_btn {}
+
+
+/* .poster-container {
   position: relative;
   width: 100%;
   height: 0%;
@@ -164,13 +245,13 @@ body {
   right: 0;
   bottom: 18%;
   width: 878px;
-  /* height: 100vh; */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
-}
-
+} */
+/* 
 .poster-items {
   display: flex;
   gap: 20px;
@@ -187,8 +268,8 @@ body {
   cursor: pointer;
   transition: all 0.5s ease;
   flex-shrink: 0;
-}
-
+} */
+/* 
 .bg-img {
   width: 100%;
   height: 100vh;
@@ -196,8 +277,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-}
-
+} */
+/* 
 .bg-img::after {
   content: '';
   display: block;
@@ -207,8 +288,8 @@ body {
   width: 100%;
   height: 100%;
   background: var(--sectionBg-Grad-lin);
-}
-
+} */
+/* 
 .bg-1 {
   background-image: url(../images/movierank_bg_howtotraindragon.jpg);
 }
@@ -227,24 +308,24 @@ body {
 
 .bg-5 {
   background-image: url(../images/movierank_bg_theseedofthescaredfig_bg.jpg);
-}
-
+} */
+/* 
 .poster-bg {
   width: 280px;
   height: 382px;
   background-size: cover;
   background-position: center;
   position: relative;
-}
+} */
 
-.poster-bg:after {
+/* .poster-bg:after {
   content: '';
   display: block;
   width: 100%;
   height: 100%;
   background: var(--img_cover_color);
-}
-
+} */
+/* 
 .poster-number {
   position: absolute;
   bottom: 10px;
@@ -253,18 +334,18 @@ body {
   line-height: 54px;
   display: flex;
   font-size: 54px;
-}
+} */
 
 /* 네비게이션 버튼 */
-.nav-buttons {
+/* .nav-buttons {
   position: absolute;
   bottom: 5%;
   left: 50%;
   display: flex;
   gap: 15px;
-}
+} */
 
-.nav-btn {
+/* .nav-btn {
   width: 40px;
   height: 40px;
   border: 1px solid var(--disable_color);
@@ -283,10 +364,10 @@ body {
   background: rgba(255, 255, 255, 0.1);
   border-color: #B5B5B5;
   color: #B5B5B5;
-}
+} */
 
 /* 영화포스터 이미지 */
-.poster-1 {
+/* .poster-1 {
   background-image: url(../images/movierank_poster_howtotraindragon.jpg);
 }
 
@@ -304,7 +385,7 @@ body {
 
 .poster-5 {
   background-image: url(../images/movierank_poster_theseedofthescaredfig.jpg);
-}
+} */
 
 /* //movie_rank */
 /* //rank */
@@ -471,12 +552,15 @@ body {
 .recommend_content {
   display: flex;
   align-items: center;
-  outline: 10px solid red;
-  width: 1077px;
+  justify-content: space-between;
+  gap: 48px;
+  max-width: 1077px;
   padding: 50px 100px;
+  width: 90%;
   backdrop-filter: blur(20px);
   border-radius: var(--m_radius);
   border: 1px solid rgba(217, 217, 217, 0.2);
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -485,15 +569,18 @@ body {
 }
 
 .recommend_content .content_box {
-  /* width: 420px;
-  left: 111px;
-  bottom: 18%; */
+  max-width: 494px;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  outline: 10px solid blue;
+
 }
 
 .recommend_content .content_box .text_box .title {
-  /* font-size: 32px; */
-  /* line-height: 38px; */
-  /* position: relative; */
+  font-size: 32px;
+  line-height: 38px;
 }
 
 .recommend_content .content_box .text_box .title .weather_icon {
@@ -509,33 +596,30 @@ body {
 }
 
 .recommend_content .thumb_box {
-  width: 400px;
-  /* position: absolute; */
-  /* top: -64px; */
-  /* right: 111px; */
-  /* width: 400px; */
-  /* height: 534px; */
-  /* overflow: hidden; */
-  /* border-radius: var(--s_radius); */
-  /* box-shadow: var(--web_card_shadow); */
+  max-width: 400px;
+  width: 37.14%;
+  overflow: hidden;
+  border-radius: var(--s_radius);
+  box-shadow: var(--web_card_shadow);
+  position: relative;
 }
 
 .recommend_content .thumb_box .play_cover {
-  /* position: absolute; */
-  /* top: 0; */
-  /* left: 0; */
-  /* width: 100%; */
-  /* height: 100%; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* background-color: rgba(0, 0, 0, 0.6); */
-  /* transition: 0.3s; */
-  /* z-index: 10; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+  z-index: 10;
 }
 
 .recommend_content .thumb_box .play_cover:hover {
-  /* background-color: rgba(0, 0, 0, 0.4); */
+  background-color: rgba(0, 0, 0, 0.4);
 
 }
 
