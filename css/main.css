@@ -88,7 +88,14 @@ body {
 .text_box {
   position: relative;
 }
-
+#move_box{
+  left : -200px;
+  opacity: 0;
+}
+#slide{
+  right : -200px;
+  opacity: 0;
+}
 .title-section {
   position: absolute;
   display: flex;

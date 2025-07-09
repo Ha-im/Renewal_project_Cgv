@@ -14,6 +14,7 @@ const menu = $('header'); //header
 const hamBtn = $('.gnb_toggle');
 
 
+//화면 페이지
 $(document).on('wheel', function (evt) {
   //check변수가 true면 이벤트 진행중
   if (checkEvent === true) {
@@ -25,7 +26,14 @@ $(document).on('wheel', function (evt) {
     currentPage++;
     if(currentPage === 1){
       // 1번 페이지를 볼 때 할 일
-      
+      $('#move_box').delay(200).animate({
+        left : 0,
+        opacity : 1
+      },1000)
+      $('#slide').delay(200).animate({
+        right : 0,
+        opacity : 1
+      },1000)
     }
     console.log(currentPage);
     langList.slideUp(400);
