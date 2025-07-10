@@ -28,7 +28,14 @@ bannerConBox.animate({
 //화면 페이지
 $(document).on('wheel', function (evt) {
   //check변수가 true면 이벤트 진행중
+  const isMobile = window.innerWidth <= 768;
+  const menuPosition = parseInt($('.menu').css('margin-left'), 10);
+  
+
   if (checkEvent === true) {
+    return;
+  }
+  if(isMobile && menuPosition < 0){
     return;
   }
   if (evt.originalEvent.deltaY > 0) {
@@ -286,11 +293,13 @@ fetch("https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=7299a66f754
   });
 modalPlayBtn.on('click', function () {
   recommendModal.addClass('on');
+  // 스크롤 멈추기
   fullpage_api.setAllowScrolling(false);
   fullpage_api.setKeyboardScrolling(false);
 })
 recommendModal.on('click', function () {
   $(this).removeClass('on');
+  // 다시 스크롤 가능
   fullpage_api.setAllowScrolling(true);
   fullpage_api.setKeyboardScrolling(true);
 })

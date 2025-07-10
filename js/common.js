@@ -15,16 +15,22 @@ langbtn.on('click', function () {
 })
 
 resMenuBtn.on('click', function () {
+  fullpage_api.setKeyboardScrolling(false);
+  fullpage_api.setAllowScrolling(false);
   menuWrap.animate({
     marginLeft: `-500px`
   }, 600)
 })
 
 resMenuCloseBtn.on('click', function () {
+  fullpage_api.setAllowScrolling(true);
+  fullpage_api.setKeyboardScrolling(true);
   menuWrap.animate({
-    marginLeft: `100%`
+    marginLeft: `0`
   }, 600)
 })
+
+
 
 function setEventTognb() {
   //이벤트 전부 제거해서 초기 상태
@@ -53,6 +59,7 @@ function setEventTognb() {
     })
   }
 }
+
 
 // 초기 이벤트 설정
 setEventTognb();
