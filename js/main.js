@@ -15,6 +15,16 @@ const menu = $('header'); //header
 const hamBtn = $('.gnb_toggle');
 
 
+// 첫 로딩
+
+
+const bannerConBox = $('#banner_content_box');
+bannerConBox.animate({
+  left: 0,
+  opacity: 1
+}, 1000)
+
+
 //화면 페이지
 $(document).on('wheel', function (evt) {
   //check변수가 true면 이벤트 진행중
