@@ -1,9 +1,9 @@
 <?php
 //mysql 연결코드 절차지향방식
 $host = 'localhost';
-$user = 'qna';
-$password = 'qna1234';
-$dbname = 'qna';
+$user = 'signup';
+$password = 'signup1234';
+$dbname = 'signup';
 
 // 연결 생성
 $conn = mysqli_connect($host, $user, $password, $dbname);

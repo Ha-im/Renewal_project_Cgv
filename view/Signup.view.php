@@ -10,7 +10,7 @@
         <h3>기본정보</h3>
         <p>*전체 항목은 필수 입력입니다</p>
       </div>
-      <form action="" method="POST">
+      <form action="join.php" method="POST">
         <div class="input">
           <input type="text" name="username" id="username" placeholder="이름을 입력해주세요." required>
           <div id="name-error" class="error-message"></div>
