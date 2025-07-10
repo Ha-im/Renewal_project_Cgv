@@ -53,6 +53,17 @@ $(document).on('wheel', function (evt) {
         opacity: 1
       }, 600);
     }
+    if (currentPage === 7) {
+      const appdownImg = $('#appdown_img');
+      console.log('7호출');
+      appdownImg.delay(200).animate({
+        top : 0,
+        opacity: 1     
+      },1000)
+
+    }
+
+
     langList.slideUp(400);
     menu.animate({
       top: `-72px`
@@ -72,6 +83,10 @@ $(document).on('wheel', function (evt) {
     })
   }
 });
+
+//   bottom: 0,
+//   opacity: 1
+// }, 1000)
 
 
 
@@ -117,8 +132,9 @@ nextBtn.on('click', function () {
       left: `-300px`
     })
   });
-})
-// 추후 구연...
+});
+
+bgImg.eq(getRank).show();
 prevBtn.on('click', function () {
   if (slideCheck === true) {
     return;
@@ -126,11 +142,14 @@ prevBtn.on('click', function () {
   slideCheck = true;
   slideContainer.stop().animate({
     //할 일
-    left: `-600px`
+    left: `0px`
   }, 600, function () {
     //움직임이 끝나고 후속 조치
     slideCheck = false;
-    slideContainer.find('.slide_item').first().appendTo(slideContainer);
+    slideContainer.find('.slide_item').last().prependTo(slideContainer);
+    getRank = slideContainer.find('.slide_item').first().attr('data-rank');
+    bgImg.fadeOut(200);
+    bgImg.eq(getRank).fadeIn(600);
     slideContainer.css({
       left: `-300px`
     })
@@ -352,7 +371,6 @@ swiperContainer.on('mouseleave', '.swiper-slide', function () {
 // 앱 다운로드 js
 
 
-// 푸터 js
 
 
 
