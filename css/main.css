@@ -562,13 +562,15 @@ body {
   border: 1px solid rgba(217, 217, 217, 0.2);
 
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 50;
 
 }
-
+#recommend_content_box{
+  opacity: 0;
+}
 .recommend_content .content_box {
   max-width: 494px;
   min-width: 368px;

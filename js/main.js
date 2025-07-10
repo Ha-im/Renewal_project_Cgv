@@ -36,6 +36,13 @@ $(document).on('wheel', function (evt) {
         opacity: 1
       }, 1000)
     }
+    if (currentPage === 3) {
+      // 3번 페이지를 볼 때 할 일
+      $('#recommend_content_box').delay(200).animate({
+        top: `50%`,
+        opacity: 1
+      }, 600);
+    }
     langList.slideUp(400);
     menu.animate({
       top: `-72px`
@@ -256,6 +263,11 @@ modalPlayBtn.on('click', function () {
   recommendModal.addClass('on');
   fullpage_api.setAllowScrolling(false);
   fullpage_api.setKeyboardScrolling(false);
+})
+recommendModal.on('click', function () {
+  $(this).removeClass('on');
+  fullpage_api.setAllowScrolling(true);
+  fullpage_api.setKeyboardScrolling(true);
 })
 modalCloseBtn.on('click', function () {
   recommendModal.removeClass('on');
