@@ -35,12 +35,14 @@ $(document).on('wheel', function (evt) {
         right: 0,
         opacity: 1
       }, 1000)
-
-
-
-
     }
-    console.log(currentPage);
+    if (currentPage === 3) {
+      // 3번 페이지를 볼 때 할 일
+      $('#recommend_content_box').delay(200).animate({
+        top: `50%`,
+        opacity: 1
+      }, 600);
+    }
     langList.slideUp(400);
     menu.animate({
       top: `-72px`
@@ -62,6 +64,7 @@ $(document).on('wheel', function (evt) {
 });
 
 
+
 // header의 ham버튼
 hamBtn.on('click', function () {
   menu.animate({
@@ -69,8 +72,8 @@ hamBtn.on('click', function () {
   }, 600);
   $(this).fadeOut(200);
 })
-
 // 메인 배너 js
+
 
 
 // 영화 순위 js
@@ -105,9 +108,6 @@ nextBtn.on('click', function () {
     })
   });
 })
-
-
-
 // 추후 구연...
 prevBtn.on('click', function () {
   if (slideCheck === true) {
@@ -126,14 +126,6 @@ prevBtn.on('click', function () {
     })
   });
 })
-
-
-
-
-
-
-
-
 
 
 
@@ -208,6 +200,10 @@ $.getJSON('./json/slides.json', function (data) {
 
 
 // 추천영화(날씨데이터) js
+const modalCloseBtn = $('.modal_close');
+const modalPlayBtn = $('.play_cover');
+const modalIframe = $('.play_box iframe');
+const recommendModal = $('.recommend_modal');
 fetch("https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=7299a66f7547deee9ba6c8f17a2d97a8&units=metric")
   .then(response => {
     if (!response.ok) {
@@ -242,20 +238,15 @@ fetch("https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=7299a66f754
         */
         let checkWeather = data.weather[0].main //날씨 상태 변수에 담기
         let checkMovie = movieData[`${checkWeather}`];
-        console.log(checkWeather);
-        console.log(checkMovie);
-        console.log(checkMovie.length);
         // 랜덤 값 만들기
         let randomIdx = Math.floor(Math.random() * checkMovie.length);
-        console.log(randomIdx);
-        console.log(checkMovie[randomIdx]);
         // 변수 선언
         const title = $('#recommend_title');
         const subtitle = $('#recommend_subtitle');
         const des = $('#recommend_des');
         const thumbUrl = $('#recommend_thumb');
         const bgUrl = $('#recommend_bg');
-
+        modalIframe.attr('src', `${checkMovie[randomIdx].youtube}`);
         title.html(`${checkMovie[randomIdx].title}`);
         subtitle.html(`${checkMovie[randomIdx].subtitle}`);
         des.text(`${checkMovie[randomIdx].description}`)
@@ -268,6 +259,25 @@ fetch("https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=7299a66f754
   .catch(error => {
     console.error("에러 발생:", error);
   });
+modalPlayBtn.on('click', function () {
+  recommendModal.addClass('on');
+  fullpage_api.setAllowScrolling(false);
+  fullpage_api.setKeyboardScrolling(false);
+})
+recommendModal.on('click', function () {
+  $(this).removeClass('on');
+  fullpage_api.setAllowScrolling(true);
+  fullpage_api.setKeyboardScrolling(true);
+})
+modalCloseBtn.on('click', function () {
+  recommendModal.removeClass('on');
+  let getSrc = modalIframe.attr('src');
+  modalIframe.attr('src', '');
+  modalIframe.attr('src', getSrc);
+  fullpage_api.setAllowScrolling(true);
+  fullpage_api.setKeyboardScrolling(true);
+})
+// 추천영화(날씨데이터) js
 
 /* 씨네마 (특별관) */
 const cinemaspecial = $('.cinemaspecial > div');
