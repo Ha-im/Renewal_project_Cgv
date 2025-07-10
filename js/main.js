@@ -71,6 +71,14 @@ $(document).on('wheel', function (evt) {
         opacity: 1
       }, 600);
     }
+    if (currentPage === 6) {
+      const locationSearch = $('#location_search');
+      locationSearch.delay(200).animate({
+        top : 0,
+        opacity: 1     
+      },1000);
+    }
+
     if (currentPage === 7) {
       const appdownImg = $('#appdown_img');
       console.log('7호출');
@@ -177,6 +185,9 @@ prevBtn.on('click', function () {
     })
   });
 })
+
+
+
 
 
 
