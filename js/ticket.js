@@ -1,47 +1,53 @@
 $.getJSON('./json/ticket.json', function (data) {
-    const regions = data.regions;
-  
-    regions.forEach(function(item, idx) {
-      let cinemaListHTML = '';
-  
-      item.cinemas.forEach(function(cinema, index) {
-        // 첫 번째만 active 클래스
-         const isActive = index === 1 ? 'active' : '';
-         cinemaListHTML += `<li><a href="" class="${isActive}">${cinema}</a></li>`;
-      });
-  
-      const regionsHTML = `
-        <ul>
-          <li class="list_location">
-            <a href="" class="area-select" style="width:175px">
-              <span>${item.name}</span>
-              <span>&#40;${item.count}&#41;</span>
-            </a>
-            <div class="area_cinema_list">
-              <ul class="content scroll_y">
-                ${cinemaListHTML}
-              </ul>
-            </div>
-          </li>
-        </ul>
-      `;
-  
-      $('.cinema_list').append(regionsHTML);
+  const regions = data.regions;
+
+  regions.forEach(function(item, idx) {
+    let cinemaListHTML = '';
+
+    item.cinemas.forEach(function(cinema, index) {
+      const isActiveCinema = index === 0 ? 'active' : '';
+      cinemaListHTML += `<li class="${isActiveCinema}"><a href="">${cinema}</a></li>`;
     });
+
+    const isActiveArea = idx === 0 ? 'active' : '';
+    // 첫 번째만 보이도록 style 조절 (display:block, 나머진 display:none)
+    const areaDisplayStyle = idx === 0 ? 'display:block;' : 'display:none;';
+
+    const regionsHTML = `
+      <ul>
+        <li class="list_location">
+          <a href="" class="area-select ${isActiveArea}" style="width:175px">
+            <span>${item.name}</span>
+            <span>&#40;${item.count}&#41;</span>
+          </a>
+          <div class="area_cinema_list" style="${areaDisplayStyle}">
+            <ul class="content scroll_y">
+              ${cinemaListHTML}
+            </ul>
+          </div>
+        </li>
+      </ul>
+    `;
+
+    $('.cinema_list').append(regionsHTML);
   });
-  $(document).on('click', '.area-select', function(e) {
-    e.preventDefault();
-  
-    // 모든 area-select에서 active 제거
-    $('.content').removeClass('active');
-  
-    // 현재 클릭한 것만 active
-    $(this).addClass('active');
-  
-    // 원하는 동작 추가 (예: area_cinema_list 토글)
-    $('.area_cinema_list .content').hide(); // 모두 닫고
-    $(this).siblings('.area_cinema_list .content').show(); // 해당 것만 열기
-  });
+});
+
+$(document).on('click', '.area-select', function(e) {
+  e.preventDefault();
+  const $clicked = $(this);
+  const index = $('.area-select').index($clicked);  // 클릭한 a태그 인덱스
+// 모든 .area-select에서 active 클래스 제거
+  $('.area-select').removeClass('active');
+// 클릭한 a태그에 active 클래스 추가
+  $clicked.addClass('active');
+
+// 모든 .area_cinema_list 숨기기
+  $('.area_cinema_list').hide();
+// 클릭한 인덱스에 해당하는 .area_cinema_list만 보이기
+  $('.area_cinema_list').eq(index).show();
+
+});
 
 
 
