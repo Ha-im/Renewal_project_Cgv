@@ -5,9 +5,8 @@ $.getJSON('./json/ticket.json', function (data) {
       let cinemaListHTML = '';
   
       item.cinemas.forEach(function(cinema, index) {
-        // 첫 번째만 active 클래스
-         const isActive = index === 1 ? 'active' : '';
-         cinemaListHTML += `<li><a href="" class="${isActive}">${cinema}</a></li>`;
+         const isActive = index === 0 ? 'active' : '';
+         cinemaListHTML += `<li class="${isActiveCinema}"><a href="" class="active"> ${cinema}</a></li>`;
       });
   
       const regionsHTML = `
