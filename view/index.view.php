@@ -1,5 +1,4 @@
 <?php
- require('inc/function.php')
 
 ?>
   <div id="fullpage">
@@ -301,15 +300,15 @@
     <div class="section appdownload gradient-bg">
       <div class="container app">
         <div class="appdown_img">
-          <img src="../images/appdownload.png" alt="appdownload">
+          <img src="./images/appdownload.png" alt="appdownload">
         </div>
         <div class="appdown_contents">
           <h6>CGV APP</h6>
           <h2>앱 다운로드</h2>
           <p>CGV앱에서 더 편리하게 이용하세요.</p>
           <div class="appdown">
-            <a href=""><img src="../images/playstore_icon.png" alt="playstore_icon">Google Play</a>
-            <a href=""><img src="../images/ios_icon.png" alt="ios_icon">App Store</a>
+            <a href=""><img src="./images/playstore_icon.png" alt="playstore_icon">Google Play</a>
+            <a href=""><img src="./images/ios_icon.png" alt="ios_icon">App Store</a>
           </div>
         </div>
       </div>

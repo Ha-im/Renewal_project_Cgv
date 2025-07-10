@@ -1,17 +1,8 @@
 <?php
- require('inc/function.php');
+require_once('inc/function.php');
 
-$commonCss = '<link rel="stylesheet" href="css/common.css">';
-$mainCss = '<link rel="stylesheet" href="css/main.css">';
-$footerCss = '<link rel="stylesheet" href="css/footer.css">';
-$commonJs = '<script src="./js/common.js"></script>';
-$mainJs= '<script src="./js/main.js"></script>';
-
-view('index','깊이 빠져 보다,CGV', $commonCss, $mainCss, $footerCss, $commonJs, $mainJs, '');
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -30,20 +21,20 @@ view('index','깊이 빠져 보다,CGV', $commonCss, $mainCss, $footerCss, $comm
   <meta property="og:image" content="images/header_logo.png" /> <!-- 대표 이미지 -->
   <title><?= $model; ?></title>
   <!-- favicon -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/images/login/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/images/login/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/images/login/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/images/login/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/images/login/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/images/login/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/images/login/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/images/login/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/login/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/images/login/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/login/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/images/login/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/login/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/images/login/favicon/manifest.json">
+  <link rel="apple-touch-icon" sizes="57x57" href="./images/login/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./images/login/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./images/login/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./images/login/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./images/login/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./images/login/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./images/login/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./images/login/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/login/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./images/login/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/login/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./images/login/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/login/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./images/login/favicon/manifest.json">
   <!-- swiper.js -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- fonts.google.com icon -->
@@ -121,7 +112,7 @@ view('index','깊이 빠져 보다,CGV', $commonCss, $mainCss, $footerCss, $comm
     <div class="user_menu">
       <ul>
         <li>
-          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+          <a href="login.php"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
               fill="#FFFFFF">
               <path
                 d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z" />
@@ -294,7 +285,7 @@ view('index','깊이 빠져 보다,CGV', $commonCss, $mainCss, $footerCss, $comm
   <div id="policy_modal">
     <div>
       <button type="button" id="policy_closeModal">닫기</button>
-      <iframe id="policy_modalIframe" src="policy.html" width="100%" height="100%"></iframe>
+      <iframe id="policy_modalIframe" src="policy.php" width="100%" height="100%"></iframe>
     </div>
   </div>
   <div id="popup">
@@ -328,6 +319,7 @@ view('index','깊이 빠져 보다,CGV', $commonCss, $mainCss, $footerCss, $comm
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.36/fullpage.min.js"
     integrity="sha512-UYOFSBBEKCk3CMYe2EAX1zI8EruS4WgJbs85Bh9dPcgmcOykTi7NMONWmwt/cp3dkNTnDBNCQI39LGupsz3AvA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <?= $script1 ?>

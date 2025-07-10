@@ -146,7 +146,7 @@ $.getJSON('./json/slides.json', function (data) {
     const displayIndex = (idx + 1).toString().padStart(2, '0'); // 01, 02 ... 번호 붙이기
     const slideHTML = `
       <div class="swiper-slide img_item">
-        <img src="${item.image}" alt="">
+        <img src="./${item.image}" alt="">
         <div class="planHover">
           <div class="moviText">
             <p>${item.description}</p>
