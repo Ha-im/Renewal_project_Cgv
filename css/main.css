@@ -45,6 +45,11 @@ body {
   z-index: 30;
 }
 
+#banner_content_box {
+  left: -200px;
+  opacity: 0;
+}
+
 .content_box .text_box {
   margin-bottom: 30px;
 }
@@ -568,9 +573,11 @@ body {
   z-index: 50;
 
 }
-#recommend_content_box{
+
+#recommend_content_box {
   opacity: 0;
 }
+
 .recommend_content .content_box {
   max-width: 494px;
   min-width: 368px;
@@ -704,6 +711,7 @@ body {
   right: 60px;
   z-index: 9999;
 }
+
 /* // recommend */
 
 
@@ -1148,8 +1156,9 @@ body {
 /* 팝업 */
 #popup{
   position: fixed;
-  left: 100px;
-  top:100px;
+  left: 80%;
+  top:50%;
+  transform: translate(-50%,-50%);
   border: 1px solid #ccc;
   width: 380px;
   background: #fff;
