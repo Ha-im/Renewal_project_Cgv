@@ -6,17 +6,20 @@ $.getJSON('./json/ticket.json', function (data) {
   
       item.cinemas.forEach(function(cinema, index) {
          const isActive = index === 0 ? 'active' : '';
-         cinemaListHTML += `<li class="${isActiveCinema}"><a href="" class="active"> ${cinema}</a></li>`;
+         cinemaListHTML += `<li class="${isActive}"><a href="" class="active"> ${cinema}</a></li>`;
       });
-  
+      const isActiveArea = idx === 0 ? 'active' : '';
+      // 첫 번째만 보이도록 style 조절 (display:block, 나머진 display:none)
+      const areaDisplayStyle = idx === 0? 'display:block;' : 'display:none;';
+
       const regionsHTML = `
         <ul>
           <li class="list_location">
-            <a href="" class="area-select" style="width:175px">
+            <a href="" class="area-select ${isActiveArea}" style="width:175px">
               <span>${item.name}</span>
               <span>&#40;${item.count}&#41;</span>
             </a>
-            <div class="area_cinema_list">
+            <div class="area_cinema_list" style="${areaDisplayStyle}">
               <ul class="content scroll_y">
                 ${cinemaListHTML}
               </ul>
@@ -28,19 +31,7 @@ $.getJSON('./json/ticket.json', function (data) {
       $('.cinema_list').append(regionsHTML);
     });
   });
-  $(document).on('click', '.area-select', function(e) {
-    e.preventDefault();
   
-    // 모든 area-select에서 active 제거
-    $('.content').removeClass('active');
-  
-    // 현재 클릭한 것만 active
-    $(this).addClass('active');
-  
-    // 원하는 동작 추가 (예: area_cinema_list 토글)
-    $('.area_cinema_list .content').hide(); // 모두 닫고
-    $(this).siblings('.area_cinema_list .content').show(); // 해당 것만 열기
-  });
 
 
 
