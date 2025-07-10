@@ -36,6 +36,17 @@ $(document).on('wheel', function (evt) {
         opacity: 1
       }, 1000)
     }
+    if (currentPage === 2) {
+      // 2번 페이지를 볼 때 할 일
+      const imgItems = $('.swiper-slide.img_item');
+
+      imgItems.each(function(i) {
+        const that = $(this);
+        setTimeout(function() {
+          that.addClass('push');
+        }, i * 150);
+      });
+    }
     if (currentPage === 3) {
       // 3번 페이지를 볼 때 할 일
       $('#recommend_content_box').delay(200).animate({
@@ -50,6 +61,10 @@ $(document).on('wheel', function (evt) {
       $('.gnb_toggle').fadeIn(200);
       checkEvent = false;
     })
+    if (currentPage === 4) {
+      // 4번 페이지를 볼 때 할 일
+      $('.container.cinema').addClass('push').slideDown(1000);
+    }
   } else {
     //휠을 위로 당겨 이전 페이지를 본다.
     currentPage--;

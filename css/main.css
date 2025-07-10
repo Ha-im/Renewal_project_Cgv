@@ -425,7 +425,6 @@ body {
   position: relative;
   z-index: 10;
 }
-
 .swiper-pagination-progressbar-fill {
   background: var(--primary_color) !important;
   border-radius: 4px;
@@ -537,7 +536,24 @@ body {
 .img_item:hover .planHover {
   opacity: 1;
 }
+/*스와이프 애니메이션*/
+.swiper-slide.img_item{
+  opacity: 0;
+}
+@keyframes slideUpFadeIn {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
+.swiper-slide.img_item.push {
+  animation: slideUpFadeIn 0.6s ease-in-out forwards;
+}
 
 
 
@@ -716,10 +732,17 @@ body {
 }
 
 .cinema {
+  display:none;
   color: var(--white);
   overflow-y: hidden;
+  transform:translateY(50%);
+  opacity: 0;
+  transition:transform 0.6s ease, opacity 1s ease;
 }
-
+.cinema.push{
+  transform:translateY(0);
+  opacity: 1;
+}
 .cinema h5 {
   font-size: 28px;
   line-height: 48px;
