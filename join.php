@@ -14,15 +14,20 @@ if ($password !== $passwordok) {
 }
 
 // 2. 아이디 중복 검사
-$sql = "SELECT * FROM signup_board WHERE userid = '$userid'";
-$result = mysqli_query($conn, $sql);
+if (isset($_POST['userid'])) {
+  $userid = $_POST['userid'];
 
-if (mysqli_num_rows($result) > 0) {
-  echo `<script>
-  alert('이미 사용 중인 아이디입니다.'); 
-  history.back();
-  </script>`;
+  // SQL 인젝션 방지용으로 mysqli_real_escape_string 권장
+  $userid = mysqli_real_escape_string($conn, $userid);
 
+  $sql = "SELECT * FROM signup_board WHERE userid = '$userid'";
+  $result = mysqli_query($conn, $sql);
+
+  if (mysqli_num_rows($result) > 0) {
+      echo 'taken';  // 중복 있음
+  } else {
+      echo 'available';  // 사용 가능
+  }
   exit;
 }
 

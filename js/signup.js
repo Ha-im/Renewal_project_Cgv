@@ -88,6 +88,7 @@ $('#email').on('input', function() {
     $('#email-error').text('');
     }
 });
+/*
 // 중복확인 
 $('.idok').on('click',function(){
     const val = $('#userid').val().trim();
@@ -98,7 +99,39 @@ $('.idok').on('click',function(){
     }
 })
 // 아무 입력 없이 가입하기 눌럿을때 error메세지 띄우기
+*/
+//중복확인
+$(document).on('click','.idok', function () {
+    const userid = $('#userid').val().trim();
 
+
+
+    // 2. AJAX 요청 보내기
+    $.ajax({
+        url: 'join.php',
+        type: 'POST',
+        data: { userid: userid },
+        success: function (response) {
+            console.log(response);
+            if (response.trim() === 'taken') {
+                $('#id-error').text('이미 사용중인 아이디 입니다.').slideDown(500);
+                $('#userid').removeClass('input-ok').addClass('input-error');
+                $('#ok-error').slideUp();
+            } else if (response.trim() === 'available') {
+                $('#userid').removeClass('input-error').addClass('input-ok');
+                $('#ok-error').text('유효한 아이디 입니다.').slideDown(500);
+                $('#id-error').slideUp();
+            } else {
+                $('#id-error').text('알 수 없는 오류가 발생했습니다.').slideDown(500);
+                $('#userid').removeClass('input-ok').addClass('input-error');
+                $('#ok-error').slideUp();
+            }
+        },
+        error: function () {
+            alert('오류가 발생했습니다.');
+        }
+    });
+});
 const submitBtn = $('#submitBtn');
 let inputMessage = $('input').val().trim();
 const minLength = 8;
