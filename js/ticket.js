@@ -1,37 +1,53 @@
 $.getJSON('./json/ticket.json', function (data) {
-    const regions = data.regions;
-  
-    regions.forEach(function(item, idx) {
-      let cinemaListHTML = '';
-  
-      item.cinemas.forEach(function(cinema, index) {
-         const isActive = index === 0 ? 'active' : '';
-         cinemaListHTML += `<li class="${isActive}"><a href="" class="active"> ${cinema}</a></li>`;
-      });
-      const isActiveArea = idx === 0 ? 'active' : '';
-      // 첫 번째만 보이도록 style 조절 (display:block, 나머진 display:none)
-      const areaDisplayStyle = idx === 0? 'display:block;' : 'display:none;';
+  const regions = data.regions;
 
-      const regionsHTML = `
-        <ul>
-          <li class="list_location">
-            <a href="" class="area-select ${isActiveArea}" style="width:175px">
-              <span>${item.name}</span>
-              <span>&#40;${item.count}&#41;</span>
-            </a>
-            <div class="area_cinema_list" style="${areaDisplayStyle}">
-              <ul class="content scroll_y">
-                ${cinemaListHTML}
-              </ul>
-            </div>
-          </li>
-        </ul>
-      `;
-  
-      $('.cinema_list').append(regionsHTML);
+  regions.forEach(function(item, idx) {
+    let cinemaListHTML = '';
+
+    item.cinemas.forEach(function(cinema, index) {
+      const isActiveCinema = index === 0 ? 'active' : '';
+      cinemaListHTML += `<li class="${isActiveCinema}"><a href="">${cinema}</a></li>`;
     });
+
+    const isActiveArea = idx === 0 ? 'active' : '';
+    // 첫 번째만 보이도록 style 조절 (display:block, 나머진 display:none)
+    const areaDisplayStyle = idx === 0 ? 'display:block;' : 'display:none;';
+
+    const regionsHTML = `
+      <ul>
+        <li class="list_location">
+          <a href="" class="area-select ${isActiveArea}" style="width:175px">
+            <span>${item.name}</span>
+            <span>&#40;${item.count}&#41;</span>
+          </a>
+          <div class="area_cinema_list" style="${areaDisplayStyle}">
+            <ul class="content scroll_y">
+              ${cinemaListHTML}
+            </ul>
+          </div>
+        </li>
+      </ul>
+    `;
+
+    $('.cinema_list').append(regionsHTML);
   });
-  
+});
+
+$(document).on('click', '.area-select', function(e) {
+  e.preventDefault();
+  const $clicked = $(this);
+  const index = $('.area-select').index($clicked);  // 클릭한 a태그 인덱스
+// 모든 .area-select에서 active 클래스 제거
+  $('.area-select').removeClass('active');
+// 클릭한 a태그에 active 클래스 추가
+  $clicked.addClass('active');
+
+// 모든 .area_cinema_list 숨기기
+  $('.area_cinema_list').hide();
+// 클릭한 인덱스에 해당하는 .area_cinema_list만 보이기
+  $('.area_cinema_list').eq(index).show();
+
+});
 
 
 

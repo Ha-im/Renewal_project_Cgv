@@ -99,8 +99,9 @@ body{
 	width: 175px;
 	padding-left: 20px;
 }
-.cinema_area_list a.active{
+.list_location a.active {
 	background-color: #262525;
+	color: var(--primary_color);
 }
 .cinema_area_list a span:nth-of-type(2){
 	color: #767575;
