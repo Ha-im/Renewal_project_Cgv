@@ -101,6 +101,7 @@
     height:100%; 
     background:rgba(0,0,0,0.6); 
     z-index:9999;
+    
 }
 #policy_modal > div{
     position:relative; 
@@ -109,6 +110,8 @@
     margin:5% auto; 
     background:white; 
     padding:1px;
+    overflow: hidden; 
+    border-radius: 10px;
 }
 #policy_closeModal{
     position:absolute; 
@@ -127,6 +130,9 @@
 }
 #policy_closeModal:active{
     background:rgba(0,0,0,0.9) !important; 
+}
+#policy_modalIframe{
+padding:30px;
 }
 /* common style */
 

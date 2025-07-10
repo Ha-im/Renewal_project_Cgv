@@ -1141,9 +1141,12 @@ body {
 }
 #popup p{
   font-size:14px;
-  line-height:1;
+  line-height: 22px;
   margin: 12px 0;
   
+}
+#popup a:hover{
+  color:var(--primary_color);
 }
 #popup p strong{
   font-weight: 700;
