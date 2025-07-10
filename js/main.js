@@ -138,9 +138,56 @@ const slideItem = $('.slide_item');
 const nextBtn = $('.slide_btn_box .next_btn');
 const prevBtn = $('.slide_btn_box .prev_btn');
 
+
 const bgImg = $('.bg_img img');
 let slideCheck = false // false 실행x  true//실행o
 let getRank = 0;
+
+let moviesData = []; // 영화 데이터를 전역 변수로 저장
+
+$.getJSON('./json/rank.json', function(data){
+  moviesData = data.movies;
+  const movies = data.movies;
+  displayMovieInfo(getRank); //초기 로드 시 첫 번째 영화 정보 표시
+});
+
+// 특정 인덱스의 영화 정보만 표시하는 함수
+function displayMovieInfo(index){
+  const container = $('.movie-rankings'); 
+  container.empty();  // 기존 내용 삭제
+
+  if(moviesData.length > 0 && index < moviesData.length){
+    const item = moviesData[index];
+
+    let starsHTML = '';
+    const rating = parseInt(item.rating);
+    for (let i=0; i<5; i++){
+      if (i<rating.rating){
+        starsHTML += '<span class="material-symbols-outlined star">star</span>';
+      }else{
+        starsHTML += '<span class="material-symbols-outlined star">star_border</span>';
+      }
+    }
+
+  const moviesHTML = `
+  <div class="text_box">
+        <div class="title_section">
+          <div class="ranking_number">${item.number}</div>
+          <div class="rank-title">
+            <h2 class="title rating ratingall" >${item.title}</h2>
+            <div class="star-rating" data-rate="${item.rating}">
+            ${starsHTML}
+            </div>
+          </div>
+        </div>
+        <p class="subtitle">${item.subtitle}</p>
+        <p class="content_body">${item.description}</p>
+      </div>
+    `;
+    container.append(moviesHTML);
+    
+  }
+}
 
 bgImg.eq(getRank).show();
 nextBtn.on('click', function () {
@@ -158,13 +205,13 @@ nextBtn.on('click', function () {
     getRank = slideContainer.find('.slide_item').first().attr('data-rank');
     bgImg.fadeOut(200);
     bgImg.eq(getRank).fadeIn(600);
+    displayMovieInfo(getRank); // 해당 인덱스의 영화 정보 표시
     slideContainer.css({
       left: `-300px`
-    })
+    });
   });
 });
 
-bgImg.eq(getRank).show();
 prevBtn.on('click', function () {
   if (slideCheck === true) {
     return;
@@ -180,11 +227,12 @@ prevBtn.on('click', function () {
     getRank = slideContainer.find('.slide_item').first().attr('data-rank');
     bgImg.fadeOut(200);
     bgImg.eq(getRank).fadeIn(600);
+    displayMovieInfo(getRank);
     slideContainer.css({
       left: `-300px`
-    })
+    });
   });
-})
+});
 
 
 

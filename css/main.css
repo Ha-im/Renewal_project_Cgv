@@ -115,7 +115,6 @@ body {
 
 .rank-title {
   display: flex;
-
   align-items: flex-end;
 }
 
@@ -141,7 +140,7 @@ body {
   gap: 4px;
   position: relative;
   height: 32px;
-  left: 10%;
+  left: 7%;
 }
 
 .star {
@@ -152,6 +151,9 @@ body {
 
 .material-symbols-outlined.empty {
   color: var(--fontColorDark);
+}
+.movie-rankings{
+  display: flex;
 }
 
 /* 우측 포스터 슬라이더 영역 */
@@ -277,6 +279,83 @@ body {
   position: relative;
   gap: 10px;
 }
+
+/* .movie-rankings .text_box{
+  opacity: 0;
+  transition: 0.6s ease;
+}
+.movie-rankings .text_box.show{
+  opacity: 1;
+} */
+
+/* 태블릿 이하 (1024px 이하) */
+@media screen and (max-width:1200px) {
+	  .movie_rank{
+    width: 100%;
+  }
+  .movie_rank .text_box{
+    width: 330px;
+  }
+  .rank-title .title{
+    width: 120px;
+  }
+  .slide_content {
+  left: 50%;
+  }
+  .empty_btn, .cta_btn{
+    padding: 14px 40px;
+  }
+  .star-rating{
+    left: 10%;
+  }
+  .movie_rank .slide_btn_box {
+  display: none;
+}
+}
+/* 모바일 (768px 이하) */
+@media screen and (max-width: 767px) {
+  .movie_rank{
+    padding: 0 10px 10px 20px;
+  }
+  .rank-title .title{
+    width: 100%;
+  }
+  .slide_content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 900px;
+  z-index: 18;
+}
+.movie_rank .content_box{
+  position: absolute;
+  top: 0;
+}
+.ranking_number{
+    font-size: 68px;
+  }
+.rank-title .title{
+  font-size: 26px;
+  width: 120px;
+}
+.img_box{
+  width:146px;
+  height:200px;
+}
+.movie_rank .slide_btn_box {
+  display: none;
+}
+.view_slide{
+  padding-bottom: 20px;
+}
+.movie_rank .text_box{
+  margin-bottom: 20px;
+}
+.slide_container{
+
+}
+}
+
 
 /* //movie_rank */
 /* //rank */
@@ -873,7 +952,6 @@ body {
   position: relative;
   top: 200px;        
   opacity: 0;           
-
 }
 
 
@@ -950,6 +1028,28 @@ body {
   transition: .5s;
 }
 
+/* 모바일 (768px 이하) */
+@media screen and (max-width: 570px) {
+.location_search{
+  h2{
+    font-size: 24px;
+  }
+  p{
+    font-size: 14px;
+  }
+  .search_container input{
+    width: 335px;
+    height: 47px;
+  }
+  .tag_box{
+    width: 355px;
+    margin-left: 85px;
+  }
+  .tag_box a{
+    padding: 8px 18px;
+  }
+}
+}
 /* // 07 location pym */
 
 
@@ -1048,6 +1148,49 @@ body {
     transform: translateY(-20px);
   }
 }
+
+/* 태블릿 이하 (1024px 이하) */
+@media screen and (max-width:1200px) {
+	.appdown_img img{
+    width: 310px;
+    height: 374;
+  }
+  .appdown{
+     display: flex;
+  justify-content: flex-start;
+  }
+  .app{
+    gap: 30px;
+  }
+/* 모바일 (768px 이하) */
+@media screen and (max-width: 767px) {
+  .app>div h6{
+    font-size: 12px;
+  }
+  .app>div h2{
+    font-size: 40px;
+  }
+  .app>div p{
+    font-size: 20px;
+  }
+  .appdown a{
+    padding: 16px 30px;
+  }
+  .appdown_img img{
+    width: 260px;
+    height: 314;
+  }
+  .app {
+  display: block;
+}
+.appdown_contents{
+  padding: 0 8pxy;
+}
+}
+
+
+
+
 
 
 /* // 08 appdownload pym */
