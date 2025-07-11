@@ -1418,7 +1418,7 @@ body {
     font-size: 14px;
   }
 
-  .search_container input {
+  .location>div input {
     width: 335px;
     height: 47px;
   }
