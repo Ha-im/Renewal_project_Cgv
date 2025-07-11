@@ -1295,7 +1295,7 @@ body {
     gap: 30px;
   }
   .search_container .search_btn {
-    left: 92%;
+    left: 90%;
   }
   .movie_rank {
     width: 100%;
@@ -1432,7 +1432,7 @@ body {
     padding: 8px 18px;
   }
 }
-.search_btn {
+.search_container .search_btn {
   left: 75%;
 }
 
