@@ -62,7 +62,7 @@ require_once('inc/db.php');
   <!-- 영태 -header- -->
   <header>
     <h1 class="logo">
-      <a href="index.html">
+      <a href="index.php">
         <span>CGV</span>
         <img src="images/header_logo.png" alt="CGV메인로고">
       </a>
