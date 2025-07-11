@@ -7,5 +7,5 @@
  $commonJs = '<script src="./js/common.js"></script>';
  $loginJs= '<script src="./js/login.js"></script>';
  
- view('login','로그인', $commonCss, $loginCss,'', $commonJs, $loginJs, '');
+ subpageView('login','로그인', $commonCss, $loginCss,'', $commonJs, $loginJs, '');
 ?>
