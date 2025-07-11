@@ -15,25 +15,37 @@ const menu = $('header'); //header
 const hamBtn = $('.gnb_toggle');
 const getBodyWidth = $('body').width();
 let conBoxLeft = '';
+let slideBoxLeft = '';
 // 첫 로딩
 
 // 현재 body의 너비를 비교해서 적절한 이벤트 부여.
 if (getBodyWidth >= 769) {
-  //너비가 769이상이면 hover이벤트 부여
-  conBoxLeft = 0
+  //너비가 769 보다 크거나 같으면
+  conBoxLeft = 0;
+  slideBoxLeft = `55%`;
+} else if (getBodyWidth >= 451) {
+  //너비가 451 보다 크거나 같으면
+  conBoxLeft = `-50px`;
+  slideBoxLeft = `55%`;
 } else {
-  //너비가 768 이하이면 click 이벤트 부여
-  conBoxLeft = `-50px`
+  //그외
+  conBoxLeft = `40px`;
+  slideBoxLeft = `0%`;
 }
 
 $(window).on('resize', function () {
-  // 현재 body의 너비를 비교해서 적절한 이벤트 부여.
   if (getBodyWidth >= 769) {
-    //너비가 769이상이면 hover이벤트 부여
-    conBoxLeft = 0
+    //너비가 769 보다 크거나 같으면
+    conBoxLeft = 0;
+    slideBoxLeft = `55%`;
+  } else if (getBodyWidth >= 451) {
+    //너비가 451 보다 크거나 같으면
+    conBoxLeft = `-50px`;
+    slideBoxLeft = `55%`;
   } else {
-    //너비가 768 이하이면 click 이벤트 부여
-    conBoxLeft = `-50px`
+    //그외
+    conBoxLeft = `40px`;
+    slideBoxLeft = `0%`;
   }
 });
 
@@ -72,7 +84,7 @@ $(document).on('wheel', function (evt) {
         opacity: 1
       }, 1000)
       $('#slide').delay(200).animate({
-        left: `55%`,
+        left: `${slideBoxLeft}`,
         opacity: 1
       }, 1000)
     }
