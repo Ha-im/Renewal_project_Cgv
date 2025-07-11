@@ -610,7 +610,6 @@ body {
 }
 
 .recommend_content .thumb_box {
-  order: 1;
   max-width: 400px;
   min-width: 200px;
   overflow: hidden;
@@ -1460,6 +1459,26 @@ body {
     width: 100%;
     font-size: 28px;
     margin-bottom: 48px;
+  }
+
+  /* recommend */
+  .recommend_content {
+    flex-direction: column;
+    padding: 30px 20px;
+    height: 85vh;
+    gap : 32px;
+  }
+
+  .recommend_content .content_box {
+    order: 2;
+    max-width: none;
+    width: 100%;
+  }
+
+  .recommend_content .thumb_box {
+    order: 1;
+    max-width: none;
+    width: 100%;
   }
 }
 
