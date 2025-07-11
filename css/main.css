@@ -100,7 +100,7 @@ body {
 }
 
 #slide {
-  right: -200px;
+  left: 70%;
   opacity: 0;
 }
 
@@ -196,7 +196,7 @@ body {
 
 .slide_content {
   position: absolute;
-  left: 59%;
+  left: 75%;
   bottom: 18%;
   width: 900px;
   /* outline: 40px solid red; */
@@ -1325,6 +1325,11 @@ body {
 
 /* 모바일 (768px 이하) */
 @media screen and (max-width: 768px) {
+
+  #slide {
+    left: 70%;
+  }
+
   .container {
     width: 100%;
   }
@@ -1349,7 +1354,7 @@ body {
     flex-direction: column;
     padding: 30px 20px;
     height: 85vh;
-    gap : 32px;
+    gap: 32px;
   }
 
   .recommend_content .content_box {
@@ -1426,6 +1431,7 @@ body {
   .movie_rank {
     padding: 0 10px 10px 20px;
   }
+
   .rank-title .title {
     width: 100%;
   }
@@ -1442,6 +1448,7 @@ body {
     position: absolute;
     bottom: 30%;
   }
+
   .rank_contents {
     top: 10%;
   }
@@ -1467,12 +1474,13 @@ body {
   .view_slide {
     /* padding-bottom: 20px; */
   }
-  
+
   .movie_rank .text_box {
     margin-bottom: 20px;
-    
+
   }
-  .slide_container{
+
+  .slide_container {
     width: 100%;
   }
 }
@@ -1502,5 +1510,3 @@ body {
     font-size: 12px;
   }
 }
-
-
