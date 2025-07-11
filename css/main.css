@@ -1439,7 +1439,7 @@ body {
   .slide_content {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 25px;
     width: 900px;
     z-index: 18;
   }
