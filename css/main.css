@@ -1325,8 +1325,8 @@ body {
   .app {
     gap: 30px;
   }
-  .search_btn {
-    left: 92%;
+  .search_container .search_btn {
+    left: 90%;
   }
   .movie_rank {
     width: 100%;
@@ -1357,6 +1357,9 @@ body {
 /* 모바일 (768px 이하) */
 @media screen and (max-width: 768px) {
 
+  .footer{
+    padding : 36px 40px;
+  }
   #slide {
     left: 70%;
   }
@@ -1446,7 +1449,7 @@ body {
     font-size: 14px;
   }
 
-  .search_container input {
+  .location>div input {
     width: 335px;
     height: 47px;
   }
@@ -1460,7 +1463,7 @@ body {
     padding: 8px 18px;
   }
 }
-.search_btn {
+.search_container .search_btn {
   left: 75%;
 }
 
@@ -1559,7 +1562,7 @@ body {
   }
   .movie_rank .slide_btn_box {
     display: inline-block;
-    left: 17%;
+    left: 21%;
     margin-bottom: 20px;
   }
   #popup{
