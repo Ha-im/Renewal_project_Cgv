@@ -5,7 +5,7 @@
 footer {
     padding: 48px 60px;
     height: 364px;
-    background-color: #000;
+    background-color: var(--black);
 }
 
 footer nav {
