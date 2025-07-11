@@ -1324,6 +1324,9 @@ body {
 /* 모바일 (768px 이하) */
 @media screen and (max-width: 768px) {
 
+  .footer{
+    padding : 36px 40px;
+  }
   #slide {
     left: 70%;
   }

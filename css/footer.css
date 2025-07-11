@@ -86,3 +86,60 @@ footer .copyright,
 .mail {
     color: blue;
 }
+
+@media screen and (max-width: 768px) {
+    footer nav {
+        margin-bottom: 36px;
+    }
+
+    footer .footer_menu {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    footer .footer_menu a svg {
+        width: var(--icon_s_w);
+        height: var(--icon_s_h);
+    }
+
+    footer .footer_menu a span {
+        font-size: 16px;
+    }
+
+    .footer .footer_link {
+        flex-wrap: wrap;
+    }
+}
+
+/* 아주 작은 화면 (480px 이하) */
+@media screen and (max-width: 480px) {
+    footer .footer_menu {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    footer .footer_menu a {
+        gap: 8px;
+    }
+
+    footer .footer_menu a svg {
+        width: var(--icon_s_w);
+        height: var(--icon_s_h);
+    }
+
+    footer .footer_menu a span {
+        text-align: center;
+        font-size: 10px;
+    }
+
+    footer .footer_text span {
+        display: block;
+    }
+
+    footer .footer_text address,
+    footer .footer_text span,
+    footer .copyright,
+    .accordion_btn {
+        font-size: 14px;
+    }
+}
