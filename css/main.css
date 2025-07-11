@@ -1281,7 +1281,7 @@ body {
 @media screen and (max-width:1200px) {
   .appdown_img img {
     width: 310px;
-    height: 374;
+    height: 374px;
   }
 
   .appdown {
@@ -1388,7 +1388,7 @@ body {
 
   .appdown_img img {
     width: 260px;
-    height: 314;
+    height: 314px;
   }
 
   .app {
@@ -1398,36 +1398,39 @@ body {
   .appdown_contents {
     padding: 0 8px;
   }
+  #popup{
+    left:70%;
+  }
 }
 
 /* 모바일 (570px 이하) */
 @media screen and (max-width: 570px) {
   .location_search {
-    h2 {
-      font-size: 24px;
-    }
-
-    p {
-      font-size: 14px;
-    }
-
-    .search_container input {
-      width: 335px;
-      height: 47px;
-    }
-    
-    .tag_box {
-      width: 355px;
-      margin-left: 85px;
-    }
-
-    .tag_box a {
-      padding: 8px 18px;
-    }
   }
-  .search_btn {
-    left: 75%;
+  h2 {
+    font-size: 24px;
   }
+
+  p {
+    font-size: 14px;
+  }
+
+  .search_container input {
+    width: 335px;
+    height: 47px;
+  }
+  
+  .tag_box {
+    width: 355px;
+    margin-left: 85px;
+  }
+
+  .tag_box a {
+    padding: 8px 18px;
+  }
+}
+.search_btn {
+  left: 75%;
 }
 
 /* 모바일 (500px 이하) */
@@ -1494,6 +1497,9 @@ body {
   .container .app{
  
   }
+  #popup{
+    left:60%;
+  }
 }
 
 /* 아주 작은 화면 (480px 이하) */
@@ -1524,5 +1530,8 @@ body {
     display: inline-block;
     left: 17%;
     margin-bottom: 20px;
+  }
+  #popup{
+    left:50%;
   }
 }
