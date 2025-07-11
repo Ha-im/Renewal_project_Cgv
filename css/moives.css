@@ -2,149 +2,60 @@
     box-sizing: border-box;
 }
 
-main {
+/* banner */
+.banner {
     width: 100%;
-    /* height: 100vh; */
-    position: relative;
-}
-
-.boot {
-    width: 1320px;
     height: 100vh;
-    margin: 0 auto;
     position: relative;
-    outline: 1px solid red;
 }
 
-main .content_box {
+.container {
+    height: 100%;
+    position: relative;
+    z-index: 50;
+}
+
+.moive_box {
     position: absolute;
     left: 0;
     bottom: 18%;
-    /* 작은값 / 큰값 = 0.18... * 100 = 18%  */
-    z-index: 30;
-
-    /* 임시값 */
-    color: #fff;
 }
-
-.content_box .moive_box {}
 
 .moive_box .title {
-    display: inline-block;
-    font: var(--title);
-    color: var(--white);
     margin-bottom: 10px;
-    position: relative;
 }
 
-h2.rating::after {
-    width: var(--icon_s_w);
-    height: var(--icon_s_h);
-    display: block;
-    position: absolute;
-    left: calc(100% + 5px);
-    bottom: 0;
-    color: var(--white);
-    font: var(--rating_number);
-    border-radius: var(--icon_radius);
-    text-align: center;
-    padding-top: 5px;
-}
-
-h2.rating19::after {
-    content: '19';
-    background-color: var(--rating19);
-}
-
-h2.rating15::after {
-    content: '15';
-    background-color: var(--rating15);
-}
-
-h2.rating12::after {
-    content: '12';
-    background-color: var(--rating12);
-}
-
-h2.ratingall::after {
-    content: 'All';
-    background-color: var(--ratingAll);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.moive_box .special_cinema {
+.special_cinema {
     display: flex;
-    outline: 1px solid red;
-    justify-content: flex-start;
     gap: 10px;
     margin-bottom: 16px;
 }
 
-.moive_box .special_cinema span {
-    display: block;
-    width: 85px;
-    height: 45px;
+.special_cinema .cinema_icon {
+    width: 96px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.6);
-    text-align: center;
-    padding-top: 13px;
-    box-sizing: border-box;
 }
 
-.moive_box .info_box {
-    outline: 1px solid red;
+.info_box {
+    color: var(--white);
     margin-bottom: 16px;
 }
-.moive_box .info_box p{
-    font-size : 16px;
-    line-height : 24px;
-    font-weight: 300;
-}
-.moive_box .content_body {
-    font-size : 16px;
+
+.info_box p {
+    font-size: 16px;
     line-height: 24px;
-    font-weight: 300;
+}
+
+.content_body {
     margin-bottom: 30px;
 }
 
-
-
-.moive_box .btn_box {}
-
-.moive_box .btn_box .cta_btn {}
-
 .video_banner {
+    position: absolute;
     width: 100%;
     height: 100vh;
-    position: absolute;
     top: 0;
     left: 0;
 }
@@ -170,45 +81,133 @@ h2.ratingall::after {
     left: 0;
     z-index: 10;
 }
-.btn_box a {
-  display: inline-block;
-}
 
-.cta_btn {
-  background-color: var(--primary_color);
-  padding: var(--web_btn_padding);
-  color: var(--white);
-  font: var(--btn_text);
-  border: var(--empty_btn_border);
-  border-radius: var(--max_radius);
-  backdrop-filter: blur(20px);
-}
+/* //banner */
 
 
-.movie_chart{
-    background-color: #000;
-    /* 임시값 */
-    color : #fff;
+/* movie_list */
+.movie_list {
+    background-color: var(--black);
 }
-.movie_chart .tab_menu{
+
+.movie_list .container {
+    padding: 50px 0;
+}
+
+.tab_menu {
     display: flex;
-    gap : 20px;
+    gap: 24px;
     margin-bottom: 24px;
 }
-.tab_menu li.on{
-    color : var(--primary_color);
-}
-.tab_menu li a{
-    font-size : 20px;
-    font-weight : 400;
+
+.tab_menu li a {
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--white);
 }
 
-
-.tab_content{}
-.tab_content .total{
-    font-size : 16px;
-    font-weight : 300;
+.tab_menu li.on a {
+    color: var(--primary_color);
 }
-footer {
-    background-color: #000;
+
+.mv_cnt {
+    margin-left: 25px;
+    margin-bottom: 12px;
+    color: var(--white);
+}
+
+.tab_content {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-flow: wrap;
+    margin-bottom: 60px;
+}
+
+.tab_content .item {
+    width: 280px;
+}
+
+.mv_img_box {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.mv_img_box img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.mv_img_box:hover .img_cover {
+    display: flex;
+}
+
+.img_cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.img_cover .mv_text {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: justify;
+    margin-bottom: 30px;
+    color: var(--white);
+}
+
+.mv_info_box {
+    color: var(--white);
+}
+
+.mv_info_box .mv_title {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.mv_info_box p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.mv_info_box .btn_box {
+    margin-top: 8px;
+    gap: 8px;
+}
+
+.btn_box .cta_btn {
+    padding: 14px 50px;
+}
+
+.btn_box .like_btn {
+    border: 1px solid var(--white);
+    padding: 14px 20px;
+    background: transparent;
+    border-radius: var(--max_radius);
+    border: var(--empty_btn_border);
+    color: var(--white);
+}
+
+.add_list_box {
+    text-align: center;
+}
+
+.add_list {
+    width: 600px;
+    padding: 14px 0;
+    border : none;
+    border-radius: var(--max_radius);
+    background-color: var(--primary_color);
+    color : var(--white);
 }
