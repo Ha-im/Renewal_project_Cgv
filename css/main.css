@@ -100,7 +100,7 @@ body {
 }
 
 #slide {
-  right: -200px;
+  left: 70%;
   opacity: 0;
 }
 
@@ -196,7 +196,7 @@ body {
 
 .slide_content {
   position: absolute;
-  left: 59%;
+  left: 75%;
   bottom: 18%;
   width: 900px;
   /* outline: 40px solid red; */
@@ -933,7 +933,7 @@ body {
 .search_btn {
   position: absolute;
   top: 12px;
-  left: 75%;
+  left: 92%;
   display: inline-flex;
   color: var(--fontColordisable);
   /* justify-content: center; */
@@ -1292,7 +1292,9 @@ body {
   .app {
     gap: 30px;
   }
-
+  .search_btn {
+    left: 92%;
+  }
   .movie_rank {
     width: 100%;
   }
@@ -1317,14 +1319,15 @@ body {
   .star-rating {
     left: 10%;
   }
-
-  .movie_rank .slide_btn_box {
-    display: none;
-  }
 }
 
 /* 모바일 (768px 이하) */
 @media screen and (max-width: 768px) {
+
+  #slide {
+    left: 70%;
+  }
+
   .container {
     width: 100%;
   }
@@ -1349,7 +1352,7 @@ body {
     flex-direction: column;
     padding: 30px 20px;
     height: 85vh;
-    gap : 32px;
+    gap: 32px;
   }
 
   .recommend_content .content_box {
@@ -1390,7 +1393,7 @@ body {
   }
 
   .appdown_contents {
-    padding: 0 8pxy;
+    padding: 0 8px;
   }
 }
 
@@ -1409,7 +1412,7 @@ body {
       width: 335px;
       height: 47px;
     }
-
+    
     .tag_box {
       width: 355px;
       margin-left: 85px;
@@ -1419,6 +1422,9 @@ body {
       padding: 8px 18px;
     }
   }
+  .search_btn {
+    left: 75%;
+  }
 }
 
 /* 모바일 (500px 이하) */
@@ -1426,6 +1432,7 @@ body {
   .movie_rank {
     padding: 0 10px 10px 20px;
   }
+
   .rank-title .title {
     width: 100%;
   }
@@ -1433,15 +1440,16 @@ body {
   .slide_content {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 25px;
     width: 900px;
     z-index: 18;
   }
 
   .movie_rank .content_box {
     position: absolute;
-    bottom: 30%;
+    bottom: 35%;
   }
+
   .rank_contents {
     top: 10%;
   }
@@ -1461,18 +1469,21 @@ body {
   }
 
   .movie_rank .slide_btn_box {
-    display: none;
+    display: inline-block;
+    left: 24%;
+    margin-bottom: 20px;
   }
 
   .view_slide {
     /* padding-bottom: 20px; */
   }
-  
+
   .movie_rank .text_box {
     margin-bottom: 20px;
-    
+
   }
-  .slide_container{
+
+  .slide_container {
     width: 100%;
   }
 }
@@ -1501,6 +1512,9 @@ body {
   .plan_title a {
     font-size: 12px;
   }
+  .movie_rank .slide_btn_box {
+    display: inline-block;
+    left: 17%;
+    margin-bottom: 20px;
+  }
 }
-
-
