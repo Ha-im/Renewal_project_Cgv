@@ -10,7 +10,7 @@
           </ul>
         </div>
         <div id="tab1">
-          <form action="login.html" method="POST" id="loginPage">
+          <form action="login_process.php" method="POST" id="loginPage">
             <fieldset>
               <div class="form-group">
                 <label for="userid" class="visually-hidden">아이디 입력</label>

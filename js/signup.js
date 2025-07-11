@@ -100,15 +100,12 @@ $('.idok').on('click',function(){
 })
 // 아무 입력 없이 가입하기 눌럿을때 error메세지 띄우기
 */
-//중복확인
-$(document).on('click','.idok', function () {
+/*중복확인 체크*/
+$(document).on('click', '.idok', function () {
     const userid = $('#userid').val().trim();
 
-
-
-    // 2. AJAX 요청 보내기
     $.ajax({
-        url: 'join.php',
+        url: 'id_check.php', // 
         type: 'POST',
         data: { userid: userid },
         success: function (response) {
@@ -132,27 +129,3 @@ $(document).on('click','.idok', function () {
         }
     });
 });
-const submitBtn = $('#submitBtn');
-let inputMessage = $('input').val().trim();
-const minLength = 8;
-submitBtn.on('click',function(){
-    if(!inputMessage){
-        $('input').each(function(){
-            $(this).addClass('input-error')
-            $('#name-error').text('이름은 2글자 이상 10글자 이하여야하고, 공백 및 특수문자 사용 불가').slideDown(500);
-            $('#id-error').text('아이디는 5글자 이상이어야 합니다.').slideDown(500);
-            $('#pw-error').text('비밀번호는 최소 ' + minLength + '자 이상이어야 합니다.').slideDown(500);
-            $('#pwok-error').text('비밀번호가 서로 일치하지 않습니다.').slideDown(500);
-            $('#email-error').text('유효한 이메일을 입력해주세요.').slideDown(500);
-        })
-    }else{
-        $('input').each(function(){
-            $(this).removeClass('input-error')
-            $('#name-error').text('');
-            $('#id-error').text('');
-            $('#pw-error').text('');
-            $('#pwok-error').text('');
-            $('#email-error').text('');
-        })
-    }
-})
