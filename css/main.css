@@ -100,7 +100,7 @@ body {
 }
 
 #slide {
-  right: -200px;
+  left: 70%;
   opacity: 0;
 }
 
@@ -196,7 +196,7 @@ body {
 
 .slide_content {
   position: absolute;
-  left: 59%;
+  left: 75%;
   bottom: 18%;
   width: 900px;
   /* outline: 40px solid red; */
@@ -525,7 +525,6 @@ body {
 }
 
 .recommend_content .thumb_box {
-  order: 1;
   max-width: 400px;
   min-width: 200px;
   overflow: hidden;
@@ -1324,6 +1323,11 @@ body {
 
 /* 모바일 (768px 이하) */
 @media screen and (max-width: 768px) {
+
+  #slide {
+    left: 70%;
+  }
+
   .container {
     width: 100%;
   }
@@ -1341,6 +1345,26 @@ body {
     width: 100%;
     font-size: 28px;
     margin-bottom: 48px;
+  }
+
+  /* recommend */
+  .recommend_content {
+    flex-direction: column;
+    padding: 30px 20px;
+    height: 85vh;
+    gap: 32px;
+  }
+
+  .recommend_content .content_box {
+    order: 2;
+    max-width: none;
+    width: 100%;
+  }
+
+  .recommend_content .thumb_box {
+    order: 1;
+    max-width: none;
+    width: 100%;
   }
 
   .app>div h6 {
@@ -1408,6 +1432,7 @@ body {
   .movie_rank {
     padding: 0 10px 10px 20px;
   }
+
   .rank-title .title {
     width: 100%;
   }
@@ -1415,7 +1440,7 @@ body {
   .slide_content {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 25px;
     width: 900px;
     z-index: 18;
   }
@@ -1424,6 +1449,7 @@ body {
     position: absolute;
     bottom: 35%;
   }
+
   .rank_contents {
     top: 10%;
   }
@@ -1451,12 +1477,13 @@ body {
   .view_slide {
     /* padding-bottom: 20px; */
   }
-  
+
   .movie_rank .text_box {
     margin-bottom: 20px;
-    
+
   }
-  .slide_container{
+
+  .slide_container {
     width: 100%;
   }
 }
@@ -1491,5 +1518,3 @@ body {
     margin-bottom: 20px;
   }
 }
-
-
