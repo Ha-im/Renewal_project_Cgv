@@ -1288,7 +1288,9 @@ body {
     display: flex;
     justify-content: flex-start;
   }
-
+  .appdown_img{
+    padding-top: 200px;
+  }
   .app {
     gap: 30px;
   }
@@ -1381,6 +1383,7 @@ body {
 
   .appdown a {
     padding: 16px 30px;
+    height: 48px;
   }
 
   .appdown_img img {
@@ -1447,7 +1450,7 @@ body {
 
   .movie_rank .content_box {
     position: absolute;
-    bottom: 35%;
+    bottom: 40%;
   }
 
   .rank_contents {
@@ -1482,9 +1485,14 @@ body {
     margin-bottom: 20px;
 
   }
-
+  .appdown_img{
+    padding-top: 200px;
+  }
   .slide_container {
     width: 100%;
+  }
+  .container .app{
+ 
   }
 }
 
