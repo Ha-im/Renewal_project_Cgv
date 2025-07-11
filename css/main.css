@@ -1294,7 +1294,7 @@ body {
   .app {
     gap: 30px;
   }
-  .search_btn {
+  .search_container .search_btn {
     left: 92%;
   }
   .movie_rank {
