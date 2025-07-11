@@ -13,14 +13,37 @@ let currentPage = 0; //현재 사용자가 보고있는 page (index 체크용)
 let checkEvent = false; //스크롤 이벤트 on/off
 const menu = $('header'); //header
 const hamBtn = $('.gnb_toggle');
-
-
+const getBodyWidth = $('body').width();
+let conBoxLeft = '';
 // 첫 로딩
 
+// 현재 body의 너비를 비교해서 적절한 이벤트 부여.
+if (getBodyWidth >= 769) {
+  //너비가 769이상이면 hover이벤트 부여
+  conBoxLeft = 0
+} else {
+  //너비가 768 이하이면 click 이벤트 부여
+  conBoxLeft = `-50px`
+}
 
+$(window).on('resize', function () {
+  // 현재 body의 너비를 비교해서 적절한 이벤트 부여.
+  if (getBodyWidth >= 769) {
+    //너비가 769이상이면 hover이벤트 부여
+    conBoxLeft = 0
+  } else {
+    //너비가 768 이하이면 click 이벤트 부여
+    conBoxLeft = `-50px`
+  }
+});
+
+
+
+
+// if()
 const bannerConBox = $('#banner_content_box');
 bannerConBox.animate({
-  left: 0,
+  left: `${conBoxLeft}`,
   opacity: 1
 }, 1000)
 
@@ -30,12 +53,12 @@ $(document).on('wheel', function (evt) {
   //check변수가 true면 이벤트 진행중
   const isMobile = window.innerWidth <= 768;
   const menuPosition = parseInt($('.menu').css('margin-left'), 10);
-  
+
 
   if (checkEvent === true) {
     return;
   }
-  if(isMobile && menuPosition < 0){
+  if (isMobile && menuPosition < 0) {
     return;
   }
   if (evt.originalEvent.deltaY > 0) {
@@ -45,11 +68,11 @@ $(document).on('wheel', function (evt) {
     if (currentPage === 1) {
       // 1번 페이지를 볼 때 할 일
       $('#move_box').delay(200).animate({
-        left: 0,
+        left: `${conBoxLeft}`,
         opacity: 1
       }, 1000)
       $('#slide').delay(200).animate({
-        right: 0,
+        left: `55%`,
         opacity: 1
       }, 1000)
     }
@@ -57,9 +80,9 @@ $(document).on('wheel', function (evt) {
       // 2번 페이지를 볼 때 할 일
       const imgItems = $('.swiper-slide.img_item');
 
-      imgItems.each(function(i) {
+      imgItems.each(function (i) {
         const that = $(this);
-        setTimeout(function() {
+        setTimeout(function () {
           that.addClass('push');
         }, i * 150);
       });
@@ -74,18 +97,18 @@ $(document).on('wheel', function (evt) {
     if (currentPage === 6) {
       const locationSearch = $('#location_search');
       locationSearch.delay(200).animate({
-        top : 0,
-        opacity: 1     
-      },1000);
+        top: 0,
+        opacity: 1
+      }, 1000);
     }
 
     if (currentPage === 7) {
       const appdownImg = $('#appdown_img');
       console.log('7호출');
       appdownImg.delay(200).animate({
-        top : 0,
-        opacity: 1     
-      },1000)
+        top: 0,
+        opacity: 1
+      }, 1000)
 
     }
 
@@ -145,31 +168,31 @@ let getRank = 0;
 
 let moviesData = []; // 영화 데이터를 전역 변수로 저장
 
-$.getJSON('./json/rank.json', function(data){
+$.getJSON('./json/rank.json', function (data) {
   moviesData = data.movies;
   const movies = data.movies;
   displayMovieInfo(getRank); //초기 로드 시 첫 번째 영화 정보 표시
 });
 
 // 특정 인덱스의 영화 정보만 표시하는 함수
-function displayMovieInfo(index){
-  const container = $('.movie-rankings'); 
+function displayMovieInfo(index) {
+  const container = $('.movie-rankings');
   container.empty();  // 기존 내용 삭제
 
-  if(moviesData.length > 0 && index < moviesData.length){
+  if (moviesData.length > 0 && index < moviesData.length) {
     const item = moviesData[index];
 
     let starsHTML = '';
     const rating = parseInt(item.rating);
-    for (let i=0; i<5; i++){
-      if (i<rating.rating){
+    for (let i = 0; i < 5; i++) {
+      if (i < rating.rating) {
         starsHTML += '<span class="material-symbols-outlined star">star</span>';
-      }else{
+      } else {
         starsHTML += '<span class="material-symbols-outlined star">star_border</span>';
       }
     }
 
-  const moviesHTML = `
+    const moviesHTML = `
   <div class="text_box">
         <div class="title_section">
           <div class="ranking_number">${item.number}</div>
@@ -185,7 +208,7 @@ function displayMovieInfo(index){
       </div>
     `;
     container.append(moviesHTML);
-    
+
   }
 }
 
