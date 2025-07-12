@@ -3,11 +3,11 @@ session_start(); // 세션 시작
 $isLoggedIn = isset($_SESSION['userid']);
 $username = $isLoggedIn ? $_SESSION['username'] : null;
 ?>
-  <div id="fullpage">
+    <div id="fullpage">
     <!-- 01 영태 - 메인 -->
     <div class="section main_banner">
       <div class="container h_100 position_rel">
-        <div class="content_box">
+        <div class="content_box" id="banner_content_box">
           <div class="text_box">
             <h2 class="title rating ratingall">28년 후</h2>
             <p class="subtitle">&lt;28일 후 시작, 28주 후 전염, 28년 후 진화&gt;</p>
@@ -34,29 +34,13 @@ $username = $isLoggedIn ? $_SESSION['username'] : null;
 
     <!-- 02 연미 - 영화순위 -->
     <div class="section movie_rank">
+      <div class="rank_contents">
       <div class="container h_100 position_rel">
         <div class="content_box" id="move_box">
-          <div class="text_box">
-            <div class="title_section">
-              <div class="ranking_number" id="ranking-num">01</div>
-              <div class="rank-title">
-                <h2 class="title rating ratingall" id="movie-title">드래곤 길들이기</h2>
-                <div class="star-rating" id="star-rating" data-rate="5">
-                  <span class="material-symbols-outlined star">star</span>
-                  <span class="material-symbols-outlined star">star</span>
-                  <span class="material-symbols-outlined star">star</span>
-                  <span class="material-symbols-outlined star">star</span>
-                  <span class="material-symbols-outlined star">star</span>
-                </div>
-              </div>
-            </div>
-            <p class="subtitle" id="movie-subtitle">&lt; 수백년간 지속되어온 바이킹과 드래곤의 전쟁 &gt;</p>
-            <p class="content_body" id="'movie-desc">
-              드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과 다른 신념을 가진 ‘히컵’은<br>
-              무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못한다. 그러던 어느 날,<br>
-              히컵은 베일에 싸인 전설의 드래곤 나이트 퓨어리인 ‘투슬리스’와 만나게 되는데...
-            </p>
-          </div>
+
+        <div class="movie-rankings"> 
+          <!-- 여기에 영화 목록이 추가 -->
+        </div>
 
           <div class="btn_box">
             <a href="#" class="empty_btn">상세 정보</a>
@@ -65,55 +49,65 @@ $username = $isLoggedIn ? $_SESSION['username'] : null;
         </div>
       </div>
       <!-- slide -->
-      <div class="slide_content">
+      <div class="slide_content" id="slide">
         <div class="view_slide">
           <ul class="slide_container">
             <li class="slide_item" data-rank="0">
               <div class="img_box">
-                <img src="images/movierank_poster_28yearslater.jpg" alt="">
+                <img src="images/movierank_poster_howtotraindragon.jpg" alt="">
               </div>
+              <span class="num">01</span>
             </li>
             <li class="slide_item" data-rank="1">
               <div class="img_box">
-                <img src="images/movierank_poster_f1.jpg" alt="">
+                <img src="images/movierank_poster_28yearslater.jpg" alt="">
               </div>
+              <span class="num">02</span>
             </li>
             <li class="slide_item" data-rank="2">
               <div class="img_box">
-                <img src="images/movierank_poster_howtotraindragon.jpg" alt="">
+                <img src="images/movierank_poster_f1.jpg" alt="">
               </div>
+              <span class="num">03</span>
             </li>
             <li class="slide_item" data-rank="3">
               <div class="img_box">
                 <img src="images/movierank_poster_nausicaaofthevalleyofthewinds.jpg" alt="">
               </div>
+              <span class="num">04</span>
             </li>
             <li class="slide_item" data-rank="4">
               <div class="img_box">
                 <img src="images/movierank_poster_theseedofthescaredfig.jpg" alt="">
               </div>
+              <span class="num">05</span>
             </li>
           </ul>
 
         </div>
         <div class="slide_btn_box">
-          <button class="prev_btn">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
-              <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+          <button class="slide_btn prev_btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFF">
+              <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg>
             </svg>
           </button>
-          <button class="next_btn">
+          <button class="slide_btn next_btn">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
               <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
             </svg>
           </button>
         </div>
       </div>
+
+    </div>
+
+
+   
       <!-- bg -->
       <div class="bg_img">
+        <img src="images/movierank_bg_howtotraindragon.jpg" alt="">
         <img src="images/movierank_bg_28yearslater.jpg" alt="">
         <img src="images/movierank_bg_f1.jpg" alt="">
-        <img src="images/movierank_bg_howtotraindragon.jpg" alt="">
         <img src="images/movierank_bg_nausicaaofthevalleyofthewinds.jpg" alt="">
         <img src="images/movierank_bg_theseedofthescaredfig_bg.jpg" alt="">
         <div class="cover"></div>
@@ -146,7 +140,7 @@ $username = $isLoggedIn ? $_SESSION['username'] : null;
     <!-- 04 영태 - 추천영화(날씨데이터) -->
     <div class="section recommend">
       <div class="container">
-        <div class="recommend_content">
+        <div class="recommend_content" id="recommend_content_box">
           <div class="content_box">
             <div class="text_box">
               <h2 class="title" id="recommend_title">
@@ -165,16 +159,18 @@ $username = $isLoggedIn ? $_SESSION['username'] : null;
           </div>
           <div class="thumb_box">
             <a class="play_cover" href="#">
-              <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                 fill="#e3e3e3">
                 <path
                   d="m380-300 280-180-280-180v360ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
-              </svg> -->
+              </svg>
             </a>
             <img src="" alt="노이즈" id="recommend_thumb">
           </div>
         </div>
       </div>
+
+
       <!-- recommend bg -->
       <div class="img_banner">
         <img src="" alt="노이즈" id="recommend_bg">
@@ -236,6 +232,9 @@ $username = $isLoggedIn ? $_SESSION['username'] : null;
                 <li><a href="#">#오늘의쇼핑 </a></li>
               </ul>
             </div>
+            <div class="arrow_swiper">
+              <span class="material-symbols-outlined">arrow_forward_ios</span>
+            </div>
           </div>
           <div class="event swiper-slide" data-bg="images/event_zone/event_zone_event.jpg">
             <a href="#">
@@ -250,6 +249,9 @@ $username = $isLoggedIn ? $_SESSION['username'] : null;
                 <li><a href="#">#현장이벤트</a></li>
                 <li><a href="#">#부스이벤트</a></li>
               </ul>
+            </div>
+            <div class="arrow_swiper">
+              <span class="material-symbols-outlined">arrow_forward_ios</span>
             </div>
           </div>
           <div class="special swiper-slide" data-bg="images/event_zone/special.png">
@@ -274,7 +276,7 @@ $username = $isLoggedIn ? $_SESSION['username'] : null;
     <!-- 07 연미 - 위치찾기 -->
     <div class="section location_search">
       <div class="container location">
-        <div>
+        <div id="location_search">
           <h2>CGV 찾기</h2>
           <p>가장 가까운 CGV를 찾아보세요</p>
           <form class="search_container">
@@ -301,7 +303,7 @@ $username = $isLoggedIn ? $_SESSION['username'] : null;
     <!-- 08 연미 - 앱다운 -->
     <div class="section appdownload gradient-bg">
       <div class="container app">
-        <div class="appdown_img">
+        <div class="appdown_img" id="appdown_img">
           <img src="./images/appdownload.png" alt="appdownload">
         </div>
         <div class="appdown_contents">
@@ -315,6 +317,8 @@ $username = $isLoggedIn ? $_SESSION['username'] : null;
         </div>
       </div>
     </div>
+
+    <!-- 09 영태 - 푸터 -->
     <div class="section footer">
       <footer>
         <nav>
