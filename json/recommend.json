@@ -1,0 +1,56 @@
+{
+    "Clear": [
+        {
+            "title": "맑은 날,<br>더 생생하게 펼쳐지는 어드벤처",
+            "subtitle": "&lt;가장 위험한 놈들만 여기 남겨진 거야&gt;",
+            "description": "지구 최상위 포식자가 된 공룡들이 인간 세상으로 나온 5년 후, 인간과 공룡의 위태로운 공존이 이어지는 가운데 인류를 구할 신약 개발을 위해 육지, 하늘, 바다를 지배하는 가장 거대한 공룡들의 DNA가 필요하게 된다...",
+            "bgurl": "images/recommend_bg_jurassic.jpg",
+            "thumburl": "images/recommend_thumb_jurassic.jpg",
+            "youtube": "https://www.youtube.com/embed/42CK_hmKkq0?si=8zxYj6u0WCX3DB81"
+        },
+        {
+            "title": "햇살 가득한 날,<br>순수한 애니메이션의 세계로",
+            "subtitle": "&lt;수백년간 지속되어온 바이킹과 드래곤의 전쟁&gt;",
+            "description": "드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과 다른 신념을 가진 ‘히컵’은 무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못한다. 그러던 어느 날, 히컵은 베일에 싸인 전설의 드래곤 나이트 퓨어리인 ‘투슬리스’와 만나게 되는데...",
+            "bgurl": "images/recommend_bg_dragon.jpg",
+            "thumburl": "images/recommend_thumb_dragon.jpg",
+            "youtube": "https://www.youtube.com/embed/eyeXAgO7rp8?si=1uEBkp79MtP5Y5Gw"
+        }
+    ],
+    "Rain": [
+        {
+            "title": "비 내리는 날,<br>더 오싹한 공포 스릴러",
+            "subtitle": "&lt;시끄러워 죽겠어요 못 살겠네 죽이고 싶다&gt;",
+            "description": "내 집 마련에 성공한 주영과 주희 어느 날부터 아파트 어딘가에서 들려오는 정체불명의 층간소음에 시달린다. 그러던 중 동생 주희와 연락이 끊기자 불안에 휩싸인 주영은 급히 지방 공장에서 집으로 돌아오고 주희의 남자친구 기훈과 함께 실종된 동생을 추적하기 시작한다...",
+            "bgurl": "images/recommend_bg_noize.jpg",
+            "thumburl": "images/recommend_thumb_noize.jpg",
+            "youtube": "https://www.youtube.com/embed/nzyimLpTYa0?si=r8Kpg1QoOtTZYeu-"
+        },
+        {
+            "title": "비 내리는 날,<br>더 오싹한 아포칼립스",
+            "subtitle": "&lt;28일 후 시작, 28주 후 전염, 28년 후 진화&gt;",
+            "description": "태어나 처음 마주한 바이러스에 감염된 세상, 충격을 넘어선 극강의 공포가 밀려온다! 이곳에서 태어나 한 번도 섬 밖을 나가 본 적 없는 소년 ‘스파이크’는 어느 날 섬을 떠나 본토에 발을 들이게 되고 난생처음 바이러스에 잠식된 세상을 마주하게 되는데...",
+            "bgurl": "images/recommend_bg_28years.jpg",
+            "thumburl": "images/recommend_thumb_28years.jpg",
+            "youtube": "https://www.youtube.com/embed/iSyYE__waY4?si=5QUmKB4L9HdGMpQb"
+        }
+    ],
+    "Clouds": [
+        {
+            "title": "비 내리는 날,<br>더 오싹한 공포 스릴러",
+            "subtitle": "&lt;시끄러워 죽겠어요 못 살겠네 죽이고 싶다&gt;",
+            "description": "내 집 마련에 성공한 주영과 주희 어느 날부터 아파트 어딘가에서 들려오는 정체불명의 층간소음에 시달린다. 그러던 중 동생 주희와 연락이 끊기자 불안에 휩싸인 주영은 급히 지방 공장에서 집으로 돌아오고 주희의 남자친구 기훈과 함께 실종된 동생을 추적하기 시작한다...",
+            "bgurl": "images/recommend_bg_noize.jpg",
+            "thumburl": "images/recommend_thumb_noize.jpg",
+            "youtube": "https://www.youtube.com/embed/nzyimLpTYa0?si=r8Kpg1QoOtTZYeu-"
+        },
+        {
+            "title": "비 내리는 날,<br>더 오싹한 아포칼립스",
+            "subtitle": "&lt;28일 후 시작, 28주 후 전염, 28년 후 진화&gt;",
+            "description": "태어나 처음 마주한 바이러스에 감염된 세상, 충격을 넘어선 극강의 공포가 밀려온다! 이곳에서 태어나 한 번도 섬 밖을 나가 본 적 없는 소년 ‘스파이크’는 어느 날 섬을 떠나 본토에 발을 들이게 되고 난생처음 바이러스에 잠식된 세상을 마주하게 되는데...",
+            "bgurl": "images/recommend_bg_28years.jpg",
+            "thumburl": "images/recommend_thumb_28years.jpg",
+            "youtube": "https://www.youtube.com/embed/iSyYE__waY4?si=5QUmKB4L9HdGMpQb"
+        }
+    ]
+}
