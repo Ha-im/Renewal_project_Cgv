@@ -150,9 +150,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 0 20px;
-    display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
@@ -206,8 +205,18 @@
 .add_list {
     width: 600px;
     padding: 14px 0;
-    border : none;
+    border: none;
     border-radius: var(--max_radius);
     background-color: var(--primary_color);
-    color : var(--white);
+    color: var(--white);
+    transition: 0.6s;
+}
+
+.add_list:hover {
+    background-color: var(--fill_hover_color);
+}
+
+.add_list:active {
+    background-color: var(--fill_active_color);
+
 }
