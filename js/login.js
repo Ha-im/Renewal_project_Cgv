@@ -33,7 +33,6 @@
         const form = $('#loginPage')
 
         form.submit(function(e){
-            e.preventDefault();
             const id = $('#userid');
             const pw = $('#password');
             const userid = $('#userid').val().trim()
@@ -45,10 +44,6 @@
                 id.removeClass('input-error');
                 alert('비밀번호를 입력해주세요.');
                 pw.addClass('input-error');
-            }else{
-                id.removeClass('input-error');
-                pw.removeClass('input-error');
-                alert('로그인 성공');
             }
         })
 
