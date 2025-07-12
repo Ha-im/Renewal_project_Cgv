@@ -1,5 +1,4 @@
 <?php
-session_start(); // 세션 시작
 $isLoggedIn = isset($_SESSION['userid']);
 $username = $isLoggedIn ? $_SESSION['username'] : null;
 ?>

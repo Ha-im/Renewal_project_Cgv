@@ -1,6 +1,6 @@
 <?php
 require_once('inc/db.php');
-
+session_start(); // 세션 시작
 
 ?>
 <!DOCTYPE html>
