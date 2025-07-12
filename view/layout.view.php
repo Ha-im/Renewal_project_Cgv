@@ -160,7 +160,7 @@ require_once('inc/db.php');
   <div id="policy_modal">
     <div>
       <button type="button" id="policy_closeModal">닫기</button>
-      <iframe id="policy_modalIframe" src="policy.html" width="100%" height="100%"></iframe>
+      <iframe id="policy_modalIframe" src="policy.php" width="100%" height="100%"></iframe>
     </div>
   </div>
 
@@ -197,10 +197,10 @@ require_once('inc/db.php');
     <hr>
     <h4>구현완료파트</h4>
     <p>
-      <strong>박*선</strong> : <a href="">plan</a>,<a href="">eventzone</a>,<a href="">cinemazone</a>,<a href="login.html">sub_login</a><br>
+      <strong>박*선</strong> : <a href="">plan</a>,<a href="">eventzone</a>,<a href="">cinemazone</a>,<a href="login.php">sub_login</a><br>
       <strong>김*태</strong> : <a href="">header</a>,<a href="">footer</a>,<a href="">main</a>,<a
-        href="moives.html">recommend</a>,<a href="">sub_movies</a><br>
-      <strong>박*미</strong> : <a href="">movie_rank</a>,<a href="">search</a>,<a href="">appdownload</a>,<a href="ticket.html">sub_ticket</a><br>
+        href="moives.php">recommend</a>,<a href="">sub_movies</a><br>
+      <strong>박*미</strong> : <a href="">movie_rank</a>,<a href="">search</a>,<a href="">appdownload</a>,<a href="ticket.php">sub_ticket</a><br>
     </p>
     <hr>
     <div>
