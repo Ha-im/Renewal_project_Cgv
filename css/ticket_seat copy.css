@@ -5,14 +5,13 @@ body{
 	font: 15px/24px "Noto Sans KR", sans-serif;
 }
 .main-container {
-	width: 100%;
 	max-width: 1280px;
 	margin: 144px auto 76px;
 	position: relative;
 }
 .booking_container {
 	background-color: #262525;
-	width: 1280px;
+	min-width: 1280px;
 }
 .booking_tab {
 	/* flex: 1; */
@@ -30,16 +29,13 @@ body{
 }
 .booking-header{
 	display: flex;
-	max-width: 1280px;
-	 justify-content: center; 
-	width: 100%;
+	min-width: 1280px;
 	background-color: #121212;
 	color: var(--light_white);
 }
 .header{
 	position: relative;
-	max-width: 1280px;
-	width: 100%;
+	width: 1280px;
 	height: 60px;
 	text-align: center;
 	padding: 18px 0;
@@ -244,3 +240,15 @@ body{
 
 
 
+
+/* query */
+
+/* 태블릿 이하 (1024px 이하) */
+@media screen and (max-width: 1290px) {
+	.main-container{
+		width: 724px;
+	}
+	.ticket_data .data_img{
+		display: none;
+	}
+}
