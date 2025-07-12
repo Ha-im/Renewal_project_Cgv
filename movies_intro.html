@@ -229,6 +229,7 @@
                     <div class="tab_content">
                         <!-- 써머리 -->
                         <article class="mv_summary">
+                            <h2 class="con_title">줄거리</h2>
                             <h3 class="sum_title">
                                 수백년간 지속되어온 바이킹과 드래곤의 전쟁.
                             </h3>
@@ -248,15 +249,45 @@
                         </article>
                         <!-- 차트 -->
                         <article class="mv_chart">
-                            <!-- 차트 어떻게하더라..?
-                              -->
+                            <!-- 차트 어떻게하더라..?-->
+                            <div class="chart_item">
+                                <h3 class="chart_title">성별 예매 분포</h3>
+                                <div>
+                                    <canvas id="myChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="chart_item">
+                                <h3 class="chart_title">성별 예매 분포</h3>
+                                <div>
+                                    <canvas id="line_myChart"></canvas>
+                                </div>
+                            </div>
+
                         </article>
                         <!-- 트레일러 -->
                         <article class="mv_trailer">
                             <h2 class="con_title">트레일러</h2>
                             <ul class="trailer_wrapper">
                                 <li class="trailer_item">
-                                    <p>티저 예고편</p>
+                                    <p class="trailer_title">티저 예고편</p>
+                                    <div class="video_box">
+                                        <a class="play_cover" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                                                <path
+                                                    d="m380-300 280-180-280-180v360ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                                            </svg>
+                                        </a>
+                                        <!-- 나중에 실제 비디오 파일 말고..
+                                        영상의 썸네일을 사용하고 클릭하면 영상 모달..? -->
+                                        <video>
+                                            <source src="media/banner.mp4">
+                                            <p>브라우저가 동영상 파일을 지원하지 않습니다.</p>
+                                        </video>
+                                    </div>
+                                </li>
+                                <li class="trailer_item">
+                                    <p class="trailer_title">1차 예고편</p>
                                     <div class="video_box">
                                         <a class="play_cover" href="#">
                                             <svg xmlns="http://www.w3.org/2000/svg" height="24px"
@@ -272,23 +303,7 @@
                                     </div>
                                 </li>
                                 <li class="trailer_item">
-                                    <p>1차 예고편</p>
-                                    <div class="video_box">
-                                        <a class="play_cover" href="#">
-                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                                                viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
-                                                <path
-                                                    d="m380-300 280-180-280-180v360ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
-                                            </svg>
-                                        </a>
-                                        <video autoplay muted>
-                                            <source src="media/banner.mp4">
-                                            <p>브라우저가 동영상 파일을 지원하지 않습니다.</p>
-                                        </video>
-                                    </div>
-                                </li>
-                                <li class="trailer_item">
-                                    <p>2차 예고편</p>
+                                    <p class="trailer_title">2차 예고편</p>
                                     <div class="video_box">
                                         <a class="play_cover" href="#">
                                             <svg xmlns="http://www.w3.org/2000/svg" height="24px"
@@ -503,7 +518,83 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script src="./js/common.js"></script>
+
+    <script>
+        const ctx1 = document.getElementById('myChart');
+
+        const ctx2 = document.getElementById('line_myChart');
+
+        new Chart(ctx1, {
+            type: 'pie',
+            data: {
+                labels: ['남성', '여성'],
+                datasets: [{
+                    data: [75, 25],
+                    backgroundColor: [
+                        '#41556C',
+                        '#D13867'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, // 비율 고정 끄기
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'white'
+                        }
+                    }
+                }
+            }
+        });
+
+
+        const dataValues = [12, 19, 3, 5];
+        const maxValue = Math.max(...dataValues); // 최댓값 구하기
+
+        const backgroundColors = dataValues.map(value =>
+            value === maxValue ? '#ED3124' : '#D9D9D9'  // 최댓값은 빨간색, 나머지는 파란색
+        );
+
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['10대', '20대', '30대', '40대'],
+                datasets: [{
+                    label: '연령 별 예매',
+                    data: dataValues,
+                    backgroundColor: backgroundColors
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'white'
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            color: 'white'
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            color: 'white'
+                        }
+                    }
+                }
+            }
+
+        });
+    </script>
 </body>
 
 </html>
