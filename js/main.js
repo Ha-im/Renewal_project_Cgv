@@ -49,7 +49,21 @@ $(window).on('resize', function () {
   }
 });
 
+resMenuBtn.on('click', function () {
+  fullpage_api.setKeyboardScrolling(false);
+  fullpage_api.setAllowScrolling(false);
+  menuWrap.animate({
+    marginLeft: `-500px`
+  }, 600)
+})
 
+resMenuCloseBtn.on('click', function () {
+  fullpage_api.setAllowScrolling(true);
+  fullpage_api.setKeyboardScrolling(true);
+  menuWrap.animate({
+    marginLeft: `0`
+  }, 600)
+})
 
 
 // if()
