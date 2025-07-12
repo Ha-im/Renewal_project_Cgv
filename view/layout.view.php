@@ -163,6 +163,20 @@ require_once('inc/db.php');
       <iframe id="policy_modalIframe" src="policy.php" width="100%" height="100%"></iframe>
     </div>
   </div>
+    <!-- 추천영화 modal -->
+  <div class="recommend_modal">
+    <div class="play_box">
+      <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <!-- 닫기버튼 모양 -->
+    <button class="modal_close">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+      </svg>
+    </button>
+  </div>
   <div id="popup">
     <h2><img src="images/header_logo.png" alt="네슬레로고"></h2>
     <h3>CGV 웹사이트 리뉴얼 프로젝트</h3>

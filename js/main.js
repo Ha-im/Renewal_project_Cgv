@@ -13,12 +13,64 @@ let currentPage = 0; //현재 사용자가 보고있는 page (index 체크용)
 let checkEvent = false; //스크롤 이벤트 on/off
 const menu = $('header'); //header
 const hamBtn = $('.gnb_toggle');
+const getBodyWidth = $('body').width();
+let conBoxLeft = '';
+let slideBoxLeft = '';
+// 첫 로딩
+
+// 현재 body의 너비를 비교해서 적절한 이벤트 부여.
+if (getBodyWidth >= 769) {
+  //너비가 769 보다 크거나 같으면
+  conBoxLeft = 0;
+  slideBoxLeft = `55%`;
+} else if (getBodyWidth >= 451) {
+  //너비가 451 보다 크거나 같으면
+  conBoxLeft = `-50px`;
+  slideBoxLeft = `55%`;
+} else {
+  //그외
+  conBoxLeft = `40px`;
+  slideBoxLeft = `0%`;
+}
+
+$(window).on('resize', function () {
+  if (getBodyWidth >= 769) {
+    //너비가 769 보다 크거나 같으면
+    conBoxLeft = 0;
+    slideBoxLeft = `55%`;
+  } else if (getBodyWidth >= 451) {
+    //너비가 451 보다 크거나 같으면
+    conBoxLeft = `-50px`;
+    slideBoxLeft = `55%`;
+  } else {
+    //그외
+    conBoxLeft = `40px`;
+    slideBoxLeft = `0%`;
+  }
+});
+
+
+
+
+// if()
+const bannerConBox = $('#banner_content_box');
+bannerConBox.animate({
+  left: `${conBoxLeft}`,
+  opacity: 1
+}, 1000)
 
 
 //화면 페이지
 $(document).on('wheel', function (evt) {
   //check변수가 true면 이벤트 진행중
+  const isMobile = window.innerWidth <= 768;
+  const menuPosition = parseInt($('.menu').css('margin-left'), 10);
+
+
   if (checkEvent === true) {
+    return;
+  }
+  if (isMobile && menuPosition < 0) {
     return;
   }
   if (evt.originalEvent.deltaY > 0) {
@@ -28,19 +80,51 @@ $(document).on('wheel', function (evt) {
     if (currentPage === 1) {
       // 1번 페이지를 볼 때 할 일
       $('#move_box').delay(200).animate({
-        left: 0,
+        left: `${conBoxLeft}`,
         opacity: 1
       }, 1000)
       $('#slide').delay(200).animate({
-        right: 0,
+        left: `${slideBoxLeft}`,
+        opacity: 1
+      }, 1000)
+    }
+    if (currentPage === 2) {
+      // 2번 페이지를 볼 때 할 일
+      const imgItems = $('.swiper-slide.img_item');
+
+      imgItems.each(function (i) {
+        const that = $(this);
+        setTimeout(function () {
+          that.addClass('push');
+        }, i * 150);
+      });
+    }
+    if (currentPage === 3) {
+      // 3번 페이지를 볼 때 할 일
+      $('#recommend_content_box').delay(200).animate({
+        top: `50%`,
+        opacity: 1
+      }, 600);
+    }
+    if (currentPage === 6) {
+      const locationSearch = $('#location_search');
+      locationSearch.delay(200).animate({
+        top: 0,
+        opacity: 1
+      }, 1000);
+    }
+
+    if (currentPage === 7) {
+      const appdownImg = $('#appdown_img');
+      console.log('7호출');
+      appdownImg.delay(200).animate({
+        top: 0,
         opacity: 1
       }, 1000)
 
-
-
-
     }
-    console.log(currentPage);
+
+
     langList.slideUp(400);
     menu.animate({
       top: `-72px`
@@ -48,6 +132,10 @@ $(document).on('wheel', function (evt) {
       $('.gnb_toggle').fadeIn(200);
       checkEvent = false;
     })
+    if (currentPage === 4) {
+      // 4번 페이지를 볼 때 할 일
+      $('.container.cinema').addClass('push').slideDown(1000);
+    }
   } else {
     //휠을 위로 당겨 이전 페이지를 본다.
     currentPage--;
@@ -61,6 +149,11 @@ $(document).on('wheel', function (evt) {
   }
 });
 
+//   bottom: 0,
+//   opacity: 1
+// }, 1000)
+
+
 
 // header의 ham버튼
 hamBtn.on('click', function () {
@@ -69,8 +162,8 @@ hamBtn.on('click', function () {
   }, 600);
   $(this).fadeOut(200);
 })
-
 // 메인 배너 js
+
 
 
 // 영화 순위 js
@@ -80,9 +173,56 @@ const slideItem = $('.slide_item');
 const nextBtn = $('.slide_btn_box .next_btn');
 const prevBtn = $('.slide_btn_box .prev_btn');
 
+
 const bgImg = $('.bg_img img');
 let slideCheck = false // false 실행x  true//실행o
 let getRank = 0;
+
+let moviesData = []; // 영화 데이터를 전역 변수로 저장
+
+$.getJSON('./json/rank.json', function (data) {
+  moviesData = data.movies;
+  const movies = data.movies;
+  displayMovieInfo(getRank); //초기 로드 시 첫 번째 영화 정보 표시
+});
+
+// 특정 인덱스의 영화 정보만 표시하는 함수
+function displayMovieInfo(index) {
+  const container = $('.movie-rankings');
+  container.empty();  // 기존 내용 삭제
+
+  if (moviesData.length > 0 && index < moviesData.length) {
+    const item = moviesData[index];
+
+    let starsHTML = '';
+    const rating = parseInt(item.rating);
+    for (let i = 0; i < 5; i++) {
+      if (i < rating.rating) {
+        starsHTML += '<span class="material-symbols-outlined star">star</span>';
+      } else {
+        starsHTML += '<span class="material-symbols-outlined star">star_border</span>';
+      }
+    }
+
+    const moviesHTML = `
+  <div class="text_box">
+        <div class="title_section">
+          <div class="ranking_number">${item.number}</div>
+          <div class="rank-title">
+            <h2 class="title rating ratingall" >${item.title}</h2>
+            <div class="star-rating" data-rate="${item.rating}">
+            ${starsHTML}
+            </div>
+          </div>
+        </div>
+        <p class="subtitle">${item.subtitle}</p>
+        <p class="content_body">${item.description}</p>
+      </div>
+    `;
+    container.append(moviesHTML);
+
+  }
+}
 
 bgImg.eq(getRank).show();
 nextBtn.on('click', function () {
@@ -100,15 +240,13 @@ nextBtn.on('click', function () {
     getRank = slideContainer.find('.slide_item').first().attr('data-rank');
     bgImg.fadeOut(200);
     bgImg.eq(getRank).fadeIn(600);
+    displayMovieInfo(getRank); // 해당 인덱스의 영화 정보 표시
     slideContainer.css({
       left: `-300px`
-    })
+    });
   });
-})
+});
 
-
-
-// 추후 구연...
 prevBtn.on('click', function () {
   if (slideCheck === true) {
     return;
@@ -116,21 +254,20 @@ prevBtn.on('click', function () {
   slideCheck = true;
   slideContainer.stop().animate({
     //할 일
-    left: `-600px`
+    left: `0px`
   }, 600, function () {
     //움직임이 끝나고 후속 조치
     slideCheck = false;
-    slideContainer.find('.slide_item').first().appendTo(slideContainer);
+    slideContainer.find('.slide_item').last().prependTo(slideContainer);
+    getRank = slideContainer.find('.slide_item').first().attr('data-rank');
+    bgImg.fadeOut(200);
+    bgImg.eq(getRank).fadeIn(600);
+    displayMovieInfo(getRank);
     slideContainer.css({
       left: `-300px`
-    })
+    });
   });
-})
-
-
-
-
-
+});
 
 
 
@@ -208,6 +345,10 @@ $.getJSON('./json/slides.json', function (data) {
 
 
 // 추천영화(날씨데이터) js
+const modalCloseBtn = $('.modal_close');
+const modalPlayBtn = $('.play_cover');
+const modalIframe = $('.play_box iframe');
+const recommendModal = $('.recommend_modal');
 fetch("https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=7299a66f7547deee9ba6c8f17a2d97a8&units=metric")
   .then(response => {
     if (!response.ok) {
@@ -242,20 +383,15 @@ fetch("https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=7299a66f754
         */
         let checkWeather = data.weather[0].main //날씨 상태 변수에 담기
         let checkMovie = movieData[`${checkWeather}`];
-        console.log(checkWeather);
-        console.log(checkMovie);
-        console.log(checkMovie.length);
         // 랜덤 값 만들기
         let randomIdx = Math.floor(Math.random() * checkMovie.length);
-        console.log(randomIdx);
-        console.log(checkMovie[randomIdx]);
         // 변수 선언
         const title = $('#recommend_title');
         const subtitle = $('#recommend_subtitle');
         const des = $('#recommend_des');
         const thumbUrl = $('#recommend_thumb');
         const bgUrl = $('#recommend_bg');
-
+        modalIframe.attr('src', `${checkMovie[randomIdx].youtube}`);
         title.html(`${checkMovie[randomIdx].title}`);
         subtitle.html(`${checkMovie[randomIdx].subtitle}`);
         des.text(`${checkMovie[randomIdx].description}`)
@@ -268,6 +404,27 @@ fetch("https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=7299a66f754
   .catch(error => {
     console.error("에러 발생:", error);
   });
+modalPlayBtn.on('click', function () {
+  recommendModal.addClass('on');
+  // 스크롤 멈추기
+  fullpage_api.setAllowScrolling(false);
+  fullpage_api.setKeyboardScrolling(false);
+})
+recommendModal.on('click', function () {
+  $(this).removeClass('on');
+  // 다시 스크롤 가능
+  fullpage_api.setAllowScrolling(true);
+  fullpage_api.setKeyboardScrolling(true);
+})
+modalCloseBtn.on('click', function () {
+  recommendModal.removeClass('on');
+  let getSrc = modalIframe.attr('src');
+  modalIframe.attr('src', '');
+  modalIframe.attr('src', getSrc);
+  fullpage_api.setAllowScrolling(true);
+  fullpage_api.setKeyboardScrolling(true);
+})
+// 추천영화(날씨데이터) js
 
 /* 씨네마 (특별관) */
 const cinemaspecial = $('.cinemaspecial > div');
@@ -332,7 +489,6 @@ swiperContainer.on('mouseleave', '.swiper-slide', function () {
 // 앱 다운로드 js
 
 
-// 푸터 js
 
 
 
