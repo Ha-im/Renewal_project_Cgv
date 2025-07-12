@@ -195,7 +195,7 @@ let getRank = 0;
 let moviesData = []; // 영화 데이터를 전역 변수로 저장
 
 $.getJSON('./json/rank.json', function (data) {
-  moviesData = data.movies;
+  moviesData = data
   const movies = data.movies;
   displayMovieInfo(getRank); //초기 로드 시 첫 번째 영화 정보 표시
 });
