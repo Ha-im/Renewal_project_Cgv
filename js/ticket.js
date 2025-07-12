@@ -1,3 +1,4 @@
+/* 영화 리스트 */
 $.getJSON('./json/ticket.json', function (data) {
   const regions = data.regions;
 
@@ -21,9 +22,7 @@ $.getJSON('./json/ticket.json', function (data) {
             <span>&#40;${item.count}&#41;</span>
           </a>
           <div class="area_cinema_list" style="${areaDisplayStyle}">
-            <ul class="content scroll_y">
-              ${cinemaListHTML}
-            </ul>
+            <ul class="content scroll_y">${cinemaListHTML}</ul>
           </div>
         </li>
       </ul>
@@ -46,85 +45,92 @@ $(document).on('click', '.area-select', function(e) {
   $('.area_cinema_list').hide();
 // 클릭한 인덱스에 해당하는 .area_cinema_list만 보이기
   $('.area_cinema_list').eq(index).show();
+ 
 
 });
 
+$(document).on('click', '.area_cinema_list li a', function(e) {
+  e.preventDefault();
+  
+  // 현재 클릭한 a의 부모 <ul> 안에서만 .active 토글
+  const $parentUl = $(this).closest('ul');
+  
+  $parentUl.find('a').removeClass('active'); // 모두 제거
+  $(this).addClass('active'); // 클릭한 a만 추가
+});
 
 
-/*
+/* 영화 리스트 */
 $.getJSON('./json/ticket.json', function (data) {
-    const regions = data.regions;
-    console.log(regions);
-    regions.forEach(function(item,idx){
-        console.log(item.name);
-        const regionsHTML = `
-              <ul>
-        <li>
-          <a href="" class="active">
-            <span>${item.name}</span>
-            <span>&#40;${item.count}&#41;</span>
-          </a>
-          <div class="area_cinema_list">
-            <ul class="content scroll_y">
-              <li><a href="">${item.cinemas[0]}</a></li>
-              <li><a href="" class="active">${item.cinemas[1]}</a></li>
-              <li><a href="">${item.cinemas[2]}</a></li>
-              <li><a href="">${item.cinemas[3]}</a></li>
-              <li><a href="">${item.cinemas[4]}</a></li>
-              <li><a href="">${item.cinemas[5]}</a></li>
-              <li><a href="">${item.cinemas[6]}</a></li>
-              <li><a href="">${item.cinemas[7]}</a></li>
-              <li><a href="">${item.cinemas[8]}</a></li>
-              <li><a href="">${item.cinemas[9]}</a></li>
-              <li><a href="">${item.cinemas[10]}</a></li>
-              <li><a href="">${item.cinemas[11]}</a></li>
-              <li><a href="">${item.cinemas[12]}</a></li>
-              <li><a href="">${item.cinemas[13]}</a></li>
-              <li><a href="">${item.cinemas[14]}</a></li>
-              <li><a href="">${item.cinemas[15]}</a></li>
-              <li><a href="">${item.cinemas[16]}</a></li>
-              <li><a href="">${item.cinemas[17]}</a></li>
-              <li><a href="">${item.cinemas[18]}</a></li>
-              <li><a href="">${item.cinemas[19]}</a></li>
-              <li><a href="">${item.cinemas[20]}</a></li>
-              <li><a href="">${item.cinemas[21]}</a></li>
-              <li><a href="">${item.cinemas[22]}</a></li>
-              <li><a href="">${item.cinemas[23]}</a></li>
-              <li><a href="">${item.cinemas[24]}</a></li>
-              <li><a href="">${item.cinemas[25]}</a></li>
-              <li><a href="">${item.cinemas[26]}</a></li>
-              <li><a href="">${item.cinemas[27]}</a></li>
-              <li><a href="">${item.cinemas[28]}</a></li>
-              <li><a href="">${item.cinemas[29]}</a></li>
-              <li><a href="">${item.cinemas[30]}</a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-        `
-    $('.cinema_list').append(regionsHTML);
-    })
-})
+  const movies = data.movies;
 
+  // 등급별 CSS 클래스 매핑
+  const ratingClassMap = {
+    "all": "rating_iconall",
+    "12": "rating_icon12",
+    "15": "rating_icon15",
+    "19": "rating_icon19"
+  };
 
-slides.forEach(function (item, idx) {
-    const displayIndex = (idx + 1).toString().padStart(2, '0'); // 01, 02 ... 번호 붙이기
-    const slideHTML = `
-    <div class="swiper-slide img_item">
-        <img src="${item.image}" alt="">
-        <div class="planHover">
-        <div class="moviText">
-            <p>${item.description}</p>
-        </div>
-        <div class="btn_box">
-            <a href="${item.buttons[0].link}" class="${item.buttons[0].class}">${item.buttons[0].label}</a>
-            <a href="${item.buttons[1].link}" class="${item.buttons[1].class}">${item.buttons[1].label}</a>
-        </div>
-        </div>
-        <div class="ranking">${displayIndex}</div>  <!-- 슬라이드 번호 -->
-        <div class="rating ${item.ageClass}"></div> <!-- 연령 등급 표시 -->
-    </div>
+  let listItemsHTML = '';
+
+  movies.forEach(function (movie) {
+    const iconClass = ratingClassMap[movie.rating] || '';
+    const ratingText = movie.rating; // "12", "15" 등
+
+    listItemsHTML += `
+      <li>
+        <span class="rating_icon ${iconClass}">${ratingText}</span>
+        <a href="#">${movie.title}</a>
+      </li>
     `;
-    $('.swiper-wrapper.planA').append(slideHTML);  // 슬라이드 HTML 추가
+  });
+
+  const finalHTML = `
+    <div class="movie_list">
+      <ul class="content scroll_y">
+        ${listItemsHTML}
+      </ul>
+    </div>
+  `;
+
+  $('.rating_movie_container').html(finalHTML); // DOM에 삽입
 });
-*/
+
+$(document).on('click', '.rating_movie_container li a', function(e) {
+  e.preventDefault(); // 링크 이동 방지
+
+  const $li = $(this).closest('li');
+
+  // 같은 리스트의 모든 li에서 active 제거
+  $li.siblings().removeClass('active');
+
+  // 클릭한 li에 active 추가
+  $li.addClass('active');
+});
+
+
+/* 날짜 슬라이드 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

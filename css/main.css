@@ -866,7 +866,31 @@ body {
   background-color: var(--primary_color);
   transition: .5s;
 }
+.arrow_swiper .material-symbols-outlined{
+ position:absolute; 
+ right:-10px;
+ top:-10px;
+ opacity: 0.6;
+}
+.arrow_swiper{
+  position: absolute;
+  left:95%;
+  animation: arrow 0.7s ease-in-out infinite;
+  display:none;
+}
+@keyframes arrow{
 
+  0%{
+    left:96%;
+  }
+  50%{
+    left:95%;
+  }
+
+  100%{
+    left:96%;
+  }
+}
 /* event_zone end */
 
 
@@ -1275,25 +1299,30 @@ body {
     font-size: 48px;
     /* 좀 작게 */
   }
+  .arrow_swiper{
+    display:block;
+  }
 }
 
 /* 태블릿 이하 (1200px 이하) */
 @media screen and (max-width:1200px) {
   .appdown_img img {
     width: 310px;
-    height: 374;
+    height: 374px;
   }
 
   .appdown {
     display: flex;
     justify-content: flex-start;
   }
-
+  .appdown_img{
+    padding-top: 200px;
+  }
   .app {
     gap: 30px;
   }
-  .search_btn {
-    left: 92%;
+  .search_container .search_btn {
+    left: 90%;
   }
   .movie_rank {
     width: 100%;
@@ -1384,11 +1413,12 @@ body {
 
   .appdown a {
     padding: 16px 30px;
+    height: 48px;
   }
 
   .appdown_img img {
     width: 260px;
-    height: 314;
+    height: 314px;
   }
 
   .app {
@@ -1398,36 +1428,39 @@ body {
   .appdown_contents {
     padding: 0 8px;
   }
+  #popup{
+    left:70%;
+  }
 }
 
 /* 모바일 (570px 이하) */
 @media screen and (max-width: 570px) {
   .location_search {
-    h2 {
-      font-size: 24px;
-    }
-
-    p {
-      font-size: 14px;
-    }
-
-    .search_container input {
-      width: 335px;
-      height: 47px;
-    }
-    
-    .tag_box {
-      width: 355px;
-      margin-left: 85px;
-    }
-
-    .tag_box a {
-      padding: 8px 18px;
-    }
   }
-  .search_btn {
-    left: 75%;
+  h2 {
+    font-size: 24px;
   }
+
+  p {
+    font-size: 14px;
+  }
+
+  .location>div input {
+    width: 335px;
+    height: 47px;
+  }
+  
+  .tag_box {
+    width: 355px;
+    margin-left: 85px;
+  }
+
+  .tag_box a {
+    padding: 8px 18px;
+  }
+}
+.search_container .search_btn {
+  left: 75%;
 }
 
 /* 모바일 (500px 이하) */
@@ -1450,7 +1483,7 @@ body {
 
   .movie_rank .content_box {
     position: absolute;
-    bottom: 35%;
+    bottom: 40%;
   }
 
   .rank_contents {
@@ -1485,9 +1518,17 @@ body {
     margin-bottom: 20px;
 
   }
-
+  .appdown_img{
+    padding-top: 200px;
+  }
   .slide_container {
     width: 100%;
+  }
+  .container .app{
+ 
+  }
+  #popup{
+    left:60%;
   }
 }
 
@@ -1517,7 +1558,10 @@ body {
   }
   .movie_rank .slide_btn_box {
     display: inline-block;
-    left: 17%;
+    left: 21%;
     margin-bottom: 20px;
+  }
+  #popup{
+    left:50%;
   }
 }
