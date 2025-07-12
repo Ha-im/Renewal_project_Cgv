@@ -1,19 +1,22 @@
-body{
+body {
 	background: #3B3B3B;
-	color:#fff;
-	font-size:14px;
+	color: #fff;
+	font-size: 14px;
 	font: 15px/24px "Noto Sans KR", sans-serif;
 }
+
 .main-container {
 	width: 100%;
 	max-width: 1280px;
 	margin: 144px auto 76px;
 	position: relative;
 }
+
 .booking_container {
 	background-color: #262525;
 	width: 1280px;
 }
+
 .booking_tab {
 	/* flex: 1; */
 	text-align: center;
@@ -25,18 +28,21 @@ body{
 	position: relative;
 	border-top: 1px solid #434343;
 }
+
 .booking_tab.active {
 	background-color: #FF243E;
 }
-.booking-header{
+
+.booking-header {
 	display: flex;
 	max-width: 1280px;
-	 justify-content: center; 
+	justify-content: center;
 	width: 100%;
 	background-color: #121212;
 	color: var(--light_white);
 }
-.header{
+
+.header {
 	position: relative;
 	max-width: 1280px;
 	width: 100%;
@@ -44,12 +50,12 @@ body{
 	text-align: center;
 	padding: 18px 0;
 	font-size: 18px;
-  line-height: 24px;
+	line-height: 24px;
 }
 
 
 /* 배경 이미지 */
-.background_img{
+.background_img {
 	position: absolute;
 	background-image: url(../images/movierank_bg_nausicaaofthevalleyofthewinds.jpg);
 	width: 1200px;
@@ -57,19 +63,19 @@ body{
 	left: 80px;
 }
 
-.background_img::after{
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--sectionBg-Grad-lin);
+.background_img::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--sectionBg-Grad-lin);
 }
 
 /* 데이터 */
-.ticket_data{
+.ticket_data {
 	position: absolute;
 	left: 130px;
 	top: 160px;
@@ -79,52 +85,57 @@ body{
 	border-radius: 10px 10px 0 0;
 	box-shadow: var(--web_card_shadow);
 }
-.data_img{
+
+.data_img {
 	background-image: url(/images/movierank_poster_nausicaaofthevalleyofthewinds.jpg);
 	width: 300px;
 	height: 410px;
 	background-size: cover;
-  background-position: center;
+	background-position: center;
 	border-radius: 10px 10px 0 0;
 }
+
 .dotted {
-  height: 1px;
+	height: 1px;
 	margin: 24px 0 20px 0;
-  background-image: repeating-linear-gradient(
-    to right,
-    #c9c9c9 0,
-    #c9c9c9 8px,
-    transparent 8px,
-    transparent 16px
-  );
+	background-image: repeating-linear-gradient(to right,
+			#c9c9c9 0,
+			#c9c9c9 8px,
+			transparent 8px,
+			transparent 16px);
 }
 
-.data_section{
+.data_section {
 	padding-left: 24px;
 }
 
-.data_title{
+.data_title {
 	padding-bottom: 18px;
 	font-size: 15px;
 	font-weight: bold;
 	line-height: 24px;
 }
-.data_content .data{
+
+.data_content .data {
 	display: flex;
 	gap: 50px;
 }
-.data_content .data span{
+
+.data_content .data span {
 	font-size: 12px;
 	font-weight: bold;
 	line-height: 24px;
 }
-.data_content .data span:first-child{
+
+.data_content .data span:first-child {
 	width: 34px;
 }
-.data_content .data span:last-child{
+
+.data_content .data span:last-child {
 	color: #999999;
 }
-.movie_title{
+
+.movie_title {
 	position: absolute;
 	left: 476px;
 	top: 240px;
@@ -134,7 +145,7 @@ body{
 }
 
 /* 인원수 입력 */
-.input_number_section{
+.input_number_section {
 	display: flex;
 	gap: 24px;
 	left: 476px;
@@ -145,30 +156,37 @@ body{
 	background-color: #121212;
 	padding: 12px 20px;
 }
-.ticket_controls{
+
+.ticket_controls {
 	display: flex;
 	align-items: center;
 	gap: 4px;
 }
-.ticket-text{
+
+.ticket-text {
 	font-size: 15px;
 }
-.ticket_controls span{
+
+.ticket_controls span {
 	font-size: 15px;
 	line-height: 24px;
-	color: var(--light_white);;
-	
+	color: var(--light_white);
+	;
+
 }
-.counter_btn{
+
+.counter_btn {
 	background-color: transparent;
 	border: none;
 	color: var(--white);
 	font-size: 15px;
 }
-.counter_btn:hover{
+
+.counter_btn:hover {
 	color: #b5b5b5;
 }
-.total{
+
+.total {
 	display: flex;
 	padding-left: 50px;
 	gap: 10px;
@@ -177,11 +195,12 @@ body{
 	font-weight: bold;
 	color: var(--light_white);
 }
-.price{
+
+.price {
 	color: var(--primary_color);
 }
-.seats_container{
-	display: flex;
+
+.select_container {
 	left: 476px;
 	top: 376px;
 	position: absolute;
@@ -191,9 +210,10 @@ body{
 	border-top: 2px solid var(--light_white);
 	padding: ;
 }
-.screen{
+
+.screen {
 	display: flex;
-  justify-content: center; 
+	justify-content: center;
 	width: 746px;
 	font-size: 25px;
 	font-weight: 300;
@@ -201,7 +221,8 @@ body{
 	line-height: 30px;
 	padding-top: 5px;
 }
-.prev_page{
+
+.prev_page {
 	position: absolute;
 	left: 990px;
 	width: 90px;
@@ -218,7 +239,7 @@ body{
 	transition: 0.3s;
 }
 
-.next_page{
+.next_page {
 	position: absolute;
 	left: 1090px;
 	width: 134px;
@@ -233,14 +254,83 @@ body{
 	transition: 0.3s;
 }
 
-.next_page:hover{
+.next_page:hover {
 	background-color: var(--fill_hover_color);
 }
 
-.prev_page:hover{
+.prev_page:hover {
 	background: rgba(255, 255, 255, 0.07);
-  color: var(--white);
+	color: var(--white);
 }
 
+/* 좌석 */
+.seats-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 40px;
+}
 
+.seats-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding-top: 24px;
+}
 
+.seat-row {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.row-label {
+	width: 24px;
+	height: 16px;
+	text-align: center;
+	color: var(--white);
+	font-weight: bold;
+	font-size: 10px;
+	display: flex;
+  align-items: center;
+}
+
+.seat {
+	width: 16px;
+	height: 16px;
+	border: 1px solid #666;
+	border-radius: 4px;
+	background-color: var(--light_white);
+	color: #333;
+	font-size: 10px;
+	cursor: pointer;
+	transition: all 0.2s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.seat:hover:not(.disabled) {
+	background-color: #aaa;
+}
+
+.seat.selected {
+	background-color: #ff4444;
+	color: #fff;
+	border-color: #ff4444;
+}
+
+.seat.disabled {
+	background-color: #666;
+	color: #888;
+	border-color: #666;
+	cursor: not-allowed;
+}
+
+.seat-group {
+	display: flex;
+	gap: 4px;
+}
+
+.seat-group.right {
+	margin-left: 16px;
+}
