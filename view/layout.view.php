@@ -160,10 +160,11 @@ require_once('inc/db.php');
   <div id="policy_modal">
     <div>
       <button type="button" id="policy_closeModal">닫기</button>
-      <iframe id="policy_modalIframe" src="policy.php" width="100%" height="100%"></iframe>
+      <iframe id="policy_modalIframe" src="policy.html" width="100%" height="100%"></iframe>
     </div>
   </div>
-    <!-- 추천영화 modal -->
+
+  <!-- 추천영화 modal -->
   <div class="recommend_modal">
     <div class="play_box">
       <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0"
@@ -177,6 +178,9 @@ require_once('inc/db.php');
       </svg>
     </button>
   </div>
+
+
+
   <div id="popup">
     <h2><img src="images/header_logo.png" alt="네슬레로고"></h2>
     <h3>CGV 웹사이트 리뉴얼 프로젝트</h3>
@@ -186,16 +190,17 @@ require_once('inc/db.php');
     <p>
       <strong>삼돌이:</strong> 박*선(팀장),김*태,박*미<br>
       <strong>제작기간:</strong> 2025.5.9 ~ 2025.7.14<br>
-      <strong>기획서:</strong><a href="#"> figma</a><img src="" alt=""><br>
-      <strong>버전관리:</strong><a href="#"> Github</a><img src="" alt=""><br>
+      <strong>기획서:</strong><a href="#"> figma <img src="./images/popup/fi.jpg" alt="피그마파일"></a><br>
+      <strong>버전관리:</strong><a href="#"> Github <img src="./images/popup/git.jpg" alt="깃허브파일"></a><br>
       <strong>개발환경:</strong> HTML5,CSS,jquery<br>
     </p>
     <hr>
     <h4>구현완료파트</h4>
     <p>
-      <strong>박*선</strong> : <a href="">plan</a>,<a href="">eventzone</a>,<a href="">cinemazone</a><br>
-      <strong>김*태</strong> : <a href="">header</a>,<a href="">footer</a>,<a href="">main</a>,<a href="">recommend</a><br>
-      <strong>박*미</strong> : <a href="">movie_rank</a>,<a href="">search</a>,<a href="">appdownload</a><br>
+      <strong>박*선</strong> : <a href="">plan</a>,<a href="">eventzone</a>,<a href="">cinemazone</a>,<a href="login.html">sub_login</a><br>
+      <strong>김*태</strong> : <a href="">header</a>,<a href="">footer</a>,<a href="">main</a>,<a
+        href="moives.html">recommend</a>,<a href="">sub_movies</a><br>
+      <strong>박*미</strong> : <a href="">movie_rank</a>,<a href="">search</a>,<a href="">appdownload</a>,<a href="ticket.html">sub_ticket</a><br>
     </p>
     <hr>
     <div>
