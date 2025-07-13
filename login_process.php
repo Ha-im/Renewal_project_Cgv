@@ -8,16 +8,18 @@ $password = $_POST['password'];
 
 // 유효성 검사
 if (empty($userid) || empty($password)) {
-    echo "<script>history.back();</script>";
+    echo "<script>alert('아이디와 비밀번호를 모두 입력하세요.'); history.back();</script>";
     exit;
 }
 
-// DB에서 사용자 조회
+// SQL 인젝션 방지
 $userid = mysqli_real_escape_string($conn, $userid);
+
+// 사용자 정보 조회
 $sql = "SELECT * FROM signup_board WHERE userid = '$userid'";
 $result = mysqli_query($conn, $sql);
 
-if (mysqli_num_rows($result) == 1) {
+if (mysqli_num_rows($result) === 1) {
     $row = mysqli_fetch_assoc($result);
 
     // 비밀번호 확인
@@ -25,9 +27,14 @@ if (mysqli_num_rows($result) == 1) {
         // 로그인 성공 -> 세션 저장
         $_SESSION['userid'] = $row['userid'];
         $_SESSION['username'] = $row['username'];
+        $_SESSION['is_admin'] = $row['is_admin']; // 관리자 여부 저장
 
-        // index.php로 이동
-        header("Location: index.php");
+        // 관리자면 admin.php로, 아니면 index.php로 이동
+        if ($row['is_admin'] == 1) {
+            header("Location: admin.php");
+        } else {
+            header("Location: index.php");
+        }
         exit;
     } else {
         echo "<script>alert('비밀번호가 일치하지 않습니다.'); history.back();</script>";
@@ -39,4 +46,5 @@ if (mysqli_num_rows($result) == 1) {
 }
 
 mysqli_close($conn);
+?>
 ?>
