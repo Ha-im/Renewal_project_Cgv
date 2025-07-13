@@ -1,0 +1,338 @@
+body {
+	background: #3B3B3B;
+	color: #fff;
+	font-size: 14px;
+	font: 15px/24px "Noto Sans KR", sans-serif;
+}
+
+.main-container {
+	width: 100%;
+	max-width: 1280px;
+	margin: 144px auto 76px;
+	position: relative;
+}
+
+.booking_container {
+	background-color: #262525;
+	width: 1280px;
+}
+
+.booking_tab {
+	/* flex: 1; */
+	text-align: center;
+	padding: 76px 0;
+	width: 80px;
+	height: 200px;
+	background-color: #323232;
+	cursor: pointer;
+	position: relative;
+	border-top: 1px solid #434343;
+}
+
+.booking_tab.active {
+	background-color: #FF243E;
+}
+
+.booking-header {
+	display: flex;
+	max-width: 1280px;
+	justify-content: center;
+	width: 100%;
+	background-color: #121212;
+	color: var(--light_white);
+}
+
+.header {
+	position: relative;
+	max-width: 1280px;
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	padding: 18px 0;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+
+/* 배경 이미지 */
+.background_img {
+	position: absolute;
+	background-image: url(../images/movierank_bg_nausicaaofthevalleyofthewinds.jpg);
+	width: 1200px;
+	height: 252px;
+	left: 80px;
+}
+
+.background_img::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--sectionBg-Grad-lin);
+}
+
+/* 데이터 */
+.ticket_data {
+	position: absolute;
+	left: 130px;
+	top: 160px;
+	width: 300px;
+	height: 600px;
+	background-color: #121212;
+	border-radius: 10px 10px 0 0;
+	box-shadow: var(--web_card_shadow);
+}
+
+.data_img {
+	background-image: url(../images/movierank_poster_nausicaaofthevalleyofthewinds.jpg);
+	width: 300px;
+	height: 410px;
+	background-size: cover;
+	background-position: center;
+	border-radius: 10px 10px 0 0;
+}
+
+.dotted {
+	height: 1px;
+	margin: 24px 0 20px 0;
+	background-image: repeating-linear-gradient(to right,
+			#c9c9c9 0,
+			#c9c9c9 8px,
+			transparent 8px,
+			transparent 16px);
+}
+
+.data_section {
+	padding-left: 24px;
+}
+
+.data_title {
+	padding-bottom: 18px;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 24px;
+}
+
+.data_content .data {
+	display: flex;
+	gap: 50px;
+}
+
+.data_content .data span {
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 24px;
+}
+
+.data_content .data span:first-child {
+	width: 34px;
+}
+
+.data_content .data span:last-child {
+	color: #999999;
+}
+
+.movie_title {
+	position: absolute;
+	left: 476px;
+	top: 240px;
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 48px;
+}
+
+/* 인원수 입력 */
+.input_number_section {
+	
+	left: 476px;
+	top: 320px;
+	position: absolute;
+	width: 746px;
+	height: 48px;
+	background-color: #121212;
+	padding: 12px 20px;
+}
+.ticket_num{
+display: flex;
+	gap: 24px;
+}
+.ticket_controls {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.ticket-text {
+	font-size: 15px;
+}
+
+.ticket_controls span {
+	font-size: 15px;
+	line-height: 24px;
+	color: var(--light_white);
+	;
+
+}
+
+.counter_btn {
+	background-color: transparent;
+	border: none;
+	color: var(--white);
+	font-size: 15px;
+}
+
+.counter_btn:hover {
+	color: #b5b5b5;
+}
+
+.total {
+	display: flex;
+	padding-left: 50px;
+	gap: 10px;
+	font-size: 15px;
+	line-height: 24px;
+	font-weight: bold;
+	color: var(--light_white);
+}
+
+.price {
+	color: var(--primary_color);
+}
+
+.select_container {
+	left: 476px;
+	top: 376px;
+	position: absolute;
+	width: 746px;
+	height: 388px;
+	background-color: #121212;
+	border-top: 2px solid var(--light_white);
+	padding: ;
+}
+
+.screen {
+	display: flex;
+	justify-content: center;
+	width: 746px;
+	font-size: 25px;
+	font-weight: 300;
+	color: #595959;
+	line-height: 30px;
+	padding-top: 5px;
+}
+
+.prev_page {
+	position: absolute;
+	left: 990px;
+	width: 90px;
+	height: 48px;
+	bottom: 24px;
+	background-color: transparent;
+	font-size: 20px;
+	line-height: 24px;
+	align-items: center;
+	border-radius: 5px;
+	border: 1px solid var(--white);
+	color: var(--white);
+	padding-right: 10px;
+	transition: 0.3s;
+}
+
+.next_page {
+	position: absolute;
+	left: 1090px;
+	width: 134px;
+	bottom: 24px;
+	background-color: var(--primary_color);
+	font-size: 20px;
+	line-height: 24px;
+	padding: 12px 10px;
+	border-radius: 5px;
+	border: none;
+	color: var(--white);
+	transition: 0.3s;
+}
+
+.next_page:hover {
+	background-color: var(--fill_hover_color);
+}
+
+.prev_page:hover {
+	background: rgba(255, 255, 255, 0.07);
+	color: var(--white);
+}
+
+/* 좌석 */
+.seats-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 40px;
+}
+
+.seats-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding-top: 24px;
+}
+
+.seat-row {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.row-label {
+	width: 24px;
+	height: 16px;
+	text-align: center;
+	color: var(--white);
+	font-weight: bold;
+	font-size: 10px;
+	display: flex;
+  align-items: center;
+}
+
+.seat {
+	width: 16px;
+	height: 16px;
+	border: 1px solid #666;
+	border-radius: 4px;
+	background-color: var(--light_white);
+	color: #333;
+	font-size: 10px;
+	cursor: pointer;
+	transition: all 0.2s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.seat:hover:not(.disabled) {
+	background-color: #aaa;
+}
+
+.seat.selected {
+	background-color: #ff4444;
+	color: #fff;
+	border-color: #ff4444;
+}
+
+.seat.disabled {
+	background-color: #666;
+	color: #888;
+	border-color: #666;
+	cursor: not-allowed;
+}
+
+.seat-group {
+	display: flex;
+	gap: 4px;
+}
+
+.seat-group.right {
+	margin-left: 16px;
+}
