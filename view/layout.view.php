@@ -59,14 +59,21 @@ session_start(); // 세션 시작
 
 <body>
   <!-- 영태 -header- -->
-  <header>
+    <header>
+
     <h1 class="logo">
-      <a href="index.php">
+      <a href="index.html">
         <span>CGV</span>
         <img src="images/header_logo.png" alt="CGV메인로고">
       </a>
     </h1>
+
     <nav class="menu">
+      <button class="res_menu_close_btn">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+          <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+        </svg>
+      </button>
       <ul class="gnb">
         <li class="on">
           <a href="#">영화</a>
@@ -108,11 +115,13 @@ session_start(); // 세션 시작
           </ul>
         </li>
       </ul>
+      <button class="res_login_btn">로그인</button>
     </nav>
+
     <div class="user_menu">
       <ul>
         <li>
-          <a href="login.php"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+          <a href="login.html"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
               fill="#FFFFFF">
               <path
                 d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z" />
@@ -142,10 +151,17 @@ session_start(); // 세션 시작
         </li>
       </ul>
     </div>
-    <button class="gnb_toggle"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-        width="24px" fill="#FFFFFF">
+    <!-- responsive menu_btn -->
+    <button class="res_menu_btn">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-      </svg></button>
+      </svg>
+    </button>
+    <button class="gnb_toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+      </svg>
+    </button>
   </header>
   <?php  require("{$name}.view.php") ?>
     <!-- 09 영태 - 푸터 -->
