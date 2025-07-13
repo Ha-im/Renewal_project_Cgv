@@ -203,40 +203,36 @@ $.getJSON('./json/rank.json', function (data) {
 // 특정 인덱스의 영화 정보만 표시하는 함수
 function displayMovieInfo(index) {
   const container = $('.movie-rankings');
-  container.empty();  // 기존 내용 삭제
+  container.empty();
 
-  if (moviesData.length > 0 && index < moviesData.length) {
-    const item = moviesData[index];
-    
-    let starsHTML = '';
-    const rating = parseInt(item.rating);
-    for (let i = 0; i < 5; i++) {
-      if (i < rating) {
-        starsHTML += '<span class="material-symbols-outlined star">star</span>';
-      } else {
-        starsHTML += '<span class="material-symbols-outlined star">star_border</span>';
-      }
-    }
+  const item = moviesData[index];
+  if (!item) return;
 
-    const moviesHTML = `
-  <div class="text_box">
-        <div class="title_section">
-          <div class="ranking_number">${item.number}</div>
-          <div class="rank-title">
-            <h2 class="title rating ratingall" >${item.title}</h2>
-            <div class="star-rating" data-rate="${item.rating}">
+  const rating = parseInt(item.rating) || 0;
+  let starsHTML = '';
+  for (let i = 0; i < 5; i++) {
+    starsHTML += `<span class="material-symbols-outlined star">${i < rating ? 'star' : 'star_border'}</span>`;
+  }
+
+  const moviesHTML = `
+    <div class="text_box">
+      <div class="title_section">
+        <div class="ranking_number">${item.number}</div>
+        <div class="rank-title">
+          <h2 class="title rating ratingall">${item.title}</h2>
+          <div class="star-rating" data-rate="${item.rating}">
             ${starsHTML}
-            </div>
           </div>
         </div>
-        <p class="subtitle">${item.subtitle}</p>
-        <p class="content_body">${item.description}</p>
       </div>
-    `;
-    container.append(moviesHTML);
+      <p class="subtitle">${item.subtitle}</p>
+      <p class="content_body">${item.description}</p>
+    </div>
+  `;
 
-  }
+  container.append(moviesHTML);
 }
+
 
 bgImg.eq(getRank).show();
 nextBtn.on('click', function () {
