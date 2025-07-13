@@ -4,10 +4,7 @@ body{
 	font-size:14px;
 	font: 15px/24px "Noto Sans KR", sans-serif;
 }
-a{
-	text-decoration: none;
-	color:var(--light_white);
-}
+
 /*상영관 json 파일 css*/
 .list_location{
 	display:flex;
@@ -86,7 +83,7 @@ a{
 }
 .cinema_list{
 	position: absolute;
-	left: 48px;
+	left: 80px;
 	top: 120px;
 }
 
@@ -130,9 +127,7 @@ a{
 .area_cinema_list .content.scroll_y{
 	overflow-x: hidden;
 }
-.content.scroll_y{
-	padding:0;
-}
+
 /* 스크롤 */
 ::-webkit-scrollbar {
   width: 6px;
