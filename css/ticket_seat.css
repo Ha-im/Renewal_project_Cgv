@@ -87,7 +87,7 @@ body {
 }
 
 .data_img {
-	background-image: url(/images/movierank_poster_nausicaaofthevalleyofthewinds.jpg);
+	background-image: url(../images/movierank_poster_nausicaaofthevalleyofthewinds.jpg);
 	width: 300px;
 	height: 410px;
 	background-size: cover;

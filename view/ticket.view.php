@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>예매</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/ticket.css">
-</head>
-<body>
+
 
 <main class="main_container">
 
@@ -60,28 +50,28 @@
           <div class="slider_content">
             <div class="slider_wrapper">
               <div class="slide">
-                <a href=""><span>3</span><span>목</span></a>
+                <a href=""><span>14</span><span>월</span></a>
               </div>
               <div class="slide">
-                <a href=""><span class="active">4</span><span>금</span></a>
+                <a href=""><span class="active">15</span><span>화</span></a>
               </div>
               <div class="slide">
-                <a href=""><span>5</span><span>토</span></a>
+                <a href=""><span>16</span><span>수</span></a>
               </div>
               <div class="slide">
-                <a href=""><span>6</span><span>일</span></a>
+                <a href=""><span>17</span><span>목</span></a>
               </div>
               <div class="slide">
-                <a href=""><span>7</span><span>월</span></a>
+                <a href=""><span>18</span><span>금</span></a>
               </div>
               <div class="slide">
-                <a href=""><span>8</span><span>화</span></a>
+                <a href=""><span>19</span><span>토</span></a>
               </div>
               <div class="slide">
-                <a href=""><span>9</span><span>수</span></a>
+                <a href=""><span>20</span><span>일</span></a>
               </div>
               <div class="slide">
-                <a href=""><span>10</span><span>목</span></a>
+                <a href=""><span>21</span><span>월</span></a>
               </div>
             </div>
           </div>                        
@@ -101,7 +91,7 @@
     <span class="rating_icon rating_iconall">all</span>
     <h2>바람계곡의 나우시카</h2>
   </div>
-
+<div class="time_wrap">
   <div class="time_wrapper">
     <h3>2D</h3>
     <div class="time_container">
@@ -183,6 +173,8 @@
       </button>
     </div>
   </div>
+  </div>
+  </div>
   
 </div>
 </div>
@@ -211,9 +203,3 @@
   
 <button class="next_page">다음</button>
 </main>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="./js/ticket.js"></script>
-</body>
-</html>

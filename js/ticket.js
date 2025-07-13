@@ -110,13 +110,106 @@ $(document).on('click', '.rating_movie_container li a', function(e) {
 });
 
 
-/* 날짜 슬라이드 */
+ const sliderWrapper = document.querySelector('.slider_wrapper');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const timeSections = document.querySelectorAll('.time_section');
 
+  const startDate = new Date(2025, 6, 13); // 2025년 7월 13일
+  const endDate = new Date(2025, 6, 31);
+  const totalDays = (endDate - startDate) / (1000 * 60 * 60 * 24) + 1;
 
+  let currentSlide = 0;
+  const daysPerSlide = 8;
 
+  // 요일 배열
+  const dayNames = ['일', '월', '화', '수', '목', '금', '토'];
 
+  // 날짜 슬라이드 생성
+  function generateSlides() {
+    sliderWrapper.innerHTML = ''; // 초기화
 
+    const slideCount = Math.ceil(totalDays / daysPerSlide);
 
+    for (let i = 0; i < slideCount; i++) {
+      const slideGroup = document.createElement('div');
+      slideGroup.classList.add('slide_group');
+
+      for (let j = 0; j < daysPerSlide; j++) {
+        const dayIndex = i * daysPerSlide + j;
+        const date = new Date(startDate);
+        date.setDate(startDate.getDate() + dayIndex);
+
+        if (date > endDate) break;
+
+        const day = date.getDate();
+        const weekday = dayNames[date.getDay()];
+
+        const slide = document.createElement('div');
+        slide.classList.add('slide');
+        slide.innerHTML = `<a href="#" data-day="${day}"><span>${day}</span><span>${weekday}</span></a>`;
+        slideGroup.appendChild(slide);
+      }
+
+      sliderWrapper.appendChild(slideGroup);
+    }
+
+    updateSlideView();
+  }
+
+  // 슬라이드 뷰 업데이트
+  function updateSlideView() {
+    const slideGroups = document.querySelectorAll('.slide_group');
+    slideGroups.forEach((group, index) => {
+      group.style.display = index === currentSlide ? 'flex' : 'none';
+    });
+  }
+
+  // 버튼 이벤트
+  prevBtn.addEventListener('click', () => {
+    if (currentSlide > 0) {
+      currentSlide--;
+      updateSlideView();
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    const maxSlide = Math.ceil(totalDays / daysPerSlide) - 1;
+    if (currentSlide < maxSlide) {
+      currentSlide++;
+      updateSlideView();
+    }
+  });
+
+  // 날짜 클릭 이벤트 처리
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('.slide a')) {
+      e.preventDefault();
+      const clicked = e.target.closest('.slide a');
+      const selectedDay = clicked.dataset.day;
+
+      // 모든 a에서 active 제거
+      document.querySelectorAll('.slide a span:first-child').forEach(el => el.classList.remove('active'));
+
+      // 현재 클릭된 날짜에 active
+      clicked.querySelector('span:first-child').classList.add('active');
+
+      // 모든 time_section 숨기고 active 제거
+      timeSections.forEach(section => {
+        section.style.display = 'none';
+        section.classList.remove('active');
+      });
+
+      // 선택한 날짜에 해당하는 time_section만 보이게
+      const targetSection = document.querySelector(`.time_section[data-day="${selectedDay}"]`);
+      if (targetSection) {
+        targetSection.style.display = 'block';
+        targetSection.classList.add('active');
+      }
+    }
+  });
+
+  generateSlides();
 
 
 

@@ -6,8 +6,4 @@ $(document).ready(function () {
 
 
 
- $.getJSON('./json/ticket_seat.json', function (data) {
-
-  }); 
-
 
