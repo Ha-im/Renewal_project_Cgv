@@ -374,6 +374,11 @@ h3{
 	width: 500px;
 	border-left: 1px solid #434343;
 }
+
+.slide_group{
+	display: flex;
+	gap: 18px;
+}
 /* 날짜 영역 끝 */
 
 /* 다음 페이지 버튼 */
@@ -397,6 +402,18 @@ h3{
 }
 /* 다음 페이지 버튼  끝 */
 /* display */
+
+
+
+.time_section {
+  display: none;
+}
+.time_section.active {
+  display: block;
+}
+
+
+
 
 
 /* 태블릿 이하 (1024px 이하) */
