@@ -1,29 +1,7 @@
+
 [
     {
-        "title": "쥬라기 월드",
-        "reservation": "15.5%",
-        "runtime": 125,
-        "rating": 4.8,
-        "description": "지구 최상위 포식자가 된 공룡들이 인간 세상으로 나온 5년 후, 인간과 공룡의 위태로운 공존이 이어지는 가운데 인류를 구할 신약 개발을 위해 육지, 하늘, 바다를 지배하는 가장 거대한 공룡들의 DNA가 필요하게 된다",
-        "thumburl": "images/movies/jurassic.jpg",
-        "alt": "쥬라기 월드",
-        "like": 889,
-        "movieurl": "media/jurassic.mp4",
-        "age": "rating19"
-    },
-    {
-        "title": "F1, 더 무비",
-        "reservation": "13.7%",
-        "runtime": 165,
-        "rating": 4.2,
-        "description": "한때 주목받는 유망주였지만 끔찍한 사고로 F1에서 우승하지 못하고한순간에 추락한 드라이버 '소니 헤이스'(브래드 피트).그의 오랜 동료인'루벤 세르반테스'(하비에르 바르뎀)에게레이싱 복귀를 제안받으며 최하위 팀인 APXGP에 합류한다.",
-        "thumburl": "images/movies/f1.jpg",
-        "alt": "f1",
-        "like": 754,
-        "movieurl": "media/f1.mp4",
-        "age": "rating15"
-    },
-    {
+        "id": "noise",
         "title": "노이즈",
         "reservation": "10.2%",
         "runtime": 150,
@@ -36,6 +14,33 @@
         "age": "rating15"
     },
     {
+        "id": "f1-the-movie",
+        "title": "F1, 더 무비",
+        "reservation": "13.7%",
+        "runtime": 165,
+        "rating": 4.2,
+        "description": "한때 주목받는 유망주였지만 끔찍한 사고로 F1에서 우승하지 못하고한순간에 추락한 드라이버 '소니 헤이스'(브래드 피트).그의 오랜 동료인'루벤 세르반테스'(하비에르 바르뎀)에게레이싱 복귀를 제안받으며 최하위 팀인 APXGP에 합류한다.",
+        "thumburl": "images/movies/f1.jpg",
+        "alt": "f1",
+        "like": 754,
+        "movieurl": "media/f1.mp4",
+        "age": "rating15"
+    },
+    {
+        "id": "jurassic-world",
+        "title": "쥬라기 월드",
+        "reservation": "15.5%",
+        "runtime": 125,
+        "rating": 4.8,
+        "description": "지구 최상위 포식자가 된 공룡들이 인간 세상으로 나온 5년 후, 인간과 공룡의 위태로운 공존이 이어지는 가운데 인류를 구할 신약 개발을 위해 육지, 하늘, 바다를 지배하는 가장 거대한 공룡들의 DNA가 필요하게 된다",
+        "thumburl": "images/movies/jurassic.jpg",
+        "alt": "쥬라기 월드",
+        "like": 889,
+        "movieurl": "media/jurassic.mp4",
+        "age": "rating19"
+    },
+    {
+        "id": "elio",
         "title": "엘리오",
         "reservation": "9.5%",
         "runtime": 119,
@@ -48,6 +53,7 @@
         "age": "ratingall"
     },
     {
+        "id": "zombie-daughter",
         "title": "좀비딸",
         "reservation": "15.5%",
         "runtime": 132,
@@ -60,6 +66,7 @@
         "age": "ratingall"
     },
     {
+        "id": "super-man",
         "title": "수퍼맨",
         "reservation": "22.5%",
         "runtime": 122,

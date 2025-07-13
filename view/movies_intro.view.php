@@ -8,16 +8,25 @@
 
     // 삼항 연산자
     //intval()값을 정수형 데이터로 변경합니다. 보안상 중요한 역할을 합니다.
-    $id = isset($_GET['id']) ? intval($_GET['id']) : -1;
+    // $id = isset($_GET['id']) ? intval($_GET['id']) : -1;
+    $slug = isset($_GET['id']) ? $_GET['id'] : '';
 
     //php문에서의 유효성 검사
-    if (!isset($data[$id])) {
-        die("유효하지 않은 영화 ID입니다.");
+    // if (!isset($data[$id])) {
+    //     die("유효하지 않은 영화 ID입니다.");
+    // }
+    $movie = null;
+    foreach ($data as $item) {
+        if ($item->id === $slug) {
+            $movie = $item;
+            break;
+        }
     }
+
 
     // 여기서 $data는 json의 전체 데이터 입니다.
     // 전체 데이터중 $id번째 해당하는 데이터를 가져옵니다.
-    $movie = $data[$id];
+    // $movie = $data[$id];
     // echo "<pre>";
     // print_r($movie);
     // echo "</pre>";

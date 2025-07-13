@@ -108,7 +108,7 @@
                                     <p class="mv_text">
                                         <?= $item->description?>
                                     </p>
-                                    <a href="movies_intro.php?id=<?=$idx?>" class="empty_btn">상세 보기</a>
+                                    <a href="movies_intro.php?id=<?=$item->id?>" class="empty_btn">상세 보기</a>
                                 </div>
                             </div>
                             <div class="mv_info_box">
