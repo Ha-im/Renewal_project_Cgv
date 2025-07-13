@@ -69,9 +69,9 @@ session_start(); // 세션 시작
     <nav class="menu">
       <ul class="gnb">
         <li class="on">
-          <a href="#">영화</a>
+          <a href="movies.php">영화</a>
           <ul class="lnb">
-            <li><a href="#">영화순위</a></li>
+            <li><a href="movies.php">영화순위</a></li>
             <li><a href="#">아트하우스</a></li>
           </ul>
         </li>
