@@ -1,5 +1,4 @@
 
-
 <main class="main_container">
 
 <!-- 극장 > 전체 리스트 -->
