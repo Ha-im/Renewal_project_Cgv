@@ -1,0 +1,74 @@
+[
+    {
+        "title": "쥬라기 월드",
+        "reservation": "15.5%",
+        "runtime": 125,
+        "rating": 4.8,
+        "description": "지구 최상위 포식자가 된 공룡들이 인간 세상으로 나온 5년 후, 인간과 공룡의 위태로운 공존이 이어지는 가운데 인류를 구할 신약 개발을 위해 육지, 하늘, 바다를 지배하는 가장 거대한 공룡들의 DNA가 필요하게 된다",
+        "thumburl": "images/movies/jurassic.jpg",
+        "alt": "쥬라기 월드",
+        "like": 889,
+        "movieurl": "media/jurassic.mp4",
+        "age": "rating19"
+    },
+    {
+        "title": "F1, 더 무비",
+        "reservation": "13.7%",
+        "runtime": 165,
+        "rating": 4.2,
+        "description": "한때 주목받는 유망주였지만 끔찍한 사고로 F1에서 우승하지 못하고한순간에 추락한 드라이버 '소니 헤이스'(브래드 피트).그의 오랜 동료인'루벤 세르반테스'(하비에르 바르뎀)에게레이싱 복귀를 제안받으며 최하위 팀인 APXGP에 합류한다.",
+        "thumburl": "images/movies/f1.jpg",
+        "alt": "f1",
+        "like": 754,
+        "movieurl": "media/f1.mp4",
+        "age": "rating15"
+    },
+    {
+        "title": "노이즈",
+        "reservation": "10.2%",
+        "runtime": 150,
+        "rating": 4,
+        "description": " 내 집 마련에 성공한 주영과 주희 어느 날부터 아파트 어딘가에서 들려오는 정체불명의 층간소음에 시달린다. 그러던 중 동생 주희와 연락이 끊기자 불안에 휩싸인 주영은 급히 지방 공장에서 집으로 돌아오고 주희의 남자친구 기훈과 함께 실종된 동생을 추적하기 시작한다",
+        "thumburl": "images/movies/noise.jpg",
+        "alt": "노이즈",
+        "like": 692,
+        "movieurl": "media/noise.mp4",
+        "age": "rating15"
+    },
+    {
+        "title": "엘리오",
+        "reservation": "9.5%",
+        "runtime": 119,
+        "rating": 4.9,
+        "description": "“나도 어딘가에 속하고 싶어” 세상 그 어디에서도 소속감을 느끼지 못한 채, 외계인의 납치를 꿈꾸는 외톨이 소년 엘리오. 그러던 어느 날 작은 오해로 인해 지구 대표로 우주에 소환되고, 그곳에서 자신과는 너무도 다른 특별한 존재 글로든을 만나 처음으로 마음을 나눌 친구를 갖게 된다.",
+        "thumburl": "images/movies/elio.jpg",
+        "alt": "엘리오",
+        "like": 998,
+        "movieurl": "media/elio.mp4",
+        "age": "ratingall"
+    },
+    {
+        "title": "좀비딸",
+        "reservation": "15.5%",
+        "runtime": 132,
+        "rating": 4.2,
+        "description": "'나의 딸은 좀비다. 이 세상 마지막 남은 유일한 좀비' 댄스 열정을 불태우는 사춘기 딸 ‘수아’와 함께 티격태격 일상을 보내는 맹수 전문 사육사 ‘정환’ 어느 날 전 세계를 강타한 좀비 바이러스에 감염된 딸 '수아'를 지키기 위해 '정환'은 어머니 '밤순'이 사는 바닷가 마을 '은봉리'로 ‘수아’와 함께 향한다.",
+        "thumburl": "images/movies/zombie_daughter.jpg",
+        "alt": "좀비딸",
+        "like": 423,
+        "movieurl": "media/zombie.mp4",
+        "age": "ratingall"
+    },
+    {
+        "title": "수퍼맨",
+        "reservation": "22.5%",
+        "runtime": 122,
+        "rating": 4.9,
+        "description": "‘슈퍼맨’은 오늘도 세계 곳곳의 위협에 맞서 싸우지만, 시민들의 반응은 극과 극으로 갈린다. 한편, ‘렉스 루터’는 ‘슈퍼맨’을 무너뜨릴 비밀을 손에 넣고 역대 최강의 슈퍼-빌런들과 함께 총 공격에 나선다.‘슈퍼맨’은 첫 패배와 함께 이들의 계속된 공세에 직면하고모든 것을 바로잡기 위해 슈퍼독 ‘크립토’와 함께 맞서게 되는데...과연 그는 이 전례 없는 위기에서 다시 날아오를 수 있을까?",
+        "thumburl": "images/movies/super_man.jpg",
+        "alt": "수퍼맨",
+        "like": 999,
+        "movieurl": "media/super_man.mp4",
+        "age": "ratingall"
+    }
+]
