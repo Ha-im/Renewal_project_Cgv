@@ -189,25 +189,25 @@
           <h5>영화, 그이상의 경험 스페셜 시네마</h5>
           <div class="cinemaspecial">
             <div class="item">
-              <a href="" data-bg="images/cinema/livingroom.png">CINE &amp; LIVINGROOM</a>
+              <a href="" data-bg="images/cinema/livingroom.jpg">CINE &amp; LIVINGROOM</a>
               <span class="material-symbols-outlined">
                 arrow_forward_ios
               </span>
             </div>
             <div class="item">
-              <a href="" data-bg="images/cinema/suite.png">SUITE CINEMA</a>
+              <a href="" data-bg="images/cinema/suite.jpg">SUITE CINEMA</a>
               <span class="material-symbols-outlined">
                 arrow_forward_ios
               </span>
             </div>
             <div class="item">
-              <a href="" data-bg="images/cinema/4dx.png">4DX</a>
+              <a href="" data-bg="images/cinema/4dx.jpg">4DX</a>
               <span class="material-symbols-outlined">
                 arrow_forward_ios
               </span>
             </div>
             <div class="item">
-              <a href="" data-bg="images/cinema/chef.png">CINE de CHEF</a>
+              <a href="" data-bg="images/cinema/chef.jpg">CINE de CHEF</a>
               <span class="material-symbols-outlined">
                 arrow_forward_ios
               </span>
