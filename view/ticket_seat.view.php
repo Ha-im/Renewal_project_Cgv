@@ -24,16 +24,15 @@
         <h2 class="movie_title">바람계곡의 나우시카</h2>
         <div class="input_number_section">
           <div class="ticket_num">
-          <div class="ticket_controls">
             <!-- 인원 입력 -->
-          </div>
-          </div>
-          
+        </div>
           <div class="total">
             <span>총 합계</span>
             <span class="price">0</span>
             <span>원</span>
           </div>
+
+          
         
         </div>
 
@@ -338,9 +337,6 @@
       </div>
 
     </div>
-seat.view
-
-
 
 
 
