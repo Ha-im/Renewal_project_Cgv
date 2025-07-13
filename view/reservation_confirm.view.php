@@ -26,11 +26,14 @@
     <div class="total_price">
         <span>주문금액</span><span>36000</span><span>원</span>
     </div>
-    <button class="mobile_ticket_btn">모바일 티켓 받기</button>
+    <button class="mobile_ticket_btn" onclick="alert('휴대폰으로 전송되었습니다.')">모바일 티켓 받기</button>
   </div>
 
   <div class="move_btn">
-    <a href="" class="home_page">홈으로</a>
+    <a href="index.php" class="home_page" >홈으로</a>
     <a href="" class="my_page">마이페이지</a>
   </div>
     </div>
+<button type="button" class="next_page" onclick="location.href='http://localhost/Renewal_project_Cgv/reservation_confirm.php'">
+            다음
+          </button>

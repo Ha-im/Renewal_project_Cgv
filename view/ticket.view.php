@@ -199,6 +199,7 @@
       </div>
   </div>
 
-  
-<button class="next_page">다음</button>
+<button type="button" class="next_page" onclick="location.href='http://localhost/Renewal_project_Cgv/ticket_seat.php'">
+  다음
+</button>
 </main>

@@ -95,7 +95,7 @@ $username = $isLoggedIn ? $_SESSION['username'] : null;
         <li>
           <a href="#">예매</a>
           <ul class="lnb">
-            <li><a href="#">빠른예매</a></li>
+            <li><a href="ticket.php">빠른예매</a></li>
           </ul>
         </li>
         <li>

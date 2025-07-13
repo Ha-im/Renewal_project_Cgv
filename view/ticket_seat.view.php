@@ -331,8 +331,11 @@
 
 
         <div class="move_btn">
-          <button class="prev_page"><span class="material-symbols-outlined">chevron_left</span>이전</button>
-          <button class="next_page">결제하기</button>
+          <button type="button" class="prev_page" onclick="location.href='http://localhost/Renewal_project_Cgv/ticket.php'"><span class="material-symbols-outlined">chevron_left</span>이전</button>
+
+          <button type="button" class="next_page" onclick="location.href='http://localhost/Renewal_project_Cgv/reservation_confirm.php'">
+            다음
+          </button>
         </div>
       </div>
 
