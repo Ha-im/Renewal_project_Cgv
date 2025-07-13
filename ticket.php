@@ -8,10 +8,10 @@
 require_once('inc/function.php');
 
  $commonCss = '<link rel="stylesheet" href="./css/common.css">';
- $signupCss = '<link rel="stylesheet" href="./css/signup.css">';
- $commonJs = '<script src=./>js/common.js"></script>';
- $signupJs= '<script src="./js/signup.js"></script>';
+ $ticketCss = '<link rel="stylesheet" href="./css/ticket.css">';
+ $commonJs = '<script src=./js/common.js></script>';
+ $ticketJs= '<script src="./js/ticket.js"></script>';
  
- subpageView('ticket','영화예매', $commonCss, $signupCss,'', $commonJs, $signupJs, '');
+ subpageView('ticket','영화예매', $commonCss, $ticketCss,'', $commonJs, $ticketJs, '');
 
 ?>
