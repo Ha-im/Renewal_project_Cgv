@@ -958,7 +958,6 @@ body {
   position: absolute;
   top: 12px;
   left: 92%;
-  display: inline-flex;
   color: var(--fontColordisable);
   /* justify-content: center; */
   width: 24px;
@@ -1057,7 +1056,6 @@ body {
   border-radius: var(--m_radius);
   transition: all 0.3s ease;
   background: rgba(255, 255, 255, 0.07);
-
 }
 
 .appdown a:hover {
@@ -1083,7 +1081,34 @@ body {
   opacity: 0;
 
 }
-
+.appdown_modal{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 600px;
+  height: 760px;
+  background-color: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display:none;
+}
+.appdown_box img{
+  width: 300px;
+  height: 320px;
+}
+.appdown_modal_close {
+  background: none;
+  border: none;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 500px;
+  right: 500px;
+  z-index: 9999;
+}
 
 @keyframes Float {
 
@@ -1321,9 +1346,6 @@ body {
   .app {
     gap: 30px;
   }
-  .search_container .search_btn {
-    left: 90%;
-  }
   .movie_rank {
     width: 100%;
   }
@@ -1458,9 +1480,9 @@ body {
   .tag_box a {
     padding: 8px 18px;
   }
-}
-.search_container .search_btn {
-  left: 75%;
+  .search_container .search_btn {
+    left: 74%;
+  }
 }
 
 /* 모바일 (500px 이하) */

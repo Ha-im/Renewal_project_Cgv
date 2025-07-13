@@ -592,3 +592,6 @@ popupCloseBtn.on('click', function () {
   }
   mypopup.removeClass('active');
 }); 
+
+
+/* 앱다운 모달 */
