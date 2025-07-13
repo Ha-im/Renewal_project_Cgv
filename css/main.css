@@ -49,7 +49,10 @@ body {
   left: -200px;
   opacity: 0;
 }
-
+.main_banner .content_box .text_box{
+  width : 500px;
+  text-align: justify;
+}
 .content_box .text_box {
   margin-bottom: 30px;
 }
