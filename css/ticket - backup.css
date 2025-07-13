@@ -4,25 +4,13 @@ body{
 	font-size:14px;
 	font: 15px/24px "Noto Sans KR", sans-serif;
 }
-/*상영관 json 파일 css*/
-.list_location{
-	display:flex;
-}
-.list_location a.active{
-	color:red;
-}
-.main_container{
-	display: flex;
-	width: 1280px;
+.main_container {
+	max-width: 1280px;
 	margin: 144px auto 76px;
 	position: relative;
 }
-
-/* 좌측 탭 */
-.booking_step{
-	position: absolute;
-	left: 0;
-	top: 60px;
+.booking_container {
+	background-color: #1B1B1B;
 }
 .booking_tab {
 	/* flex: 1; */
@@ -38,56 +26,71 @@ body{
 .booking_tab.active {
 	background-color: #FF243E;
 }
-/* 좌측 탭 끝 */
-
-/* 극장 영역 */
-.list_location{
-	height: 34px;
-}
-.list_location a{
-	padding-left: 16px;
-	line-height: 34px;
-	font-size: 14px;
-}
-.list_location span:last-child{
-	color: #666666;
-}
-.cinema_section{
-	position: relative;
-	background-color: #1B1B1B;
-	width: 430px;
-	height: 860px;
+.booking_header{
+	display: flex;
+	min-width: 1280px;
+	background-color: #121212;
+	color: var(--light_white);
 }
 .header{
-	text-align: center;
-	font-size: 18px;
-  line-height: 60px;
-	background-color: #121212;
-}
-.cinema_section .header{
-	width: 430px;
+	position: relative;
 	height: 60px;
+	text-align: center;
+	padding: 18px;
+	font-size: 18px;
+  line-height: 24px;
+}
+.header_1 {
+  width: 430px;
+	border-right: 1px solid #434343;
+}
+.header_2 {
+  width: 350px;
+	border-right: 1px solid #434343;
+}
+.header_3 {
+  width: 500px;
+}
+
+/* 영화예매 컨텐츠 영역 */
+.tab_button{
+	position: absolute;
+	display: flex;
+	top: 60px;
+	left: 80px;
+}
+.movie_section .tab_button{
+	left: 430px;
+}
+.cinema_tab_btn{
+	border: none;
+	background-color: #1B1B1B;
+	width: 350px;
+	height: 60px;
+	color: var(--white);
+	border: 1px solid #434343;
 }
 .tab_btn{
-	background-color: #1B1B1B;
-	border: 1px solid #434343;
-	text-align: center;
-	line-height: 60px;
-}
-.cinema_tab{
-	position: absolute;
-	left: 80px;
-	width: 351px;
+	border: none;
+	background-color: #262525;
+	width: 175px;
 	height: 60px;
+	color: #767575;
+	border: 1px solid #434343;
 }
+.tab_btn.active{
+	background-color: #1B1B1B;
+	color: var(--white);
+}
+
+/* 극장 list */
 .cinema_list{
 	position: absolute;
 	left: 80px;
 	top: 120px;
 }
-
 .cinema_area_list > ul {
-	width: 350px;
+	width: 351px;
 }
 .cinema_area_list li{
 	display: flex;
@@ -99,15 +102,14 @@ body{
 	width: 175px;
 	padding-left: 20px;
 }
-.list_location a.active {
+.cinema_area_list a.active{
 	background-color: #262525;
-	color: var(--primary_color);
 }
 .cinema_area_list a span:nth-of-type(2){
 	color: #767575;
 }
 .area_cinema_list a{
-	padding-left: 16px;
+	padding-left: 20px;
 	background-color: transparent;
 }
 .area_cinema_list a.active{
@@ -135,79 +137,72 @@ body{
   background: #868686;
   border-radius: 10px;
 }
-/* 극장 영역 끝 */
 
-/* 영화 영역 */
-.movie_section{
-	background-color: #1B1B1B;
-	width: 351px;
-	height: 860px;
-}
-.movie_section .header{
-	width: 350px;
-	height: 60px;
-	border-left: 1px solid #434343;
-}
-.tab_button{
-	display: flex;
-	gap: 0;
-}
-.tab_movie{
-	border: none;
-	background-color: #262525;
-	width: 176px;
-	height: 60px;
-	color: #767575;
-	border: 1px solid #434343;
-}
-.tab_movie.active{
-	background-color: #1B1B1B;
-	color: var(--white);
-}
-.area_cinema_list .content{
+
+/* 영화 list */
+.movie_list{
 	position: absolute;
-	top: 0;
+	left: 430px;
+	top: 120px;
 }
-.content li{
-	display: flex;
+.movie_list > ul {
+	width: 350px;
 }
+.movie_list li{
+	height: 34px;
+	font-size: 14px;
+	line-height: 34px;
+	position: relative;
+}
+.movie_list li a{
+	padding-left: 40px;
+}
+/* age icon */
 .rating_icon{
   width: var(--icon_s_w);
   height: var(--icon_s_h);
+  position: absolute;
+  top: 5px;
   color: var(--white);
   font: var(--rating_number);
   border-radius: var(--icon_radius);
   text-align: center;
   padding-top: 6px;
-	margin-top: 5px;
 	margin-left: 10px;
 }
+
 .rating_icon19{
   content: '19';
   background-color: var(--rating19);
 }
+
 .rating_icon15{
   content: '15';
   background-color: var(--rating15);
 }
+
 .rating_icon12{
   content: '12';
   background-color: var(--rating12);
 }
+
 .rating_iconall{
   content: 'All';
   background-color: var(--ratingAll);
 }
+
 .movie_list a {
   display: block;
   height: 34px;
-  padding-left: 12px;
+  padding-left: 30px;
   background-color: #1B1B1B;
 	line-height: 34px;
 }
-.movie_list li.active {
+.movie_list a.active {
+  background-color: #262525;
   border: 2px solid #fff;
 	box-sizing: border-box;
+	width: 98.3%;
 }
 .movie_list .content{
 	width: 350px;
@@ -221,10 +216,8 @@ body{
 .movie_list .content.scroll-y{
 	overflow-x: hidden;
 }
-/* 영화 영역 끝 */
 
-
-/* 날짜 영역 */
+/* 날짜 선택 */
 .calendar_container{
 	
 }
@@ -283,9 +276,8 @@ body{
 	color: var(--light_white);
 	font-size: 14px;
 	font-weight: 400;
+	padding-top: ;
 }
-
-
 .nav_btn {
   width: 40px;
   height: 40px;
@@ -317,11 +309,10 @@ body{
 	position: absolute;
 	left: 800px;
 	top: 175px;
-	padding: 20px 0 0 0;
+	padding: 24px 0 0 0;
 }
 .movie_title{
-	display: flex;
-	gap: 12px;
+	padding-left: 30px;
 	padding-bottom: 20px;
 	font-size: 15px;
 	font-weight: bold;
@@ -347,7 +338,6 @@ body{
   background-color: #FFD9D9;
   border: 2px solid red;
 	box-sizing: border-box;
-	height: 50px;
 }
 .time{
 	font-size: 15px;
@@ -361,32 +351,15 @@ body{
 	font-size: 12px;
 	color: var(--black);
 }
-h2{
-	margin-top: 5px;
-	line-height: 24px;
-}
 h3{
 	font-size: 13px;
 	line-height: 24px;
 	padding-bottom: 5px;
 	color: var(--light_white);
 }
-.header_3{
-	width: 500px;
-	border-left: 1px solid #434343;
-}
-
-.slide_group{
-	display: flex;
-	gap: 18px;
-}
-/* 날짜 영역 끝 */
-
-/* 다음 페이지 버튼 */
 .next_page{
 	position: absolute;
 	width: 104px;
-	height: 48px;
 	left: 1160px;
 	bottom: 24px;
 	background-color: var(--primary_color);
@@ -401,43 +374,26 @@ h3{
 .next_page:hover{
 	background-color: var(--fill_hover_color);
 }
-/* 다음 페이지 버튼  끝 */
-/* display */
-
-
-
-.time_section {
-  display: none;
-}
-.time_section.active {
-  display: block;
-}
-
-
-
-
 
 /* 태블릿 이하 (1024px 이하) */
-@media screen and (max-width:1280px) {
-	body{
-		width:100%;
+@media screen and (max-width: 1024px) {
+	.main_container{
+		width: 780px;
+		margin:0 auto;
 	}
-	.tab_movie{
-		width:100%;
-		padding:0 20px
+	.booking_header{
+		min-width:780px;
 	}
-	.date_section{
-		width: 100%;
-		display: none;
+	.booking_container{
+		width:780px
 	}
-	.next_page{
-		position: absolute;
-		bottom: -72px;
-		left: 676px;
+	.date_section, .time_section,.header .header_3, .date{
+		display:none;
 	}
+
 
 }
 /* 모바일 (768px 이하) */
-@media screen and (max-width: 725px) {
+@media screen and (max-width: 768px) {
 
 }

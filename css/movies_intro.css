@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+}
+
+.con_title {
+    color: var(--white);
+    margin-bottom: 24px;
+    padding-left: 16px;
+    font-size: 26px;
+}
+
+/* banner */
+.banner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    height: 100%;
+    position: relative;
+    z-index: 50;
+}
+
+.moive_box {
+    position: absolute;
+    left: 0;
+    bottom: 18%;
+}
+
+.moive_box .title {
+    margin-bottom: 10px;
+}
+
+.special_cinema {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.special_cinema .cinema_icon {
+    width: 96px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+}
+
+.info_box {
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.info_box p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.content_body {
+    margin-bottom: 30px;
+}
+
+.video_banner {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.video_banner::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.video_banner video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* //banner */
+
+
+/* movie_list */
+.movie_intro {
+    background-color: var(--black);
+    /* outline: 20px solid red; */
+    position: relative;
+
+}
+
+.movie_intro .container {
+    padding: 50px 0;
+}
+
+.tab_menu {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.tab_menu li a {
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--white);
+}
+
+.tab_menu li.on a {
+    color: var(--primary_color);
+}
+
+.content_wrapper {}
+
+.tab_content {}
+
+.tab_content article {
+    margin-bottom: 96px;
+    position: relative;
+}
+.tab_content article:first-child::after{
+    display: none;
+}
+.tab_content article::after{
+    content: '';
+    display: block;
+    width : 100%;
+    height : 1px;
+    background-color: #eee;
+    position : absolute;
+    top : -48px;
+}
+.mv_summary {
+    color: var(--white);
+}
+
+.mv_summary .sum_title {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.mv_summary .sum_text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+.mv_summary .sum_bold b {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.mv_chart {
+    display: flex;
+    gap: 24px;
+}
+
+.mv_chart .chart_item {
+    width: 50%;
+}
+
+.chart_title {
+    text-align: center;
+    font-size: 28px;
+    color: var(--white);
+    margin-bottom: 24px;
+}
+
+#myChart {
+    width: 300px;
+    height: 300px;
+}
+
+
+
+.trailer_wrapper {
+    width: 100%;
+    display: flex;
+    gap: 24px;
+}
+
+.trailer_wrapper .trailer_item {
+    position: relative;
+
+}
+
+.trailer_wrapper .trailer_item .trailer_title {
+    color: var(--white);
+    margin-bottom: 8px;
+}
+
+.video_box {
+    position: relative;
+}
+
+.video_box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play_cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: 0.3s;
+    z-index: 10;
+
+}
+
+.play_cover:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.play_cover svg {
+    width: var(--icon_m_w);
+    height: var(--icon_m_h);
+    transition: 0.3s;
+}
+
+.play_cover:hover svg {
+    fill: var(--primary_color);
+}
+
+
+/* slide */
+.view {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide_container {
+    display: flex;
+    gap: 24px;
+    position: relative;
+    /* outline: 10px solid blueviolet; */
+    width: 300%;
+    left: -100%
+}
+
+.slide_item {
+    width: 100%;
+}
+
+.mv_still_cut .img_box {
+    width: 100%;
+    /* outline: 5px solid red; */
+}
+
+.mv_still_cut .img_box img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.slide_btn_box {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.slide_btn {
+    background-color: transparent;
+    border: 1px solid #BBBBBB;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    color: #BBBBBB;
+    transition: 0.3s;
+}
+
+.slide_btn:hover {
+    background-color: rgba(271, 271, 271, 0.1);
+}

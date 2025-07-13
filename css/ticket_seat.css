@@ -1,12 +1,10 @@
-body {
+body{
 	background: #3B3B3B;
-	color: #fff;
-	font-size: 14px;
+	color:#fff;
+	font-size:14px;
 	font: 15px/24px "Noto Sans KR", sans-serif;
 }
-
 .main-container {
-	width: 100%;
 	max-width: 1280px;
 	margin: 144px auto 76px;
 	position: relative;
