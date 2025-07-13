@@ -595,3 +595,14 @@ popupCloseBtn.on('click', function () {
 
 
 /* 앱다운 모달 */
+//모달 띄우기
+$('.appdown a').on('click', function (e) {
+  e.preventDefault();
+  $('#appdown_modal').fadeIn(500);
+})
+$('#appdown_closeModal').on('click', function () {
+  $('#appdown_modal').hide();
+})
+$('#appdown_modal').on('click', function () {
+  $('#appdown_modal').hide();
+})
