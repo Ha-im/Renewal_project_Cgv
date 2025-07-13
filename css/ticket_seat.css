@@ -146,8 +146,7 @@ body {
 
 /* 인원수 입력 */
 .input_number_section {
-	display: flex;
-	gap: 24px;
+	
 	left: 476px;
 	top: 320px;
 	position: absolute;
@@ -156,7 +155,10 @@ body {
 	background-color: #121212;
 	padding: 12px 20px;
 }
-
+.ticket_num{
+display: flex;
+	gap: 24px;
+}
 .ticket_controls {
 	display: flex;
 	align-items: center;

@@ -27,7 +27,7 @@
 
         <!-- 인원수 입력 -->
         <div class="input_number_section">
-
+          <div class="ticket_num">
           <div class="ticket_controls">
             <span>성인</span>
             <button class="counter_btn" id="plusBtn">
@@ -39,7 +39,7 @@
             </button>
           </div>
           <div class="ticket_controls">
-            <span>성인</span>
+            <span>청소년</span>
             <button class="counter_btn" id="plusBtn">
               <span class="material-symbols-outlined">add</span>
             </button>
@@ -49,7 +49,7 @@
             </button>
           </div>
           <div class="ticket_controls">
-            <span>성인</span>
+            <span>경로</span>
             <button class="counter_btn" id="plusBtn">
               <span class="material-symbols-outlined">add</span>
             </button>
@@ -59,7 +59,7 @@
             </button>
           </div>
           <div class="ticket_controls">
-            <span>성인</span>
+            <span>장애인석</span>
             <button class="counter_btn" id="plusBtn">
               <span class="material-symbols-outlined">add</span>
             </button>
@@ -70,9 +70,10 @@
           </div>
           <div class="total">
             <span>총 합계</span>
-            <span class="price">13000</span>
+            <span class="price">0</span>
             <span>원</span>
           </div>
+        </div>
         </div>
 
         <div class="select_container">
@@ -85,9 +86,9 @@
               <div class="seat-row">
                 <div class="row-label">A</div>
                 <div class="seat-group">
-                  <button class="seat disabled" id="A1">1</button>
-                  <button class="seat disabled" id="A2">2</button>
-                  <button class="seat disabled" id="A3">3</button>
+                  <button class="seat disabled" id="A1"></button>
+                  <button class="seat disabled" id="A2"></button>
+                  <button class="seat disabled" id="A3"></button>
                   <button class="seat" id="A4">4</button>
                   <button class="seat" id="A5">5</button>
                   <button class="seat" id="A6">6</button>
@@ -102,10 +103,10 @@
                   <button class="seat" id="A15">15</button>
                 </div>
                 <div class="seat-group right">
-                  <button class="seat disabled" id="A16">16</button>
-                  <button class="seat disabled" id="A17">17</button>
-                  <button class="seat disabled" id="A18">18</button>
-                  <button class="seat disabled" id="A19">19</button>
+                  <button class="seat disabled" id="A16"></button>
+                  <button class="seat disabled" id="A17"></button>
+                  <button class="seat disabled" id="A18"></button>
+                  <button class="seat disabled" id="A19"></button>
                 </div>
               </div>
               <!-- Row B -->
@@ -198,7 +199,7 @@
                 <div class="seat-group">
                   <button class="seat" id="E1">1</button>
                   <button class="seat" id="E2">2</button>
-                  <button class="seat disabled" id="E3">3</button>
+                  <button class="seat disabled" id="E3"></button>
                   <button class="seat" id="E4">4</button>
                   <button class="seat" id="E5">5</button>
                   <button class="seat" id="E6">6</button>
@@ -206,17 +207,17 @@
                   <button class="seat" id="E8">8</button>
                   <button class="seat" id="E9">9</button>
                   <button class="seat" id="E10">10</button>
-                  <button class="seat disabled" id="E11">11</button>
-                  <button class="seat disabled" id="E12">12</button>
-                  <button class="seat disabled" id="E13">13</button>
+                  <button class="seat disabled" id="E11"></button>
+                  <button class="seat disabled" id="E12"></button>
+                  <button class="seat disabled" id="E13"></button>
                   <button class="seat" id="E14">14</button>
                   <button class="seat" id="E15">15</button>
                 </div>
                 <div class="seat-group right">
-                  <button class="seat disabled" id="E16">16</button>
-                  <button class="seat disabled" id="E17">17</button>
-                  <button class="seat disabled" id="E18">18</button>
-                  <button class="seat disabled" id="E19">19</button>
+                  <button class="seat disabled" id="E16"></button>
+                  <button class="seat disabled" id="E17"></button>
+                  <button class="seat disabled" id="E18"></button>
+                  <button class="seat disabled" id="E19"></button>
                 </div>
               </div>
 
@@ -237,14 +238,14 @@
                   <button class="seat" id="F11">11</button>
                   <button class="seat" id="F12">12</button>
                   <button class="seat" id="F13">13</button>
-                  <button class="seat disabled" id="F14">14</button>
+                  <button class="seat disabled" id="F14"></button>
                   <button class="seat" id="F15">15</button>
                 </div>
                 <div class="seat-group right">
-                  <button class="seat disabled" id="F16">16</button>
-                  <button class="seat disabled" id="F17">17</button>
-                  <button class="seat disabled" id="F18">18</button>
-                  <button class="seat disabled" id="F19">19</button>
+                  <button class="seat disabled" id="F16"></button>
+                  <button class="seat disabled" id="F17"></button>
+                  <button class="seat disabled" id="F18"></button>
+                  <button class="seat disabled" id="F19"></button>
                 </div>
               </div>
 
@@ -257,7 +258,7 @@
                   <button class="seat" id="G3">3</button>
                   <button class="seat" id="G4">4</button>
                   <button class="seat" id="G5">5</button>
-                  <button class="seat disabled" id="G6">6</button>
+                  <button class="seat disabled" id="G6"></button>
                   <button class="seat" id="G7">7</button>
                   <button class="seat" id="G8">8</button>
                   <button class="seat" id="G9">9</button>
@@ -270,7 +271,7 @@
                 </div>
                 <div class="seat-group right">
                   <button class="seat" id="G16">16</button>
-                  <button class="seat disabled" id="G17">17</button>
+                  <button class="seat disabled" id="G17"></button>
                   <button class="seat" id="G18">18</button>
                   <button class="seat" id="G19">19</button>
                 </div>
@@ -308,12 +309,12 @@
               <div class="seat-row">
                 <div class="row-label">I</div>
                 <div class="seat-group">
-                  <button class="seat disabled" id="I1">1</button>
-                  <button class="seat disabled" id="I2">2</button>
-                  <button class="seat disabled" id="I3">3</button>
-                  <button class="seat disabled" id="I4">4</button>
+                  <button class="seat disabled" id="I1"></button>
+                  <button class="seat disabled" id="I2"></button>
+                  <button class="seat disabled" id="I3"></button>
+                  <button class="seat disabled" id="I4"></button>
                   <button class="seat" id="I5">5</button>
-                  <button class="seat disabled" id="I6">6</button>
+                  <button class="seat disabled" id="I6"></button>
                   <button class="seat" id="I7">7</button>
                   <button class="seat" id="I8">8</button>
                   <button class="seat" id="I9">9</button>
@@ -325,7 +326,7 @@
                   <button class="seat" id="I15">15</button>
                 </div>
                 <div class="seat-group right">
-                  <button class="seat disabled" id="I16">16</button>
+                  <button class="seat disabled" id="I16"></button>
                   <button class="seat" id="I17">17</button>
                   <button class="seat" id="I18">18</button>
                   <button class="seat" id="I19">19</button>

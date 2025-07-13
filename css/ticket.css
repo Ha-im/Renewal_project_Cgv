@@ -349,6 +349,7 @@ body{
   background-color: #FFD9D9;
   border: 2px solid red;
 	box-sizing: border-box;
+	height: 50px;
 }
 .time{
 	font-size: 15px;

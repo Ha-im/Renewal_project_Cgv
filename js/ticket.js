@@ -195,19 +195,34 @@ $(document).on('click', '.rating_movie_container li a', function(e) {
       clicked.querySelector('span:first-child').classList.add('active');
 
       // 모든 time_section 숨기고 active 제거
-      timeSections.forEach(section => {
-        section.style.display = 'none';
-        section.classList.remove('active');
-      });
-
-      // 선택한 날짜에 해당하는 time_section만 보이게
-      const targetSection = document.querySelector(`.time_section[data-day="${selectedDay}"]`);
-      if (targetSection) {
-        targetSection.style.display = 'block';
-        targetSection.classList.add('active');
-      }
+     timeSections.forEach(section => {
+  section.style.display = 'block';
+});
     }
   });
+
+document.addEventListener('click',(e) => {
+  const timeButton = e.target.closest('time_select');
+  if(timeButton){
+    const timeSection = timeButton.closest('.time_section');
+
+    timeSection.querySelectorAll('.time_select').forEach(btn => btn.classList.remove('active'));
+
+    timeButton.classList.add('active');
+  }
+});
+
+
+document.addEventListener('click', (e) => {
+  const timeButton = e.target.closest('.time_select'); // ← 수정된 부분
+  if (timeButton) {
+    const timeSection = timeButton.closest('.time_section');
+
+    timeSection.querySelectorAll('.time_select').forEach(btn => btn.classList.remove('active'));
+
+    timeButton.classList.add('active');
+  }
+});
 
   generateSlides();
 

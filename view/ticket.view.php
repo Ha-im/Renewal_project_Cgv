@@ -94,7 +94,7 @@
   <div class="time_wrapper">
     <h3>2D</h3>
     <div class="time_container">
-      <button class="time_select active">
+      <button class="time_select">
         <div><span class="time">11:20</span></div>
         <div class="theater_data">
           <div class="seat">89/156</div>
