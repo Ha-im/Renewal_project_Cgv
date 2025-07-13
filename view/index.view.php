@@ -1,6 +1,5 @@
 <?php
-$isLoggedIn = isset($_SESSION['userid']);
-$username = $isLoggedIn ? $_SESSION['username'] : null;
+
 ?>
     <div id="fullpage">
     <!-- 01 영태 - 메인 -->
