@@ -188,7 +188,11 @@ if (file_exists($jsonFile)) {
     const index = Number(li.dataset.index);
     setSelected(index);
   });
+    document.getElementById('movieForm').addEventListener('submit', function(e) {
+    alert('수정되었습니다.');
+    // 폼은 그대로 제출됨
+  });
 </script>
 
 </body>
-</html>Q
+</html>

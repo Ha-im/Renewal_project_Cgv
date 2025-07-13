@@ -56,6 +56,7 @@ if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] != 1) {
       height: 100%;
       border: none;
     }
+    
   </style>
 </head>
 <body>
@@ -90,6 +91,14 @@ links.forEach(link => {
     frame.src = page;
   });
 });
+  if (window.self !== window.top) {
+    document.addEventListener("DOMContentLoaded", function () {
+      const sidebar = document.querySelector(".admin-sidebar");
+      if (sidebar) {
+        sidebar.remove();
+      }
+    });
+  }
   </script>
 </body>
 </html>
