@@ -1,3 +1,9 @@
+<?php
+require_once('inc/function.php');
+require_once('inc/db.php');
+
+
+?>
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -14,7 +20,7 @@
   <meta property="og:title" content="CGV Revamp" /> <!-- 웹페이지의 제목(title)을 sns에 표시할 때 사용 -->
   <meta property="og:description" content="Experience the Revamped CGV" /> <!-- 웹페이지의 설명(요약) 새롭게 바뀐 CGV를 경험해보세요  -->
   <meta property="og:image" content="images/header_logo.png" /> <!-- 대표 이미지 -->
-  <title>깊이 빠져 보다,CGV</title>
+  <title><?= $model; ?></title>
   <!-- favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="./images/login/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="./images/login/favicon/apple-icon-60x60.png">
@@ -40,36 +46,28 @@
     integrity="sha512-zEsr0FaQkbCw1KMhC6NZDSJs7N1li8k7bYI/FmZyiny2e+MzqJlxsisACg5BWkH/7E76+O8waOsQbF5/CDFRVw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- fontassom -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
-    integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <?= $css1 ?>
+  <?= $css2 ?>
+  <?= $css3 ?>
 
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/footer.css">
+
 
 </head>
 
 <body>
   <!-- 영태 -header- -->
   <header>
-
     <h1 class="logo">
-      <a href="index.html">
+      <a href="index.php">
         <span>CGV</span>
         <img src="images/header_logo.png" alt="CGV메인로고">
       </a>
     </h1>
-
     <nav class="menu">
-      <button class="res_menu_close_btn">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
-          <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-        </svg>
-      </button>
       <ul class="gnb">
         <li class="on">
           <a href="#">영화</a>
@@ -111,13 +109,11 @@
           </ul>
         </li>
       </ul>
-      <button class="res_login_btn">로그인</button>
     </nav>
-
     <div class="user_menu">
       <ul>
         <li>
-          <a href="login.html"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+          <a href="login.php"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
               fill="#FFFFFF">
               <path
                 d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z" />
@@ -147,334 +143,12 @@
         </li>
       </ul>
     </div>
-    <!-- responsive menu_btn -->
-    <button class="res_menu_btn">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+    <button class="gnb_toggle"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+        width="24px" fill="#FFFFFF">
         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-      </svg>
-    </button>
-    <button class="gnb_toggle">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
-        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-      </svg>
-    </button>
+      </svg></button>
   </header>
-
-  <div id="fullpage">
-    <!-- 01 영태 - 메인 -->
-    <div class="section main_banner">
-      <div class="container h_100 position_rel">
-        <div class="content_box" id="banner_content_box">
-          <div class="text_box">
-            <h2 class="title rating ratingall">28년 후</h2>
-            <p class="subtitle">&lt;28일 후 시작, 28주 후 전염, 28년 후 진화&gt;</p>
-            <p class="content_body">
-              28일 후 시작, 28주 후 전염, 28년 후 진화...<br>
-              태어나 처음 마주한 바이러스에 감염된 세상,<br>
-              충격을 넘어선 극강의 공포가 밀려온다!
-            </p>
-          </div>
-          <div class="btn_box">
-            <a href="#" class="empty_btn">상세 정보</a>
-            <a href="#" class="cta_btn">예매 하기</a>
-          </div>
-        </div>
-      </div>
-      <!--  video bg -->
-      <div class="video_banner">
-        <video autoplay muted loop>
-          <source src="media/banner.mp4">
-          <p>브라우저가 동영상 파일을 지원하지 않습니다.</p>
-        </video>
-      </div>
-    </div>
-
-    <!-- 02 연미 - 영화순위 -->
-    <div class="section movie_rank">
-      <div class="rank_contents">
-      <div class="container h_100 position_rel">
-        <div class="content_box" id="move_box">
-
-        <div class="movie-rankings"> 
-          <!-- 여기에 영화 목록이 추가 -->
-        </div>
-
-          <div class="btn_box">
-            <a href="#" class="empty_btn">상세 정보</a>
-            <a href="#" class="cta_btn">예매 하기</a>
-          </div>
-        </div>
-      </div>
-      <!-- slide -->
-      <div class="slide_content" id="slide">
-        <div class="view_slide">
-          <ul class="slide_container">
-            <li class="slide_item" data-rank="0">
-              <div class="img_box">
-                <img src="images/movierank_poster_howtotraindragon.jpg" alt="">
-              </div>
-              <span class="num">01</span>
-            </li>
-            <li class="slide_item" data-rank="1">
-              <div class="img_box">
-                <img src="images/movierank_poster_28yearslater.jpg" alt="">
-              </div>
-              <span class="num">02</span>
-            </li>
-            <li class="slide_item" data-rank="2">
-              <div class="img_box">
-                <img src="images/movierank_poster_f1.jpg" alt="">
-              </div>
-              <span class="num">03</span>
-            </li>
-            <li class="slide_item" data-rank="3">
-              <div class="img_box">
-                <img src="images/movierank_poster_nausicaaofthevalleyofthewinds.jpg" alt="">
-              </div>
-              <span class="num">04</span>
-            </li>
-            <li class="slide_item" data-rank="4">
-              <div class="img_box">
-                <img src="images/movierank_poster_theseedofthescaredfig.jpg" alt="">
-              </div>
-              <span class="num">05</span>
-            </li>
-          </ul>
-
-        </div>
-        <div class="slide_btn_box">
-          <button class="slide_btn prev_btn">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFF">
-              <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg>
-            </svg>
-          </button>
-          <button class="slide_btn next_btn">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
-              <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-    </div>
-
-
-   
-      <!-- bg -->
-      <div class="bg_img">
-        <img src="images/movierank_bg_howtotraindragon.jpg" alt="">
-        <img src="images/movierank_bg_28yearslater.jpg" alt="">
-        <img src="images/movierank_bg_f1.jpg" alt="">
-        <img src="images/movierank_bg_nausicaaofthevalleyofthewinds.jpg" alt="">
-        <img src="images/movierank_bg_theseedofthescaredfig_bg.jpg" alt="">
-        <div class="cover"></div>
-      </div>
-      <!-- next,prev -->
-    </div>
-
-
-    <!-- 03 경선 - 상영예정작 -->
-    <div class="section plan gradient-bg">
-      <div class="container plan_all">
-        <div class="plan_title">
-          <h3>곧 만날 수 있는 기대작</h3>
-          <a href="">
-            전체보기
-            <span class="material-symbols-outlined">
-              arrow_forward_ios
-            </span>
-          </a>
-        </div>
-      </div>
-      <div class="swiper plan_post">
-        <div class="swiper-wrapper planA">
-          <!-- slides.json 파일 load 후 태그 생성 -->
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-
-    <!-- 04 영태 - 추천영화(날씨데이터) -->
-    <div class="section recommend">
-      <div class="container">
-        <div class="recommend_content" id="recommend_content_box">
-          <div class="content_box">
-            <div class="text_box">
-              <h2 class="title" id="recommend_title">
-                <!-- <img src="images/recommend_rain_icon.svg" alt="" class="weather_icon">4we3 -->
-
-              </h2>
-              <p class="subtitle" id="recommend_subtitle"></p>
-              <p class="content_body" id="recommend_des">
-
-              </p>
-            </div>
-            <div class="btn_box">
-              <a href="#" class="empty_btn">상세 정보</a>
-              <a href="#" class="cta_btn">예매 하기</a>
-            </div>
-          </div>
-          <div class="thumb_box">
-            <a class="play_cover" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                fill="#e3e3e3">
-                <path
-                  d="m380-300 280-180-280-180v360ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
-              </svg>
-            </a>
-            <img src="" alt="노이즈" id="recommend_thumb">
-          </div>
-        </div>
-      </div>
-
-
-      <!-- recommend bg -->
-      <div class="img_banner">
-        <img src="" alt="노이즈" id="recommend_bg">
-      </div>
-    </div>
-
-    <!-- 05 경선 - 씨네마 -->
-    <div class="section cinemazone">
-      <div class="bg1"></div>
-      <div>
-        <div class="container cinema">
-          <h5>영화, 그이상의 경험 스페셜 시네마</h5>
-          <div class="cinemaspecial">
-            <div class="item">
-              <a href="" data-bg="images/cinema/livingroom.png">CINE &amp; LIVINGROOM</a>
-              <span class="material-symbols-outlined">
-                arrow_forward_ios
-              </span>
-            </div>
-            <div class="item">
-              <a href="" data-bg="images/cinema/suite.png">SUITE CINEMA</a>
-              <span class="material-symbols-outlined">
-                arrow_forward_ios
-              </span>
-            </div>
-            <div class="item">
-              <a href="" data-bg="images/cinema/4dx.png">4DX</a>
-              <span class="material-symbols-outlined">
-                arrow_forward_ios
-              </span>
-            </div>
-            <div class="item">
-              <a href="" data-bg="images/cinema/chef.png">CINE de CHEF</a>
-              <span class="material-symbols-outlined">
-                arrow_forward_ios
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 06 경선 - 이벤트 -->
-    <div class="section eventzone">
-      <div class="bg"></div>
-      <div class="promotion swiper event_swiper">
-        <div class="swiper-wrapper">
-          <div class="store swiper-slide" data-bg="images/event_zone/store.jpg">
-            <a href="#">
-              <h6>Store</h6>
-              <p>영화의 여운을 소장하는 공간<br> 스토어에서 만나보세요!</p>
-            </a>
-            <div class="hashtag">
-              <ul class="hashtag_store">
-                <li><a href="#">#스토어</a></li>
-                <li><a href="#">#온라인쇼핑몰</a></li>
-                <li><a href="#">#쇼핑스타그램</a></li>
-                <li><a href="#">#스토어딜 </a></li>
-                <li><a href="#">#오늘의쇼핑 </a></li>
-              </ul>
-            </div>
-            <div class="arrow_swiper">
-              <span class="material-symbols-outlined">arrow_forward_ios</span>
-            </div>
-          </div>
-          <div class="event swiper-slide" data-bg="images/event_zone/event_zone_event.jpg">
-            <a href="#">
-              <h6>Event</h6>
-              <p>진행중인 다양한 이벤트를 즐겨보세요!</p>
-            </a>
-            <div class="hashtag">
-              <ul class="hashtag_event">
-                <li><a href="#">#이벤트</a></li>
-                <li><a href="#">#온라인 이벤트</a></li>
-                <li><a href="#">#오프라인 행사</a></li>
-                <li><a href="#">#현장이벤트</a></li>
-                <li><a href="#">#부스이벤트</a></li>
-              </ul>
-            </div>
-            <div class="arrow_swiper">
-              <span class="material-symbols-outlined">arrow_forward_ios</span>
-            </div>
-          </div>
-          <div class="special swiper-slide" data-bg="images/event_zone/special.png">
-            <a href="#">
-              <h6>Special</h6>
-              <p>특별한 영화 지금 만나보세요!</p>
-            </a>
-            <div class="hashtag">
-              <ul class="hashtag_special">
-                <li><a href="#">#스페셜</a></li>
-                <li><a href="#">#시네마이벤트</a></li>
-                <li><a href="#">#프리미어상영</a></li>
-                <li><a href="#">#특별상영</a></li>
-                <li><a href="#">#시사회</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 07 연미 - 위치찾기 -->
-    <div class="section location_search">
-      <div class="container location">
-        <div id="location_search">
-          <h2>CGV 찾기</h2>
-          <p>가장 가까운 CGV를 찾아보세요</p>
-          <form class="search_container">
-            <input type="search" name="search" id="search" placeholder="찾으시는 상영관의 지역을 입력하세요.">
-            <button class="search_btn">
-              <span class="material-symbols-outlined">search</span>
-            </button>
-            <div class="tag_box">
-              <a href="" class="hint"># 강남</a>
-              <a href="" class="hint"># 건대</a>
-              <a href="" class="hint"># 대학로</a>
-              <a href="" class="hint"># 명동</a>
-              <a href="" class="hint"># 성수</a>
-              <a href="" class="hint"># 신논현</a>
-              <a href="" class="hint"># 신림</a>
-              <a href="" class="hint"># 왕십리</a>
-              <a href="" class="hint"># 종로</a>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <!-- 08 연미 - 앱다운 -->
-    <div class="section appdownload gradient-bg">
-      <div class="container app">
-        <div class="appdown_img" id="appdown_img">
-          <img src="./images/appdownload.png" alt="appdownload">
-        </div>
-        <div class="appdown_contents">
-          <h6>CGV APP</h6>
-          <h2>앱 다운로드</h2>
-          <p>CGV앱에서 더 편리하게 이용하세요.</p>
-          <div class="appdown">
-            <a href=""><img src="./images/playstore_icon.png" alt="playstore_icon">Google Play</a>
-            <a href=""><img src="./images/ios_icon.png" alt="ios_icon">App Store</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
+<?php  require("{$name}.view.php") ?>
     <!-- 09 영태 - 푸터 -->
     <div class="section footer">
       <footer>
@@ -612,63 +286,19 @@
   <div id="policy_modal">
     <div>
       <button type="button" id="policy_closeModal">닫기</button>
-      <iframe id="policy_modalIframe" src="policy.html" width="100%" height="100%"></iframe>
+      <iframe id="policy_modalIframe" src="policy.php" width="100%" height="100%"></iframe>
     </div>
   </div>
 
-  <!-- 추천영화 modal -->
-  <div class="recommend_modal">
-    <div class="play_box">
-      <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <!-- 닫기버튼 모양 -->
-    <button class="modal_close">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
-        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-      </svg>
-    </button>
-  </div>
-
-
-
-  <div id="popup">
-    <h2><img src="images/header_logo.png" alt="네슬레로고"></h2>
-    <h3>CGV 웹사이트 리뉴얼 프로젝트</h3>
-    <p>본 사이트는 <strong>구직용 포트폴리오 웹사이트</strong>이며, 실제로 운영되는 사이트가 아닙니다.<br>
-    </p>
-    <hr>
-    <p>
-      <strong>삼돌이:</strong> 박*선(팀장),김*태,박*미<br>
-      <strong>제작기간:</strong> 2025.5.9 ~ 2025.7.14<br>
-      <strong>기획서:</strong><a href="#"> figma <img src="./images/popup/fi.jpg" alt="피그마파일"></a><br>
-      <strong>버전관리:</strong><a href="#"> Github <img src="./images/popup/git.jpg" alt="깃허브파일"></a><br>
-      <strong>개발환경:</strong> HTML5,CSS,jquery<br>
-    </p>
-    <hr>
-    <h4>구현완료파트</h4>
-    <p>
-      <strong>박*선</strong> : <a href="">plan</a>,<a href="">eventzone</a>,<a href="">cinemazone</a>,<a href="login.html">sub_login</a><br>
-      <strong>김*태</strong> : <a href="">header</a>,<a href="">footer</a>,<a href="">main</a>,<a
-        href="moives.html">recommend</a>,<a href="">sub_movies</a><br>
-      <strong>박*미</strong> : <a href="">movie_rank</a>,<a href="">search</a>,<a href="">appdownload</a>,<a href="ticket.html">sub_ticket</a><br>
-    </p>
-    <hr>
-    <div>
-      <input type="checkbox" id="check">
-      <label for="check">오늘 하루 안보기</label>
-      <button><i class="fa-solid fa-xmark"></i></button>
-    </div>
-  </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.36/fullpage.min.js"
     integrity="sha512-UYOFSBBEKCk3CMYe2EAX1zI8EruS4WgJbs85Bh9dPcgmcOykTi7NMONWmwt/cp3dkNTnDBNCQI39LGupsz3AvA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="./js/common.js"></script>
-  <script src="./js/main.js"></script>
+    <?= $script1 ?>
+    <?= $script2 ?>
 </body>
 
 </html>

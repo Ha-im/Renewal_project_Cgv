@@ -4,6 +4,7 @@ body{
 	font-size:14px;
 	font: 15px/24px "Noto Sans KR", sans-serif;
 }
+
 /*상영관 json 파일 css*/
 .list_location{
 	display:flex;
@@ -126,6 +127,7 @@ body{
 .area_cinema_list .content.scroll_y{
 	overflow-x: hidden;
 }
+
 /* 스크롤 */
 ::-webkit-scrollbar {
   width: 6px;
