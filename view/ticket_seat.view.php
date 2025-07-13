@@ -1,4 +1,3 @@
-
   <main class="main-container">
     <div class="booking-header">
 
@@ -23,57 +22,19 @@
         </div>
 
         <h2 class="movie_title">바람계곡의 나우시카</h2>
-
-
-        <!-- 인원수 입력 -->
         <div class="input_number_section">
           <div class="ticket_num">
           <div class="ticket_controls">
-            <span>성인</span>
-            <button class="counter_btn" id="plusBtn">
-              <span class="material-symbols-outlined">add</span>
-            </button>
-            <span>0</span>
-            <button class="counter_btn" id="minusBtn">
-              <span class="material-symbols-outlined">remove</span>
-            </button>
+            <!-- 인원 입력 -->
           </div>
-          <div class="ticket_controls">
-            <span>청소년</span>
-            <button class="counter_btn" id="plusBtn">
-              <span class="material-symbols-outlined">add</span>
-            </button>
-            <span>0</span>
-            <button class="counter_btn" id="minusBtn">
-              <span class="material-symbols-outlined">remove</span>
-            </button>
           </div>
-          <div class="ticket_controls">
-            <span>경로</span>
-            <button class="counter_btn" id="plusBtn">
-              <span class="material-symbols-outlined">add</span>
-            </button>
-            <span>0</span>
-            <button class="counter_btn" id="minusBtn">
-              <span class="material-symbols-outlined">remove</span>
-            </button>
-          </div>
-          <div class="ticket_controls">
-            <span>장애인석</span>
-            <button class="counter_btn" id="plusBtn">
-              <span class="material-symbols-outlined">add</span>
-            </button>
-            <span>0</span>
-            <button class="counter_btn" id="minusBtn">
-              <span class="material-symbols-outlined">remove</span>
-            </button>
-          </div>
+          
           <div class="total">
             <span>총 합계</span>
             <span class="price">0</span>
             <span>원</span>
           </div>
-        </div>
+        
         </div>
 
         <div class="select_container">
@@ -377,7 +338,7 @@
       </div>
 
     </div>
-
+seat.view
 
 
 

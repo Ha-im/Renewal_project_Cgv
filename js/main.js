@@ -196,7 +196,7 @@ let moviesData = []; // 영화 데이터를 전역 변수로 저장
 
 $.getJSON('./json/rank.json', function (data) {
   moviesData = data.movies;
-  const movies = data.movies;
+  console.log(moviesData);
   displayMovieInfo(getRank); //초기 로드 시 첫 번째 영화 정보 표시
 });
 
@@ -207,11 +207,11 @@ function displayMovieInfo(index) {
 
   if (moviesData.length > 0 && index < moviesData.length) {
     const item = moviesData[index];
-
+    
     let starsHTML = '';
     const rating = parseInt(item.rating);
     for (let i = 0; i < 5; i++) {
-      if (i < rating.rating) {
+      if (i < rating) {
         starsHTML += '<span class="material-symbols-outlined star">star</span>';
       } else {
         starsHTML += '<span class="material-symbols-outlined star">star_border</span>';
