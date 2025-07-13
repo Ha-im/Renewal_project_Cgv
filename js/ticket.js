@@ -227,6 +227,12 @@ document.addEventListener('click', (e) => {
   generateSlides();
 
 
+  document.getElementById('next_page').addEventListener('click', function (event) {
+     event.preventDefault();
+    window.location.href = './view/ticket_seat.view.php';
+  });
+
+
 
 
 
