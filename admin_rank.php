@@ -19,7 +19,7 @@ if (file_exists($jsonFile)) {
     <title>영화순위 관리자 페이지</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: sans-serif;
             margin: 0; 
             padding: 0;
             display: flex;
