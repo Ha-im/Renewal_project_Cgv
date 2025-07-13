@@ -1,5 +1,13 @@
 <?php
+    $moveList = file_get_contents('json/movies.json');
+    $data = json_decode($moveList); // 객체형태로 불러오기
+    $titleMovie = $data[0];
+    
 
+  // $mainMoive = $data[0];
+  // foreach($mainMoive as $item){
+  //   print_r($item);
+  // }
 ?>
     <div id="fullpage">
     <!-- 01 영태 - 메인 -->
@@ -7,16 +15,14 @@
       <div class="container h_100 position_rel">
         <div class="content_box" id="banner_content_box">
           <div class="text_box">
-            <h2 class="title rating ratingall">28년 후</h2>
+            <h2 class="title rating <?= $titleMovie->age?>"><?=$titleMovie->title?></h2>
             <p class="subtitle">&lt;28일 후 시작, 28주 후 전염, 28년 후 진화&gt;</p>
             <p class="content_body">
-              28일 후 시작, 28주 후 전염, 28년 후 진화...<br>
-              태어나 처음 마주한 바이러스에 감염된 세상,<br>
-              충격을 넘어선 극강의 공포가 밀려온다!
+              <?=$titleMovie->description?>
             </p>
           </div>
           <div class="btn_box">
-            <a href="#" class="empty_btn">상세 정보</a>
+            <a href="movies_intro.php?id=<?=$titleMovie->id?>" class="empty_btn">상세 보기</a>
             <a href="#" class="cta_btn">예매 하기</a>
           </div>
         </div>
@@ -24,7 +30,7 @@
       <!--  video bg -->
       <div class="video_banner">
         <video autoplay muted loop>
-          <source src="media/banner.mp4">
+          <source src="<?=$titleMovie->movieurl?>">
           <p>브라우저가 동영상 파일을 지원하지 않습니다.</p>
         </video>
       </div>
@@ -314,7 +320,10 @@
           </div>
         </div>
       </div>
+
     </div>
+
+      
 
     <!-- 09 영태 - 푸터 -->
     <div class="section footer">

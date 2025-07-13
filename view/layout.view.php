@@ -205,6 +205,13 @@ $username = $isLoggedIn ? $_SESSION['username'] : null;
       </svg>
     </button>
   </div>
+        <!-- 앱다운 modal -->
+  <div id="appdown_modal">
+    <div>
+      <button type="button" id="appdown_closeModal">닫기</button>
+      <img src="./images/appdown_qr.png" alt="">
+    </div>
+  </div>
 
 
 
