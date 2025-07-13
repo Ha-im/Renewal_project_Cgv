@@ -8,7 +8,7 @@ $password = $_POST['password'];
 
 // 유효성 검사
 if (empty($userid) || empty($password)) {
-    echo "<script>alert('아이디와 비밀번호를 모두 입력하세요.'); history.back();</script>";
+    echo "<script>history.back();</script>";
     exit;
 }
 
