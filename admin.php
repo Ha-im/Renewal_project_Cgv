@@ -134,6 +134,7 @@ if (file_exists($jsonFile)) {
       </li>
     <?php endforeach; ?>
   </ul>
+        <button type="submit">추가하기</button>
 </div>
 
 <div class="main-content">
