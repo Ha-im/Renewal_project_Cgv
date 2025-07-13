@@ -144,11 +144,12 @@ body {
 }
 
 .star {
-  color: #ffd700;
   border: none;
   font-size: 24px;
 }
-
+.star_border{
+  color:#ccc;
+}
 .material-symbols-outlined.empty {
   color: var(--fontColorDark);
 }
@@ -156,7 +157,12 @@ body {
 .movie-rankings {
   display: flex;
 }
-
+.star.filled {
+  color: #ffd700;
+}
+.star.empty {
+  color: #ccc; 
+}
 /* 우측 포스터 슬라이더 영역 */
 
 /* bg_img*/
