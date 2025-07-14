@@ -64,7 +64,7 @@ require_once('inc/db.php');
     <nav class="menu">
       <ul class="gnb">
         <li class="on">
-          <a href="#">영화</a>
+          <a href="movies.php">영화</a>
           <ul class="lnb">
             <li><a href="#">영화순위</a></li>
             <li><a href="#">아트하우스</a></li>
@@ -80,7 +80,7 @@ require_once('inc/db.php');
         <li>
           <a href="#">예매</a>
           <ul class="lnb">
-            <li><a href="#">빠른예매</a></li>
+            <li><a href="ticket.php">빠른예매</a></li>
           </ul>
         </li>
         <li>
