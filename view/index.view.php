@@ -125,7 +125,7 @@
       <div class="container plan_all">
         <div class="plan_title">
           <h3>곧 만날 수 있는 기대작</h3>
-          <a href="">
+          <a href="#">
             전체보기
             <span class="material-symbols-outlined">
               arrow_forward_ios
@@ -189,25 +189,25 @@
           <h5>영화, 그이상의 경험 스페셜 시네마</h5>
           <div class="cinemaspecial">
             <div class="item">
-              <a href="" data-bg="images/cinema/livingroom.jpg">CINE &amp; LIVINGROOM</a>
+              <a href="#" data-bg="images/cinema/livingroom.jpg">CINE &amp; LIVINGROOM</a>
               <span class="material-symbols-outlined">
                 arrow_forward_ios
               </span>
             </div>
             <div class="item">
-              <a href="" data-bg="images/cinema/suite.jpg">SUITE CINEMA</a>
+              <a href="#" data-bg="images/cinema/suite.jpg">SUITE CINEMA</a>
               <span class="material-symbols-outlined">
                 arrow_forward_ios
               </span>
             </div>
             <div class="item">
-              <a href="" data-bg="images/cinema/4dx.jpg">4DX</a>
+              <a href="#" data-bg="images/cinema/4dx.jpg">4DX</a>
               <span class="material-symbols-outlined">
                 arrow_forward_ios
               </span>
             </div>
             <div class="item">
-              <a href="" data-bg="images/cinema/chef.jpg">CINE de CHEF</a>
+              <a href="#" data-bg="images/cinema/chef.jpg">CINE de CHEF</a>
               <span class="material-symbols-outlined">
                 arrow_forward_ios
               </span>
@@ -258,7 +258,7 @@
               <span class="material-symbols-outlined">arrow_forward_ios</span>
             </div>
           </div>
-          <div class="special swiper-slide" data-bg="images/event_zone/special.png">
+          <div class="special swiper-slide" data-bg="images/event_zone/special.jpg">
             <a href="#">
               <h6>Special</h6>
               <p>특별한 영화 지금 만나보세요!</p>
