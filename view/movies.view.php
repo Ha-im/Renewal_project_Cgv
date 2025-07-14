@@ -6,8 +6,10 @@
 
     // json불러오고
     $moveList = file_get_contents('json/movies.json');
-    $data = json_decode($moveList); // 객체형태로 불러오기
-    $total = count($data);
+    $mvData = json_decode($moveList); // 객체형태로 불러오기
+    $upMovies = file_get_contents('json/upcoming_movies.json');
+    $upmvdata = json_decode($upMovies); // 객체형태로 불러오기
+    $total = count($mvData);
 ?>
 
 <main>
@@ -99,7 +101,7 @@
                 <p class="mv_cnt">총 <?= $total ?>개의 영화가 검색 되었습니다.</p>
                 <ul class="tab_content">
                     <?php
-                        foreach($data as $idx => $item){
+                        foreach($mvData as $idx => $item){
                     ?>
                         <li class="item">
                             <div class="mv_img_box">
@@ -139,11 +141,47 @@
                     ?>
                 </ul>
                 <!-- 상영 예정작 -->
-                <!-- <ul class="tab_content">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul> -->
+                <ul class="tab_content">
+                    <?php
+                        foreach($upmvdata as $idx => $item){
+                    ?>
+                        <li class="item">
+                            <div class="mv_img_box">
+                                <img src="<?= $item->thumburl?>" alt="<?= $item->alt?>">
+                                <div class="img_cover">
+                                    <p class="mv_text">
+                                        <?= $item->description?>
+                                    </p>
+                                    <a href="movies_intro.php?id=<?=$item->id?>" class="empty_btn">상세 보기</a>
+                                </div>
+                            </div>
+                            <div class="mv_info_box">
+                                <h3 class="mv_title"><?= $item->title?></h3>
+                                <p>예매율 : <span><?= $item->reservation?></span> / 시간 : <span><?= $item->runtime?></span></p>
+                                <p class="mv_rating_box">평점 :
+                                    <svg class="star_fill" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"/></svg>
+                                    <svg class="star_fill" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"/></svg>
+                                    <svg class="star_fill" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"/></svg>
+                                    <svg class="star_fill" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"/></svg>
+                                    <svg class="star" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"/></svg>
+                                    <span class="mv_rating"><?= $item->rating?></span>
+                                </p>
+                                <div class="btn_box">
+                                    <a href="#" class="cta_btn">예매 하기</a>
+                                        <button class="like_btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+                                            <path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Z"/>
+                                        </svg>
+                                        <span><?= $item->like?></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                    <?php
+                        // foreach문 끝나는 지점
+                        }
+                    ?>
+                </ul>
 
                 <!-- 스페셜 상영작 -->
                 <!-- <ul class="tab_content">
