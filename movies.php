@@ -21,9 +21,10 @@
  $moviesCss = '<link rel="stylesheet" href="css/movies.css">';
  $footerCss = '<link rel="stylesheet" href="css/footer.css">';
  $commonJs = '<script src="js/common.js"></script>';
+ $movies = '<script src="js/movies.js"></script>';
 
 
- subpageView('movies','깊이 빠져 보다,CGV | 영화 목록', $commonCss, $moviesCss, $footerCss, $commonJs);
+ subpageView('movies','깊이 빠져 보다,CGV | 영화 목록', $commonCss, $moviesCss, $footerCss, $commonJs, $movies);
 
 // echo "제대로 들어왔어요";
 ?>

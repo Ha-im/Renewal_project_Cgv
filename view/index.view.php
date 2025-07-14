@@ -1,9 +1,13 @@
 <?php
     $moveList = file_get_contents('json/movies.json');
     $data = json_decode($moveList); // 객체형태로 불러오기
-    $titleMovie = $data[0];
-    
 
+
+    // json전체 길이 중에서 1개 랜덤으로 뽑기
+    $jsonLength = count($data); //json의 길이 반환
+    $getRandomNum = rand(0, $jsonLength - 1); // 0 ~ length -1까지의 랜덤값 뽑기 *-1은 인덱스로 제어하기 위해 길이보다 1칸 작게 설정
+    $titleMovie = $data[$getRandomNum]; //랜덤 인덱스 부여
+    
   // $mainMoive = $data[0];
   // foreach($mainMoive as $item){
   //   print_r($item);
@@ -24,6 +28,9 @@
           <div class="btn_box">
             <a href="movies_intro.php?id=<?=$titleMovie->id?>" class="empty_btn">상세 보기</a>
             <a href="#" class="cta_btn">예매 하기</a>
+            <?php 
+              print_r($jsonLength);
+            ?>
           </div>
         </div>
       </div>

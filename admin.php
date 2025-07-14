@@ -84,21 +84,32 @@ if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] != 1) {
 const links = document.querySelectorAll('.admin-menu a');
 const frame = document.getElementById('adminFrame');
 
-links.forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const page = link.dataset.page;
-    frame.src = page;
-  });
-});
-  if (window.self !== window.top) {
-    document.addEventListener("DOMContentLoaded", function () {
-      const sidebar = document.querySelector(".admin-sidebar");
-      if (sidebar) {
-        sidebar.remove();
-      }
+  function setSelected(index) {
+    [...movieList.children].forEach((li, i) => {
+      li.classList.toggle('selected', i === index);
     });
+
+    const movie = movies[index];
+    document.getElementById('movieId').value = movie.id || '';
+    document.getElementById('number').value = movie.number || '';
+    document.getElementById('title').value = movie.title || '';
+    document.getElementById('subtitle').value = movie.subtitle || '';
+    document.getElementById('description').value = movie.description || '';
+    document.getElementById('rating').value = movie.rating || '';
+    document.getElementById('poster').value = movie.poster || '';
+    document.getElementById('bg').value = movie.bg || '';
   }
-  </script>
+
+  // 초기 첫번째 영화 선택
+  if(movies.length > 0) setSelected(0);
+
+  movieList.addEventListener('click', e => {
+    const li = e.target.closest('li');
+    if (!li) return;
+    const index = Number(li.dataset.index);
+    setSelected(index);
+  });
+</script>
+
 </body>
 </html>
