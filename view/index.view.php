@@ -58,31 +58,31 @@
           <ul class="slide_container">
             <li class="slide_item" data-rank="0">
               <div class="img_box">
-                <img src="images/movierank_poster_howtotraindragon.jpg" alt="">
+                <img src="images/movierank_poster_howtotraindragon.jpg" alt="드래곤 길들이기">
               </div>
               <span class="num">01</span>
             </li>
             <li class="slide_item" data-rank="1">
               <div class="img_box">
-                <img src="images/movierank_poster_28yearslater.jpg" alt="">
+                <img src="images/movierank_poster_28yearslater.jpg" alt="이십팔년후">
               </div>
               <span class="num">02</span>
             </li>
             <li class="slide_item" data-rank="2">
               <div class="img_box">
-                <img src="images/movierank_poster_f1.jpg" alt="">
+                <img src="images/movierank_poster_f1.jpg" alt="에프원">
               </div>
               <span class="num">03</span>
             </li>
             <li class="slide_item" data-rank="3">
               <div class="img_box">
-                <img src="images/movierank_poster_nausicaaofthevalleyofthewinds.jpg" alt="">
+                <img src="images/movierank_poster_nausicaaofthevalleyofthewinds.jpg" alt="나우시카">
               </div>
               <span class="num">04</span>
             </li>
             <li class="slide_item" data-rank="4">
               <div class="img_box">
-                <img src="images/movierank_poster_theseedofthescaredfig.jpg" alt="">
+                <img src="images/movierank_poster_theseedofthescaredfig.jpg" alt="신성한나무의씨앗">
               </div>
               <span class="num">05</span>
             </li>
@@ -109,11 +109,11 @@
    
       <!-- bg -->
       <div class="bg_img">
-        <img src="images/movierank_bg_howtotraindragon.jpg" alt="">
-        <img src="images/movierank_bg_28yearslater.jpg" alt="">
-        <img src="images/movierank_bg_f1.jpg" alt="">
-        <img src="images/movierank_bg_nausicaaofthevalleyofthewinds.jpg" alt="">
-        <img src="images/movierank_bg_theseedofthescaredfig_bg.jpg" alt="">
+        <img src="images/movierank_bg_howtotraindragon.jpg" alt="드래곤길들이기 배경 이미지">
+        <img src="images/movierank_bg_28yearslater.jpg" alt="이십팔년후 배경 이미지">
+        <img src="images/movierank_bg_f1.jpg" alt="에프원 배경 이미지">
+        <img src="images/movierank_bg_nausicaaofthevalleyofthewinds.jpg" alt="나우시카 배경 이미지">
+        <img src="images/movierank_bg_theseedofthescaredfig_bg.jpg" alt="신성한 나무씨앗 배경 이미지">
         <div class="cover"></div>
       </div>
       <!-- next,prev -->
