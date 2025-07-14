@@ -126,19 +126,18 @@
                         <article class="mv_summary">
                             <h2 class="con_title">줄거리</h2>
                             <h3 class="sum_title">
-                                수백년간 지속되어온 바이킹과 드래곤의 전쟁.
+                                시끄러워 죽겠어요, 못 살겠네 죽이고 싶다
                             </h3>
                             <p class="sum_text">
-                                드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과 다른 신념을 가진
-                                ‘히컵’은 무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못한다.
+                                내 집 마련에 성공한 주영(이선빈)과 주희(한수아) 자매
+                                어느 날부터 아파트 어딘가에서 들려오는 정체불명의 층간소음에 시달린다.
 
-                                그러던 어느 날,
-                                히컵은 베일에 싸인 전설의 드래곤 나이트 퓨어리인 ‘투슬리스’와 만나게 되고,
-                                드래곤을 죽이라는 바이킹의 신념을 깨고 ‘투슬리스’와 친구가 된다.
+                                그러던 중 동생 주희와 연락이 끊기자 불안에 휩싸인 주영은
+                                급히 지방 공장에서 집으로 돌아오고,
+                                주희의 남자친구 기훈(김민석)과 함께 실종된 동생을 추적하기 시작한다.
 
-                                하지만 드래곤을 죽여야 된다고 믿는 바이킹 족과
-                                모든 드래곤을 위협하는 더 거대한 존재와 맞닥뜨리게 된 ‘히컵’과 ‘투슬리스’.
-                                세상을 변화시키기 위한 특별한 여정을 시작하게 되는데...
+                                한편, 자매와 마찬가지로 층간소음에 시달리던 아랫집 남자(류경수)는
+                                그 소음의 근원이 윗집 자매에게 있다고 생각해 살인 협박을 하게 되는데…
                             </p>
                             <p class="sum_bold"><b>다르다는 건, 특별하다는 것. 세상을 바꿀 우리들의 모험이 시작된다!</b></p>
                         </article>
@@ -176,7 +175,7 @@
                                         <!-- 나중에 실제 비디오 파일 말고..
                                         영상의 썸네일을 사용하고 클릭하면 영상 모달..? -->
                                         <video>
-                                            <source src="media/banner.mp4">
+                                            <source src="media/noise_mv01.mp4">
                                             <p>브라우저가 동영상 파일을 지원하지 않습니다.</p>
                                         </video>
                                     </div>
@@ -192,7 +191,7 @@
                                             </svg>
                                         </a>
                                         <video>
-                                            <source src="media/banner.mp4">
+                                            <source src="media/noise_mv02.mp4">
                                             <p>브라우저가 동영상 파일을 지원하지 않습니다.</p>
                                         </video>
                                     </div>
@@ -208,7 +207,7 @@
                                             </svg>
                                         </a>
                                         <video>
-                                            <source src="media/banner.mp4">
+                                            <source src="media/noise_mv03.mp4">
                                             <p>브라우저가 동영상 파일을 지원하지 않습니다.</p>
                                         </video>
                                     </div>
@@ -223,27 +222,27 @@
                                     <!-- 스틸컷은 5개만 보여진다. -->
                                     <li class="slide_item">
                                         <div class="img_box">
-                                            <img src="images/recommend_bg_dragon.jpg" alt="">
+                                            <img src="images/movies_intro/noise_slide01.jpg" alt="노이즈">
                                         </div>
                                     </li>
                                     <li class="slide_item">
                                         <div class="img_box">
-                                            <img src="images/recommend_bg_dragon.jpg" alt="">
+                                            <img src="images/movies_intro/noise_slide02.jpg" alt="노이즈">
                                         </div>
                                     </li>
                                     <li class="slide_item">
                                         <div class="img_box">
-                                            <img src="images/recommend_bg_dragon.jpg" alt="">
+                                            <img src="images/movies_intro/noise_slide03.jpg" alt="노이즈">
                                         </div>
                                     </li>
                                     <li class="slide_item">
                                         <div class="img_box">
-                                            <img src="images/recommend_bg_dragon.jpg" alt="">
+                                            <img src="images/movies_intro/noise_slide04.jpg" alt="노이즈">
                                         </div>
                                     </li>
                                     <li class="slide_item">
                                         <div class="img_box">
-                                            <img src="images/recommend_bg_dragon.jpg" alt="">
+                                            <img src="images/movies_intro/noise_slide05.jpg" alt="노이즈">
                                         </div>
                                     </li>
                                 </ul>

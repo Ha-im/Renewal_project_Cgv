@@ -64,3 +64,23 @@ new Chart(ctx2, {
     }
 
 });
+
+
+    const $slideContainer = $('.slide_container');
+    const slideWidth = $('.slide_item').outerWidth();
+
+    // 다음 슬라이드
+    $('.next_btn').on('click', function () {
+      $slideContainer.animate({ left: -slideWidth }, 400, function () {
+        $slideContainer.append($slideContainer.find('.slide_item').first());
+        $slideContainer.css('left', 0);
+      });
+    });
+
+    // 이전 슬라이드
+    $('.prev_btn').on('click', function () {
+      $slideContainer.prepend($slideContainer.find('.slide_item').last());
+      $slideContainer.css('left', -slideWidth);
+      $slideContainer.animate({ left: 0 }, 400);
+    });
+

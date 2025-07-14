@@ -275,8 +275,9 @@ svg.star {
     gap: 24px;
     position: relative;
     /* outline: 10px solid blueviolet; */
-    width: 300%;
-    left: -100%
+    width: 500%;
+    height : 600px;
+    left: 0%
 }
 
 .slide_item {
