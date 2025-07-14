@@ -147,11 +147,19 @@ svg.star {
     gap: 50px;
     flex-flow: wrap;
     margin-bottom: 60px;
-    padding : 0 25px;
+    padding: 0 25px;
 }
 
 .tab_content .item {
     width: 280px;
+}
+
+.tab_content .item {
+    display: none;
+}
+
+.tab_content .item.show {
+    display: block;
 }
 
 .mv_img_box {

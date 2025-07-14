@@ -190,6 +190,10 @@ display: flex;
 
 .total {
 	display: flex;
+	justify-content: flex-end;
+	position: absolute;
+	top: 14px;
+	right: 20px;
 	padding-left: 50px;
 	gap: 10px;
 	font-size: 15px;
