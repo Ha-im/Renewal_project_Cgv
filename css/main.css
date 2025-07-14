@@ -726,7 +726,7 @@ body {
   right: 0;
   bottom: 0;
   top: 0;
-  background-image: var(--sectionBg-Grad-lin), url('../images/cinema/livingroom.png');
+  background-image: var(--sectionBg-Grad-lin), url('../images/cinema/livingroom.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
