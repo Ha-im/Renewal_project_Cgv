@@ -331,9 +331,9 @@
 
 
         <div class="move_btn">
-          <button type="button" class="prev_page" onclick="location.href='http://localhost/Renewal_project_Cgv/ticket.php'"><span class="material-symbols-outlined">chevron_left</span>이전</button>
+          <button type="button" class="prev_page" onclick="location.href='http://gungsun1.dothome.co.kr/Renewal_project_Cgv/ticket.php'"><span class="material-symbols-outlined">chevron_left</span>이전</button>
 
-          <button type="button" class="next_page" onclick="location.href='http://localhost/Renewal_project_Cgv/reservation_confirm.php'">
+          <button type="button" class="next_page" onclick="location.href='http://gungsun1.dothome.co.kr/Renewal_project_Cgv/reservation_confirm.php'">
             다음
           </button>
         </div>
