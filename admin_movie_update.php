@@ -62,5 +62,13 @@ $newJsonContent = json_encode($jsonData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNIC
 file_put_contents($jsonFile, $newJsonContent);
 
 // 완료 후 관리자 페이지로 리다이렉트
-header("Location: admin.php");
+echo "<script>
+  alert('수정이 완료되었습니다.');
+  if (window.parent && window.parent !== window) {
+    window.parent.document.getElementById('adminFrame').src = 'welecom.php';
+  } else {
+    window.location.href = 'admin.php';
+  }
+</script>";
+exit;
 exit;
