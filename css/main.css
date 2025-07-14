@@ -49,10 +49,12 @@ body {
   left: -200px;
   opacity: 0;
 }
-.main_banner .content_box .text_box{
-  width : 500px;
+
+.main_banner .content_box .text_box {
+  width: 500px;
   text-align: justify;
 }
+
 .content_box .text_box {
   margin-bottom: 30px;
 }
@@ -150,9 +152,11 @@ body {
   border: none;
   font-size: 24px;
 }
-.star_border{
-  color:#ccc;
+
+.star_border {
+  color: #ccc;
 }
+
 .material-symbols-outlined.empty {
   color: var(--fontColorDark);
 }
@@ -160,12 +164,15 @@ body {
 .movie-rankings {
   display: flex;
 }
+
 .star.filled {
   color: #ffd700;
 }
+
 .star.empty {
-  color: #ccc; 
+  color: #ccc;
 }
+
 /* 우측 포스터 슬라이더 영역 */
 
 /* bg_img*/
@@ -726,7 +733,7 @@ body {
   right: 0;
   bottom: 0;
   top: 0;
-  background-image: var(--sectionBg-Grad-lin), url('../images/cinema/livingroom.jpg');
+  background-image: var(--sectionBg-Grad-lin), url('../images/cinema/livingroom.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -875,31 +882,36 @@ body {
   background-color: var(--primary_color);
   transition: .5s;
 }
-.arrow_swiper .material-symbols-outlined{
- position:absolute; 
- right:-10px;
- top:-10px;
- opacity: 0.6;
-}
-.arrow_swiper{
+
+.arrow_swiper .material-symbols-outlined {
   position: absolute;
-  left:95%;
+  right: -10px;
+  top: -10px;
+  opacity: 0.6;
+}
+
+.arrow_swiper {
+  position: absolute;
+  left: 95%;
   animation: arrow 0.7s ease-in-out infinite;
-  display:none;
+  display: none;
 }
-@keyframes arrow{
 
-  0%{
-    left:96%;
-  }
-  50%{
-    left:95%;
+@keyframes arrow {
+
+  0% {
+    left: 96%;
   }
 
-  100%{
-    left:96%;
+  50% {
+    left: 95%;
+  }
+
+  100% {
+    left: 96%;
   }
 }
+
 /* event_zone end */
 
 
@@ -1090,6 +1102,7 @@ body {
   opacity: 0;
 
 }
+
 /* 모달 */
 #appdown_modal {
   display: none;
@@ -1102,14 +1115,16 @@ body {
   z-index: 9999;
 
 }
-#appdown_modal img{
+
+#appdown_modal img {
   display: flex;
   justify-content: center;
   padding: 100px 94px;
 }
+
 #appdown_modal>div {
   position: relative;
-  width:400px;
+  width: 400px;
   height: 600px;
   margin: 5% auto;
   background: linear-gradient(to bottom, rgba(201, 0, 64, 1), rgba(6, 0, 76, 1)70%);
@@ -1354,8 +1369,9 @@ body {
     font-size: 48px;
     /* 좀 작게 */
   }
-  .arrow_swiper{
-    display:block;
+
+  .arrow_swiper {
+    display: block;
   }
 }
 
@@ -1370,12 +1386,15 @@ body {
     display: flex;
     justify-content: flex-start;
   }
-  .appdown_img{
+
+  .appdown_img {
     padding-top: 200px;
   }
+
   .app {
     gap: 30px;
   }
+
   .movie_rank {
     width: 100%;
   }
@@ -1405,9 +1424,14 @@ body {
 /* 모바일 (768px 이하) */
 @media screen and (max-width: 768px) {
 
-  .footer{
-    padding : 36px 40px;
+  .footer {
+    padding: 36px 40px;
   }
+
+  .main_banner .content_box .text_box {
+    width: 80%;
+  }
+
   #slide {
     left: 70%;
   }
@@ -1480,15 +1504,16 @@ body {
   .appdown_contents {
     padding: 0 8px;
   }
-  #popup{
-    left:70%;
+
+  #popup {
+    left: 70%;
   }
 }
 
 /* 모바일 (570px 이하) */
 @media screen and (max-width: 570px) {
-  .location_search {
-  }
+  .location_search {}
+
   h2 {
     font-size: 24px;
   }
@@ -1501,7 +1526,7 @@ body {
     width: 335px;
     height: 47px;
   }
-  
+
   .tag_box {
     width: 355px;
     margin-left: 85px;
@@ -1510,6 +1535,7 @@ body {
   .tag_box a {
     padding: 8px 18px;
   }
+
   .search_container .search_btn {
     left: 74%;
   }
@@ -1570,22 +1596,28 @@ body {
     margin-bottom: 20px;
 
   }
-  .appdown_img{
+
+  .appdown_img {
     padding-top: 200px;
   }
+
   .slide_container {
     width: 100%;
   }
-  .container .app{
- 
-  }
-  #popup{
-    left:60%;
+
+  .container .app {}
+
+  #popup {
+    left: 60%;
   }
 }
 
 /* 아주 작은 화면 (480px 이하) */
 @media screen and (max-width: 480px) {
+
+  .main_banner .content_box .text_box {
+    width: 80%;
+  }
   .container {
     width: 100%;
   }
@@ -1608,12 +1640,14 @@ body {
   .plan_title a {
     font-size: 12px;
   }
+
   .movie_rank .slide_btn_box {
     display: inline-block;
     left: 21%;
     margin-bottom: 20px;
   }
-  #popup{
-    left:50%;
+
+  #popup {
+    left: 50%;
   }
 }

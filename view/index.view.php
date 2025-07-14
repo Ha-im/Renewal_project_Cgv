@@ -28,9 +28,6 @@
           <div class="btn_box">
             <a href="movies_intro.php?id=<?=$titleMovie->id?>" class="empty_btn">상세 보기</a>
             <a href="#" class="cta_btn">예매 하기</a>
-            <?php 
-              print_r($jsonLength);
-            ?>
           </div>
         </div>
       </div>
