@@ -58,31 +58,31 @@
           <ul class="slide_container">
             <li class="slide_item" data-rank="0">
               <div class="img_box">
-                <img src="images/movierank_poster_howtotraindragon.jpg" alt="">
+                <img src="images/movierank_poster_howtotraindragon.jpg" alt="드래곤길들이기">
               </div>
               <span class="num">01</span>
             </li>
             <li class="slide_item" data-rank="1">
               <div class="img_box">
-                <img src="images/movierank_poster_28yearslater.jpg" alt="">
+                <img src="images/movierank_poster_28yearslater.jpg" alt="28년후">
               </div>
               <span class="num">02</span>
             </li>
             <li class="slide_item" data-rank="2">
               <div class="img_box">
-                <img src="images/movierank_poster_f1.jpg" alt="">
+                <img src="images/movierank_poster_f1.jpg" alt="f1더무비">
               </div>
               <span class="num">03</span>
             </li>
             <li class="slide_item" data-rank="3">
               <div class="img_box">
-                <img src="images/movierank_poster_nausicaaofthevalleyofthewinds.jpg" alt="">
+                <img src="images/movierank_poster_nausicaaofthevalleyofthewinds.jpg" alt="바람계곡의나우사카">
               </div>
               <span class="num">04</span>
             </li>
             <li class="slide_item" data-rank="4">
               <div class="img_box">
-                <img src="images/movierank_poster_theseedofthescaredfig.jpg" alt="">
+                <img src="images/movierank_poster_theseedofthescaredfig.jpg" alt="신성한나무씨앗">
               </div>
               <span class="num">05</span>
             </li>
@@ -109,11 +109,11 @@
    
       <!-- bg -->
       <div class="bg_img">
-        <img src="images/movierank_bg_howtotraindragon.jpg" alt="">
-        <img src="images/movierank_bg_28yearslater.jpg" alt="">
-        <img src="images/movierank_bg_f1.jpg" alt="">
-        <img src="images/movierank_bg_nausicaaofthevalleyofthewinds.jpg" alt="">
-        <img src="images/movierank_bg_theseedofthescaredfig_bg.jpg" alt="">
+        <img src="images/movierank_bg_howtotraindragon.jpg" alt="드래곤길들이기">
+        <img src="images/movierank_bg_28yearslater.jpg" alt="28년후">
+        <img src="images/movierank_bg_f1.jpg" alt="f1더무비">
+        <img src="images/movierank_bg_nausicaaofthevalleyofthewinds.jpg" alt="바람계곡의나우사카">
+        <img src="images/movierank_bg_theseedofthescaredfig_bg.jpg" alt="신성한나무씨앗">
         <div class="cover"></div>
       </div>
       <!-- next,prev -->
@@ -289,15 +289,15 @@
               <span class="material-symbols-outlined">search</span>
             </button>
             <div class="tag_box">
-              <a href="" class="hint"># 강남</a>
-              <a href="" class="hint"># 건대</a>
-              <a href="" class="hint"># 대학로</a>
-              <a href="" class="hint"># 명동</a>
-              <a href="" class="hint"># 성수</a>
-              <a href="" class="hint"># 신논현</a>
-              <a href="" class="hint"># 신림</a>
-              <a href="" class="hint"># 왕십리</a>
-              <a href="" class="hint"># 종로</a>
+              <a href="#" class="hint"># 강남</a>
+              <a href="#" class="hint"># 건대</a>
+              <a href="#" class="hint"># 대학로</a>
+              <a href="#" class="hint"># 명동</a>
+              <a href="#" class="hint"># 성수</a>
+              <a href="#" class="hint"># 신논현</a>
+              <a href="#" class="hint"># 신림</a>
+              <a href="#" class="hint"># 왕십리</a>
+              <a href="#" class="hint"># 종로</a>
             </div>
           </form>
         </div>
