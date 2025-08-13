@@ -1,5 +1,13 @@
-# Renewal_project_Cgv
+# CGV 리뉴얼 프로젝트
+- **과정명** : 프로젝트기반 프론트앤드 개발자 양성
+- **기간** : 2025/03/24 ~ 2025/09/24
+- **2차 프로젝트** : 2025/05/13 ~ 2025/07/14
 
+## 📚 외부 자료 및 참고 링크
+
+- **📑기획서(PPT 발표 자료)**:<a href="https://github.com/Ha-im/Renewal_project_Cgv" target="_blank">Figma Slides</a>  
+- **📑기획서(PPT 발표 자료)**: [Figma Slides](https://www.figma.com/slides/xhYQIPhYWHqIumk73Xyssf/%EC%82%BC%EB%8F%8C%EC%9D%B4%ED%8C%80-ppt?node-id=497-950&t=yBumxaWzbfPrf7Mg-1)  
+- **🎨디자인 원본(피그마)**: [Figma 디자인](https://www.figma.com/design/cNWqo63kkdZgcqTbzLOIxy/%EC%82%BC%EB%8F%8C%EC%9D%B4%ED%8C%80-%EB%93%9C%EB%9E%98%ED%94%84%ED%8A%B8?node-id=151-92&t=mmAqOWMc5pQzQ0Ki-1)  
 **🔗GitHub:** [CGV Renewal](https://github.com/Ha-im/Renewal_project_Cgv/tree/main_php)  
 **🌐데모 사이트:** [닷홈 배포 버전](http://gungsun1.dothome.co.kr/Renewal_project_Cgv/)
 
@@ -384,12 +392,6 @@ A: PHP 세션 설정을 확인하고, 브라우저 쿠키 설정을 점검하세
 **Q: main_php 브랜치에서 작업하고 있는데 파일이 다릅니다**  
 A: 올바른 브랜치에서 작업하고 있는지 확인하세요. `git branch`로 현재 브랜치를 확인할 수 있습니다.
 
----
-
-## 📚 외부 자료 및 참고 링크
-
-- **📑기획서(PPT 발표 자료)**: [Figma Slides](https://www.figma.com/slides/xhYQIPhYWHqIumk73Xyssf/%EC%82%BC%EB%8F%8C%EC%9D%B4%ED%8C%80-ppt?node-id=497-950&t=yBumxaWzbfPrf7Mg-1)  
-- **🎨디자인 원본(피그마)**: [Figma 디자인](https://www.figma.com/design/cNWqo63kkdZgcqTbzLOIxy/%EC%82%BC%EB%8F%8C%EC%9D%B4%ED%8C%80-%EB%93%9C%EB%9E%98%ED%94%84%ED%8A%B8?node-id=151-92&t=mmAqOWMc5pQzQ0Ki-1)  
 
 ---
 
