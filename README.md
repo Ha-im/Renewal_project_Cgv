@@ -412,7 +412,7 @@ A: 올바른 브랜치에서 작업하고 있는지 확인하세요. `git branch
 ---
 
 ## 📞 연락처
-
+######  💡 **팁**: 외부 링크를 새 탭에서 열려면 `Ctrl+클릭` (Windows/Linux) 또는 `Cmd+클릭` (Mac)을 사용하세요.
 - **Email**: gungsun1@naver.com
 - **GitHub**: [Ha-im](https://github.com/Ha-im)
 - **프로젝트 Repository**: [Renewal_project_Cgv](https://github.com/Ha-im/Renewal_project_Cgv)
