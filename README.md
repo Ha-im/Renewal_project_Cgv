@@ -88,12 +88,12 @@ Renewal_project_Cgv/
 
 ## 미리보기
 
-아래 주요 화면 스크린샷은 프로젝트 내 `assets/images/homepage_screen` 폴더에 저장되어 있습니다.
+아래 주요 화면 스크린샷은 프로젝트 내 `/images/homepage_screen` 폴더에 저장되어 있습니다.
 
-![메인 페이지](/assets/images/homepage_screen/main_pullpage.png)  
+![메인 페이지](/images/homepage_screen/main_pullpage.png)  
 *메인 페이지 화면*  
 
-![관리자 페이지 초기화면](/assets/images/homepage_screen/admin_pullpage.png)  
+![관리자 페이지 초기화면](/images/homepage_screen/admin_pullpage.png)  
 *관리자 로그인 후 초기 화면*  
 
 ---
