@@ -336,6 +336,7 @@ flowchart TD
 
 ## 🏗️ 영화 예매 시스템 아키텍처
 
+```mermaid
 graph TB
     subgraph "Frontend"
         A[HTML/CSS/JavaScript]
@@ -373,7 +374,7 @@ graph TB
     K --> L
     K --> M
     K --> N
-
+```
 ---
 
 *Last updated: 2025*
