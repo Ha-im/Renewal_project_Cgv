@@ -1,7 +1,7 @@
 # Renewal_project_Cgv
 
-**GitHub:** [Ha-im/Renewal_project_Cgv](https://github.com/Ha-im/Renewal_project_Cgv)  
-**데모 사이트:** [닷홈 배포 버전](http://gungsun1.dothome.co.kr/Renewal_project_Cgv/)
+**🔗GitHub:** [Ha-im/Renewal_project_Cgv](https://github.com/Ha-im/Renewal_project_Cgv)  
+**🌐데모 사이트:** [닷홈 배포 버전](http://gungsun1.dothome.co.kr/Renewal_project_Cgv/)
 
 ---
 
