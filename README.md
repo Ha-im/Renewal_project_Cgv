@@ -306,6 +306,8 @@ A: 올바른 브랜치에서 작업하고 있는지 확인하세요. `git branch
 
 ---
 
+## 🎬 영화 예매 시스템 플로우
+
 ```mermaid
 flowchart TD
     A[메인 페이지] --> B{로그인 여부}
@@ -331,4 +333,47 @@ flowchart TD
 ```
 
 ---
+
+## 🏗️ 영화 예매 시스템 아키텍처
+
+graph TB
+    subgraph "Frontend"
+        A[HTML/CSS/JavaScript]
+        B[jQuery UI]
+        C[Responsive Design]
+    end
+    
+    subgraph "Backend"
+        D[PHP 8.x]
+        E[Session Management]
+        F[JSON Data Handler]
+    end
+    
+    subgraph "Database"
+        G[MySQL/MariaDB]
+        H[User Tables]
+        I[Movie Tables]
+        J[Reservation Tables]
+    end
+    
+    subgraph "Static Data"
+        K[JSON Files]
+        L[Movies Data]
+        M[Seat Layout]
+        N[Rankings]
+    end
+    
+    A --> D
+    B --> E
+    D --> G
+    F --> K
+    G --> H
+    G --> I
+    G --> J
+    K --> L
+    K --> M
+    K --> N
+
+---
+
 *Last updated: 2025*
