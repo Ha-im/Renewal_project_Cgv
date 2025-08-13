@@ -263,4 +263,6 @@ header {
 }
 
 /* 아주 작은 화면 (480px 이하) */
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 480px) {
+
+}
