@@ -292,9 +292,7 @@ A: 올바른 브랜치에서 작업하고 있는지 확인하세요. `git branch
 
 ## 📞 연락처
 
-프로젝트에 대한 문의사항이 있으시면 연락주세요.
-
-- **Email**: [박경선](gungsun1@naver.com)
+- **Email**: gungsun1@naver.com
 - **GitHub**: [Ha-im](https://github.com/Ha-im)
 - **프로젝트 Repository**: [Renewal_project_Cgv](https://github.com/Ha-im/Renewal_project_Cgv)
 - **브랜치**: main_php
