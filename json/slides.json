@@ -1,7 +1,7 @@
 {
   "slides": [
     {
-      "image": "/images/plan/shadow.jpg",
+      "image": "./images/plan/shadow.jpg",
       "description": "장 피에르 멜빌이 “전쟁에 대한 모든 것을 말했다”고 고백한 작품이다. 레지스탕스 시절 멜빌이 감명 받았던 두 권의 책은 이후 그의 영화인생에 각별한 의미를 부여했다.",
       "buttons": [
         {
@@ -18,7 +18,7 @@
       "ageClass": "rating19"
     },
     {
-      "image": "/images/plan/soon.jpg",
+      "image": "./images/plan/soon.jpg",
       "description": "로마의 유복한 집안에서 자란 마르첼로는 어린 시절의 트라우마와 정신병원에 입원해 있는 아버지로 인해 불안에 시달린다.",
       "buttons": [
         {
@@ -35,7 +35,7 @@
       "ageClass": "rating15"
     },
     {
-      "image": "/images/plan/neo.jpg",
+      "image": "./images/plan/neo.jpg",
       "description": "전 세계가 사랑하는 거장 엔니오 모리꼬네 그가 직접 들려주는 명작 탄생 비하인드 그리고 세계적인 아티스트들이 이야기하는 그에 대한 모든 것...",
       "buttons": [
         {
@@ -52,7 +52,7 @@
       "ageClass": "rating15"
     },
     {
-      "image": "/images/plan/word.jpg",
+      "image": "./images/plan/word.jpg",
       "description": "“가장 위험한 놈들만 여기 남겨진 거야“ 지구 최상위 포식자가 된 공룡들이 인간 세상으로 나온 5년 후,인간과 공룡의 위태로운 공존이 이어지는 가운데...",
       "buttons": [
         {
@@ -69,7 +69,7 @@
       "ageClass": "rating12"
     },
     {
-      "image": "/images/plan/sunset.jpg",
+      "image": "./images/plan/sunset.jpg",
       "description": "안개가 자욱한 어느 숲에서 하루도 조용할 날 없이 지내는 더럽게 사랑스러운(?) 사스콰치 가족. 이들은 안착할 수 있는 생활 터전을 찾아 지극히 평범하지 않은 여정을 떠난다",
       "buttons": [
         {
@@ -86,7 +86,7 @@
       "ageClass": "rating15"
     },
     {
-      "image": "/images/plan/jang.jpg",
+      "image": "./images/plan/jang.jpg",
       "description": "경찰 따돌리다 지쳐버린 말빨의 요술사 제니, 도망치다 도망치다 도착한 곳은… GPS도 포기한 깡촌 마을 ‘용두골’! 거기서 들은 희대의 떡밥!",
       "buttons": [
         {
@@ -103,7 +103,7 @@
       "ageClass": "rating15"
     },
     {
-      "image": "/images/plan/kbo.jpg",
+      "image": "./images/plan/kbo.jpg",
       "description": "2025 신한 SOL뱅크 KBO 리그 CGV 극장 단독 생중계! 함성 가득한 그 뜨거운 순간! 다시, CGV에서 2025 KBO 리그를 만나보세요!",
       "buttons": [
         {
@@ -120,7 +120,7 @@
       "ageClass": "rating12"
     },
     {
-      "image": "/images/plan/kboL.jpg",
+      "image": "./images/plan/kboL.jpg",
       "description": "2025 신한 SOL뱅크 KBO 리그 CGV 극장 단독 생중계! 함성 가득한 그 뜨거운 순간! 다시, CGV에서 2025 KBO 리그를 만나보세요!",
       "buttons": [
         {
@@ -137,7 +137,7 @@
       "ageClass": "rating12"
     },
     {
-      "image": "/images/plan/supermen.jpg",
+      "image": "./images/plan/supermen.jpg",
       "description": "‘슈퍼맨’은 오늘도 세계 곳곳의 위협에 맞서 싸우지만, 시민들의 반응은 극과 극으로 갈린다.",
       "buttons": [
         {
@@ -154,7 +154,7 @@
       "ageClass": "ratingall"
     },
     {
-      "image": "/images/plan/gi.jpg",
+      "image": "./images/plan/gi.jpg",
       "description": "조회수가 간절한 공포 유튜버 ‘다경’(주현영). 전국 최다 실종 사건 발생지인 광림역을 둘러싼 괴기한 소문을 업로드하고 단숨에 최고 조회수를 기록한다.",
       "buttons": [
         {
@@ -171,7 +171,7 @@
       "ageClass": "ratingall"
     },
     {
-      "image": "/images/plan/rapachini.jpg",
+      "image": "./images/plan/rapachini.jpg",
       "description": "18세기 이탈리아 파두아. 과학자 라파치니는 딸 베아트리체를 위해 식물의 독을 이용해 사람을 독체질로 만드는 비밀 연구를 한다.",
       "buttons": [
         {
@@ -188,7 +188,7 @@
       "ageClass": "rating15"
     },
     {
-      "image": "/images/plan/balconi.jpg",
+      "image": "./images/plan/balconi.jpg",
       "description": "한여름 밤의 마르세유, 찜통 같은 더위에 미쳐 가던 세 여자는 발코니에서 훔쳐보던 이웃 남자의 집에 초대받는데… 다음 날 보니 그가 죽어있다!?",
       "buttons": [
         {
@@ -205,7 +205,7 @@
       "ageClass": "rating15"
     },
     {
-      "image": "/images/plan/bom.jpg",
+      "image": "./images/plan/bom.jpg",
       "description": "국어교사였던 ‘영경’과 철공소를 운영하던 ‘수환’ 각자의 첫 결혼을 파혼한 뒤, 알코올과 병으로 모든 것을 잃고 죽음과 마주한 시간을 지낸다.",
       "buttons": [
         {
@@ -222,7 +222,7 @@
       "ageClass": "rating19"
     },
     {
-      "image": "/images/plan/sun.jpg",
+      "image": "./images/plan/sun.jpg",
       "description": "진학을 위해 서울을 떠나 낯선 소도시로 이사 온 초등학생 기준. 새 학교에 등교하기도 전, 새 운동화가 사라진다.",
       "buttons": [
         {
@@ -239,7 +239,7 @@
       "ageClass": "rating12"
     },
     {
-      "image": "/images/plan/seventin.jpg",
+      "image": "./images/plan/seventin.jpg",
       "description": "태양이 된 세븐틴과 캐럿이 하나된 순간! 전 세계 22개 도시, 29회 공연으로 화제를 모은 [BE THE SUN] 투어!",
       "buttons": [
         {
@@ -256,7 +256,7 @@
       "ageClass": "rating19"
     },
     {
-      "image": "/images/plan/bangtan.jpg",
+      "image": "./images/plan/bangtan.jpg",
       "description": "전세계 아미들과 함께한 단 하나 (ONE) 뿐인 온라인에디션(ONline Edition) 그 어느 때보다 웅장하고 화려했던 BTS MAP OF THE SOUL ON:E 공연을 영화관의 대형 스크린으로 만나보세요!",
       "buttons": [
         {
@@ -273,7 +273,7 @@
       "ageClass": "rating12"
     },
     {
-      "image": "/images/plan/tomo.jpg",
+      "image": "./images/plan/tomo.jpg",
       "description": "2023년, 전 세계 MOA와 함께한 투모로우바이투게더의 두 번째 월드투어 [ACT : SWEET MIRAGE] ! 그 대미를 장식한 FINALE 공연의 현장감과 감동을 영화관의 대형 스크린으로 만나보세요!",
       "buttons": [
         {
@@ -290,7 +290,7 @@
       "ageClass": "ratingall"
     },
     {
-      "image": "/images/plan/nhipen.jpg",
+      "image": "./images/plan/nhipen.jpg",
       "description": "2023년, 전세계 ENGENE을 열광시킨 엔하이픈의 두 번째 월드투어 ‘FATE’! 운명처럼 만난 잊지못할 그 시절의 여름 밤을 영화관의 대형 스크린으로 만나보세요!",
       "buttons": [
         {
@@ -307,7 +307,7 @@
       "ageClass": "rating12"
     },
     {
-      "image": "/images/plan/hive.jpg",
+      "image": "./images/plan/hive.jpg",
       "description": "영화관에서 만나는 한국의 NORAEBANG 문화! 한국의 노래방을 그대로 재현한 특별 싱어롱 상영회가 여러분을 찾아갑니다!",
       "buttons": [
         {
@@ -324,7 +324,7 @@
       "ageClass": "ratingall"
     },
     {
-      "image": "/images/plan/delma.jpg",
+      "image": "./images/plan/delma.jpg",
       "description": "자유를 향한 마지막 질주 답답한 현실에 갇힌 주부 ‘델마’와 식당 웨이트리스로 일하는 ‘루이스’. 모든 걸 잠시 내려놓고 떠난 주말 여행은...",
       "buttons": [
         {

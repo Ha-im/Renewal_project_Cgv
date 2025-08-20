@@ -1,0 +1,24 @@
+{
+  "ticketTypes": [
+    {
+      "id": "adult",
+      "name": "성인",
+      "price": 13000
+    },
+    {
+      "id": "teen",
+      "name": "청소년",
+      "price": 10000
+    },
+    {
+      "id": "senior",
+      "name": "경로우대",
+      "price": 8000
+    },
+    {
+      "id": "disabled",
+      "name": "장애인",
+      "price": 8000
+    }
+  ]
+}

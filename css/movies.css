@@ -2,6 +2,18 @@
     box-sizing: border-box;
 }
 
+
+
+svg.star_fill {
+    fill: #ffd700;
+    width: 16px;
+}
+
+svg.star {
+    fill: #fff;
+    width: 16px;
+}
+
 /* banner */
 .banner {
     width: 100%;
@@ -32,10 +44,22 @@
 }
 
 .special_cinema .cinema_icon {
+    display: flex;
+    padding: 0 8px;
     width: 96px;
     height: 48px;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 8px;
+    align-items: center;
+}
+
+.special_cinema .cinema_icon:hover {
+    background-color: #ED3124;
+}
+
+.special_cinema .cinema_icon img {
+    width: 100%;
+    object-fit: cover;
 }
 
 .info_box {
@@ -47,6 +71,7 @@
     font-size: 16px;
     line-height: 24px;
 }
+
 
 .content_body {
     margin-bottom: 30px;
@@ -118,14 +143,23 @@
 
 .tab_content {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 50px;
     flex-flow: wrap;
     margin-bottom: 60px;
+    padding: 0 25px;
 }
 
 .tab_content .item {
     width: 280px;
+}
+
+.tab_content .item {
+    display: none;
+}
+
+.tab_content .item.show {
+    display: block;
 }
 
 .mv_img_box {
