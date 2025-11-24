@@ -60,7 +60,11 @@ CGV 사이트 리뉴얼 프로젝트입니다.
 |----------|--------------|-----------------------------------------------|
 | 박경선   | 팀장 / 로그인 | 로그인 관련 전체 (세션 관리, 인증, 관리자 라우팅 등) |
 | 박연미   | 기능 / 디자인 | 메인 페이지 공통, 영화 예매 페이지 구현 및 디자인     |
+<<<<<<< HEAD
 | 김영태   | 기능 구현    | 메인 페이지 공통, 영화 소개 페이지 구현 및 디자인      |
+=======
+| 김영태   | 기능 구현    | 영화 소개 페이지 구현                           |
+>>>>>>> df7201379176880489a0407ed3a49e6644baea64
 
 ---
 
@@ -320,7 +324,11 @@ RENEWAL_PROJECT_CGV/
 
 ### 1. 저장소 클론 및 이동  
 ```bash
+<<<<<<< HEAD
 git clone https://github.com/kyt0830/Renewal_project_Cgv
+=======
+git clone https://github.com/Ha-im/Renewal_project_Cgv.git
+>>>>>>> df7201379176880489a0407ed3a49e6644baea64
 cd Renewal_project_Cgv
 ```
 
@@ -362,9 +370,21 @@ cd Renewal_project_Cgv
 ---
 
 ## 🖼️ 미리보기
+<<<<<<< HEAD
 [![메인 페이지](/images/thumbnail.png)](http://kytkyt910830.dothome.co.kr/cgv/)
 *메인 페이지 화면*  
 
+=======
+
+아래 주요 화면 스크린샷은 프로젝트 내 `/images/` 폴더에 저장되어 있습니다.
+
+![메인 페이지](/images/homepage_screen/main_pullpage.png)  
+*메인 페이지 화면*  
+
+![관리자 페이지 초기화면](/images/homepage_screen/admin_pullpage.png)  
+*관리자 로그인 후 초기 화면*  
+
+>>>>>>> df7201379176880489a0407ed3a49e6644baea64
 ---
 
 ## 🔧 문제 해결
@@ -388,6 +408,19 @@ A: 올바른 브랜치에서 작업하고 있는지 확인하세요. `git branch
 
 
 ---
+<<<<<<< HEAD
+=======
+
+## 📝 코드 컨벤션
+
+- [HTML 컨벤션](docs/html.md)  
+- [CSS 컨벤션](docs/css.md)  
+- [JavaScript 컨벤션](docs/javascript.md)  
+- [PHP 컨벤션](docs/php.md)  
+
+---
+
+>>>>>>> df7201379176880489a0407ed3a49e6644baea64
 ## 📄 라이센스
 
 이 프로젝트는 교육 목적으로 제작된 포트폴리오입니다.
@@ -396,8 +429,14 @@ A: 올바른 브랜치에서 작업하고 있는지 확인하세요. `git branch
 
 ## 📞 연락처
 ######  💡 **팁**: 외부 링크를 새 탭에서 열려면 `Ctrl+클릭` (Windows/Linux) 또는 `Cmd+클릭` (Mac)을 사용하세요.
+<<<<<<< HEAD
 - **Email**: kyt910830@gmail.com
 - **GitHub**: [@kyt0830](https://github.com/kyt0830)
+=======
+- **Email**: gungsun1@naver.com
+- **GitHub**: [Ha-im](https://github.com/Ha-im)
+- **프로젝트 Repository**: [Renewal_project_Cgv](https://github.com/Ha-im/Renewal_project_Cgv)
+>>>>>>> df7201379176880489a0407ed3a49e6644baea64
 - **브랜치**: main_php
 
 ---
