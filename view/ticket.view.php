@@ -199,7 +199,7 @@
       </div>
   </div>
 
-<button type="button" class="next_page" onclick="location.href='http://gungsun1.dothome.co.kr/Renewal_project_Cgv/ticket_seat.php'">
+<button type="button" class="next_page" onclick="location.href='http://localhost/Renewal_project_Cgv/ticket_seat.php'">
   다음
 </button>
 </main>

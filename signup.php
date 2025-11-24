@@ -7,5 +7,5 @@
  $commonJs = '<script src=./>js/common.js"></script>';
  $signupJs= '<script src="./js/signup.js"></script>';
  
- subpageView('signup','회원가입', $commonCss, $signupCss,'', $commonJs, $signupJs, '');
+ subpageView('Signup','회원가입', $commonCss, $signupCss,'', $commonJs, $signupJs, '');
 ?>

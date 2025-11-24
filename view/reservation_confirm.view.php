@@ -34,6 +34,6 @@
     <a href="" class="my_page">마이페이지</a>
   </div>
     </div>
-<button type="button" class="next_page" onclick="location.href='http://gungsun1.dothome.co.kr/Renewal_project_Cgv/reservation_confirm.php'">
+<button type="button" class="next_page" onclick="location.href='http://localhost/Renewal_project_Cgv/reservation_confirm.php'">
             다음
           </button>

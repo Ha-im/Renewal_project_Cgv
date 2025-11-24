@@ -85,7 +85,7 @@
                         <?= $movie->description?>
                     </p>
                     <div class="btn_box">
-                        <a href="ticket.php" class="cta_btn">예매 하기</a>
+                        <a href="#" class="cta_btn">예매 하기</a>
                     </div>
                 </div>
             </div>
